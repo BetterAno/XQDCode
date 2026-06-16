@@ -449,22 +449,20 @@ def step2_screenshot(json_path: str, captcha_pause: bool = True):
         log_ok("浏览器已启动，开始截图...")
         print()
 
-        # --- 2.5 逐个处理（遍历所有商品提取卖家名，只截图新商品） ---
-        for idx, item in enumerate(items, 1):
+        # --- 2.5 逐个截图 ---
+        for idx, item in enumerate(pending, 1):
             item_id = item["itemId"]
             detail_url = item.get("detailUrl", "")
-            is_new = item_id not in done_ids
 
             if not detail_url:
-                log_warn(f"[{idx}/{len(items)}] 无详情链接，跳过: {item_id}")
-                if is_new:
-                    fail += 1
+                log_warn(f"[{idx}/{len(pending)}] 无详情链接，跳过: {item_id}")
+                fail += 1
                 continue
 
             snapshot_path = os.path.join(SCREENSHOTS_DIR, f"{item_id}.png")
 
             try:
-                print(f"  [{idx}/{len(items)}] {item_id} ... ",
+                print(f"  [{idx}/{len(pending)}] {item_id} ... ",
                       end="", flush=True)
 
                 page.goto(detail_url, timeout=30000, wait_until="domcontentloaded")
@@ -487,7 +485,11 @@ def step2_screenshot(json_path: str, captcha_pause: bool = True):
                 wait_s = random.randint(*PAGE_WAIT)
                 page.wait_for_timeout(wait_s * 1000)
 
-                # 从详情页提取卖家名（无论新旧商品都提取）
+                page.screenshot(path=snapshot_path, full_page=False)
+                print(f"✓ ({wait_s}s)", flush=True)
+                success += 1
+
+                # 从详情页提取卖家名并写回JSON
                 try:
                     name = page.evaluate("""() => {
                       const el = document.querySelector('[class*="item-user-info-nick"]');
@@ -495,27 +497,31 @@ def step2_screenshot(json_path: str, captcha_pause: bool = True):
                     }""")
                     if name:
                         seller_names[item_id] = name
-                        name_extracted += 1
+                        # 同步更新JSON中对应记录的 sellerName
+                        for rec in items:
+                            if rec["itemId"] == item_id:
+                                rec["sellerName"] = name
+                                break
                 except Exception:
                     pass
 
-                # 只截图新商品
-                if is_new:
-                    page.screenshot(path=snapshot_path, full_page=False)
-                    print(f"✓ ({wait_s}s)", flush=True)
-                    success += 1
-                else:
-                    print(f"✓ 提取卖家名", flush=True)
-
                 # 商品间停顿
-                if idx < len(items):
+                if idx < len(pending):
                     time.sleep(random.uniform(*BETWEEN_WAIT))
             except Exception:
                 print("✗", flush=True)
-                log_warn(f"[{idx}/{len(items)}] {item_id} 失败: "
+                log_warn(f"[{idx}/{len(pending)}] {item_id} 失败: "
                          f"{traceback.format_exc().splitlines()[-1]}")
-                if is_new:
-                    fail += 1
+                fail += 1
+
+        # --- 2.5b 将提取到的卖家名回写JSON ---
+        if seller_names:
+            try:
+                with open(json_path, "w", encoding="utf-8") as f:
+                    json.dump(items, f, ensure_ascii=False, indent=2)
+                log_ok(f"已将 {len(seller_names)} 个卖家名回写到 JSON")
+            except Exception:
+                log_warn("回写JSON失败")
 
         context.close()
 
@@ -523,7 +529,8 @@ def step2_screenshot(json_path: str, captcha_pause: bool = True):
     total = success + skipped + fail
     print()
     log_ok(f"截图完成: 新增 {success}, 跳过 {skipped}, 失败 {fail}, 共 {total}/{len(items)}")
-    log_ok(f"从详情页提取卖家名: {name_extracted} 个")
+    if seller_names:
+        log_ok(f"从详情页提取卖家名: {len(seller_names)} 个，已回写JSON")
     return done_ids, seller_names  # 返回截图前的已存在ID集合 + 卖家名映射
 
 
@@ -611,8 +618,10 @@ def step3_to_xlsx(json_path: str, existing_ids: set = None, seller_names: dict =
         item_id = item.get("itemId", "")
         status = "已爬取" if item_id in existing_ids else "新增"
         image_url = item.get("image", "")
-        # 卖家名：优先用详情页抓取的，其次用搜索页地区
-        seller_display = seller_names.get(item_id) or item.get("location", "")
+        # 卖家名：优先当前提取 > JSON已存 > 搜索页地区
+        seller_display = (seller_names.get(item_id)
+                          or item.get("sellerName", "")
+                          or item.get("location", ""))
 
         row_data = [
             row_idx - 1,

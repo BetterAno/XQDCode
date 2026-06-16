@@ -15,7 +15,7 @@ set "FP_SEED=58321"
 REM --- Layer 0: Kill existing Chrome ---------------------------
 taskkill /f /im chrome.exe 2>nul
 timeout /t 1 /nobreak >nul
-if exist "%DATA_DIR%" rmdir /s /q "%DATA_DIR%" 2>nul
+REM if exist "%DATA_DIR%" rmdir /s /q "%DATA_DIR%" 2>nul
 
 REM --- Layer 1: C++ Fingerprint Patches (58 in binary) ---------
 REM  Master seed: deterministic identity across restarts
