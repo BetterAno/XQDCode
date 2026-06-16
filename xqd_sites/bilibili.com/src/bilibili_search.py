@@ -3,8 +3,8 @@ B站视频搜索采集工具
 =====================
 三种运行模式:
   模式1: python src/bilibili_search.py 八段锦                           → 指定关键词，输出浏览器提取脚本
-  模式2: python src/bilibili_search.py --from-json data.json             → 根据JSON文件：截图+转XLSX
-  模式3: python src/bilibili_search.py --auto 八段锦                      → 一键自动采集（打开浏览器→注入JS→截图→XLSX）
+  模式2: python src/bilibili_search.py --from-json 李在峰八段锦_bilibili_2026-06-16.json  --no-captcha               → 根据JSON文件：截图+转XLSX
+  模式3: python src/bilibili_search.py --auto 李在峰八段锦_bilibili_2026-06-16.json --no-captcha                     → 一键自动采集（打开浏览器→注入JS→截图→XLSX）
 
 可选参数:
   --pages N         指定采集页数（默认5）

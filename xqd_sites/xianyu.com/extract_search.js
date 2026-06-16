@@ -53,16 +53,21 @@
       if (decEl && decEl.textContent.trim()) price += decEl.textContent.trim();
     }
 
-    // 卖家
-    const sellerEl = card.querySelector('[class*="seller-text--"]');
-    const seller = sellerEl ? sellerEl.textContent.trim() : '';
+    // 卖家地区（闲鱼搜索页展示的是地区，非卖家名；卖家名需从详情页获取）
+    const locationEl = card.querySelector('[class*="seller-text--"]');
+    const location = locationEl ? locationEl.textContent.trim() : '';
+
+    // 卖家名（搜索页不再展示，留空，由 step2 截图阶段从详情页抓取）
+    const sellerName = '';
 
     // 商品图片
     const img = card.querySelector('img[class*="feeds-image"]');
     let image = '';
     if (img) {
-      image = img.src || '';
-      // 去掉缩略图后缀还原原图: xxx.jpg_450x10000Q90.jpg_.webp → xxx.jpg
+      // 取 src / data-src（懒加载兜底），协议相对URL补 https:
+      image = img.src || img.getAttribute('data-src') || '';
+      if (image.startsWith('//')) image = 'https:' + image;
+      // 去掉阿里CDN缩略图后缀还原原图: xxx.jpg_450x10000Q90.jpg_.webp → xxx.jpg
       image = image.replace(/_\d+x\d+.*\.\w+$/i, '');
     }
 
@@ -74,7 +79,7 @@
     const cpvEls = card.querySelectorAll('[class*="cpv--"]');
     const tags = Array.from(cpvEls).map(el => el.textContent.trim()).filter(t => t);
 
-    // 详情页链接（去掉 spm 等追踪参数）
+    // 详情页链接（去掉 spm/trackParams 追踪参数，保留 categoryId）
     const detailUrl = card.href.split('&spm=')[0].split('&trackParams=')[0];
 
     // 卖家头像
@@ -85,7 +90,8 @@
       itemId,
       title,
       price,
-      seller,
+      location,
+      sellerName,
       image,
       wantCount,
       tags,
@@ -116,7 +122,7 @@
   console.log(`💾 已保存: ${filename}`);
   console.table(items.slice(0, 5).map(i => ({
     商品ID: i.itemId,
-    卖家: i.seller,
+    地区: i.location,
     标题: i.title.substring(0, 30),
     售价: i.price,
     想要: i.wantCount,

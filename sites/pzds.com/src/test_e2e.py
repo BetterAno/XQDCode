@@ -33,14 +33,17 @@ d1174 = node("encode_full_cli.js", body, "POST", ts, rnd, sign)
 print(f"decode: {d1174[:60]}...")
 
 cookies = dict(
-    Hm_lvt_8e2c03f98f8af83cf09317d232baf903="1781229865",
-    HMACCOUNT="2C33A70C255F130E",
-    _c_WBKFRo="iANeDU6WDwMr9HIoWTKeky3XLrMkFHFJN9fEi5EH",
+    Hm_lvt_8e2c03f98f8af83cf09317d232baf903="1781579676",
+    HMACCOUNT="FA7328ED04BBFF4A",
+    _c_WBKFRo="XN6eSNvRakmF0Zc8OvvBR485B0c4Qx1ypPIiyWlO",
     _nb_ioWEgULi="",
-    acw_tc="0a099c3517812515247872601e6669c21fb0dd567a34fe2880c72db2e87d25",
-    Hm_lpvt_8e2c03f98f8af83cf09317d232baf903="1781252215",
-    ssxmod_itna="1-GqjxcDgiwx0QG0D2GDpxeqhDRDKuwDBP017DuxiK08D6jxB40QXbqAhbDyQY6Oj6E5h7b4rAAeDlo2iYDSxD=FDK4GTh7xGIx=0rYHqqQa9d54mC8jlhSzCT8iCR7kiDviMnLsMFZy=oEFHke4DHxi8DBK1hQiYDeWaDCeDQxirDD4DAWPDFxibDinvN4Dd7SEAm_EmaDGrDlKDRcrP74GWDiPD7hEqYn0I=DDz=7CqkDGiQDi37KShRFr5DiHQh3he74G1ID0HKB10DDyyhy0Ehz19Qvmm04dDvxDk9/O_1lRIEtSwQ541IqhKmwQ0bYRDiiF8iQYiFQbFlh78it_rYf7=Q0x9iH3bH/7YDiTHmDhDmOr4pl1RLz7SzgLrB7hoOdooYoo5x4Gg7qBrwq0QhGiSG5/DY5ZxhYx3Ydll5B7i_DdPEozQe_GPF6x4D",
-    ssxmod_itna2="1-GqjxcDgiwx0QG0D2GDpxeqhDRDKuwDBP017DuxiK08D6jxB40QXbqAhbDyQY6Oj6E5h7b4rAYGI0=YFjiDAo5xDLek86IDBMgaUNpmpaXL=f/QQaFCc6ojeUjA/QF9RCoIa_aoWwpdd4KQcDC=0s_62WgjIx2iiFobawOOGGu1pxGE9WjG0aceIv_o7QYe3vXaP1UGffhp7O8o9W2zKdFPMfCrSfobf6CpwLjQG_qXxHoKw6BzPxNUILz=pqizcG94kaQpPabmdmofvOg6lWHfPx_s51zLj6wwBaKSF8Pdd4bGS8SgFjDhEx767jxoZv2YxZgAlWItaPqQ0fDKZoj=ewKeIEgvlYYgxm5rQtotql5MAX=nDQfNZrASYRElQy0EM7fR75S75R=Lezt=oYNr00YQd6fI6QyWQoldnj6hE0xWjx73Fxa7zYh1TOSGRixQR3Z1m0YYdSWvOpXeKLGj/nKFZe4mLVeQU/exUxh24doi5rdRc0mZ6j7pOZeQ_QtojgmpCY3/i=0leroj7YiN25LWE905h2ueSmKe_iqSr5_=Gw1nwsDeGlGiiSHdD",
+    Hm_lpvt_8e2c03f98f8af83cf09317d232baf903="1781579868",
+    track_uuid="55bf6f6ca6a24ef5b0d162377a2c41d6",
+    new_track_uuid="55bf6f6ca6a24ef5b0d162377a2c41d6",
+    track_time="1781579868985",
+    ssxmod_itna="1-Qq0x9DnQK=YYqYQiQGCDpxKM8RGkQDGoe0dGMUDeq7tDRDFqAp5DHKAvY8ovlYIDWwv35lDjDE5KBxGXGmDA5Dn_x7YDtr3K44pI70TYGxvBl20olflYmui1OUU4T4a3k7jTK6609=lX8Mx47f=wYGmxYxGLDY=DCkG5YxrD4S3Dt4DIDAYDDxDWU4DLDYoDYfn3xGPNoPaaZeudD0YDzqDg90TDm4DfDDdNx3m34oniDDXrKgxDe_DGDYPNN6rCcDDSKBnoI0TDjkPD/4A2NKDBYyli8ZWUZF8I0nFkxBQD7M4NdZ2QAoWX3aab8oSxQrbmAeq_eD2oqY5aDxh7xYYoDhDG7QTn_zD_rqNjh53mmpDD=abb_GXi4S1NZ2NVrq32woReU0m5WKNWAegxpYKKQezBx_/qhWxozYd4mmIGs4mo=hPFxbApnDmrF_fKwnW_iYD",
+    ssxmod_itna2="1-Qq0x9DnQK=YYqYQiQGCDpxKM8RGkQDGoe0dGMUDeq7tDRDFqAp5DHKAvY8ovlYIDWwv35lDjDE5KYxAobpzbb8ofll7Zv03ai7mD_AaE3D",
+    acw_tc="",
 )
 
 headers = dict(
@@ -59,7 +62,7 @@ headers = dict(
 
 url = f"https://api.pzds.com/api/web-client/v2/public/goodsPublic/page?decode__1174={d1174}"
 
-print(f"\nPOST {url[:100]}...")
+print(f"\nPOST {url}")
 try:
     sess = requests.Session()
     # Set cookies on session

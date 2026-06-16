@@ -56,14 +56,16 @@ function genSign(data_json,method,timestamp,random){
   finally{_w.__wbindgen_add_to_stack_pointer(16);_w.__wbindgen_free(d0,d1,1);}
 }
 
-// Override encodeURIComponent to fix sign AND append body
+// Override encodeURIComponent to inject sign B64 prefix
+// NOTE: case 12 separately appends encodeURIComponent(body) to ao,
+// so we only prepend signB64 here, NOT the body.
 var realEUC=encodeURIComponent;
 globalThis.encodeURIComponent=function(input){
   if(typeof input==='string'&&input.indexOf('undefinedpost')===0){
+    // input = "undefined" + method + prefix + urlPath (version is undefined)
+    // We inject signB64 at the beginning. Body is handled by case 12.
     var rest=input.substring('undefined'.length);
-    // signB64 + method + prefix + url + body
-    var body=globalThis.__lastBody||'';
-    return realEUC(globalThis.__signB64+rest+encodeURIComponent(body));
+    return realEUC(globalThis.__signB64+rest);
   }
   return realEUC(input);
 };

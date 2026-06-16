@@ -45,9 +45,9 @@ BETWEEN_WAIT = (2, 3)    # 商品间间隔
 # XLSX 列定义
 HEADERS = [
     "序号", "店铺名", "标题", "售价", "地址",
-    "销量", "详情页链接", "商品图片", "itemId", "商品详情页截图",
+    "销量", "状态", "详情页链接", "商品图片", "itemId", "商品详情页截图",
 ]
-COL_WIDTHS = [6, 28, 60, 12, 12, 14, 50, 50, 16, 30]
+COL_WIDTHS = [6, 28, 60, 12, 12, 14, 10, 50, 50, 16, 30]
 IMG_WIDTH_PT = 220   # 截图嵌入宽度（点）
 IMG_HEIGHT_PT = 155  # 截图嵌入高度（点）
 
@@ -365,10 +365,10 @@ def step0_auto_collect(keyword: str, max_pages: int = DEFAULT_PAGES,
     # 自动继续截图+XLSX
     print()
     log_step("继续执行截图...")
-    step2_screenshot(filename, captcha_pause=captcha_pause)
+    existing_ids = step2_screenshot(filename, captcha_pause=captcha_pause)
     print()
     log_step("继续生成 XLSX...")
-    step3_to_xlsx(filename)
+    step3_to_xlsx(filename, existing_ids=existing_ids)
 
     return json_path
 
@@ -420,7 +420,7 @@ def step2_screenshot(json_path: str, captcha_pause: bool = True):
         log_ok(f"跳过 {skipped} 个已有截图，待处理 {len(pending)} 个")
     if not pending:
         log_ok("所有商品已有截图，无需处理")
-        return
+        return done_ids  # 返回已存在的ID集合
 
     # --- 2.4 启动浏览器 ---
     success = 0
@@ -492,16 +492,18 @@ def step2_screenshot(json_path: str, captcha_pause: bool = True):
     total = success + skipped + fail
     print()
     log_ok(f"截图完成: 新增 {success}, 跳过 {skipped}, 失败 {fail}, 共 {total}/{len(items)}")
+    return done_ids  # 返回截图前的已存在ID集合，供 step3 标记状态
 
 
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║                   Step 3: JSON → XLSX                            ║
 # ╚══════════════════════════════════════════════════════════════════╝
 
-def step3_to_xlsx(json_path: str):
+def step3_to_xlsx(json_path: str, existing_ids: set = None):
     """
     将搜索结果 JSON + 截图合并为一个 XLSX 文件。
     截图以图片形式嵌入到「商品详情页截图」列。
+    existing_ids: 截图前已存在的 itemId 集合，用于标记「新增/已爬取」。
     """
     # --- 3.1 校验依赖 ---
     try:
@@ -523,6 +525,12 @@ def step3_to_xlsx(json_path: str):
         return
 
     log_step(f"数据 {len(items)} 条 → 生成 XLSX ...")
+
+    # 若无传入，从截图目录推断已存在的 itemId
+    if existing_ids is None:
+        existing_ids = set()
+        if os.path.exists(SCREENSHOTS_DIR):
+            existing_ids = {f.replace(".png", "") for f in os.listdir(SCREENSHOTS_DIR) if f.endswith(".png")}
 
     # --- 3.3 写入工作簿 ---
     wb = Workbook()
@@ -555,6 +563,8 @@ def step3_to_xlsx(json_path: str):
     img_miss = 0
 
     for row_idx, item in enumerate(items, 2):
+        item_id = item.get("itemId", "")
+        status = "已爬取" if item_id in existing_ids else "新增"
         row_data = [
             row_idx - 1,
             item.get("shopName", ""),
@@ -562,18 +572,19 @@ def step3_to_xlsx(json_path: str):
             item.get("price", ""),
             item.get("location", ""),
             item.get("sales", ""),
+            status,
             item.get("detailUrl", ""),
             item.get("image", ""),
-            item.get("itemId", ""),
+            item_id,
             "",  # 截图列——后面嵌入图片
         ]
         for col, val in enumerate(row_data, 1):
             cell = ws.cell(row=row_idx, column=col, value=val)
             cell.font = data_font
             cell.border = thin_border
-            align_h = "center" if col in (1, 4, 5, 6, 9) else "left"
+            align_h = "center" if col in (1, 4, 5, 6, 7, 10) else "left"
             cell.alignment = Alignment(horizontal=align_h, vertical="center",
-                                       wrap_text=(col in (2, 3, 7, 8)))
+                                       wrap_text=(col in (2, 3, 8, 9)))
 
         # 行高（预留给截图）
         ws.row_dimensions[row_idx].height = IMG_HEIGHT_PT + 8
@@ -655,9 +666,9 @@ def main():
             log_err("请指定 JSON 文件路径")
             sys.exit(1)
         log_step(f"从 JSON 文件开始: {json_file}")
-        step2_screenshot(json_file, captcha_pause=captcha_pause)
+        existing_ids = step2_screenshot(json_file, captcha_pause=captcha_pause)
         print()
-        step3_to_xlsx(json_file)
+        step3_to_xlsx(json_file, existing_ids=existing_ids)
 
     else:
         # 模式1: 指定关键词，输出提取脚本

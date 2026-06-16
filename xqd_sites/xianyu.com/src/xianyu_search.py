@@ -3,8 +3,8 @@
 =====================
 三种运行模式:
   模式1: python src/xianyu_search.py 耳机                           → 指定关键词，输出浏览器提取脚本
-  模式2: python src/xianyu_search.py --from-json data.json            → 根据JSON文件：截图+转XLSX
-  模式3: python src/xianyu_search.py --auto 耳机                      → 一键自动采集（打开浏览器→注入JS→截图→XLSX）
+  模式2: python src/xianyu_search.py --from-json 李在峰八段锦_xianyu_2026-06-16.json            → 根据JSON文件：截图+转XLSX
+  模式3: python src/xianyu_search.py --auto 李在峰八段锦                                        → 一键自动采集（打开浏览器→注入JS→截图→XLSX）
 
 可选参数:
   --pages N         指定采集页数（默认5）
@@ -45,16 +45,19 @@ BETWEEN_WAIT = (2, 4)    # 商品间间隔
 # XLSX 列定义
 HEADERS = [
     "序号", "卖家", "标题", "售价", "想要",
-    "详情页链接", "商品图片", "itemId", "商品详情页截图",
+    "状态", "详情页链接", "商品图片", "itemId", "商品详情页截图",
 ]
-COL_WIDTHS = [6, 22, 60, 12, 12, 50, 50, 18, 30]
+COL_WIDTHS = [6, 22, 60, 12, 12, 10, 50, 50, 18, 30]
 IMG_WIDTH_PT = 220   # 截图嵌入宽度（点）
 IMG_HEIGHT_PT = 155  # 截图嵌入高度（点）
+PRODUCT_IMG_W = 100  # 商品图片嵌入宽度（点）
+PRODUCT_IMG_H = 100  # 商品图片嵌入高度（点）
 
 DEFAULT_PAGES = 5     # 默认采集页数
 
 
 import urllib.request
+import ssl
 import io as _io
 
 # ╔══════════════════════════════════════════════════════════════════╗
@@ -103,14 +106,14 @@ def check_captcha(page) -> bool:
     reason = ""
 
     try:
-        # ---- 第 0 层：主动等待验证码 DOM 出现（5s 内）----
+        # ---- 第 0 层：主动等待验证码 DOM 出现（3s 内）----
         try:
             page.wait_for_selector(
                 ".captcha_verify_container, .verify-captcha, "
                 ".login-modal, .goofish-login, "
                 "#nocaptcha, #nc_1_n1z, .captcha-box, .sm-pop-inner, "
                 ".slidetounlock, .bx_captcha_iframe, #baxia-dialog",
-                timeout=5000, state="attached",
+                timeout=3000, state="attached",
             )
         except Exception:
             pass
@@ -226,11 +229,15 @@ def resolve_json_path(json_path: str) -> str:
 # ╚══════════════════════════════════════════════════════════════════╝
 
 def get_keyword() -> str:
-    """从 --keyword 参数或交互输入获取搜索关键词。"""
+    """从位置参数、--keyword 参数或交互输入获取搜索关键词。"""
     if "--keyword" in sys.argv:
         idx = sys.argv.index("--keyword")
         if idx + 1 < len(sys.argv):
             return sys.argv[idx + 1]
+    # 第一个不以 -- 开头的位置参数作为关键词
+    for arg in sys.argv[1:]:
+        if not arg.startswith("--"):
+            return arg
     return input("请输入搜索关键词: ").strip()
 
 
@@ -360,10 +367,10 @@ def step0_auto_collect(keyword: str, max_pages: int = DEFAULT_PAGES,
     # 自动继续截图+XLSX
     print()
     log_step("继续执行截图...")
-    step2_screenshot(filename, captcha_pause=captcha_pause)
+    existing_ids, seller_names = step2_screenshot(filename, captcha_pause=captcha_pause)
     print()
     log_step("继续生成 XLSX...")
-    step3_to_xlsx(filename)
+    step3_to_xlsx(filename, existing_ids=existing_ids, seller_names=seller_names)
 
     return json_path
 
@@ -408,11 +415,14 @@ def step2_screenshot(json_path: str, captcha_pause: bool = True):
     pending = [it for it in items if it["itemId"] not in done_ids]
     skipped = len(items) - len(pending)
 
+    # 卖家名映射（从详情页抓取）
+    seller_names = {}  # itemId → sellerName
+
     if skipped:
         log_ok(f"跳过 {skipped} 个已有截图，待处理 {len(pending)} 个")
     if not pending:
         log_ok("所有商品已有截图，无需处理")
-        return
+        return done_ids, seller_names  # 返回已存在的ID集合 + 空卖家名
 
     # --- 2.4 启动浏览器 ---
     success = 0
@@ -439,25 +449,37 @@ def step2_screenshot(json_path: str, captcha_pause: bool = True):
         log_ok("浏览器已启动，开始截图...")
         print()
 
-        # --- 2.5 逐个截图 ---
-        for idx, item in enumerate(pending, 1):
+        # --- 2.5 逐个处理（遍历所有商品提取卖家名，只截图新商品） ---
+        for idx, item in enumerate(items, 1):
             item_id = item["itemId"]
             detail_url = item.get("detailUrl", "")
+            is_new = item_id not in done_ids
 
             if not detail_url:
-                log_warn(f"[{idx}/{len(pending)}] 无详情链接，跳过: {item_id}")
-                fail += 1
+                log_warn(f"[{idx}/{len(items)}] 无详情链接，跳过: {item_id}")
+                if is_new:
+                    fail += 1
                 continue
 
             snapshot_path = os.path.join(SCREENSHOTS_DIR, f"{item_id}.png")
 
             try:
-                print(f"  [{idx}/{len(pending)}] {item_id} ... ",
+                print(f"  [{idx}/{len(items)}] {item_id} ... ",
                       end="", flush=True)
 
                 page.goto(detail_url, timeout=30000, wait_until="domcontentloaded")
 
-                # 验证码检测
+                # 等待详情页关键元素渲染（价格/图片/「我想要」按钮）
+                try:
+                    page.wait_for_selector(
+                        '[class*="price"], [class*="item-image"], img[src*="alicdn"], '
+                        '[class*="want"], [class*="buy"], [class*="detail"]',
+                        timeout=8000,
+                    )
+                except Exception:
+                    pass  # 超时也不阻塞，继续截图
+
+                # 验证码检测（缩减轮询超时，减少每项等待时间）
                 if captcha_pause and check_captcha(page):
                     page.wait_for_timeout(2000)
 
@@ -465,18 +487,35 @@ def step2_screenshot(json_path: str, captcha_pause: bool = True):
                 wait_s = random.randint(*PAGE_WAIT)
                 page.wait_for_timeout(wait_s * 1000)
 
-                page.screenshot(path=snapshot_path, full_page=False)
-                print(f"✓ ({wait_s}s)", flush=True)
-                success += 1
+                # 从详情页提取卖家名（无论新旧商品都提取）
+                try:
+                    name = page.evaluate("""() => {
+                      const el = document.querySelector('[class*="item-user-info-nick"]');
+                      return el ? el.textContent.trim() : '';
+                    }""")
+                    if name:
+                        seller_names[item_id] = name
+                        name_extracted += 1
+                except Exception:
+                    pass
+
+                # 只截图新商品
+                if is_new:
+                    page.screenshot(path=snapshot_path, full_page=False)
+                    print(f"✓ ({wait_s}s)", flush=True)
+                    success += 1
+                else:
+                    print(f"✓ 提取卖家名", flush=True)
 
                 # 商品间停顿
-                if idx < len(pending):
+                if idx < len(items):
                     time.sleep(random.uniform(*BETWEEN_WAIT))
             except Exception:
                 print("✗", flush=True)
-                log_warn(f"[{idx}/{len(pending)}] {item_id} 失败: "
+                log_warn(f"[{idx}/{len(items)}] {item_id} 失败: "
                          f"{traceback.format_exc().splitlines()[-1]}")
-                fail += 1
+                if is_new:
+                    fail += 1
 
         context.close()
 
@@ -484,16 +523,20 @@ def step2_screenshot(json_path: str, captcha_pause: bool = True):
     total = success + skipped + fail
     print()
     log_ok(f"截图完成: 新增 {success}, 跳过 {skipped}, 失败 {fail}, 共 {total}/{len(items)}")
+    log_ok(f"从详情页提取卖家名: {name_extracted} 个")
+    return done_ids, seller_names  # 返回截图前的已存在ID集合 + 卖家名映射
 
 
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║                   Step 3: JSON → XLSX                            ║
 # ╚══════════════════════════════════════════════════════════════════╝
 
-def step3_to_xlsx(json_path: str):
+def step3_to_xlsx(json_path: str, existing_ids: set = None, seller_names: dict = None):
     """
     将搜索结果 JSON + 截图合并为一个 XLSX 文件。
     截图以图片形式嵌入到「商品详情页截图」列。
+    existing_ids: 截图前已存在的 itemId 集合，用于标记「新增/已爬取」。
+    seller_names: {itemId: sellerName} 从详情页抓取的卖家名映射。
     """
     # --- 3.1 校验依赖 ---
     try:
@@ -515,6 +558,14 @@ def step3_to_xlsx(json_path: str):
         return
 
     log_step(f"数据 {len(items)} 条 → 生成 XLSX ...")
+
+    # 若无传入，从截图目录推断已存在的 itemId
+    if existing_ids is None:
+        existing_ids = set()
+        if os.path.exists(SCREENSHOTS_DIR):
+            existing_ids = {f.replace(".png", "") for f in os.listdir(SCREENSHOTS_DIR) if f.endswith(".png")}
+    if seller_names is None:
+        seller_names = {}
 
     # --- 3.3 写入工作簿 ---
     wb = Workbook()
@@ -543,31 +594,69 @@ def step3_to_xlsx(json_path: str):
     # 数据行
     data_font = Font(name="微软雅黑", size=10)
     screenshot_col = len(HEADERS)  # 最后一列 = 截图列号
+    product_img_col = 8  # "商品图片" 列号
     img_ok = 0
     img_miss = 0
+    product_img_ok = 0
+    product_img_miss = 0
+
+    # SSL 上下文（复用于图片下载）
+    ssl_ctx = ssl.create_default_context()
+    ssl_ctx.check_hostname = False
+    ssl_ctx.verify_mode = ssl.CERT_NONE
+
+    log_step("正在下载商品图片...")
 
     for row_idx, item in enumerate(items, 2):
+        item_id = item.get("itemId", "")
+        status = "已爬取" if item_id in existing_ids else "新增"
+        image_url = item.get("image", "")
+        # 卖家名：优先用详情页抓取的，其次用搜索页地区
+        seller_display = seller_names.get(item_id) or item.get("location", "")
+
         row_data = [
             row_idx - 1,
-            item.get("seller", ""),
+            seller_display,
             item.get("title", ""),
             item.get("price", ""),
             item.get("wantCount", ""),
+            status,
             item.get("detailUrl", ""),
-            item.get("image", ""),
-            item.get("itemId", ""),
+            "",  # 商品图片列——后面嵌入图片
+            item_id,
             "",  # 截图列——后面嵌入图片
         ]
         for col, val in enumerate(row_data, 1):
             cell = ws.cell(row=row_idx, column=col, value=val)
             cell.font = data_font
             cell.border = thin_border
-            align_h = "center" if col in (1, 4, 5, 8) else "left"
+            align_h = "center" if col in (1, 4, 5, 6, 9) else "left"
             cell.alignment = Alignment(horizontal=align_h, vertical="center",
-                                       wrap_text=(col in (2, 3, 6, 7)))
+                                       wrap_text=(col in (2, 3, 7)))
 
-        # 行高（预留给截图）
+        # 行高（预留给截图和商品图）
         ws.row_dimensions[row_idx].height = IMG_HEIGHT_PT + 8
+
+        # --- 嵌入商品图片（内存下载，不落盘） ---
+        if image_url:
+            try:
+                req = urllib.request.Request(image_url, headers={
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+                    "Referer": "https://www.goofish.com/",
+                })
+                with urllib.request.urlopen(req, context=ssl_ctx, timeout=10) as resp:
+                    img_data = io.BytesIO(resp.read())
+                pimg = XlImage(img_data)
+                pimg.width = PRODUCT_IMG_W
+                pimg.height = PRODUCT_IMG_H
+                ws.add_image(pimg, f"{get_column_letter(product_img_col)}{row_idx}")
+                product_img_ok += 1
+            except Exception:
+                ws.cell(row=row_idx, column=product_img_col, value=image_url)
+                product_img_miss += 1
+        else:
+            ws.cell(row=row_idx, column=product_img_col, value="(无图片)")
+            product_img_miss += 1
 
         # --- 嵌入截图 ---
         item_id = item.get("itemId", "")
@@ -597,7 +686,9 @@ def step3_to_xlsx(json_path: str):
 
     print()
     log_ok(f"XLSX 已保存: {out_path}")
-    log_ok(f"数据 {len(items)} 条 | 截图嵌入 {img_ok}/{len(items)} 张")
+    log_ok(f"数据 {len(items)} 条 | 商品图嵌入 {product_img_ok}/{len(items)} | 截图嵌入 {img_ok}/{len(items)}")
+    if product_img_miss:
+        log_warn(f"{product_img_miss} 条商品图下载失败（保留URL）")
     if img_miss:
         log_warn(f"{img_miss} 条缺少截图（需先运行 --screenshot）")
 
@@ -646,9 +737,9 @@ def main():
             log_err("请指定 JSON 文件路径")
             sys.exit(1)
         log_step(f"从 JSON 文件开始: {json_file}")
-        step2_screenshot(json_file, captcha_pause=captcha_pause)
+        existing_ids, seller_names = step2_screenshot(json_file, captcha_pause=captcha_pause)
         print()
-        step3_to_xlsx(json_file)
+        step3_to_xlsx(json_file, existing_ids=existing_ids, seller_names=seller_names)
 
     else:
         # 模式1: 指定关键词，输出提取脚本
