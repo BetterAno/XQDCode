@@ -1,0 +1,18 @@
+[
+  {
+    "name": "F2RPud6G9GkQO",
+    "value": "60qzqBmfos6nUfKMYjEpXL47Wf2U6O06Z06zSHbnb4ENrHIhuAtbk43pvfBc5KPPXs.VsWRa6hl03oMzXWmLgQhq",
+    "domain": "sugh.szu.edu.cn",
+    "path": "/",
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "F2RPud6G9GkQP",
+    "value": "0veh48bnbukCje1UktwleC99uA1GaWmuwOaPGbSo.HFlxkI9qzXXR2KSFo_OlKTeQywYD5KV.PsnJpH4k3QKSgJyHShvWtbvnxWzhwcnnZEybVAU9Ens17jdc1ObwQ21Cm_4WTPSF192ph3Z7JrLIR9_KjgxJ1FnEDSXkSbqVLG7Mn521ogDZGe.uUeRlCLikJbRVcQsUL79Q5XH0p5aTlYRZR2qDSY56.6xQ2q9F6Nl35N7bRUHCtOx3sUncjKSlx878c5GKTMcJYr3vI82CtG",
+    "domain": "sugh.szu.edu.cn",
+    "path": "/",
+    "httpOnly": false,
+    "secure": true
+  }
+]

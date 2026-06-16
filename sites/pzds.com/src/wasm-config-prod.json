@@ -1,0 +1,55 @@
+{
+  "currentVersion": "v13",
+  "candidateVersion": "v14",
+  "rollout": {
+    "percent": 100,
+    "salt": "sign-v3-20260423"
+  },
+  "wasm": {
+    "v13": {
+      "url": "https://oss.pzds.com/mobileV3/87720fce.wasm",
+      "sha256": "sha256-of-sign-v13"
+    },
+    "v14": {
+      "url": "https://oss.pzds.com/mobileV3/e07eecc3.wasm",
+      "sha256": "sha256-of-sign-v14"
+    }
+  },
+  "pc": {
+    "currentVersion": "v16",
+    "candidateVersion": "v17",
+    "apiFullList": false,
+    "rollout": {
+      "percent": 100
+    },
+    "wasm": {
+      "v17": {
+        "url": "https://oss.pzds.com/mobileV3/ad96acb6.wasm",
+        "sha256": "sha256-of-sign-v2"
+      },
+      "v16": {
+        "url": "https://oss.pzds.com/mobileV3/ffb74daf.wasm",
+        "sha256": "sha256-of-sign-v2"
+      }
+    }
+  },
+  "h5": {
+    "currentVersion": "v13",
+    "candidateVersion": "v14",
+    "apiFullList": false,
+    "rollout": {
+      "percent": 100,
+      "salt": "sign-v3-20260423"
+    },
+    "wasm": {
+      "v13": {
+        "url": "https://oss.pzds.com/mobileV3/87720fce.wasm",
+        "sha256": "sha256-of-sign-v13"
+      },
+      "v14": {
+        "url": "https://oss.pzds.com/mobileV3/e07eecc3.wasm",
+        "sha256": "sha256-of-sign-v14"
+      }
+    }
+  }
+}

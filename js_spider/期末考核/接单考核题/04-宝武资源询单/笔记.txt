@@ -1,0 +1,8 @@
+
+网址: https://qiye.obei.com.cn/web-zone/bwzy/procurement.html
+接口: https://qiye.obei.com.cn/web-zone/api/sys/zone/getPurchaseList
+
+请求头加密参数 traceparent 不校验
+
+cookie (不校验)
+ENVTGhxsh01MP: 加密过程类似瑞数, 具有类似ts代码和外链文件

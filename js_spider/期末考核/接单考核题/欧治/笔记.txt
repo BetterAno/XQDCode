@@ -1,0 +1,9 @@
+欧治瑞数cookie
+
+请求接口: https://www.ouyeel.com/search-ng/commoditySearch/queryCommodityResult
+
+请求中有查询字符串参数, 但是在通过py请求的时候不带反而能获取到数据.
+
+分析网页当中查询字符串参数的生成位置
+
+请求接口中的响应参数不好解析提取出关键数据

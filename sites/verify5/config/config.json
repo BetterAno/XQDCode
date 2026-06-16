@@ -1,0 +1,90 @@
+{
+    "target": {
+        "url": "https://www.verify5.com/demo",
+        "site_name": "verify5",
+        "captcha_type": "slider"
+    },
+    "sdk": {
+        "version": "2.6.2",
+        "cdn_script": "https://s.verify5.com/assets/latest/v5.js",
+        "cdn_images": "https://ss.verify5.com/s"
+    },
+    "websocket": {
+        "host": "wss://verify5.com/ws",
+        "protocol": "verify5-2.6.2",
+        "chunk_size": 1024,
+        "safari_chunk_size": 186,
+        "reconnect_delay": 500,
+        "max_reconnect": 3
+    },
+    "encryption": {
+        "algorithm": "AES-256-CTR",
+        "hash_algorithm": "MurmurHash3_x64_128",
+        "key_derivation": "Y_XOR",
+        "seed": 31,
+        "random_iv_length": 16
+    },
+    "fingerprint": {
+        "use_canvas_fp": false,
+        "use_webgl_fp": false,
+        "use_audio_fp": false,
+        "use_font_detection": false,
+        "answer_static_fp": {
+            "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36",
+            "language": "zh-CN",
+            "platform": "Win32",
+            "screenResolution": [1920, 1080],
+            "colorDepth": 24,
+            "hardwareConcurrency": 8,
+            "timezone": "Asia/Shanghai",
+            "timezoneOffset": -480
+        }
+    },
+    "track": {
+        "min_steps": 15,
+        "max_steps": 50,
+        "accel_ratio": 0.2,
+        "steady_ratio": 0.55,
+        "decel_ratio": 0.25,
+        "y_jitter": 3,
+        "time_interval_min": 8,
+        "time_interval_max": 25,
+        "back_adjustment": true,
+        "back_pixels": 5
+    },
+    "image": {
+        "bg_width": 260,
+        "bg_height": 160,
+        "slice_width": 52,
+        "slice_height": 60,
+        "canny_low": 80,
+        "canny_high": 180,
+        "match_method": "TM_CCOEFF_NORMED"
+    },
+    "http": {
+        "headers": {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36",
+            "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+        },
+        "timeout": 15,
+        "retry": 3,
+        "retry_delay": 1
+    },
+    "logging": {
+        "level": "INFO",
+        "format": "%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+        "log_dir": "logs"
+    },
+    "yunma": {
+        "token": "tR5pqscPQ0EI8n7thn38hAIyyakstNb6-DFUuT9pGwI",
+        "api_url": "http://api.jfbym.com/api/YmServer/customApi",
+        "captcha_type": "20111",
+        "distance_correction": 0,
+        "max_retries": 3,
+        "base_delay": 1.0,
+        "timeout": 30,
+        "enabled": true,
+        "priority": "fallback"
+    }
+}

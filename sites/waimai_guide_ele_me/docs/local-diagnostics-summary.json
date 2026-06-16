@@ -1,0 +1,178 @@
+{
+  "generatedAt": "2026-05-23T09:45:52.305Z",
+  "note": "Local fake-data diagnostic summary. Security SDK outputs are represented as status or redacted digests.",
+  "runs": [
+    {
+      "script": "sdk_local_simulation.js",
+      "status": 0,
+      "ok": true,
+      "stdout": "[Sat May 23 2026 17:45:51 GMT+0800 (中国标准时间)]\n{\n  \"generatedAt\": \"2026-05-23T09:45:52.084Z\",\n  \"load\": {\n    \"ok\": 9,\n    \"total\": 9,\n    \"failed\": []\n  },\n  \"awscFeatures\": [\n    {\n      \"feature\": \"uab\",\n      \"ok\": true,\n      \"state\": \"loaded\",\n      \"moduleType\": \"object\",\n      \"keys\": [\n        \"getUA\",\n        \"isReadyForSC\",\n        \"resetSA\",\n        \"decryptJSON\",\n        \"getVersion\"\n      ],\n      \"fakeUA\": {\n        \"ok\": true,\n        \"redacted\": true,\n        \"digest\": {\n          \"type\": \"string\",\n          \"length\": 3504,\n          \"sha256_16\": \"869c14ca856fcc7f\"\n        }\n      }\n    },\n    {\n      \"feature\": \"um\",\n      \"ok\": true,\n      \"state\": \"loaded\",\n      \"moduleType\": \"object\",\n      \"keys\": [\n        \"st\",\n        \"init\",\n        \"getVersion\",\n        \"at\"\n      ]\n    },\n    {\n      \"feature\": \"et\",\n      \"ok\": true,\n      \"state\": \"loaded\",\n      \"moduleType\": \"object\",\n      \"keys\": [\n        \"ver\",\n        \"jsv\",\n        \"getETToken\",\n        \"LTKProduct\",\n        \"LTKConsume\",\n        \"AECookie\",\n        \"load\"\n      ]\n    }\n  ],\n  \"globals\": {\n    \"AWSC\": \"object\",\n    \"AWSCInner\": \"object\",\n    \"__etModule\": \"object\",\n    \"__fyModule\": \"undefined\",\n    \"__uabModule\": \"undefined\",\n    \"__umidModule\": \"undefined\",\n    \"etSign\": \"function\",\n    \"x_check\": \"function\",\n    \"baxiaCommon\": \"function\",\n    \"lib\": \"undefined\",\n    \"EBridgeClientAPI\": \"function\"\n  },\n  \"browserParity\": {\n    \"note\": \"Diagnostic Chrome-shape patch only; verify against a live browser baseline before trusting parity.\",\n    \"nodeLeakKeys\": [],\n    \"prototypeChecks\": {\n      \"document\": true,\n      \"navigator\": true,\n      \"localStorage\": true,\n      \"body\": true,\n      \"head\": true,\n      \"xhr\": true\n    },\n    \"toStringChecks\": {\n      \"fetch\": \"function fetch() { [native code] }\",\n      \"xhrOpen\": \"function open() { [native code] }\",\n      \"createElement\": \"function createElement() { [native code] }\"\n    },\n    \"navigatorKeys\": [\n      \"appCodeName\",\n      \"appName\",\n      \"appVersion\",\n      \"connection\",\n      \"cookieEnabled\",\n      \"deviceMemory\",\n      \"doNotTrack\",\n      \"hardwareConcurrency\",\n      \"javaEnabled\",\n      \"language\",\n      \"languages\",\n      \"maxTouchPoints\",\n      \"mimeTypes\",\n      \"onLine\",\n      \"pdfViewerEnabled\",\n      \"permissions\",\n      \"platform\",\n      \"plugins\",\n      \"product\",\n      \"productSub\",\n      \"userAgent\",\n      \"userAgentData\",\n      \"vendor\",\n      \"webdriver\"\n    ]\n  },\n  \"expiredSample\": {\n    \"note\": \"Expired captured sample for offline parity only; no network request is made.\",\n    \"expectedSign\": \"8d3fa332a8e04ee6bf0504dae3f27c55\",\n    \"signMatches\": true,\n    \"dataLength\": 596,\n    \"browserBxEtLengthBaseline\": 469\n  },\n  \"fakeParamStatus\": {\n    \"t\": \"ok\",\n    \"sign\": \"ok\",\n    \"bx_et\": \"ok\",\n    \"bx_et_getETToken\": \"ok\",\n    \"x_ele_check\": \"ok\",\n    \"x_ele_ua\": \"ok\",\n    \"bx_umidtoken\": \"ok\"\n  },\n  \"fakeParamDigests\": {\n    \"bx_et\": {\n      \"type\": \"string\",\n      \"length\": 457,\n      \"sha256_16\": \"916bd945a4ff66e0\"\n    },\n    \"bx_et_getETToken\": {\n      \"type\": \"string\",\n      \"length\": 457,\n      \"sha256_16\": \"004af1e21379ab4c\"\n    }\n  },\n  \"behaviorSeed\": {\n    \"mode\": \"deterministic expired-sample parity events\",\n    \"dispatched\": 15,\n    \"extraMoves\": 0\n  },\n  \"dynamicResources\": [\n    \"https://g.alicdn.com/AWSC/et/1.83.41/et_f.js\"\n  ],\n  \"xhrUrls\": [\n    \"https://h5-data.elemecdn.com/ele-check-h5-config/config/zh_CN.json\",\n    \"https://h5-data.elemecdn.com/ele-check-h5-config/config/zh_CN.json\"\n  ],\n  \"staticDependencies\": {\n    \"sdk/AWSC__AWSC__awsc.js\": [\n      \"https://acjs.aliyun.com/error?v=\",\n      \"https://aeis.alicdn.com/\",\n      \"https://assets.alicdn.com/\",\n      \"https://assets.aliexpress-media.com/\",\n      \"https://g.alicdn.com/\",\n      \"https://g.lazcdn.com/\",\n      \"https://lzd-g.slatic.net/\"\n    ],\n    \"sdk/sd__baxia__2.5.36__baxiaCommon.js\": [\n      \"//g.alicdn.com/sd/baxia/\",\n      \"//g.alicdn.com/sd/nch5/index.js\",\n      \"//g.alicdn.com/sd/ncpc/nc.js\",\n      \"https://g.alicdn.com/sd/baxia/\"\n    ],\n    \"sdk/sd__baxia__2.5.36__baxiaXhrHandler.js\": [\n      \"//g.alicdn.com/sd/nch5/index.js\",\n      \"//g.alicdn.com/sd/ncpc/nc.js\",\n      \"https://fourier.taobao.com/ts?ext=200&uuid=\"\n    ],\n    \"sdk/sd__baxia__2.5.36__baxiaFetchHandler.js\": [\n      \"//g.alicdn.com/sd/nch5/index.js\",\n      \"//g.alicdn.com/sd/ncpc/nc.js\",\n      \"https://fourier.taobao.com/ts?ext=200&uuid=\"\n    ],\n    \"elecheck-cl-legacy-1.1.7.js\": [\n      \"https://github.com/zloirock/core-js\",\n      \"https://github.com/zloirock/core-js/blob/v3.43.0/LICENSE\",\n      \"https://mozilla.github.io/localForage/#definedriver\"\n    ],\n    \"elecheck-cl-polyfill-1.1.7.js\": [\n      \"./cl_babel-CP8i_Swq.js\",\n      \"https://github.com/zloirock/core-js\",\n      \"https://github.com/zloirock/core-js/blob/v3.43.0/LICENSE\"\n    ],\n    \"elecheck-cl-vendor-1.1.7.js\": [\n      \"./cl_babel-CP8i_Swq.js\",\n      \"https://mozilla.github.io/localForage/#definedriver\"\n    ],\n    \"elecheck-cl-1.1.7.js\": [\n      \"./cl_babel-CP8i_Swq.js\",\n      \"./cl_polyfill-DqZ71sDb.js\",\n      \"./cl_vendor-DXnIpoEh.js\"\n    ]\n  },\n  \"relatedReports\": {\n    \"elecheckEsmProbe\": \"E:\\\\PythonCodeObject1\\\\Qoder_ObjectProdemo2\\\\sites\\\\waimai_guide_ele_me\\\\docs\\\\elecheck-esm-probe.json\"\n  },\n  \"imageAttempts\": 1,\n  \"reportPath\": \"E:\\\\PythonCodeObject1\\\\Qoder_ObjectProdemo2\\\\sites\\\\waimai_guide_ele_me\\\\docs\\\\sdk-local-simulation.json\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "script": "elecheck_esm_probe.mjs",
+      "status": 0,
+      "ok": true,
+      "stdout": "{\n  \"generatedAt\": \"2026-05-23T09:45:52.283Z\",\n  \"imports\": [\n    {\n      \"file\": \"cl_babel-CP8i_Swq.js\",\n      \"ok\": true,\n      \"exports\": [\n        \"_\",\n        \"a\",\n        \"b\",\n        \"c\",\n        \"d\",\n        \"e\",\n        \"f\",\n        \"g\",\n        \"h\",\n        \"i\",\n        \"t\"\n      ]\n    },\n    {\n      \"file\": \"cl_polyfill-DqZ71sDb.js\",\n      \"ok\": true,\n      \"exports\": []\n    },\n    {\n      \"file\": \"cl_vendor-DXnIpoEh.js\",\n      \"ok\": true,\n      \"exports\": [\n        \"I\",\n        \"p\"\n      ]\n    },\n    {\n      \"file\": \"cl.js\",\n      \"ok\": true,\n      \"exports\": []\n    }\n  ],\n  \"after\": {\n    \"AWSC\": \"undefined\",\n    \"AWSCInner\": \"undefined\",\n    \"__etModule\": \"undefined\",\n    \"__fyModule\": \"undefined\",\n    \"__uabModule\": \"undefined\",\n    \"__umidModule\": \"undefined\",\n    \"etSign\": \"undefined\",\n    \"x_check\": \"function\",\n    \"baxiaCommon\": \"undefined\",\n    \"lib\": \"undefined\",\n    \"EBridgeClientAPI\": \"function\"\n  },\n  \"probes\": {\n    \"x_check\": {\n      \"ok\": true,\n      \"redacted\": true,\n      \"digest\": {\n        \"type\": \"string\",\n        \"length\": 576,\n        \"sha256_16\": \"5fb17e8d256cb1d9\"\n      }\n    },\n    \"answer\": {\n      \"ok\": false,\n      \"error\": \"globalThis.$answer is not available after ESM import\"\n    }\n  },\n  \"interestingGlobals\": [\n    \"ByteLengthQueuingStrategy\",\n    \"Element\",\n    \"HTMLAnchorElement\",\n    \"HTMLAudioElement\",\n    \"HTMLBodyElement\",\n    \"HTMLButtonElement\",\n    \"HTMLCanvasElement\",\n    \"HTMLDivElement\",\n    \"HTMLElement\",\n    \"HTMLFormElement\",\n    \"HTMLHeadElement\",\n    \"HTMLHtmlElement\",\n    \"HTMLIFrameElement\",\n    \"HTMLImageElement\",\n    \"HTMLInputElement\",\n    \"HTMLLinkElement\",\n    \"HTMLMediaElement\",\n    \"HTMLOptionElement\",\n    \"HTMLScriptElement\",\n    \"HTMLSelectElement\",\n    \"HTMLSpanElement\",\n    \"HTMLStyleElement\",\n    \"HTMLTemplateElement\",\n    \"HTMLTextAreaElement\",\n    \"HTMLUnknownElement\",\n    \"HTMLVideoElement\",\n    \"SVGElement\",\n    \"SVGSVGElement\",\n    \"WheelEvent\",\n    \"__x__init__v\",\n    \"__x__reset\",\n    \"x_check\"\n  ],\n  \"reportPath\": \"E:\\\\PythonCodeObject1\\\\Qoder_ObjectProdemo2\\\\sites\\\\waimai_guide_ele_me\\\\docs\\\\elecheck-esm-probe.json\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "sdk": {
+    "loadOk": 9,
+    "loadTotal": 9,
+    "awscFeatures": [
+      {
+        "feature": "uab",
+        "ok": true,
+        "state": "loaded",
+        "moduleType": "object",
+        "keys": [
+          "getUA",
+          "isReadyForSC",
+          "resetSA",
+          "decryptJSON",
+          "getVersion"
+        ],
+        "fakeUA": {
+          "ok": true,
+          "redacted": true,
+          "digest": {
+            "type": "string",
+            "length": 3504,
+            "sha256_16": "869c14ca856fcc7f"
+          }
+        }
+      },
+      {
+        "feature": "um",
+        "ok": true,
+        "state": "loaded",
+        "moduleType": "object",
+        "keys": [
+          "st",
+          "init",
+          "getVersion",
+          "at"
+        ]
+      },
+      {
+        "feature": "et",
+        "ok": true,
+        "state": "loaded",
+        "moduleType": "object",
+        "keys": [
+          "ver",
+          "jsv",
+          "getETToken",
+          "LTKProduct",
+          "LTKConsume",
+          "AECookie",
+          "load"
+        ]
+      }
+    ],
+    "fakeParamStatus": {
+      "t": "ok",
+      "sign": "ok",
+      "bx_et": "ok",
+      "bx_et_getETToken": "ok",
+      "x_ele_check": "ok",
+      "x_ele_ua": "ok",
+      "bx_umidtoken": "ok"
+    },
+    "fakeParamDigests": {
+      "bx_et": {
+        "type": "string",
+        "length": 457,
+        "sha256_16": "916bd945a4ff66e0"
+      },
+      "bx_et_getETToken": {
+        "type": "string",
+        "length": 457,
+        "sha256_16": "004af1e21379ab4c"
+      }
+    },
+    "expiredSample": {
+      "note": "Expired captured sample for offline parity only; no network request is made.",
+      "expectedSign": "8d3fa332a8e04ee6bf0504dae3f27c55",
+      "signMatches": true,
+      "dataLength": 596,
+      "browserBxEtLengthBaseline": 469
+    },
+    "behaviorSeed": {
+      "mode": "deterministic expired-sample parity events",
+      "dispatched": 15,
+      "extraMoves": 0
+    },
+    "nodeLeakKeys": [],
+    "autoConstructors": []
+  },
+  "elecheckEsm": {
+    "importOk": true,
+    "importFiles": [
+      {
+        "file": "cl_babel-CP8i_Swq.js",
+        "ok": true
+      },
+      {
+        "file": "cl_polyfill-DqZ71sDb.js",
+        "ok": true
+      },
+      {
+        "file": "cl_vendor-DXnIpoEh.js",
+        "ok": true
+      },
+      {
+        "file": "cl.js",
+        "ok": true
+      }
+    ],
+    "xCheck": {
+      "ok": true,
+      "redacted": true,
+      "digest": {
+        "type": "string",
+        "length": 576,
+        "sha256_16": "5fb17e8d256cb1d9"
+      }
+    },
+    "interestingGlobals": [
+      "ByteLengthQueuingStrategy",
+      "Element",
+      "HTMLAnchorElement",
+      "HTMLAudioElement",
+      "HTMLBodyElement",
+      "HTMLButtonElement",
+      "HTMLCanvasElement",
+      "HTMLDivElement",
+      "HTMLElement",
+      "HTMLFormElement",
+      "HTMLHeadElement",
+      "HTMLHtmlElement",
+      "HTMLIFrameElement",
+      "HTMLImageElement",
+      "HTMLInputElement",
+      "HTMLLinkElement",
+      "HTMLMediaElement",
+      "HTMLOptionElement",
+      "HTMLScriptElement",
+      "HTMLSelectElement",
+      "HTMLSpanElement",
+      "HTMLStyleElement",
+      "HTMLTemplateElement",
+      "HTMLTextAreaElement",
+      "HTMLUnknownElement",
+      "HTMLVideoElement",
+      "SVGElement",
+      "SVGSVGElement",
+      "WheelEvent",
+      "__x__init__v",
+      "__x__reset",
+      "x_check"
+    ]
+  },
+  "reports": {
+    "sdk": "E:\\PythonCodeObject1\\Qoder_ObjectProdemo2\\sites\\waimai_guide_ele_me\\docs\\sdk-local-simulation.json",
+    "elecheckEsm": "E:\\PythonCodeObject1\\Qoder_ObjectProdemo2\\sites\\waimai_guide_ele_me\\docs\\elecheck-esm-probe.json"
+  }
+}

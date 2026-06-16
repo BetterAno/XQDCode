@@ -1,0 +1,178 @@
+{
+  "generatedAt": "2026-05-23T09:45:52.283Z",
+  "note": "Local fake-data ESM loader diagnostic only. Security SDK return values are redacted to type/length/hash.",
+  "esmDir": "E:\\PythonCodeObject1\\Qoder_ObjectProdemo2\\sites\\waimai_guide_ele_me\\assets\\js\\elecheck-esm",
+  "before": {
+    "AWSC": "undefined",
+    "AWSCInner": "undefined",
+    "__etModule": "undefined",
+    "__fyModule": "undefined",
+    "__uabModule": "undefined",
+    "__umidModule": "undefined",
+    "etSign": "undefined",
+    "x_check": "undefined",
+    "baxiaCommon": "undefined",
+    "lib": "undefined",
+    "EBridgeClientAPI": "function"
+  },
+  "after": {
+    "AWSC": "undefined",
+    "AWSCInner": "undefined",
+    "__etModule": "undefined",
+    "__fyModule": "undefined",
+    "__uabModule": "undefined",
+    "__umidModule": "undefined",
+    "etSign": "undefined",
+    "x_check": "function",
+    "baxiaCommon": "undefined",
+    "lib": "undefined",
+    "EBridgeClientAPI": "function"
+  },
+  "importResults": [
+    {
+      "file": "cl_babel-CP8i_Swq.js",
+      "ok": true,
+      "exports": [
+        "_",
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "t"
+      ]
+    },
+    {
+      "file": "cl_polyfill-DqZ71sDb.js",
+      "ok": true,
+      "exports": []
+    },
+    {
+      "file": "cl_vendor-DXnIpoEh.js",
+      "ok": true,
+      "exports": [
+        "I",
+        "p"
+      ]
+    },
+    {
+      "file": "cl.js",
+      "ok": true,
+      "exports": []
+    }
+  ],
+  "probes": {
+    "x_check": {
+      "ok": true,
+      "redacted": true,
+      "digest": {
+        "type": "string",
+        "length": 576,
+        "sha256_16": "5fb17e8d256cb1d9"
+      }
+    },
+    "answer": {
+      "ok": false,
+      "error": "globalThis.$answer is not available after ESM import"
+    }
+  },
+  "interestingGlobals": [
+    "ByteLengthQueuingStrategy",
+    "Element",
+    "HTMLAnchorElement",
+    "HTMLAudioElement",
+    "HTMLBodyElement",
+    "HTMLButtonElement",
+    "HTMLCanvasElement",
+    "HTMLDivElement",
+    "HTMLElement",
+    "HTMLFormElement",
+    "HTMLHeadElement",
+    "HTMLHtmlElement",
+    "HTMLIFrameElement",
+    "HTMLImageElement",
+    "HTMLInputElement",
+    "HTMLLinkElement",
+    "HTMLMediaElement",
+    "HTMLOptionElement",
+    "HTMLScriptElement",
+    "HTMLSelectElement",
+    "HTMLSpanElement",
+    "HTMLStyleElement",
+    "HTMLTemplateElement",
+    "HTMLTextAreaElement",
+    "HTMLUnknownElement",
+    "HTMLVideoElement",
+    "SVGElement",
+    "SVGSVGElement",
+    "WheelEvent",
+    "__x__init__v",
+    "__x__reset",
+    "x_check"
+  ],
+  "browserParity": {
+    "note": "Diagnostic Chrome-shape patch only; verify against a live browser baseline before trusting parity.",
+    "nodeLeakKeys": [],
+    "prototypeChecks": {
+      "document": true,
+      "navigator": true,
+      "localStorage": true,
+      "body": true,
+      "head": true,
+      "xhr": true
+    },
+    "toStringChecks": {
+      "fetch": "function fetch() { [native code] }",
+      "xhrOpen": "function open() { [native code] }",
+      "createElement": "function createElement() { [native code] }"
+    },
+    "navigatorKeys": [
+      "appCodeName",
+      "appName",
+      "appVersion",
+      "connection",
+      "cookieEnabled",
+      "deviceMemory",
+      "doNotTrack",
+      "hardwareConcurrency",
+      "javaEnabled",
+      "language",
+      "languages",
+      "maxTouchPoints",
+      "mimeTypes",
+      "onLine",
+      "pdfViewerEnabled",
+      "permissions",
+      "platform",
+      "plugins",
+      "product",
+      "productSub",
+      "userAgent",
+      "userAgentData",
+      "vendor",
+      "webdriver"
+    ]
+  },
+  "networkAttempts": {
+    "xhr": [
+      {
+        "method": "GET",
+        "url": "https://h5-data.elemecdn.com/ele-check-h5-config/config/zh_CN.json",
+        "type": "open"
+      },
+      {
+        "method": "GET",
+        "url": "https://h5-data.elemecdn.com/ele-check-h5-config/config/zh_CN.json",
+        "body": null,
+        "type": "send"
+      }
+    ],
+    "fetch": [],
+    "imageCount": 0,
+    "imageFirst": []
+  }
+}

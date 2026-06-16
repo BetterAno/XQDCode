@@ -1,0 +1,9 @@
+{
+  "__comment__": "登录态 cookie 配置。用法：在浏览器登录 boss 后，F12 → Network → 找任一 joblist.json 请求 → Copy Cookie header 值粘贴到 raw_cookie。程序会自动解析。",
+  "raw_cookie": "lastCity=101250100; ab_guid=f59f3a34-b66b-4160-910b-b1cd341fd5fe; wt2=DnjGua8SS3JKc5O3gKXBd_1AVRuKVxp4iAaCmuJMdz5ta5ySxk4wfJx-cG2cG-ppz9hqOOI70tS-WZvHGmcSsUQ~~; wbg=0; zp_at=HgfxRbAskjzZX44qaFI84nZbUqGzRf9YrFkRjXEBJac~; __g=-; __zp_seo_uuid__=9a0980dc-a777-440d-82c2-968c9b680300; __zp_stoken__=492bgRUXDm8OIxILDiEo8KExFMURBUEVFTkNORUV0NEREREtQTSLCucONYMOPw5Vtw5tfwr5GMk5BTEVFREFFSiJOTURERUtCRMWDw4RDQiXCisSHUDEqw4nDhlPDi8OVbcOUH8KOw4UYd8OOFDPDhRgtw4EYScOFPDhoZhkfH2hpFm8UFGZpb20ZFBwfGWUWFG0UFhwbb2IYFyQuS8Kkw4lEw4XCqMOJRMOOxYrDhMKDw4pES0RINEhLwrg1TEtNQUVMR8WMxYfFg8WDxYLFjMWHxYPDm8SDw6jFh8WDw5PDg8WMxYfDk8SDw6PFjMWHxYPFg8SEw4s6RcKdw4TCtsSBxKHEncObxJHFhsKww63DjMOfwrHCk8Kvw6nDjMKhw43Dqm3Dv1nDt8K8wq%2FCocKpwqHCo8K1wpnCpMOywrPCuWbClHvEg3vCs8OKw4d8wpvCgMKWw4nCo2vCsMOJw4JcwrXDiVbDhm5YfsOOw49if8OMZHrCiF7ChW4cHxpPwozEj8O0w5I%3D; __c=1777436108; __l=r=https%3A%2F%2Fwww.google.com.hk%2F&l=%2Fwww.zhipin.com%2Fweb%2Fgeek%2Fjobs%3Fcity%3D100010000%26query%3Dpython&s=3&friend_source=0&s=3&friend_source=0; __a=19631298.1773061291.1777352103.1777436108.45.3.9.45",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+  "sec_ch_ua": "\"Brave\";v=\"147\", \"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"147\"",
+  "sec_ch_ua_platform": "\"Windows\"",
+  "query_keyword": "python",
+  "city_code": "100010000"
+}

@@ -1,0 +1,7 @@
+"""
+目标： 影视综Rank 首页数据top10
+url： https://www.chinaindex.net/ranklist/5
+要求： 字段不限，mongodb存储
+记录： 推测api https://www.chinaindex.net/iIndexMobileServer/teleplay/rank/waiting/fans 其它返回都太短
+        返回数据有加密
+"""

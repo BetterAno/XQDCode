@@ -1,0 +1,44 @@
+使用js-reverse-mcp接管当前打开的chrome，进行数据接口监听，用户会在页面进行操作
+
+已经操作完成，需要重点关注商品数据的接口
+
+目标网站：https://www.pzds.com/goodsList/7/6，需要你使用nodejs的方式实现里面的加密，请求使用python协议请求，禁止依赖任何浏览器或者自动化的方式实现，按照你的角色定义与规则进行工作，使用js-reverse-mcp进行动态访问或调试
+
+你可以调用你的skills，比如反混淆处理，纯算处理逻辑
+
+你现在进行浏览器的网络监听，帮我分析里面的整体链路和接口情况，用户会在页面进行操作。
+
+先生成一个plan给用户确定，补环境采用最小补环境方式可以纯算的进行纯算实现。
+
+验证码的图片识别使用云码进行识别，token:YH5M9mLF88nOtPZG9ToAeaKGm6CcCebgi1JsEalBRlg, 1.1.请求地址
+
+http://api.jfbym.com/api/YmServer/customApi
+
+1.2.参数列表
+
+参数名称	传值类型	说明	是否必须
+slide_image	string	滑块原图的base64编码	是
+background_image	string	背景原图的base64编码	是
+token	string	用户中心密钥	是
+type	string	20111	是
+2.1.反参
+参数名称	传值类型	说明
+code	int	状态值
+msg	string	请求说明
+data	array	打码数据
+--code	int	打码服务状态
+--data	string	识别结果（背景图上正确缺口最左边缘的x坐标）
+--time	string	打码服务时长
+2.2.code列表
+code	说明
+10000	识别成功
+10001	参数错误
+10002	余额不足
+10003	无此访问权限（未获取到有效token）
+10004	无此验证类型（type参数值不对）
+10005	网络拥塞
+10006	数据包过载
+10007	服务繁忙（接口模型无法处理图片参数）
+10008	网络错误，请稍后重试
+10009	结果准备中，请稍后再试
+10010	请求结束

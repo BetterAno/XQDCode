@@ -1,0 +1,27 @@
+{
+  "_source": "captured from real Chrome via js-reverse-mcp at fp breakpoint (u.ct=t.vkYOg(x,[n,o]))",
+  "_capture_time": "2026-05-04",
+  "_note": "capfp 每次会变（含时间/随机），sid 每次新建 session 会变；其他指纹字段稳定复用",
+  "sid_sample": "YFZzsAABAAAFErWkYksAMLwFdx_fIgPOGffoKl1BUZhQIcXlhCD8gNuqI8DSev-_if7ad7GeMw4Cvl-Hv88q_gAAAAA",
+  "devcInfo": "{\"account\":\"testuser\",\"uo\":\"{}\",\"capfp\":\"VD8zkqyxBSwmbSp9PjdKEpE5rUcPhZcoT9pD0mmLLvTHtv9ka-hzEPUd_nMxuITjh7jwSb_DxUGtTqRuYNPcltszzJQ=\",\"cvs\":\"0d27e182efcfe1826b2fd56a29b79742\",\"wgl\":\"ba6faa254e58a06a3de7ed87b7f1f4e5\",\"pr\":\"1\",\"cd\":\"32\",\"fv\":\"\",\"fts\":\"Arial,Calibri,Cambria,Consolas,Courier,CourierNew,Georgia,Helvetica,Impact,LucidaConsole,LucidaSansUnicode,MSGothic,MSPGothic,PalatinoLinotype,SegoePrint,SegoeScript,SegoeUI,Tahoma,Times,TimesNewRoman,TrebuchetMS,Verdana,Wingdings,Symbol,Candara,Constantia,Corbel,Ebrima,FangSong,Gabriola,MicrosoftYaHei,MicrosoftYiBaiti,MingLiUExtB,PMingLiUExtB,SimHei,SimSun,SimSunExtB\",\"scr\":\"2560x1440,2560x1392\",\"cpu\":\"24\",\"pt\":\"Win32\",\"tzo\":\"Asia/Shanghai\",\"lan\":\"en-US\",\"wvr\":\"Google Inc. (NVIDIA)~ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 Ti (0x00002803) Direct3D11 vs_5_0 ps_5_0, D3D11)\",\"wdr\":\"0\",\"mem\":\"32\",\"sdv\":\"2.0\",\"jsv\":\"1835ob\",\"sdf\":\"{\\\"zow1KK\\\":\\\"OvAUNI\\\",\\\"2h0ppG\\\":\\\"ar8Kxh\\\"}\",\"lns\":\"en-US\",\"tsp\":\"0\",\"pdf\":\"1\",\"cke\":\"1\",\"bid\":\"\",\"gpu\":\"8\",\"uat\":\"11\",\"ol\":\"1\",\"ets\":\"33\",\"wch\":\"0\",\"dcs\":\"\",\"wlh\":\"https%3A%2F%2Fpassport.jd.com%2Fnew%2Flogin.aspx\"}",
+  "A_skeleton": {
+    "initType": 0,
+    "captchaType": 0,
+    "isAppDisplayEmbed": false,
+    "audio": false,
+    "width": 0,
+    "language": 1,
+    "display": "popup",
+    "host": "//jcap.m.jd.com",
+    "tdat_code": 99992,
+    "platformType": 3,
+    "platformOS": "pc",
+    "tdat_ctx": "A8RpzPvMpQPEEPZC737Wbcqo4er3yvFj4ubEUKiJqqus7qCcnO2epKHwrvn5qfin9_murquvurqxtb0DAwe3Bgutzs_QE78RyxfGFsXL0soaHBwd0dPT28_U1djaK9bY3tje2yzy8vP0oKan",
+    "cs": 1,
+    "ncsc": 0,
+    "csc": 0,
+    "sen": 0,
+    "zIndex": 9999,
+    "zoomRatio": 1
+  }
+}

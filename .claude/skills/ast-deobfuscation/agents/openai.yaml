@@ -1,0 +1,4 @@
+interface:
+  display_name: "AST Deobfuscation"
+  short_description: "分层、可回退的 JS AST 反混淆"
+  default_prompt: "Use $ast-deobfuscation to detect a JavaScript obfuscation family and run a safe staged cleanup pipeline."

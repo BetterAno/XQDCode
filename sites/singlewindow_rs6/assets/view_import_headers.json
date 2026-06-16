@@ -1,0 +1,13 @@
+{
+  "server": "SingleWindow",
+  "date": "Tue, 19 May 2026 10:55:22 GMT",
+  "content-type": "text/html;charset=utf-8",
+  "transfer-encoding": "chunked",
+  "connection": "keep-alive",
+  "set-cookie": "JSESSIONID=f9f4ce07-54e9-435d-889b-9516dfb27544; Domain=swapp.singlewindow.cn; Path=/; HttpOnly, CKvDhNH2GZibO=qapwqCzn6rELEYPL8y8Re7CssIDkl4bSFIYEoE6kTt7EOvqoL5fkdydVG8bg-bL2yZl4xQKSFAN-6f5HICEz__cEFj_eiMUEsVwzT_Tix0j2A; Path=/; expires=Fri, 16 May 2036 10:55:22 GMT; Secure; SameSite=None; HttpOnly",
+  "content-language": "zh-CN",
+  "pragma": "no-cache",
+  "cache-control": "no-store",
+  "expires": "Tue, 19 May 2026 10:55:22 GMT",
+  "content-encoding": "gzip"
+}

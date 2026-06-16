@@ -1,0 +1,166 @@
+{
+  "generatedAt": "2026-05-23T07:07:37.487Z",
+  "count": 20,
+  "okCount": 19,
+  "results": [
+    {
+      "url": "https://g.alicdn.com/secdev/sufei_data/3.9.14/index.js",
+      "source": "baxia-entry-index.js loader",
+      "file": "assets\\js\\sdk\\secdev__sufei_data__3.9.14__index.js",
+      "status": "cached",
+      "bytes": 17754,
+      "sha256": "f4425a89ec24254262bc3d81a838890e5c9740428e28cd96e520c5bf8ddffa4c"
+    },
+    {
+      "url": "https://g.alicdn.com/AWSC/AWSC/awsc.js",
+      "source": "baxia-entry-index.js loader",
+      "file": "assets\\js\\sdk\\AWSC__AWSC__awsc.js",
+      "status": "cached",
+      "bytes": 10875,
+      "sha256": "3c3b2a3ab119b44f22a4a8497273551448080b9b14b3084a29fc5439a9fdd41b"
+    },
+    {
+      "url": "https://g.alicdn.com/AWSC/fireyejs/1.231.67/fireyejs.js",
+      "source": "awsc.js module config",
+      "file": "assets\\js\\sdk\\AWSC__fireyejs__1.231.67__fireyejs.js",
+      "status": "cached",
+      "bytes": 462779,
+      "sha256": "01a202f4062ee1bc943c169d911921b94d210ff6cf239bef1698029610668632"
+    },
+    {
+      "url": "https://g.alicdn.com/AWSC/fireyejs/1.231.69/fireyejs.js",
+      "source": "baxia-entry-index.js loader",
+      "file": "assets\\js\\sdk\\AWSC__fireyejs__1.231.69__fireyejs.js",
+      "status": "cached",
+      "bytes": 471372,
+      "sha256": "f86050b7d92e68c58e6c4fad72b18159b1c817b50050bf8b8e0553fde8db2163"
+    },
+    {
+      "url": "https://g.alicdn.com/AWSC/uab/1.140.0/collina.js",
+      "source": "awsc.js module config",
+      "file": "assets\\js\\sdk\\AWSC__uab__1.140.0__collina.js",
+      "status": "cached",
+      "bytes": 248730,
+      "sha256": "04975704505b42dc124568d9d4be26aee2d4592826a0487920cb1d016d1a8e58"
+    },
+    {
+      "url": "https://g.alicdn.com/AWSC/WebUMID/1.93.0/um.js",
+      "source": "awsc.js module config",
+      "file": "assets\\js\\sdk\\AWSC__WebUMID__1.93.0__um.js",
+      "status": "cached",
+      "bytes": 177654,
+      "sha256": "4c4701ca975df0019b9ce5ffd2a8d33f413bad55663a9f64ba9369da7a444db0"
+    },
+    {
+      "url": "https://g.alicdn.com/AWSC/et/1.83.41/et_f.js",
+      "source": "awsc.js module config",
+      "file": "assets\\js\\sdk\\AWSC__et__1.83.41__et_f.js",
+      "status": "cached",
+      "bytes": 320510,
+      "sha256": "85b7432e3f622aeaa14fa5daca54438b4f4c0e2d3d98466957a48f9090f0bc01"
+    },
+    {
+      "url": "https://g.alicdn.com/AWSC/et/1.83.35/et_f.js",
+      "source": "awsc.js module config",
+      "file": "assets\\js\\sdk\\AWSC__et__1.83.35__et_f.js",
+      "status": "cached",
+      "bytes": 295155,
+      "sha256": "b2b659fcc9b076682b602188df870cab2b00b7c698f0eb9ee8a8c4b2726cba31"
+    },
+    {
+      "url": "https://g.alicdn.com/AWSC/nc/1.97.0/nc.js",
+      "source": "awsc.js module config",
+      "file": "assets\\js\\sdk\\AWSC__nc__1.97.0__nc.js",
+      "status": "cached",
+      "bytes": 72240,
+      "sha256": "94b2b99ad074012c1ce6d21a3827fecf7e4d7614babb94768282e0a17b071895"
+    },
+    {
+      "url": "https://g.alicdn.com/js/nc/60.js",
+      "source": "awsc.js module config",
+      "file": "assets\\js\\sdk\\js__nc__60.js",
+      "status": "http_404",
+      "bytes": 0
+    },
+    {
+      "url": "https://g.alicdn.com/sd/baxia/2.5.36/baxiaCommon.js",
+      "source": "seed",
+      "file": "assets\\js\\sdk\\sd__baxia__2.5.36__baxiaCommon.js",
+      "status": "cached",
+      "bytes": 37374,
+      "sha256": "65fef21fbe3258592f83014d9e24d04098070b28fb21538d220ac2f38fe2f348"
+    },
+    {
+      "url": "https://g.alicdn.com/sd/baxia/2.5.36/baxiaXhrHandler.js",
+      "source": "baxiaCommon handler path",
+      "file": "assets\\js\\sdk\\sd__baxia__2.5.36__baxiaXhrHandler.js",
+      "status": "cached",
+      "bytes": 21471,
+      "sha256": "8568bba1a439a2bc9ea7471dd530e56a8916647564cf396d31ab30a3e719c828"
+    },
+    {
+      "url": "https://g.alicdn.com/AWSC-br/uab/1.140.0/collina.js",
+      "source": "awsc.js module config",
+      "file": "assets\\js\\sdk\\AWSC-br__uab__1.140.0__collina.js",
+      "status": "cached",
+      "bytes": 248730,
+      "sha256": "04975704505b42dc124568d9d4be26aee2d4592826a0487920cb1d016d1a8e58"
+    },
+    {
+      "url": "https://g.alicdn.com/AWSC-br/fireyejs/1.227.0/fireyejs.js",
+      "source": "awsc.js module config",
+      "file": "assets\\js\\sdk\\AWSC-br__fireyejs__1.227.0__fireyejs.js",
+      "status": "cached",
+      "bytes": 88598,
+      "sha256": "e525fb47d43eee47390b479c09f898569993ed2f66c6a730e64520bb1e23a6b3"
+    },
+    {
+      "url": "https://g.alicdn.com/AWSC-br/WebUMID/1.93.0/um.js",
+      "source": "awsc.js module config",
+      "file": "assets\\js\\sdk\\AWSC-br__WebUMID__1.93.0__um.js",
+      "status": "cached",
+      "bytes": 177654,
+      "sha256": "4c4701ca975df0019b9ce5ffd2a8d33f413bad55663a9f64ba9369da7a444db0"
+    },
+    {
+      "url": "https://g.alicdn.com/AWSC-br/et/1.80.0/et_f.js",
+      "source": "awsc.js module config",
+      "file": "assets\\js\\sdk\\AWSC-br__et__1.80.0__et_f.js",
+      "status": "cached",
+      "bytes": 244173,
+      "sha256": "58cf1234d43c5434d1b822a982a5f2e011a04fcaadf8fc451cfa078240e72e51"
+    },
+    {
+      "url": "https://g.alicdn.com/AWSC-br/et/1.80.1/et_n.js",
+      "source": "awsc.js module config",
+      "file": "assets\\js\\sdk\\AWSC-br__et__1.80.1__et_n.js",
+      "status": "cached",
+      "bytes": 260665,
+      "sha256": "b5ab4139501bfab37685b21b296baa2db39b6afc3c52189e43d56d25e0ffc74e"
+    },
+    {
+      "url": "https://g.alicdn.com/AWSC/fireyejs/1.234.20/fireyejs.js",
+      "source": "awsc.js module config",
+      "file": "assets\\js\\sdk\\AWSC__fireyejs__1.234.20__fireyejs.js",
+      "status": "cached",
+      "bytes": 582982,
+      "sha256": "b735c02928bc1c4fab6121c6d3139f34675e6c24044eae169363e7c32864da62"
+    },
+    {
+      "url": "https://g.alicdn.com/AWSC/fireyejs/1.234.24/fireyejs.js",
+      "source": "awsc.js module config",
+      "file": "assets\\js\\sdk\\AWSC__fireyejs__1.234.24__fireyejs.js",
+      "status": "cached",
+      "bytes": 550996,
+      "sha256": "7b011c7d48ea0a7ddc87a430c6b087471cd9bd5d7901a30b262f511354ff30f0"
+    },
+    {
+      "url": "https://g.alicdn.com/sd/baxia/2.5.36/baxiaFetchHandler.js",
+      "source": "baxiaCommon handler path",
+      "file": "assets\\js\\sdk\\sd__baxia__2.5.36__baxiaFetchHandler.js",
+      "status": "cached",
+      "bytes": 21232,
+      "sha256": "db2fe84bcb77930bcf7d17f3319a52de56a01e8a4ff9e6a572df344b6bad4745"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+﻿Total length: 343151 chars
+
+======================================================================
+1. FINDING c(n) STRING DECODER
+  c function NOT found directly, trying alternative patterns...
+
+======================================================================
+2. STRING TABLE DECODING
+  Found a[] at offset 383
+  Length: 124414
+
+======================================================================
+3. XOR SEED HUNTING
+  Seed '3n2l3o2f2' NOT found in source
+
+======================================================================
+4. H5guard.init FUNCTION
+  Pattern '(init|getfp|getId|sign)\s*:\s*function\s...' found 1 matches
+    At offset 151957: ...sign:function(l7){if(null===l7||void 0===l7)throw new TypeError(c(525));for(var l8=Object(l7),l9=0;l9<(arguments[c(152)]...
+
+======================================================================
+5. KEY SIGNING FUNCTIONS
+  function k0: 11781 chars, 57 c() refs
+    function k0(lI,lJ){if(1==e5())return lI;var lK=Date[c(787)]();try{if(jP+=1,jO[c(3368)]=jP,lI){var lM=(lI[c(25)]||c(1133))[c(3376)](),lN=(new Date)[c(3377)](),lO=lI[c(547)]||"";lO=aB(lO),null===lI[c(12...
+    ...7)]=lO,ar(c(3429),200,200,m8[c(152)],.001)}}return ar(c(lJ?3430:3431),200,200,Date[c(787)]()-lK,.001),lI}catch(mf){throw ar(c(lJ?3430:3431),200,9401,Date[c(787)]()-lK,.001),ao(c(3437),mf[c(570)]),mf}}
+  function kB: 61 chars, 0 c() refs
+    function kB(lJ){try{return e7()?kx(lJ):k0(lJ,!0)}catch(lK){}}...
+  function kx: 2638 chars, 110 c() refs
+    function kx(lJ){return new Promise(function(lK,lL){var lM=Date[c(787)](),lN=c(3593),lO=c(3594),lP=c(3595);try{if(lJ[c(3388)]&&z(lJ[c(3388)])===c(79)){var lQ=aa[c(3600)]({},lJ[c(3388)]);Object[c(3602)]...
+    ...(lP,200,9402,Date[c(787)]()-m4,.001),ar(lN,200,9402,Date[c(787)]()-lM,.001),lK(k0(lJ,!0))}),m3))})}}}catch(m2){ao(c(3705),m2[c(570)]);var m0=k0(lJ,!0);ar(lN,200,9406,Date[c(787)]()-lM,.001),lK(m0)}})}
+  function kP: 9185 chars, 415 c() refs
+    function kP(lJ){kR({}),function(){if(window[c(3860)]);else{window[c(3860)]=!0;try{var lJ=XMLHttpRequest[c(6)][c(1261)];XMLHttpRequest[c(6)][c(1261)]=function(){try{if(this[c(3867)])this[c(3867)][c(388...
+    ...)][c(570)],ao(c(4255),ms,"","",.5)}catch(mz){}return mv[c(42)](c(40),lJ[c(327)](this,mt));case 64:case c(234):return mv[c(2171)]()}},lK,this,[[0,60]])}))}}catch(lL){ao(c(4263),lL[c(570)])}}}(),ju(lJ)}
+  function jD: 271 chars, 11 c() refs
+    function jD(lI,lJ){var lK="";if(aa[c(3297)]()[c(494)](lJ)>-1);else{var lM=c(3298);if(!(lI[c(494)](c(3300))>-1)){var lO=lI[c(494)]("?");lK=-1!==lO?lI[c(601)](lO+1)?"&"===lI[c(686)](-1)?lM:"&"+lM:lM:"?"...
+  function jE: 80 chars, 1 c() refs
+    function jE(lI,lJ,lK,lL){return lI[c(494)](lK+"=")>-1||(lJ=lJ+"&"+lK+"="+lL),lJ}...
+  function jH: 868 chars, 25 c() refs
+    function jH(lI,lJ,lK){if(jC(lJ))return 0;if(window[c(3317)]&&window[c(3317)][c(494)](lI)>-1)return 1;if(function(lI,lJ){try{if(lI&&lI[c(152)]&&lJ&&lJ[c(152)]){var lK=lI+"/"+lJ;if(aa[c(3159)](window[c(...
+    ...n(lI){if(lI&&typeof lI===c(497)){var lJ=lI[c(152)];if(lJ>8192&&ar(c(3312),200,200,lJ,.5),lJ>7542&&lJ<8192||lJ>15734&&lJ<16384)return ao(c(3313),lI[c(601)](0,9e3),"","",.5),!0}return!1}(lK)&&(lL=0),lL}
+  function kJ: 647 chars, 26 c() refs
+    function kJ(){return(kJ=G(j()[c(171)](function lJ(lK){var lL,lM,lN,lO,lP;return j()[c(64)](function(lR){for(;;)switch(lR[c(202)]=lR[c(28)]){case 0:return lR[c(202)]=0,lR[c(28)]=3,lK[c(3720)]();case 3:...
+    ...Response(lL,lO),lR[c(42)](c(40),lP);case 12:return lR[c(202)]=12,lR[c(3848)]=lR[c(370)](0),lR[c(42)](c(40),lK);case 16:case c(234):return lR[c(2171)]()}},lJ,null,[[0,12]])})))[c(327)](this,arguments)}
+  function kA: 342 chars, 3 c() refs
+    function kA(lJ){return new Promise(function(lK,lL){try{!function(lI,lJ){try{if(1==lJ)return!1;var lK=aB(lI[c(547)]||""),lL=aa[c(3151)](lK);if(lL){var lM=jH(lL[3],lL[5],lK);if(1===lM||2===lM)return!0}r...
+  function kn: 1248 chars, 52 c() refs
+    function kn(){return new Promise(function(lJ,lK){try{var lL=Date[c(787)]();!kg&&(kg=function(){return new aS(c(3555),[aV,aP,ek,aQ,ao],c(3556))[c(678)](c(3558),arguments)}());var lM=kg,lN=c(1133),lP={}...
+    ...),function(lW){ko(2,9402,lS),ko(3,9402,lL),lJ(!1)}),lT)):ao(c(3541),c(3542),"","",.01)})}}catch(lS){var lR=c(565)+lS[c(170)]+c(567)+lS[c(357)]+c(569)+lS[c(570)];ao(c(3551),lR),ko(3,9403,lL),lJ(!1)}})}
+  function ks: 603 chars, 23 c() refs
+    function ks(){return new Promise(function(lJ,lK){var lL=c(3559),lM=c(3560),lN=Date[c(787)]();if(window[c(3496)]){var lO=201;void 0!==window[c(3496)][c(3497)]?lJ(!0):(lO=9403,lJ(!1),ao(c(3565),c(3566),...
+    ...1),lJ(!1)),ar(lM,200,lR,Date[c(787)]()-lN,.001)})[c(370)](function(lQ){ao(lL+c(370),lQ[c(570)]),ar(lM,200,9404,Date[c(787)]()-lN,.001),lJ(!1)}):(ao(c(3567),window[c(541)][c(549)],"","",.1),lJ(!1))}})}
+  function jV: 366 chars, 16 c() refs
+    function jV(lI){var lB;e1(window[c(541)][c(549)])&&e1(window[c(541)][c(542)])&&(jM=!0),jT=aV(),jO[c(3355)]=aa[c(2984)](),jO[c(3357)]=lI,jO[c(3358)]=e7()?1:0,jO[c(3359)]=0,jO[c(3360)]=1,jO[c(3361)]=0,f...
+
+======================================================================
+6. INIT FLOW TRACING
+  Possible b[] sizes: []
+  Top [index]= assignments: [(0, 11), (1, 4), (3, 3), (14, 2), (28, 1), (2, 1)]
+
+======================================================================
+7. SIGN ENTRY POINT
+  XMLHttpRequest found at offset 204406
+  Context: ...lD=c(1252);try{var lE=Date[c(787)](),lF=c(1254),lG=c(1255);ar(lF,200,200,lC[c(152)],.01);var lH=new XMLHttpRequest;lH[c(1257)]=!0;var lI=c(1258)+aa[c(1259)]()+c(1260);lH[c(1261)](c(1262),lI),lH[c(1263)](c(1264),c(1265)),lH[c(1266)]=function(){if(4===lH[c(1267)])if(200===lH[c(1268)])lB(lH[c(1269)],lE);else{f4(3,0);var lJ=lH[c(1268)];0===lJ&&(lJ=500),ar(lG,lJ,200,Date[c(787)]()-lE,.01)}},lH[c(1272)]...
+
+======================================================================
+8. CUSTOM BASE64
+  Custom Base64 alphabet: f8b0cd9f8d998a9cddcac893969addcac8999c9cab919f96ddcac89d8a8a978a
+  Custom Base64 alphabet: 0f47667d6e686661602a3d3f446e647a2a3d3f48607b67666c2a3d3f5f7d6041
+  Custom Base64 alphabet: c088f5a7b5a1b2a4e5f2f0a4a5aca5b4a583afafaba9a5e5f2f0a5b2b2e5f381
+  Custom Base64 alphabet: 68205d0f1d091a0c4d5a58051b014d5a58090c0c3b010f064d5a580d1a1a071a
+  Custom Base64 alphabet: eb9e988e998a8888849e859fced9ad858e9cced9ad9a9988848f8e87848c8285
+  Custom Base64 alphabet: ade0ccd9d8dfcc889f9de0f9889f9dfecedfc4ddd9889f9deeccddc4d9ccc1de
+
+======================================================================
+9. SIGNING PIPELINE OVERVIEW
+
+Full mtgsig signing pipeline:
+
+1. XHR/fetch intercepted by kP (XHR hook)
+2. kP checks domain via jH → returns sign type (0/1/2)
+3. kP calls jD to build mtgsig parameter string
+4. jD calls kA for actual signing
+5. kA calls kB (dispatcher)
+6. kB checks e7() → calls kx (Promise-based) or k0 (pass-through)
+7. kx/k0 runs the aS VM to generate the signature
+8. k0 returns the signed URL/mtgsig
+
+Alternative: H5guard.sign() API
+1. sign(url) → calls kA directly
+2. kA → kB → kx/k0 → returns mtgsig
+
+
+======================================================================
+DONE - Deep analysis complete

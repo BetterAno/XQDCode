@@ -1,0 +1,1 @@
+module.exports = require("./ccb9.js").f("toPrimitive");

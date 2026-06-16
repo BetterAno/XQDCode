@@ -1,0 +1,30 @@
+{
+    "target": {
+        "site": "https://www.fcbox.com/pages/user/login.html",
+        "api_base": "https://acs.fcbox.com",
+        "login_base": "https://www.fcbox.com"
+    },
+    "captcha": {
+        "query_slide_image": "/captcha/querySlideImage/{uuid}",
+        "check_code": "/captcha/checkCode/{checkId}",
+        "public_key": "/noshiro/getPublicKey",
+        "login": "/passport/login"
+    },
+    "yunma": {
+        "api_url": "http://api.jfbym.com/api/YmServer/customApi",
+        "token": "tR5pqscPQ0EI8n7thn38hAIyyakstNb6-DFUuT9pGwI",
+        "type": "20111"
+    },
+    "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "application/json, text/javascript, */*; q=0.01",
+        "Accept-Language": "zh-CN,zh;q=0.9",
+        "X-Requested-With": "XMLHttpRequest",
+        "Referer": "https://www.fcbox.com/pages/user/login.html"
+    },
+    "encryption": {
+        "captcha": "AES-ECB-PKCS7",
+        "password": "RSA-PKCS1v15",
+        "sign": "MD5(clientIp + key + checkId + trackString)"
+    }
+}

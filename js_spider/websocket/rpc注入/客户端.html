@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="box" type="text">
+<button onclick="ps()">发送</button>
+
+<script>
+    // 与服务器约定的连接以及端口号
+    const websocket = new WebSocket('ws://127.0.0.1:8080')
+
+    // 连接发生错误的回调方法
+    websocket.onerror = () => {
+        console.log("WebSocket连接发生错误");
+    }
+
+    // 连接成功建立的回调方法
+    websocket.onopen = function () {
+        console.log("WebSocket连接成功");
+    }
+
+    // 接收到消息的回调方法 接收服务器的数据
+    websocket.onmessage = function (event) {
+        console.log(event.data);
+    }
+
+    // 连接关闭的回调方法
+    websocket.onclose = function () {
+        console.log("WebSocket连接关闭");
+    }
+
+    function ps() {
+        // jquery -> var  js -> value
+        var text = document.getElementById("box").value
+        // 客户端发信息到服务器
+        websocket.send(text)
+    }
+</script>
+
+</body>
+</html>

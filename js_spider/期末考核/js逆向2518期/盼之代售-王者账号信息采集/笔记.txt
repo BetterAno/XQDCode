@@ -1,0 +1,14 @@
+"""
+目标 ： 王者荣耀游戏账号交易平台 盼之代售
+url ： https://www.pzds.com/goodsList/7/6
+要求 ： 多线程
+目标数据 ： 价格 标题 热度
+记录 ： 找到翻页 page api 请求，浏览器xhr请求可以json返回全部数据
+        直接请求 460
+        不带cookie 460
+        + 不带 params 返回js
+        核心： params
+        网页实际也POST了两次
+
+       出风控： 换IP, 请求头
+"""

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package test;
+
+message Person {
+    string name = 1;
+    int32 age = 2;
+}
+
+message Message {
+    string method = 1;
+    string payload = 2;
+}
+
+// python如果需要使用当前这个模板, 则通过指令创建python文件
+// pip install protobuf
+// protoc --python_out=. test.proto

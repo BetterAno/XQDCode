@@ -1,0 +1,1 @@
+module.exports = require("./5537.js")("native-function-to-string", Function.toString);

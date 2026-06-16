@@ -1,0 +1,55 @@
+{
+  "view_import": {
+    "status": 200,
+    "length": 30899,
+    "ts_nsd": "63822",
+    "ts_cd": "qhpSr1qlJ13oJGVbqPG5qn3qJGGsqc3DxGQ0Wn3ctkgkxGqCr13otkgliGVCr13qtkgmlaqbrPliEsVWmqAPlaqfkfVsqclimfWQxGqbq1GulaqfkfQsqc3DiGQLWn3mkrVlDP3qtkgmxf7LHGAsqc3mxGELWn3rtkg8xG3WmGAYlaqbqP3ktkWbDPG5qn3mtkgcxGEW...",
+    "rs_path": "ZCQq7Fzuhp12",
+    "ts_call": "$_ts.lcd()",
+    "set_cookie": [
+      "JSESSIONID=f9f4ce07-54e9-435d-889b-9516dfb27544; Domain=swapp.singlewindow.cn; Path=/; HttpOnly",
+      "CKvDhNH2GZibO=qapwqCzn6rELEYPL8y8Re7CssIDkl4bSFIYEoE6kTt7EOvqoL5fkdydVG8bg-bL2yZl4xQKSFAN-6f5HICEz__cEFj_eiMUEsVwzT_Tix0j2A; Path=/; expires=Fri, 16 May 2036 10:55:22 GMT; Secure; SameSite=None; HttpOnly"
+    ],
+    "script_srcs": [
+      "/qspserver/ZCQq7Fzuhp12/oQ91zEKu9zN4.44d6eb6.js",
+      "https&#x3a;&#x2f;&#x2f;swapp.singlewindow.cn&#x3a;443&#x2f;qspserver&#x2f;static&#x2f;js&#x2f;jquery.min.js?v=3.4.0",
+      "https&#x3a;&#x2f;&#x2f;swapp.singlewindow.cn&#x3a;443&#x2f;qspserver&#x2f;static&#x2f;js&#x2f;bootstrap.min.js?v=3.3.6",
+      "https&#x3a;&#x2f;&#x2f;swapp.singlewindow.cn&#x3a;443&#x2f;qspserver&#x2f;static&#x2f;js&#x2f;plugins/bootstrap-table/bootstrap-table.min.js",
+      "https&#x3a;&#x2f;&#x2f;swapp.singlewindow.cn&#x3a;443&#x2f;qspserver&#x2f;static&#x2f;js&#x2f;plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js",
+      "https&#x3a;&#x2f;&#x2f;swapp.singlewindow.cn&#x3a;443&#x2f;qspserver&#x2f;static&#x2f;js&#x2f;plugins/bootstrap-select/bootstrap-select.js",
+      "https&#x3a;&#x2f;&#x2f;swapp.singlewindow.cn&#x3a;443&#x2f;qspserver&#x2f;static&#x2f;js&#x2f;plugins/suggest/bootstrap-suggest.min.js",
+      "https&#x3a;&#x2f;&#x2f;swapp.singlewindow.cn&#x3a;443&#x2f;qspserver&#x2f;static&#x2f;js&#x2f;plugins/laydate5/laydate.js",
+      "https&#x3a;&#x2f;&#x2f;swapp.singlewindow.cn&#x3a;443&#x2f;qspserver&#x2f;static&#x2f;js&#x2f;jquery-formHelp.js",
+      "https&#x3a;&#x2f;&#x2f;swapp.singlewindow.cn&#x3a;443&#x2f;qspserver&#x2f;static&#x2f;js&#x2f;jquery.validate.js",
+      "https&#x3a;&#x2f;&#x2f;swapp.singlewindow.cn&#x3a;443&#x2f;qspserver&#x2f;static&#x2f;js&#x2f;layer/layer.js",
+      "https&#x3a;&#x2f;&#x2f;swapp.singlewindow.cn&#x3a;443&#x2f;qspserver&#x2f;static&#x2f;js&#x2f;swutils/swUtil.js?v=1.0.0",
+      "https&#x3a;&#x2f;&#x2f;swapp.singlewindow.cn&#x3a;443&#x2f;qspserver&#x2f;static&#x2f;js&#x2f;client.js",
+      "https&#x3a;&#x2f;&#x2f;swapp.singlewindow.cn&#x3a;443&#x2f;qspserver&#x2f;static&#x2f;js&#x2f;plugins/storage/jquery.storageapi.min.js",
+      "https&#x3a;&#x2f;&#x2f;swapp.singlewindow.cn&#x3a;443&#x2f;qspserver&#x2f;static&#x2f;js&#x2f;jquery.form.js",
+      "https&#x3a;&#x2f;&#x2f;swapp.singlewindow.cn&#x3a;443&#x2f;qspserver&#x2f;static&#x2f;js&#x2f;plugins/autocompleter/jquery.autocompleter.js?v=1.0.0",
+      "https&#x3a;&#x2f;&#x2f;swapp.singlewindow.cn&#x3a;443&#x2f;qspserver&#x2f;static&#x2f;js&#x2f;plugins/autocompleter/autocomp.js?v=1.0.0",
+      "https&#x3a;&#x2f;&#x2f;swapp.singlewindow.cn&#x3a;443&#x2f;qspserver&#x2f;static&#x2f;js&#x2f;modal.js",
+      "https&#x3a;&#x2f;&#x2f;swapp.singlewindow.cn&#x3a;443&#x2f;qspserver&#x2f;static&#x2f;js&#x2f;content.js?v=1.0.0",
+      "https&#x3a;&#x2f;&#x2f;swapp.singlewindow.cn&#x3a;443&#x2f;qspserver&#x2f;static&#x2f;js&#x2f;enter.js",
+      "https&#x3a;&#x2f;&#x2f;swapp.singlewindow.cn&#x3a;443&#x2f;qspserver&#x2f;static/wfUI/js/wfcore.js",
+      "https&#x3a;&#x2f;&#x2f;swapp.singlewindow.cn&#x3a;443&#x2f;qspserver&#x2f;static/js/qsp/util/statistics.js",
+      "https&#x3a;&#x2f;&#x2f;swapp.singlewindow.cn&#x3a;443&#x2f;qspserver&#x2f;static/js/Mu64.js",
+      "https&#x3a;&#x2f;&#x2f;swapp.singlewindow.cn&#x3a;443&#x2f;qspserver&#x2f;static/js/captcha/sw.captcha.js",
+      "https&#x3a;&#x2f;&#x2f;swapp.singlewindow.cn&#x3a;443&#x2f;qspserver&#x2f;menuManger",
+      "https&#x3a;&#x2f;&#x2f;swapp.singlewindow.cn&#x3a;443&#x2f;qspserver&#x2f;static/js/qsp/query/importbiznew.js",
+      "https&#x3a;&#x2f;&#x2f;swapp.singlewindow.cn&#x3a;443&#x2f;qspserver&#x2f;static/js/enter.js"
+    ]
+  },
+  "biznew_import": {
+    "status": 412,
+    "length": 2592,
+    "ts_nsd": "15060",
+    "ts_cd": "qtmSrcqlxrWqxGVbqPGuxGlLHGEbru3ElaqWr13ctkWsqclimc3lxGVMxfAlDSWqxG3brnGulaqbrAactkWsqc3qxGlLWn3DkrVXWc3rJGGsqc3oxGALWn3coqVbq1G5qP3oJGGsqc3mxPGLWn3qJGGsqc3DxGQLWn3Bkr3lxc3ltkgmlaqbqc3rqOWsqc3oxGALWn3c...",
+    "rs_path": "ZCQq7Fzuhp12",
+    "ts_call": "$_ts.lcd()",
+    "set_cookie": [],
+    "script_srcs": [
+      "/qspserver/ZCQq7Fzuhp12/BSrw3csEQORp.44d6eb6.js"
+    ]
+  }
+}

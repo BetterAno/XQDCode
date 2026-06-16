@@ -1,0 +1,7919 @@
+"use strict";
+
+(window.mor_modules = window.mor_modules || []).push([[470], {
+  kCpd: function (ue, L, e) {
+    var c = e("byvu"),
+      u = e("6EqU"),
+      n = e.n(u),
+      E = e("q+dL"),
+      R = e("wFMP"),
+      A = e("vmqf"),
+      g = e("bNyJ");
+    function p() {
+      var ie,
+        m,
+        F = typeof Symbol == "function" ? Symbol : {},
+        a = F.iterator || "@@iterator",
+        s = F.toStringTag || "@@toStringTag";
+      function l(q, me, be, Re) {
+        var Ee = me && me.prototype instanceof N ? me : N,
+          $e = Object.create(Ee.prototype);
+        P($e, "_invoke", function (tt, ft, pt) {
+          var it,
+            Ge,
+            at,
+            Pt = 0,
+            Ne = pt || [],
+            fe = !1,
+            G = {
+              p: 0,
+              n: 0,
+              v: ie,
+              a: se,
+              f: se.bind(ie, 4),
+              d: function (Ze, Y) {
+                it = Ze;
+                Ge = 0;
+                at = ie;
+                G.n = Y;
+                return f;
+              }
+            };
+          function se(we, Ze) {
+            Ge = we;
+            at = Ze;
+            m = 0;
+            for (; !fe && Pt && !Y && m < Ne.length; m++) {
+              var Y,
+                He = Ne[m],
+                Et = 0,
+                mt = He[2];
+              if (we > 3) {
+                if (Y = mt === Ze) {
+                  at = He[(Ge = He[4]) ? 5 : (Ge = 3, 3)];
+                  He[4] = He[5] = ie;
+                }
+              } else {
+                if (He[0] <= Et) {
+                  if (Y = we < 2 && Et < He[1]) {
+                    Ge = 0;
+                    G.v = Ze;
+                    G.n = He[1];
+                  } else {
+                    if (Et < mt && (Y = we < 3 || He[0] > Ze || Ze > mt)) {
+                      He[4] = we;
+                      He[5] = Ze;
+                      G.n = mt;
+                      Ge = 0;
+                    }
+                  }
+                }
+              }
+            }
+            if (Y || we > 1) return f;
+            throw fe = !0, Ze;
+          }
+          return function (we, Ze, Y) {
+            if (Pt > 1) throw TypeError("Generator is already running");
+            if (fe && Ze === 1) {
+              se(Ze, Y);
+            }
+            Ge = Ze;
+            at = Y;
+            for (; (m = Ge < 2 ? ie : at) || !fe;) {
+              if (!it) {
+                if (Ge) {
+                  if (Ge < 3) {
+                    if (Ge > 1) {
+                      G.n = -1;
+                    }
+                    se(Ge, at);
+                  } else {
+                    G.n = at;
+                  }
+                } else {
+                  G.v = at;
+                }
+              }
+              try {
+                Pt = 2;
+                if (it) {
+                  if (!Ge) {
+                    we = "next";
+                  }
+                  if (m = it[we]) {
+                    if (!(m = m.call(it, at))) throw TypeError("iterator result is not an object");
+                    if (!m.done) return m;
+                    at = m.value;
+                    if (Ge < 2) {
+                      Ge = 0;
+                    }
+                  } else {
+                    if (Ge === 1 && (m = it.return)) {
+                      m.call(it);
+                    }
+                    if (Ge < 2) {
+                      at = TypeError("The iterator does not provide a '" + we + "' method");
+                      Ge = 1;
+                    }
+                  }
+                  it = ie;
+                } else if ((m = (fe = 0 < 0) ? at : tt.call(ft, G)) !== f) break;
+              } catch (He) {
+                it = ie;
+                Ge = 1;
+                at = He;
+              } finally {
+                Pt = 1;
+              }
+            }
+            return {
+              value: m,
+              done: fe
+            };
+          };
+        }(q, be, Re), !0);
+        return $e;
+      }
+      var f = {};
+      function N() {}
+      function C() {}
+      function _() {}
+      m = Object.getPrototypeOf;
+      var I = [][a] ? m(m([][a]())) : (P(m = {}, a, function () {
+          return this;
+        }), m),
+        ne = _.prototype = N.prototype = Object.create(I);
+      function B(q) {
+        if (Object.setPrototypeOf) {
+          Object.setPrototypeOf(q, _);
+        } else {
+          q.__proto__ = _;
+          P(q, s, "GeneratorFunction");
+        }
+        q.prototype = Object.create(ne);
+        return q;
+      }
+      C.prototype = _;
+      P(ne, "constructor", _);
+      P(_, "constructor", C);
+      C.displayName = "GeneratorFunction";
+      P(_, s, "GeneratorFunction");
+      P(ne);
+      P(ne, s, "Generator");
+      P(ne, a, function () {
+        return this;
+      });
+      P(ne, "toString", function () {
+        return "[object Generator]";
+      });
+      return (p = function () {
+        return {
+          w: l,
+          m: B
+        };
+      })();
+    }
+    function P(ie, m, F, a) {
+      var s = Object.defineProperty;
+      try {
+        s({}, "", {});
+      } catch (l) {
+        s = 0;
+      }
+      P = function (f, N, C, _) {
+        function I(ne, B) {
+          P(f, ne, function (q) {
+            return this._invoke(ne, B, q);
+          });
+        }
+        if (N) {
+          if (s) {
+            s(f, N, {
+              value: C,
+              enumerable: !_,
+              configurable: !_,
+              writable: !_
+            });
+          } else {
+            f[N] = C;
+          }
+        } else {
+          I("next", 0);
+          I("throw", 1);
+          I("return", 2);
+        }
+      };
+      P(ie, m, F, a);
+    }
+    var y = Object.defineProperty,
+      b = Object.defineProperties,
+      M = Object.getOwnPropertyDescriptors,
+      w = Object.getOwnPropertySymbols,
+      T = Object.prototype.hasOwnProperty,
+      d = Object.prototype.propertyIsEnumerable,
+      H = function (m, F, a) {
+        return F in m ? y(m, F, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: a
+        }) : m[F] = a;
+      },
+      x = function (m, F) {
+        for (var a in F || (F = {})) {
+          if (T.call(F, a)) {
+            H(m, a, F[a]);
+          }
+        }
+        if (w) {
+          var s = (0, c.Z)(w(F)),
+            l;
+          try {
+            for (s.s(); !(l = s.n()).done;) {
+              var a = l.value;
+              if (d.call(F, a)) {
+                H(m, a, F[a]);
+              }
+            }
+          } catch (f) {
+            s.e(f);
+          } finally {
+            s.f();
+          }
+        }
+        return m;
+      },
+      Q = function (m, F) {
+        return b(m, M(F));
+      },
+      X = function (m, F, a) {
+        return new Promise(function (s, l) {
+          var f = function (I) {
+              try {
+                C(a.next(I));
+              } catch (ne) {
+                l(ne);
+              }
+            },
+            N = function (I) {
+              try {
+                C(a.throw(I));
+              } catch (ne) {
+                l(ne);
+              }
+            },
+            C = function (I) {
+              return I.done ? s(I.value) : Promise.resolve(I.value).then(f, N);
+            };
+          C((a = a.apply(m, F)).next());
+        });
+      };
+    function oe() {
+      return X(this, null, p().m(function ie() {
+        var m, F, a, s;
+        return p().w(function (l) {
+          for (;;) switch (l.p = l.n) {
+            case 0:
+              m = E.Z.LocationSync();
+              if (!(m.latitude && m.longitude && m.cityId)) {
+                l.n = 1;
+                break;
+              }
+              return l.a(2, m);
+            case 1:
+              l.p = 1;
+              F = R.rV({
+                bizID: "biz_id_eleme_storage",
+                key: "key_eleme_location"
+              });
+              a = F && JSON.parse(F);
+              if (!(a.latitude && a.longitude)) {
+                l.n = 2;
+                break;
+              }
+              return l.a(2, a);
+            case 2:
+              l.n = 4;
+              break;
+            case 3:
+              l.p = 3;
+              s = l.v;
+              console.error("kvstorage error", s);
+            case 4:
+              return l.a(2, n()().utils.getLocation().catch(function () {
+                return {};
+              }));
+          }
+        }, ie, null, [[1, 3]]);
+      }));
+    }
+    var te = function (m) {
+        if (typeof m != "string") return !1;
+        var F = m.trim();
+        if (F === "") return !1;
+        try {
+          return Number(F) === 0 && isFinite(Number(F));
+        } catch (a) {
+          return !1;
+        }
+      },
+      J = function (m) {
+        var F = m.query,
+          a = F === void 0 ? {} : F,
+          s = getApp().$ele().utils.getQuery(location.href),
+          l = s.redirectAddressData;
+        if (l) try {
+          var f = JSON.parse(l);
+          console.log("redirectAddressData", f);
+          return f;
+        } catch (Ee) {
+          console.error("redirectAddressData error", Ee);
+        }
+        try {
+          var N = R.rV({
+              bizID: "biz_id_eleme_storage",
+              key: "key_eleme_location"
+            }),
+            C = N && JSON.parse(N);
+          if (C.latitude && C.longitude) return C;
+        } catch (Ee) {
+          console.error("kvstorage error", Ee);
+        }
+        try {
+          var _ = getApp().aLocation.store.LocationSync() || {},
+            I = ce(_.latitude),
+            ne = ce(_.longitude);
+          if (I && ne) return {
+            latitude: I,
+            longitude: ne,
+            cityId: _.cityId
+          };
+        } catch (Ee) {
+          console.error("aLocationCache error", Ee);
+        }
+        try {
+          var B = A.lJ() || {},
+            q = ce(B.latitude),
+            me = ce(B.longitude);
+          if (q && me) return console.log("readCacheLoc use Location.getCache", B), {
+            latitude: q,
+            longitude: me
+          };
+        } catch (Ee) {
+          console.error(Ee, "readCacheLoc Location error");
+        }
+        try {
+          var be = ce(a.latitude),
+            Re = ce(a.longitude);
+          if (be && Re) return console.log("readCacheLoc use query data", {
+            latitude: be,
+            longitude: Re,
+            cityId
+          }), {
+            latitude: be,
+            longitude: Re,
+            cityId
+          };
+        } catch (Ee) {
+          console.error(Ee, "readCacheLoc query error");
+        }
+        console.warn("readCacheLoc no cache warn");
+      };
+    function he(ie) {
+      return X(this, arguments, function (m) {
+        var F = m.query,
+          a = F === void 0 ? {} : F,
+          s = m.useCache,
+          l = s === void 0 ? !0 : s;
+        return p().m(function f() {
+          var N, C, _, I, ne, B, q;
+          return p().w(function (me) {
+            for (;;) switch (0) {
+              case 0:
+                n()().exlog.performance("Location", "", "start");
+                N = a || {};
+                C = N.latitude;
+                _ = N.longitude;
+                I = N.address;
+                ne = N.cityId;
+                B = N.name;
+                if (!l) {
+                  me.n = 1;
+                  break;
+                }
+                q = J({
+                  query: {
+                    latitude: C,
+                    longitude: _,
+                    cityId: ne
+                  }
+                });
+                if (!q) {
+                  me.n = 1;
+                  break;
+                }
+                E.Z.setLocation(q);
+                return me.a(2, x({
+                  locaitonSource: "homepagecache"
+                }, q));
+              case 1:
+                return me.a(2, new Promise(function (be, Re) {
+                  n()().utils.getLocation({
+                    noCache: !l
+                  }).then(function ($e) {
+                    console.log($e, "getLocPromiseTBH5 resres");
+                    E.Z.setLocation($e);
+                    be($e);
+                  }).catch(function ($e) {
+                    console.error($e, "$ele().utils.getLocation() err;");
+                    n()().exlog.poierror("aLocation.getLocPromise \u83B7\u53D6\u5B9A\u4F4D\u5931\u8D25;", "", $e);
+                    Re({
+                      err: $e,
+                      errType: "location"
+                    });
+                  }).finally(function () {
+                    n()().exlog.performance("Location", "", "end");
+                  });
+                  var Ee = setTimeout(function () {
+                    clearTimeout(Ee);
+                    n()().exlog.performance("Location", "", "end");
+                    Re({
+                      errType: "locatio_timeout"
+                    });
+                  }, 3500);
+                }));
+            }
+          }, f);
+        })();
+      });
+    }
+    function U() {
+      return X(this, arguments, function () {
+        var ie = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
+        return p().m(function m() {
+          var F, a, s, l, f, N, C, _, I, ne, B;
+          return p().w(function (q) {
+            for (;;) switch (q.n) {
+              case 0:
+                F = ie.query;
+                if (F === void 0) {
+                  a = {};
+                } else {
+                  a = F;
+                }
+                s = ie.useCache;
+                if (s === void 0) {
+                  l = !0;
+                } else {
+                  l = s;
+                }
+                if (!(0, g.at)()) {
+                  q.n = 1;
+                  break;
+                }
+                return q.a(2, he({
+                  query: a,
+                  useCache: l
+                }));
+              case 1:
+                n()().exlog.performance("Location", "", "start");
+                f = a || {};
+                N = f.latitude;
+                C = f.longitude;
+                _ = f.address;
+                I = f.cityId;
+                ne = f.name;
+                B = {};
+                if (N && C) {
+                  B = {
+                    latitude: N,
+                    longitude: C,
+                    address: _,
+                    cityId: I,
+                    locationName: ne
+                  };
+                }
+                return q.a(2, new Promise(function (me, be) {
+                  n()().utils.getLocation().then(function (Ee) {
+                    console.log(Ee, "resres");
+                    var $e = Ee.cityId ? {
+                      cityId: Ee.cityId
+                    } : {};
+                    E.Z.setLocation(Q(x(x({}, B), $e), {
+                      latitude: Ee.latitude,
+                      longitude: Ee.longitude
+                    }));
+                    me(Ee);
+                  }).catch(function (Ee) {
+                    console.error(Ee, "$ele().utils.getLocation() err;");
+                    n()().exlog.poierror("aLocation.getLocPromise \u83B7\u53D6\u5B9A\u4F4D\u5931\u8D25;", "", Ee);
+                    if (B && B.latitude && B.longitude) {
+                      E.Z.setLocation(B);
+                      me(B);
+                    } else {
+                      be({
+                        err: Ee,
+                        errType: "location"
+                      });
+                    }
+                  }).finally(function () {
+                    n()().exlog.performance("Location", "", "end");
+                  });
+                  var Re = setTimeout(function () {
+                    clearTimeout(Re);
+                    n()().exlog.performance("Location", "", "end");
+                    me(B || {});
+                  }, 3500);
+                }));
+            }
+          }, m);
+        })();
+      });
+    }
+    function de() {
+      n()().aplus.clk("Button-LocationFailClick", {
+        spm: n()().aplus.spm("LocationFailClick.1")
+      });
+      n()().utils.goToLocationPage();
+    }
+    function ce(ie) {
+      if (!(ie === "null" || ie === "undefined" || te(ie))) return ie;
+    }
+    L.Z = {
+      getLocation: oe,
+      getLocPromise: U,
+      goToSelectLocation: de
+    };
+  },
+  "5gix": function (ue, L, e) {
+    e.d(L, {
+      G: function () {
+        return n;
+      }
+    });
+    var c = e("6EqU"),
+      u = e.n(c);
+    function n(E) {
+      return u()().aplus && u()().aplus.setBaseInfo({
+        exParams: E
+      });
+    }
+  },
+  eE7e: function (ue, L, e) {
+    e.d(L, {
+      ZP: function () {
+        return U;
+      }
+    });
+    var c = e("oYSA"),
+      u = e("byvu"),
+      n = e("6EqU"),
+      E = e.n(n),
+      R = e("FtFw"),
+      A = e("+N4N"),
+      g = e("bNyJ"),
+      p = e("lk4z"),
+      P = ["alsc_exsrc", "*eretail-passon", "*from", "sthid", "adtag", "corpId", "dingClientId", "openConversationId"],
+      y = P,
+      b = e("At3Z"),
+      M = e("29KI"),
+      w = Object.defineProperty,
+      T = Object.defineProperties,
+      d = Object.getOwnPropertyDescriptors,
+      H = Object.getOwnPropertySymbols,
+      x = Object.prototype.hasOwnProperty,
+      Q = Object.prototype.propertyIsEnumerable,
+      X = function (F, a, s) {
+        return a in F ? w(F, a, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: s
+        }) : F[a] = s;
+      },
+      oe = function (F, a) {
+        for (var s in a || (a = {})) {
+          if (x.call(a, s)) {
+            X(F, s, a[s]);
+          }
+        }
+        if (H) {
+          var l = (0, u.Z)(H(a)),
+            f;
+          try {
+            for (l.s(); !(f = l.n()).done;) {
+              var s = f.value;
+              if (Q.call(a, s)) {
+                X(F, s, a[s]);
+              }
+            }
+          } catch (N) {
+            l.e(N);
+          } finally {
+            l.f();
+          }
+        }
+        return F;
+      },
+      te = function (F, a) {
+        return T(F, d(a));
+      },
+      J = A.Z.getInstance(),
+      he = R.version,
+      U = function (m) {
+        var F = {};
+        try {
+          F = J.query$.getValue().value;
+        } catch (Re) {}
+        var a = F.from || "",
+          s = F.channel_code || "",
+          l = m.params && m.params.guideTrack,
+          f = m.extraParams;
+        m.targetUrl = m.targetUrl || m.url;
+        var N = ce(F, y),
+          C = getApp().$ele().utils.url.parse(m.targetUrl) || {};
+        m.params = oe(oe(oe({}, N), C.query), m.params) || {};
+        m.params.from = a;
+        m.params.fromVersion = he;
+        m.from = a;
+        if (!l) {
+          if (m.isRetailShop) {
+            m.params._retailPV_guideTrack = encodeURIComponent(F.track || "");
+            if ((0, g.at)()) {
+              m.params._retailPV_guideTrack = "";
+            }
+          } else {
+            m.params.guideTrack = encodeURIComponent(F.track || "");
+          }
+        }
+        if (m.removeGuideTrack) {
+          m.params._retailPV_guideTrack = "";
+          m.params.guideTrack = "";
+        }
+        if (s) {
+          m.params.channel_code = s;
+          m.params._retailPV_channel_code = s;
+        }
+        if (f && s === p.ki.dingdingPindan) {
+          m.params.pindanShopData = encodeURIComponent(f.shopData || "");
+        }
+        var _ = m.targetUrl;
+        console.log("navigate, Search UniApp: %s, finalTargetUrl: %s", (0, g.Qk)(), _);
+        if (m.params && m.params.content_track) {
+          m.params.content_track = void 0;
+        }
+        if (m.params && m.params.guideTrack) {
+          m.params.guideTrack = void 0;
+        }
+        E()().answer.logKeyEvent({
+          event: "navigate",
+          desc: "options",
+          extra: {
+            options: m
+          }
+        });
+        var I = E()().utils.getQuery(_);
+        console.log("navigate, uniapp_id: %s, target uniapp_id: %s", F.uniapp_id, I.uniapp_id);
+        if ((0, g.Qk)() && de(_) && I.uniapp_id === F.uniapp_id) {
+          var ne = oe(oe({}, m.params), I);
+          _ = getApp().$ele().utils.url.appendQueryDic(_, ne);
+          console.log("navigate, open url by Router#pushPage.", _);
+          var B;
+          if (m.params.uniapp_page === "ele-takeout-index") {
+            B = getApp().$ele().utils.url.appendQueryDic(m.params.uniapp_page, ne);
+          }
+          b._H({
+            windowInfo: {},
+            type: "web",
+            url: _,
+            props: void 0,
+            pageID: B
+          }).then(function (Re) {
+            console.info("Router#pushPage#then");
+          }).catch(function (Re) {
+            M.pz({
+              url: _
+            }).catch(function () {
+              E()().utils.navigate(m);
+            });
+            console.error("Router#pushPage#error:" + Re);
+          });
+          return;
+        }
+        if ((0, g.at)() && _.indexOf("//m.duanqu.com") < 0) {
+          _ = getApp().$ele().utils.url.appendQueryDic(_, m.params);
+          if (_.indexOf("https://store.taobao.com") >= 0) {
+            _ = getApp().$ele().utils.url.appendQueryDic(m.targetUrl, m.params.spm ? {
+              spm: m.params.spm
+            } : {});
+          }
+          console.log("navigate, open url by Navigator#openURL.", _);
+          M.pz({
+            url: _
+          }).then(function (Re) {
+            console.info("Navigator#openURL#then");
+          }).catch(function (Re) {
+            E()().utils.navigate(m);
+            console.error("Navigator#openURL#error:" + Re);
+          });
+          return;
+        }
+        if ((0, g.at)() && _.indexOf("//m.duanqu.com") > -1) {
+          var q = E()().utils.getQuery(_),
+            me = E()().utils.getQuery(window.location.href);
+          if (q.query) {
+            var be = te(oe({}, q.query), {
+              from: (q == null ? void 0 : q.from) || me.from,
+              channelInfo: (q == null ? void 0 : q.channelInfo) || me.channelInfo
+            });
+            try {
+              if (getApp().$ele().utils.url) {
+                _ = getApp().$ele().utils.url.appendQueryDic(_, {
+                  query: encodeURIComponent(ie(be))
+                });
+              }
+            } catch (Re) {
+              console.log("error ::: mergeQuery", Re);
+            }
+          } else try {
+            if (getApp().$ele().utils.url) {
+              _ = getApp().$ele().utils.url.appendQueryDic(_, {
+                query: encodeURIComponent(ie({
+                  from: me == null ? void 0 : me.from,
+                  channelInfo: me == null ? void 0 : me.channelInfo
+                }))
+              });
+            }
+          } catch (Re) {
+            console.log("error ::: $ele().utils.url.appendQueryDic", Re);
+          }
+          console.log("navigate, TBH5 append params, url:", _);
+        }
+        console.log("navigate, open url by $ele().utils...");
+        if (m.redirect) {
+          E()().utils.redirect(m);
+        } else {
+          E()().utils.navigate(m);
+        }
+      },
+      de = function (F) {
+        if (!F) return !1;
+        try {
+          var a = E()().utils.getQuery(F);
+          return a ? typeof a.uniapp_id == "string" && typeof a.uniapp_page == "string" && a.uniapp_id.length > 0 && a.uniapp_page.length > 0 : !1;
+        } catch (s) {
+          console.log("isUniAppUrl:" + s);
+        }
+        return !1;
+      },
+      ce = function (F, a) {
+        return !Array.isArray(a) || !F ? null : Object.keys(F).filter(function (s) {
+          return a.includes(s);
+        }).reduce(function (s, l) {
+          s[l] = F[l];
+          return s;
+        }, {});
+      },
+      ie = function (F) {
+        return Object.entries(F).map(function (a) {
+          var s = (0, c.Z)(a, 2),
+            l = s[0],
+            f = s[1];
+          return "".concat(l, "=").concat(f);
+        }).join("&");
+      };
+  },
+  "GBp+": function (ue, L, e) {
+    e.d(L, {
+      Z: function () {
+        return he;
+      }
+    });
+    var c = e("byvu"),
+      u = e("6EqU"),
+      n = e.n(u),
+      E = e("OWia"),
+      R = e("lk4z"),
+      A = e("g96g"),
+      g = e("+N4N"),
+      p = g.Z.getInstance();
+    function P(U) {
+      var de = U.entry_code,
+        ce = U.refer || R.dq[de],
+        ie = U.search_extra_params;
+      return {
+        keyword: U.keyword,
+        refer: ce,
+        recKw: "",
+        searchEntryCode: de,
+        searchExtraParams: ie
+      };
+    }
+    function y() {
+      var U = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {},
+        de = P(U);
+      n()().preFetchSearchResultPromise = p.searchKeywordRequest(de).then(function (ce) {
+        if (ce) {
+          ce.resultMap = {
+            isFromPrefetch: !0,
+            prefetchStartTime: Date.now()
+          };
+        }
+        return Promise.resolve(ce);
+      }).catch(function (ce) {
+        setTimeout(function () {
+          delete n()().preFetchSearchResultPromise;
+        }, 0);
+        return Promise.reject(ce);
+      });
+    }
+    var b = e("hr2I"),
+      M = e("bNyJ"),
+      w = Object.defineProperty,
+      T = Object.defineProperties,
+      d = Object.getOwnPropertyDescriptors,
+      H = Object.getOwnPropertySymbols,
+      x = Object.prototype.hasOwnProperty,
+      Q = Object.prototype.propertyIsEnumerable,
+      X = function (de, ce, ie) {
+        return ce in de ? w(de, ce, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: ie
+        }) : de[ce] = ie;
+      },
+      oe = function (de, ce) {
+        for (var ie in ce || (ce = {})) {
+          if (x.call(ce, ie)) {
+            X(de, ie, ce[ie]);
+          }
+        }
+        if (H) {
+          var m = (0, c.Z)(H(ce)),
+            F;
+          try {
+            for (m.s(); !(F = m.n()).done;) {
+              var ie = F.value;
+              if (Q.call(ce, ie)) {
+                X(de, ie, ce[ie]);
+              }
+            }
+          } catch (a) {
+            m.e(a);
+          } finally {
+            m.f();
+          }
+        }
+        return de;
+      },
+      te = function (de, ce) {
+        return T(de, d(ce));
+      },
+      J = E.Z[R.fm];
+    function he(U) {
+      var de = U.keyword,
+        ce = U.refer,
+        ie = U.guideTrack,
+        m = U.cb,
+        F = U.searchExtraParams,
+        a = U.searchFilterParams,
+        s = U.spmcd;
+      if (de) {
+        var l = J.search$.getValue(),
+          f = l.status,
+          N = l.keyword;
+        if (f === R.NQ) {
+          J.guess$.mergeNext({
+            kw: N
+          });
+        }
+        J.searchBarAutoFocus$.mergeNext({
+          value: !1
+        });
+        J.recordHistory(de);
+        J.setSearchParams({
+          kw: de
+        });
+        var C = {
+            keyword: de,
+            refer: ce
+          },
+          _ = "";
+        if (F) {
+          C.search_extra_params = encodeURIComponent(JSON.stringify(F));
+          _ = F.searchEntryCode;
+          var I = a && a.goodsSupportIds || "";
+          if (I.length > 0) {
+            C.filter_params = JSON.stringify({
+              goodsSupportIds: I
+            });
+          }
+        }
+        var ne = J.query$.getValue().value;
+        if (ne.factors) {
+          var B = JSON.parse(ne.factors || "{}");
+          if (B.newBackPathSwitch === "true") {
+            J.search$.mergeNext({
+              status: R.fF,
+              keyword: ""
+            });
+            J.searchBarAutoFocus$.mergeNext({
+              refer: ce
+            });
+          }
+          if (!(ce === "\u5E95\u7EB9\u8BCD" || ce === "\u641C\u7D22\u6846\u4E0B\u70ED\u8BCD\u641C\u7D22") && B.bgWordFactors) {
+            delete B.bgWordFactors;
+            J.query$.mergeNext({
+              value: te(oe({}, ne), {
+                factors: JSON.stringify(B)
+              })
+            });
+          }
+        }
+        var q = oe(oe(te(oe({}, J.query$.getValue().value), {
+          track: encodeURIComponent(ie),
+          entry_code: _,
+          startTime: +new Date(),
+          spm: "".concat((0, b.S)(), ".12273696.").concat(s)
+        }), C), (0, M.rO)("sp.navigateSrp.".concat(s), "srp"));
+        if (n()().utils.platform.IS_WX_ENV) {
+          y(q);
+        }
+        n()().answer.logKeyEvent({
+          event: "navigateToSRP",
+          desc: "query",
+          extra: {
+            query: q
+          }
+        });
+        my.navigateTo({
+          url: (0, A.GB)("/pages/search-result/search-result", q),
+          success: typeof m == "function" ? m() : function () {}
+        });
+      }
+    }
+  },
+  pqP8: function (ue, L, e) {
+    e.d(L, {
+      Z: function () {
+        return u;
+      }
+    });
+    function c(n, E) {
+      var R = "",
+        A,
+        g = 0,
+        p,
+        P;
+      if (typeof E == "undefined") {
+        E = 0;
+      }
+      A = n.split(/(%(?:d0|d1)%.{2})/);
+      p = A.length;
+      for (; g < p; g++) {
+        try {
+          P = decodeURIComponent(A[g]);
+        } catch (y) {
+          if (E) {
+            P = A[g].replace(/%(?!\d+)/g, "%25");
+          } else {
+            P = A[g];
+          }
+        }
+        R += P;
+      }
+      return R;
+    }
+    function u() {
+      var n = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {},
+        E = n.latitude,
+        R = n.longitude,
+        A = n.track,
+        g = n.channel_code,
+        p = n.middlePageSchemeFromButton,
+        P = n.middlePageSchemeFromInput,
+        y = n.factors4Box,
+        b = n.factors4Button;
+      if (Array.isArray(E)) {
+        E = E[0];
+      } else {
+        E = E;
+      }
+      if (Array.isArray(R)) {
+        R = R[0];
+      } else {
+        R = R;
+      }
+      if (A) {
+        A = encodeURIComponent(A);
+      } else {
+        A = "";
+      }
+      if (g) {
+        g = String(g);
+      } else {
+        g = "";
+      }
+      n.latitude = E;
+      n.longitude = R;
+      n.track = A;
+      n.channel_code = g;
+      if (p) {
+        n.factors = p;
+        n.middlePageSchemeFromButton = null;
+      } else {
+        if (P) {
+          n.factors = P;
+          n.middlePageSchemeFromInput = null;
+        } else {
+          if (y) {
+            n.factors = y;
+            n.factors4Box = null;
+          } else {
+            if (b) {
+              n.factors = b;
+              n.factors4Button = null;
+            }
+          }
+        }
+      }
+      var M = {};
+      Object.keys(n).forEach(function (w) {
+        if (n[w]) {
+          M[w] = c(n[w]);
+        }
+      });
+      return M;
+    }
+  },
+  "q+dL": function (ue, L, e) {
+    var c = e("SyfN");
+    function u() {
+      var P,
+        y,
+        b = typeof Symbol == "function" ? Symbol : {},
+        M = b.iterator || "@@iterator",
+        w = b.toStringTag || "@@toStringTag";
+      function T(J, he, U, de) {
+        var ce = he && he.prototype instanceof H ? he : H,
+          ie = Object.create(ce.prototype);
+        n(ie, "_invoke", function (m, F, a) {
+          var s,
+            l,
+            f,
+            N = 0,
+            C = a || [],
+            _ = !1,
+            I = {
+              p: 0,
+              n: 0,
+              v: P,
+              a: ne,
+              f: ne.bind(P, 4),
+              d: function (q, me) {
+                s = q;
+                l = 0;
+                f = P;
+                I.n = me;
+                return d;
+              }
+            };
+          function ne(B, q) {
+            l = B;
+            f = q;
+            y = 0;
+            for (; !_ && N && !me && y < C.length; y++) {
+              var me,
+                be = C[y],
+                Re = 0,
+                Ee = be[2];
+              if (B > 3) {
+                if (me = Ee === q) {
+                  f = be[(l = be[4]) ? 5 : (l = 3, 3)];
+                  be[4] = be[5] = P;
+                }
+              } else {
+                if (be[0] <= Re) {
+                  if (me = B < 2 && Re < be[1]) {
+                    l = 0;
+                    I.v = q;
+                    I.n = be[1];
+                  } else {
+                    if (Re < Ee && (me = B < 3 || be[0] > q || q > Ee)) {
+                      be[4] = B;
+                      be[5] = q;
+                      I.n = Ee;
+                      l = 0;
+                    }
+                  }
+                }
+              }
+            }
+            if (me || B > 1) return d;
+            throw _ = !0, q;
+          }
+          return function (B, q, me) {
+            if (N > 1) throw TypeError("Generator is already running");
+            if (_ && q === 1) {
+              ne(q, me);
+            }
+            l = q;
+            f = me;
+            for (; (y = l < 2 ? P : f) || !_;) {
+              if (!s) {
+                if (l) {
+                  if (l < 3) {
+                    if (l > 1) {
+                      I.n = -1;
+                    }
+                    ne(l, f);
+                  } else {
+                    I.n = f;
+                  }
+                } else {
+                  I.v = f;
+                }
+              }
+              try {
+                N = 2;
+                if (s) {
+                  if (!l) {
+                    B = "next";
+                  }
+                  if (y = s[B]) {
+                    if (!(y = y.call(s, f))) throw TypeError("iterator result is not an object");
+                    if (!y.done) return y;
+                    f = y.value;
+                    if (l < 2) {
+                      l = 0;
+                    }
+                  } else {
+                    if (l === 1 && (y = s.return)) {
+                      y.call(s);
+                    }
+                    if (l < 2) {
+                      f = TypeError("The iterator does not provide a '" + B + "' method");
+                      l = 1;
+                    }
+                  }
+                  s = P;
+                } else if ((y = (_ = 0 < 0) ? f : m.call(F, I)) !== d) break;
+              } catch (be) {
+                s = P;
+                l = 1;
+                f = be;
+              } finally {
+                N = 1;
+              }
+            }
+            return {
+              value: y,
+              done: _
+            };
+          };
+        }(J, U, de), !0);
+        return ie;
+      }
+      var d = {};
+      function H() {}
+      function x() {}
+      function Q() {}
+      y = Object.getPrototypeOf;
+      var X = [][M] ? y(y([][M]())) : (n(y = {}, M, function () {
+          return this;
+        }), y),
+        oe = Q.prototype = H.prototype = Object.create(X);
+      function te(J) {
+        if (Object.setPrototypeOf) {
+          Object.setPrototypeOf(J, Q);
+        } else {
+          J.__proto__ = Q;
+          n(J, w, "GeneratorFunction");
+        }
+        J.prototype = Object.create(oe);
+        return J;
+      }
+      x.prototype = Q;
+      n(oe, "constructor", Q);
+      n(Q, "constructor", x);
+      x.displayName = "GeneratorFunction";
+      n(Q, w, "GeneratorFunction");
+      n(oe);
+      n(oe, w, "Generator");
+      n(oe, M, function () {
+        return this;
+      });
+      n(oe, "toString", function () {
+        return "[object Generator]";
+      });
+      return (u = function () {
+        return {
+          w: T,
+          m: te
+        };
+      })();
+    }
+    function n(P, y, b, M) {
+      var w = Object.defineProperty;
+      try {
+        w({}, "", {});
+      } catch (T) {
+        w = 0;
+      }
+      n = function (d, H, x, Q) {
+        function X(oe, te) {
+          n(d, oe, function (J) {
+            return this._invoke(oe, te, J);
+          });
+        }
+        if (H) {
+          if (w) {
+            w(d, H, {
+              value: x,
+              enumerable: !Q,
+              configurable: !Q,
+              writable: !Q
+            });
+          } else {
+            d[H] = x;
+          }
+        } else {
+          X("next", 0);
+          X("throw", 1);
+          X("return", 2);
+        }
+      };
+      n(P, y, b, M);
+    }
+    var E = function (y, b, M) {
+        return new Promise(function (w, T) {
+          var d = function (X) {
+              try {
+                x(M.next(X));
+              } catch (oe) {
+                T(oe);
+              }
+            },
+            H = function (X) {
+              try {
+                x(M.throw(X));
+              } catch (oe) {
+                T(oe);
+              }
+            },
+            x = function (X) {
+              return X.done ? w(X.value) : Promise.resolve(X.value).then(d, H);
+            };
+          x((M = M.apply(y, b)).next());
+        });
+      },
+      R = "ElemeMiniAppSearch",
+      A = {},
+      g = function (y) {
+        return y || 0;
+      },
+      p = {
+        allStore: function () {
+          return c.Z.get(R).catch(function () {
+            return {};
+          });
+        },
+        User: function () {
+          return this.get("user").then(g);
+        },
+        LocationSync: function () {
+          return A.location || {};
+        },
+        UserId: function () {
+          return this.get("userId").then(g);
+        },
+        get: function (y) {
+          return E(this, null, u().m(function b() {
+            var M, w;
+            return u().w(function (T) {
+              for (;;) switch (T.n) {
+                case 0:
+                  if (!A[y]) {
+                    T.n = 1;
+                    break;
+                  }
+                  return T.a(2, A[y]);
+                case 1:
+                  T.n = 2;
+                  return this.allStore();
+                case 2:
+                  w = T.v;
+                  if (w) {
+                    T.n = 3;
+                    break;
+                  }
+                  w = {};
+                case 3:
+                  M = w;
+                  if (!y) {
+                    T.n = 4;
+                    break;
+                  }
+                  A[y] = M[y];
+                  return T.a(2, A[y]);
+                case 4:
+                  return T.a(2, M);
+              }
+            }, b, this);
+          }));
+        },
+        set: function (y, b) {
+          return E(this, null, u().m(function M() {
+            var w, T;
+            return u().w(function (d) {
+              for (;;) switch (d.n) {
+                case 0:
+                  if (y) {
+                    d.n = 1;
+                    break;
+                  }
+                  return d.a(2, Promise.reject("KEY IS NECESSARY"));
+                case 1:
+                  A[y] = b;
+                  d.n = 2;
+                  return this.allStore();
+                case 2:
+                  T = d.v;
+                  if (T) {
+                    d.n = 3;
+                    break;
+                  }
+                  T = {};
+                case 3:
+                  w = T;
+                  w[y] = b;
+                  return d.a(2, c.Z.set(R, w));
+              }
+            }, M, this);
+          }));
+        },
+        setUser: function (y) {
+          return E(this, null, u().m(function b() {
+            return u().w(function (M) {
+              for (;;) switch (M.n) {
+                case 0:
+                  return M.a(2, this.set("user", y));
+              }
+            }, b, this);
+          }));
+        },
+        setUserId: function (y) {
+          return E(this, null, u().m(function b() {
+            return u().w(function (M) {
+              for (;;) switch (M.n) {
+                case 0:
+                  return M.a(2, this.set("userId", y));
+              }
+            }, b, this);
+          }));
+        },
+        setLocation: function (y) {
+          return E(this, null, u().m(function b() {
+            var M, w, T, d, H, x, Q, X, oe;
+            return u().w(function (te) {
+              for (;;) switch (te.n) {
+                case 0:
+                  M = y.latitude;
+                  w = y.longitude;
+                  T = y.locationName;
+                  d = y.cityId;
+                  H = y.districtId;
+                  x = y.poi_id;
+                  Q = y.poi_name;
+                  X = y.needReverse;
+                  if (!(!y.latitude || !y.longitude)) {
+                    te.n = 1;
+                    break;
+                  }
+                  return te.a(2, Promise.reject("latitude && longitude is required"));
+                case 1:
+                  oe = parseInt(new Date().valueOf() / 1e3, 10);
+                  A.location = {
+                    latitude: M,
+                    longitude: w,
+                    timestamp: oe,
+                    locationName: T,
+                    cityId: d,
+                    districtId: H,
+                    poi_id: x,
+                    poi_name: Q,
+                    needReverse: X
+                  };
+                  this.set("location", y);
+                case 2:
+                  return te.a(2);
+              }
+            }, b, this);
+          }));
+        }
+      };
+    L.Z = Object.freeze(p);
+  },
+  W5J3: function (ue, L, e) {
+    e.d(L, {
+      Z: function () {
+        return n;
+      }
+    });
+    function c(E, R, A) {
+      if (my.loadFontFace) {
+        my.loadFontFace({
+          family: E,
+          source: 'url("'.concat(R, '")'),
+          desc: A,
+          global: !0,
+          success: function () {
+            console.log('fontFace load success, "'.concat(E, '"'), A);
+          },
+          fail: function (p) {
+            console.error('fontFace load failed, "'.concat(E, '", "').concat(R, '"'), p);
+          }
+        });
+      }
+    }
+    var u = [{
+      family: "AlibabaSans102",
+      source: "https://nr-op.elemecdn.com/file/mussel-static-AlibabaSans102-Rg.woff",
+      desc: {
+        weight: "normal"
+      }
+    }, {
+      family: "AlibabaSans102",
+      source: "https://nr-op.elemecdn.com/file/mussel-static-AlibabaSans102-Md.woff",
+      desc: {
+        weight: "500 600"
+      }
+    }, {
+      family: "AlibabaSans102",
+      source: "https://nr-op.elemecdn.com/file/mussel-static-AlibabaSans102-Bd.woff",
+      desc: {
+        weight: "bold"
+      }
+    }];
+    function n() {
+      u.forEach(function (E) {
+        c(E.family, E.source, E.desc);
+      });
+    }
+  },
+  kozt: function (ue, L) {
+    L.Z = function () {
+      var e = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        c = "0123456789ABCDEF",
+        u = c.length;
+      return e.replace(/x/g, function () {
+        return c.charAt(Math.floor(Math.random() * u));
+      });
+    };
+  },
+  "0uG2": function (ue, L, e) {
+    e.d(L, {
+      z: function () {
+        return c;
+      }
+    });
+    function c() {
+      return new Promise(function (u, n) {
+        my.call("originalRouteUrl", {}, function (E) {
+          if (E && E.url) {
+            var R = E.url.split("?")[1] || "",
+              A = R.split("&") || [],
+              g = A.map(function (p) {
+                return p.split("=");
+              }).reduce(function (p, P) {
+                p[P[0]] = P[1];
+                return p;
+              }, {});
+            u(g);
+          }
+          n();
+        }, n);
+      });
+    }
+  },
+  V1tT: function (ue, L, e) {
+    e.d(L, {
+      U: function () {
+        return R;
+      },
+      X: function () {
+        return A;
+      }
+    });
+    var c = e("6EqU"),
+      u = e.n(c),
+      n = e("Jj5a"),
+      E = e("bNyJ"),
+      R = function (p) {
+        try {
+          if (u()().utils.platform.IS_WX_ENV) my.setNavigationBarColor({
+            frontColor: p === "1" ? "#ffffff" : "#11192D",
+            backgroundColor: "#ffffff"
+          });else {
+            if (u()().utils.platform.IS_TB_ENV || u()().utils.platform.IS_LT_ENV) return;
+            my.setNavigationBar({
+              backgroundColor: p === "1" ? "#11192D" : "#ffffff"
+            });
+          }
+          if ((0, E.at)() && /iPad/.test(navigator.userAgent)) {
+            n.Td({
+              title: "\u641C\u7D22"
+            });
+            n.Ne({
+              immersive: !1
+            });
+          }
+        } catch (P) {
+          console.error(P, "setNavigationBar error");
+        }
+      },
+      A = function () {
+        try {
+          if (u()().utils.platform.IS_WX_ENV) my.setNavigationBarColor({
+            frontColor: "#11192D",
+            backgroundColor: "#ffffff"
+          });else {
+            if (u()().utils.platform.IS_TB_ENV || u()().utils.platform.IS_LT_ENV) {
+              my.hideBackHome();
+              return;
+            }
+            my.setNavigationBar({
+              reset: !0,
+              transparentTitle: "always"
+            });
+          }
+        } catch (p) {
+          console.error(p, "setNavigationBar error");
+        }
+      };
+  },
+  oLrL: function (ue, L, e) {
+    var c = e("6EqU"),
+      u = e.n(c);
+    if (u()().utils.platform.IS_TB_ENV && typeof my != "undefined" && my.call) {
+      my.call("setTransparentTitle", {
+        transparentTitle: "always"
+      });
+      my.call("setNavigationBarStyle", {
+        title: "\u200B"
+      }, function (n) {});
+    }
+  },
+  OWia: function (ue, L, e) {
+    var c = e("zThL"),
+      u = e("w753"),
+      n = e("+N4N"),
+      E = e("lk4z");
+    L.Z = (0, c.Z)((0, c.Z)({}, E.fm, u.Z.getInstance()), E.jD, n.Z.getInstance());
+  },
+  shPf: function (ue, L, e) {
+    e.d(L, {
+      P: function () {
+        return c;
+      }
+    });
+    function c(u) {
+      var n = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 200,
+        E = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : {},
+        R = E.leading,
+        A = R === void 0 ? !0 : R,
+        g = E.trailing,
+        p = g === void 0 ? !1 : g,
+        P = 0,
+        y = null;
+      return function () {
+        for (var M = this, w = arguments.length, T = new Array(w), d = 0; d < w; d++) T[d] = arguments[d];
+        var H = Date.now(),
+          x = H - P,
+          Q = A && x >= n;
+        if (Q) {
+          u.apply(this, T);
+          P = H;
+        }
+        var X = n - x;
+        if (y !== null) {
+          clearTimeout(y);
+          y = null;
+        }
+        if (p && !y) {
+          y = setTimeout(function () {
+            u.apply(M, T);
+            P = H + n;
+            y = null;
+          }, X);
+        }
+      };
+    }
+  },
+  "5jaW": function (ue, L, e) {
+    e.d(L, {
+      Z: function () {
+        return p;
+      }
+    });
+    var c = e("bNyJ"),
+      u = (0, c.Vg)(),
+      E = {
+        title: "\u65E0\u6CD5\u83B7\u53D6\u4F4D\u7F6E\u4FE1\u606F",
+        subTitle: "\u6211\u5728\u54EA\uFF0C\u6211\u662F\u8C01?",
+        image: "https://img.alicdn.com/tfs/TB19Pv7IhD1gK0jSZFsXXbldVXa-396-348.png",
+        buttons: [{
+          text: "\u624B\u52A8\u5B9A\u4F4D",
+          theme: "white",
+          type: 1
+        }]
+      },
+      R = {
+        title: "\u51FA\u9519\u4E86",
+        subTitle: "\u54CE\u5440\u51FA\u9519\u4E86\uFF0C\u5C0F\u5B9D\u6B63\u5728\u68C0\u4FEE\u4E2D\u2026",
+        image: u ? "https://gw.alicdn.com/imgextra/i3/O1CN01HfZP711JHQJRxvSz4_!!6000000001003-2-tps-525-375.png" : "https://img.alicdn.com/tfs/TB1W4IcIeH2gK0jSZFEXXcqMpXa-400-320.png",
+        buttons: [{
+          text: "\u91CD\u65B0\u52A0\u8F7D",
+          theme: "blue",
+          type: 3
+        }]
+      },
+      A = {
+        title: "\u767B\u5F55\u540E\u53EF\u83B7\u53D6\u66F4\u591A\u4F18\u8D28\u670D\u52A1",
+        subTitle: "\u9644\u8FD1\u4F18\u8D28\u5546\u94FA\u7B49\u4F60\u641C\u7D22\u8FD4\u73B0",
+        image: u ? "https://gw.alicdn.com/imgextra/i3/O1CN01HfZP711JHQJRxvSz4_!!6000000001003-2-tps-525-375.png" : "https://img.alicdn.com/tfs/TB1W4IcIeH2gK0jSZFEXXcqMpXa-400-320.png",
+        buttons: [{
+          text: "\u70B9\u51FB\u767B\u5F55",
+          theme: "blue",
+          type: 4
+        }]
+      },
+      g = {
+        LOCATION_ERROR: E,
+        NETWORK_ERROR: R,
+        ACCOUNT_ERROR: A,
+        ERROR_ACTION_TYPE: n
+      },
+      p = {
+        Constant: g
+      };
+  },
+  "bF/A": function (ue, L, e) {
+    var c = e("20uZ"),
+      u = e("d8vc");
+    Component({
+      props: {
+        isShow: !1,
+        image: "",
+        title: "",
+        subTitle: "",
+        buttons: [],
+        onHandleAction: function () {}
+      },
+      methods: {
+        handleErrorAction: function (E) {
+          var R = (E.currentTarget || E.target).dataset.type,
+            A = this.props.onHandleAction;
+          if (A) {
+            A(R);
+          }
+        }
+      }
+    });
+    L.Z = c.Z.Component(u, c.Z.mergeConfig(e("s861"), e("3vE6")));
+  },
+  dbjb: function (ue, L, e) {
+    var c = e("20uZ"),
+      u = e("bNyJ"),
+      n = e("kj4q"),
+      E = (0, u.Vg)();
+    Component({
+      mixins: [],
+      data: {
+        isTBH5AndImmersiveLink: E,
+        loadingImg: E ? "https://gw.alicdn.com/imgextra/i4/O1CN010NFBEY1oSBi9sK7A9_!!6000000005223-54-tps-100-100.apng" : "https://gw.alicdn.com/tfs/TB1qotxpTM11u4jSZPxXXahcXXa-400-400.gif"
+      },
+      props: {
+        isShow: !1,
+        fixed: !0
+      },
+      didMount: function () {},
+      didUpdate: function () {},
+      didUnmount: function () {},
+      methods: {
+        handlePropagation: function () {}
+      }
+    });
+    L.Z = c.Z.Component(n, c.Z.mergeConfig(e("s861"), e("fL5z")));
+  },
+  MmZo: function (ue, L, e) {
+    e.d(L, {
+      Z: function () {
+        return m;
+      }
+    });
+    var c = e("byvu"),
+      u = e("M6oW"),
+      n = e("lk4z"),
+      E = Object.defineProperty,
+      R = Object.defineProperties,
+      A = Object.getOwnPropertyDescriptors,
+      g = Object.getOwnPropertySymbols,
+      p = Object.prototype.hasOwnProperty,
+      P = Object.prototype.propertyIsEnumerable,
+      y = function (a, s, l) {
+        return s in a ? E(a, s, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: l
+        }) : a[s] = l;
+      },
+      b = function (a, s) {
+        for (var l in s || (s = {})) {
+          if (p.call(s, l)) {
+            y(a, l, s[l]);
+          }
+        }
+        if (g) {
+          var f = (0, c.Z)(g(s)),
+            N;
+          try {
+            for (f.s(); !(N = f.n()).done;) {
+              var l = N.value;
+              if (P.call(s, l)) {
+                y(a, l, s[l]);
+              }
+            }
+          } catch (C) {
+            f.e(C);
+          } finally {
+            f.f();
+          }
+        }
+        return a;
+      },
+      M = function (a, s) {
+        return R(a, A(s));
+      };
+    function w(F, a, s) {
+      return (F || []).map(function (l) {
+        var f = l.code,
+          N = l.content,
+          C = l.trackInfo,
+          _ = C === void 0 ? {} : C,
+          I = l.adInfo,
+          ne = I === void 0 ? {} : I,
+          B = N.text,
+          q = _ && _.trackParams || {};
+        q.guideTrack = s;
+        q.refer = "\u8054\u60F3\u8BCD";
+        N.highlightWordNodes = (0, u.l1)({
+          text: B,
+          key: a,
+          defaultStyle: "display:inline-block;color: #11192D;",
+          lightStyle: "display:inline-block;color: #FF6200;"
+        });
+        var me = l.content.entities,
+          be = me && me.map(function (Ee) {
+            var $e = Ee.trackInfo && Ee.trackInfo.trackParams || {};
+            $e.guideTrack = s;
+            return M(b({}, Ee), {
+              trackItem: $e
+            });
+          });
+        l.content.entities = be;
+        var Re = !1;
+        if (f === n.Wd) {
+          Re = !0;
+        }
+        q.isAd = Re;
+        if (f === n.X8 || f === n.Wd) {
+          q = M(b({}, q), {
+            _trans_track_keys: encodeURIComponent(JSON.stringify(["rank_id", "content", "channel_code", "guideTrack", "rankType", "refer", "keyword", "browseModeSwitch"])),
+            _trans_track_url: encodeURIComponent((l.content != null ? l.content.scheme : "") || ""),
+            zfpos: "sug01"
+          });
+        }
+        return {
+          code: f,
+          content: N,
+          adInfo: ne,
+          isAd: Re,
+          trackInfo: _,
+          trackItem: q
+        };
+      });
+    }
+    var T = {
+        getSuggestListDataNew: w
+      },
+      d = "Exposure-Show_SuggestRestaurant",
+      H = "Button-Click_SuggestRestaurantSearchItem",
+      x = "SuggestRestaurant",
+      Q = "Exposure-Show_SuggestWord",
+      X = "Button-Click_SuggestWordSearchItem",
+      oe = "SuggestWord",
+      te = "Exposure-Show_SuggestModule",
+      J = "Button-Click_SuggestModule",
+      he = "SuggestModule",
+      U = "Exposure-Show_SuggestGuess",
+      de = "Button-Click_SuggestGuessSearchItem",
+      ce = "SuggestGuess",
+      ie = {
+        suggestRestaurantExpLogKey: d,
+        suggestRestaurantClkLogKey: H,
+        suggestRestaurantSpmC: x,
+        suggestWordExpLogKey: Q,
+        suggestWordClkLogKey: X,
+        suggestWordSpmC: oe,
+        suggestModuleExpLogKey: te,
+        suggestModuleClkLogKey: J,
+        suggestModuleSpmC: he,
+        suggestGuessExpLogKey: U,
+        suggestGuessClkLogKey: de,
+        suggestGuessSpmC: ce
+      },
+      m = {
+        Log: ie,
+        Func: T
+      };
+  },
+  lXnF: function (ue, L, e) {
+    e.d(L, {
+      Z: function () {
+        return Ot;
+      }
+    });
+    var c = e("byvu"),
+      u = e("20uZ"),
+      n = e("MmZo"),
+      E = e("lk4z"),
+      R = function (V) {
+        var v = null,
+          D = null;
+        return function (O) {
+          D = O;
+          return new Promise(function (ee) {
+            if (v) {
+              clearTimeout(v);
+            }
+            v = setTimeout(function () {
+              ee(D);
+              v = null;
+            }, V);
+          });
+        };
+      },
+      A = e("OWia"),
+      g = e("6EqU"),
+      p = e.n(g),
+      P = e("PxK8"),
+      y = e("y6Kz");
+    function b() {
+      var V,
+        v,
+        D = typeof Symbol == "function" ? Symbol : {},
+        O = D.iterator || "@@iterator",
+        ee = D.toStringTag || "@@toStringTag";
+      function Ie(ge, Je, gt, ut) {
+        var wt = Je && Je.prototype instanceof xe ? Je : xe,
+          St = Object.create(wt.prototype);
+        M(St, "_invoke", function (Tt, Ct, Rt) {
+          var Se,
+            re,
+            Ue,
+            qe = 0,
+            dt = Rt || [],
+            rt = !1,
+            Ye = {
+              p: 0,
+              n: 0,
+              v: V,
+              a: vt,
+              f: vt.bind(V, 4),
+              d: function (Fe, ze) {
+                Se = Fe;
+                re = 0;
+                Ue = V;
+                Ye.n = ze;
+                return De;
+              }
+            };
+          function vt(je, Fe) {
+            re = je;
+            Ue = Fe;
+            v = 0;
+            for (; !rt && qe && !ze && v < dt.length; v++) {
+              var ze,
+                Be = dt[v],
+                j = 0,
+                t = Be[2];
+              if (je > 3) {
+                if (ze = t === Fe) {
+                  Ue = Be[(re = Be[4]) ? 5 : (re = 3, 3)];
+                  Be[4] = Be[5] = V;
+                }
+              } else {
+                if (Be[0] <= j) {
+                  if (ze = je < 2 && j < Be[1]) {
+                    re = 0;
+                    Ye.v = Fe;
+                    Ye.n = Be[1];
+                  } else {
+                    if (j < t && (ze = je < 3 || Be[0] > Fe || Fe > t)) {
+                      Be[4] = je;
+                      Be[5] = Fe;
+                      Ye.n = t;
+                      re = 0;
+                    }
+                  }
+                }
+              }
+            }
+            if (ze || je > 1) return De;
+            throw rt = !0, Fe;
+          }
+          return function (je, Fe, ze) {
+            if (qe > 1) throw TypeError("Generator is already running");
+            if (rt && Fe === 1) {
+              vt(Fe, ze);
+            }
+            re = Fe;
+            Ue = ze;
+            for (; (v = re < 2 ? V : Ue) || !rt;) {
+              if (!Se) {
+                if (re) {
+                  if (re < 3) {
+                    if (re > 1) {
+                      Ye.n = -1;
+                    }
+                    vt(re, Ue);
+                  } else {
+                    Ye.n = Ue;
+                  }
+                } else {
+                  Ye.v = Ue;
+                }
+              }
+              try {
+                qe = 2;
+                if (Se) {
+                  if (!re) {
+                    je = "next";
+                  }
+                  if (v = Se[je]) {
+                    if (!(v = v.call(Se, Ue))) throw TypeError("iterator result is not an object");
+                    if (!v.done) return v;
+                    Ue = v.value;
+                    if (re < 2) {
+                      re = 0;
+                    }
+                  } else {
+                    if (re === 1 && (v = Se.return)) {
+                      v.call(Se);
+                    }
+                    if (re < 2) {
+                      Ue = TypeError("The iterator does not provide a '" + je + "' method");
+                      re = 1;
+                    }
+                  }
+                  Se = V;
+                } else if ((v = (rt = 0 < 0) ? Ue : Tt.call(Ct, Ye)) !== De) break;
+              } catch (Be) {
+                Se = V;
+                re = 1;
+                Ue = Be;
+              } finally {
+                qe = 1;
+              }
+            }
+            return {
+              value: v,
+              done: rt
+            };
+          };
+        }(ge, gt, ut), !0);
+        return St;
+      }
+      var De = {};
+      function xe() {}
+      function Te() {}
+      function _e() {}
+      v = Object.getPrototypeOf;
+      var ye = [][O] ? v(v([][O]())) : (M(v = {}, O, function () {
+          return this;
+        }), v),
+        ae = _e.prototype = xe.prototype = Object.create(ye);
+      function ot(ge) {
+        if (Object.setPrototypeOf) {
+          Object.setPrototypeOf(ge, _e);
+        } else {
+          ge.__proto__ = _e;
+          M(ge, ee, "GeneratorFunction");
+        }
+        ge.prototype = Object.create(ae);
+        return ge;
+      }
+      Te.prototype = _e;
+      M(ae, "constructor", _e);
+      M(_e, "constructor", Te);
+      Te.displayName = "GeneratorFunction";
+      M(_e, ee, "GeneratorFunction");
+      M(ae);
+      M(ae, ee, "Generator");
+      M(ae, O, function () {
+        return this;
+      });
+      M(ae, "toString", function () {
+        return "[object Generator]";
+      });
+      return (b = function () {
+        return {
+          w: Ie,
+          m: ot
+        };
+      })();
+    }
+    function M(V, v, D, O) {
+      var ee = Object.defineProperty;
+      try {
+        ee({}, "", {});
+      } catch (Ie) {
+        ee = 0;
+      }
+      M = function (De, xe, Te, _e) {
+        function ye(ae, ot) {
+          M(De, ae, function (ge) {
+            return this._invoke(ae, ot, ge);
+          });
+        }
+        if (xe) {
+          if (ee) {
+            ee(De, xe, {
+              value: Te,
+              enumerable: !_e,
+              configurable: !_e,
+              writable: !_e
+            });
+          } else {
+            De[xe] = Te;
+          }
+        } else {
+          ye("next", 0);
+          ye("throw", 1);
+          ye("return", 2);
+        }
+      };
+      M(V, v, D, O);
+    }
+    var w = Object.defineProperty,
+      T = Object.defineProperties,
+      d = Object.getOwnPropertyDescriptors,
+      H = Object.getOwnPropertySymbols,
+      x = Object.prototype.hasOwnProperty,
+      Q = Object.prototype.propertyIsEnumerable,
+      X = function (v, D, O) {
+        return D in v ? w(v, D, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: O
+        }) : v[D] = O;
+      },
+      oe = function (v, D) {
+        for (var O in D || (D = {})) {
+          if (x.call(D, O)) {
+            X(v, O, D[O]);
+          }
+        }
+        if (H) {
+          var ee = (0, c.Z)(H(D)),
+            Ie;
+          try {
+            for (ee.s(); !(Ie = ee.n()).done;) {
+              var O = Ie.value;
+              if (Q.call(D, O)) {
+                X(v, O, D[O]);
+              }
+            }
+          } catch (De) {
+            ee.e(De);
+          } finally {
+            ee.f();
+          }
+        }
+        return v;
+      },
+      te = function (v, D) {
+        return T(v, d(D));
+      },
+      J = function (v, D, O) {
+        return new Promise(function (ee, Ie) {
+          var De = function (ye) {
+              try {
+                Te(O.next(ye));
+              } catch (ae) {
+                Ie(ae);
+              }
+            },
+            xe = function (ye) {
+              try {
+                Te(O.throw(ye));
+              } catch (ae) {
+                Ie(ae);
+              }
+            },
+            Te = function (ye) {
+              return ye.done ? ee(ye.value) : Promise.resolve(ye.value).then(De, xe);
+            };
+          Te((O = O.apply(v, D)).next());
+        });
+      },
+      he = function (V) {
+        return J(void 0, null, b().m(function v() {
+          return b().w(function (D) {
+            for (;;) switch (D.n) {
+              case 0:
+                return D.a(2, (0, P.J)("28820", te(oe({
+                  isMtopMiniApp: !0,
+                  "x-ele-scene": "search_suggest"
+                }, V), {
+                  sversion: y.It,
+                  apiVersion: y.Gn
+                })).then(function (O) {
+                  return O && O.data && O.data.result && O.data.result[0] ? O.data.result[0] : null;
+                }));
+            }
+          }, v);
+        }));
+      },
+      U = e("Gw60"),
+      de = e("oYSA");
+    function ce(V, v) {
+      var D = "",
+        O = "",
+        ee = Object.values(V)[0];
+      if (ee.length) {
+        var Ie = Object.keys(ee[0]);
+        D = Ie.join("|");
+        O = ee.map(function (De) {
+          return Object.entries(De).map(function (xe) {
+            var Te = (0, de.Z)(xe, 2),
+              _e = Te[0],
+              ye = Te[1];
+            return Array.isArray(ye) ? ye[0][_e] || "" : ye || "";
+          }).join("|");
+        }).join("#");
+      }
+      return [[v, D, O]];
+    }
+    function ie() {
+      var V,
+        v,
+        D = typeof Symbol == "function" ? Symbol : {},
+        O = D.iterator || "@@iterator",
+        ee = D.toStringTag || "@@toStringTag";
+      function Ie(ge, Je, gt, ut) {
+        var wt = Je && Je.prototype instanceof xe ? Je : xe,
+          St = Object.create(wt.prototype);
+        m(St, "_invoke", function (Tt, Ct, Rt) {
+          var Se,
+            re,
+            Ue,
+            qe = 0,
+            dt = Rt || [],
+            rt = !1,
+            Ye = {
+              p: 0,
+              n: 0,
+              v: V,
+              a: vt,
+              f: vt.bind(V, 4),
+              d: function (Fe, ze) {
+                Se = Fe;
+                re = 0;
+                Ue = V;
+                Ye.n = ze;
+                return De;
+              }
+            };
+          function vt(je, Fe) {
+            re = je;
+            Ue = Fe;
+            v = 0;
+            for (; !rt && qe && !ze && v < dt.length; v++) {
+              var ze,
+                Be = dt[v],
+                j = 0,
+                t = Be[2];
+              if (je > 3) {
+                if (ze = t === Fe) {
+                  Ue = Be[(re = Be[4]) ? 5 : (re = 3, 3)];
+                  Be[4] = Be[5] = V;
+                }
+              } else {
+                if (Be[0] <= j) {
+                  if (ze = je < 2 && j < Be[1]) {
+                    re = 0;
+                    Ye.v = Fe;
+                    Ye.n = Be[1];
+                  } else {
+                    if (j < t && (ze = je < 3 || Be[0] > Fe || Fe > t)) {
+                      Be[4] = je;
+                      Be[5] = Fe;
+                      Ye.n = t;
+                      re = 0;
+                    }
+                  }
+                }
+              }
+            }
+            if (ze || je > 1) return De;
+            throw rt = !0, Fe;
+          }
+          return function (je, Fe, ze) {
+            if (qe > 1) throw TypeError("Generator is already running");
+            if (rt && Fe === 1) {
+              vt(Fe, ze);
+            }
+            re = Fe;
+            Ue = ze;
+            for (; (v = re < 2 ? V : Ue) || !rt;) {
+              if (!Se) {
+                if (re) {
+                  if (re < 3) {
+                    if (re > 1) {
+                      Ye.n = -1;
+                    }
+                    vt(re, Ue);
+                  } else {
+                    Ye.n = Ue;
+                  }
+                } else {
+                  Ye.v = Ue;
+                }
+              }
+              try {
+                qe = 2;
+                if (Se) {
+                  if (!re) {
+                    je = "next";
+                  }
+                  if (v = Se[je]) {
+                    if (!(v = v.call(Se, Ue))) throw TypeError("iterator result is not an object");
+                    if (!v.done) return v;
+                    Ue = v.value;
+                    if (re < 2) {
+                      re = 0;
+                    }
+                  } else {
+                    if (re === 1 && (v = Se.return)) {
+                      v.call(Se);
+                    }
+                    if (re < 2) {
+                      Ue = TypeError("The iterator does not provide a '" + je + "' method");
+                      re = 1;
+                    }
+                  }
+                  Se = V;
+                } else if ((v = (rt = 0 < 0) ? Ue : Tt.call(Ct, Ye)) !== De) break;
+              } catch (Be) {
+                Se = V;
+                re = 1;
+                Ue = Be;
+              } finally {
+                qe = 1;
+              }
+            }
+            return {
+              value: v,
+              done: rt
+            };
+          };
+        }(ge, gt, ut), !0);
+        return St;
+      }
+      var De = {};
+      function xe() {}
+      function Te() {}
+      function _e() {}
+      v = Object.getPrototypeOf;
+      var ye = [][O] ? v(v([][O]())) : (m(v = {}, O, function () {
+          return this;
+        }), v),
+        ae = _e.prototype = xe.prototype = Object.create(ye);
+      function ot(ge) {
+        if (Object.setPrototypeOf) {
+          Object.setPrototypeOf(ge, _e);
+        } else {
+          ge.__proto__ = _e;
+          m(ge, ee, "GeneratorFunction");
+        }
+        ge.prototype = Object.create(ae);
+        return ge;
+      }
+      Te.prototype = _e;
+      m(ae, "constructor", _e);
+      m(_e, "constructor", Te);
+      Te.displayName = "GeneratorFunction";
+      m(_e, ee, "GeneratorFunction");
+      m(ae);
+      m(ae, ee, "Generator");
+      m(ae, O, function () {
+        return this;
+      });
+      m(ae, "toString", function () {
+        return "[object Generator]";
+      });
+      return (ie = function () {
+        return {
+          w: Ie,
+          m: ot
+        };
+      })();
+    }
+    function m(V, v, D, O) {
+      var ee = Object.defineProperty;
+      try {
+        ee({}, "", {});
+      } catch (Ie) {
+        ee = 0;
+      }
+      m = function (De, xe, Te, _e) {
+        function ye(ae, ot) {
+          m(De, ae, function (ge) {
+            return this._invoke(ae, ot, ge);
+          });
+        }
+        if (xe) {
+          if (ee) {
+            ee(De, xe, {
+              value: Te,
+              enumerable: !_e,
+              configurable: !_e,
+              writable: !_e
+            });
+          } else {
+            De[xe] = Te;
+          }
+        } else {
+          ye("next", 0);
+          ye("throw", 1);
+          ye("return", 2);
+        }
+      };
+      m(V, v, D, O);
+    }
+    var F = Object.defineProperty,
+      a = Object.defineProperties,
+      s = Object.getOwnPropertyDescriptors,
+      l = Object.getOwnPropertySymbols,
+      f = Object.prototype.hasOwnProperty,
+      N = Object.prototype.propertyIsEnumerable,
+      C = function (v, D, O) {
+        return D in v ? F(v, D, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: O
+        }) : v[D] = O;
+      },
+      _ = function (v, D) {
+        for (var O in D || (D = {})) {
+          if (f.call(D, O)) {
+            C(v, O, D[O]);
+          }
+        }
+        if (l) {
+          var ee = (0, c.Z)(l(D)),
+            Ie;
+          try {
+            for (ee.s(); !(Ie = ee.n()).done;) {
+              var O = Ie.value;
+              if (N.call(D, O)) {
+                C(v, O, D[O]);
+              }
+            }
+          } catch (De) {
+            ee.e(De);
+          } finally {
+            ee.f();
+          }
+        }
+        return v;
+      },
+      I = function (v, D) {
+        return a(v, s(D));
+      },
+      ne = function (v, D, O) {
+        return new Promise(function (ee, Ie) {
+          var De = function (ye) {
+              try {
+                Te(O.next(ye));
+              } catch (ae) {
+                Ie(ae);
+              }
+            },
+            xe = function (ye) {
+              try {
+                Te(O.throw(ye));
+              } catch (ae) {
+                Ie(ae);
+              }
+            },
+            Te = function (ye) {
+              return ye.done ? ee(ye.value) : Promise.resolve(ye.value).then(De, xe);
+            };
+          Te((O = O.apply(v, D)).next());
+        });
+      };
+    function B(V) {
+      var v = (0, U.pS)(V),
+        D = (0, U.WC)(V),
+        O = "ALIPAY_MINIAPP_SUGGEST";
+      try {
+        var ee = q();
+        switch (ee) {
+          case "DY":
+            O = "DY_SUGGEST";
+            break;
+          case "TB":
+            O = me(v, D, V);
+            break;
+          case "WX":
+            O = be(v, D);
+            break;
+          case "WEB":
+            O = Re(v, D, V);
+            break;
+          default:
+            O = Ee(v, D);
+        }
+        if (V === E.ki.tbxsdtab || V === E.ki.tbxsd401 || V === E.ki.tbxsd402 || V === E.ki.tbxsd403 || V === E.ki.tbxsd404) {
+          O = "TAOBAO_MINIAPP_XSD_TAB_SUGGEST";
+        }
+      } catch (Ie) {}
+      return O;
+    }
+    function q() {
+      return p()().utils.platform.IS_DY_ENV || p()().utils.platform.IS_DYLT_ENV ? "DY" : p()().utils.platform.IS_TB_ENV || p()().utils.platform.IS_LT_ENV ? "TB" : p()().utils.platform.IS_WX_ENV ? "WX" : p()().utils.platform.IS_WEB_ENV ? "WEB" : "DEFAULT";
+    }
+    function me(V, v, D) {
+      var O = "TAOBAO_MINIAPP_SUGGEST";
+      if (V) {
+        O = "TAOBAO_MINIAPP_RETAIL_SUGGEST";
+      } else {
+        if (v) {
+          O = "TAOBAO_MINIAPP_MEDICINE_SUGGEST";
+        }
+      }
+      return O;
+    }
+    function be(V, v) {
+      var D = "WECHAT_H5_SUGGEST";
+      if (V) {
+        D = "WECHAT_RETAIL_SUGGEST";
+      } else {
+        if (v) {
+          D = "WECHAT_MEDICINE_SUGGEST";
+        }
+      }
+      return D;
+    }
+    function Re(V, v, D) {
+      var O = "OTHER_H5_SUGGEST";
+      if (V) {
+        O = "OTHER_H5_RETAIL_SUGGEST";
+      } else {
+        if (v) {
+          O = "H5_MEDICINE_SUGGEST";
+        } else {
+          if (D === E.ki.dingdingPindan) {
+            O = "DINGTALK_PD_SUGGEST";
+          }
+        }
+      }
+      return O;
+    }
+    function Ee(V, v) {
+      var D = "ALIPAY_MINIAPP_SUGGEST";
+      if (V) {
+        D = "ALIPAY_MINIAPP_RETAIL_SUGGEST";
+      } else {
+        if (v) {
+          D = "ALIPAY_MINIAPP_MEDICINE_SUGGEST";
+        }
+      }
+      return D;
+    }
+    function $e() {
+      var V = [],
+        v = [];
+      if (p()().aife && p()().aife.ssp) {
+        p()().aife.ssp.getFeature("alsc_user_behavior_shop_pv_event", {
+          success: function (ee) {
+            V = ce(ee, "alsc_user_behavior_shop_pv_event");
+          },
+          error: function (ee) {
+            console.log("$ele suggest", ee);
+          }
+        });
+        p()().aife.ssp.getFeature("alsc_user_behavior_search_event", {
+          success: function (ee) {
+            v = ce(ee, "alsc_user_behavior_search_event");
+          },
+          error: function (ee) {
+            console.log("$ele suggest", ee);
+          }
+        });
+      }
+      if (!V.length || !v.length) return null;
+      var D = {
+        "suggest|search": {
+          data: [V, v],
+          fetchTime: new Date().getTime(),
+          featureScene: "suggest|search",
+          TT: 1
+        }
+      };
+      return D;
+    }
+    var tt = function (v) {
+        return ne(void 0, [v], function (D) {
+          var O = D.keyword,
+            ee = D.query,
+            Ie = D.searchParams;
+          return ie().m(function De() {
+            var xe, Te, _e, ye, ae, ot, ge, Je;
+            return ie().w(function (gt) {
+              for (;;) switch (gt.n) {
+                case 0:
+                  xe = ee.channelId || ee.from_channel || 0;
+                  Te = ee.channel_code || 0;
+                  if (!(0, U.P1)(ee)) {
+                    gt.n = 1;
+                    break;
+                  }
+                  return gt.a(2, Promise.resolve({}));
+                case 1:
+                  _e = $e();
+                  ye = B(Te);
+                  ae = I(_({}, Ie), {
+                    kw: O,
+                    rtFeature: JSON.stringify(_e || {}),
+                    scene: ye,
+                    channelId: xe,
+                    channelCode: Te,
+                    apiVersion: "3.1"
+                  });
+                  ot = A.Z[E.fm];
+                  ge = ot && ot.guess$.getValue();
+                  Je = ge.kw;
+                  if (Je) {
+                    ae.recKw = Je;
+                    ae.needRecWords = !0;
+                  }
+                  Object.keys(ae).forEach(function (ut) {
+                    if (!ae[ut]) {
+                      delete ae[ut];
+                    }
+                  });
+                  return gt.a(2, he(ae).catch(function () {
+                    return Promise.resolve({});
+                  }));
+              }
+            }, De);
+          })();
+        });
+      },
+      ft = tt,
+      pt = e("GBp+");
+    function it() {
+      var V,
+        v,
+        D = typeof Symbol == "function" ? Symbol : {},
+        O = D.iterator || "@@iterator",
+        ee = D.toStringTag || "@@toStringTag";
+      function Ie(ge, Je, gt, ut) {
+        var wt = Je && Je.prototype instanceof xe ? Je : xe,
+          St = Object.create(wt.prototype);
+        Ge(St, "_invoke", function (Tt, Ct, Rt) {
+          var Se,
+            re,
+            Ue,
+            qe = 0,
+            dt = Rt || [],
+            rt = !1,
+            Ye = {
+              p: 0,
+              n: 0,
+              v: V,
+              a: vt,
+              f: vt.bind(V, 4),
+              d: function (Fe, ze) {
+                Se = Fe;
+                re = 0;
+                Ue = V;
+                Ye.n = ze;
+                return De;
+              }
+            };
+          function vt(je, Fe) {
+            re = je;
+            Ue = Fe;
+            v = 0;
+            for (; !rt && qe && !ze && v < dt.length; v++) {
+              var ze,
+                Be = dt[v],
+                j = 0,
+                t = Be[2];
+              if (je > 3) {
+                if (ze = t === Fe) {
+                  Ue = Be[(re = Be[4]) ? 5 : (re = 3, 3)];
+                  Be[4] = Be[5] = V;
+                }
+              } else {
+                if (Be[0] <= j) {
+                  if (ze = je < 2 && j < Be[1]) {
+                    re = 0;
+                    Ye.v = Fe;
+                    Ye.n = Be[1];
+                  } else {
+                    if (j < t && (ze = je < 3 || Be[0] > Fe || Fe > t)) {
+                      Be[4] = je;
+                      Be[5] = Fe;
+                      Ye.n = t;
+                      re = 0;
+                    }
+                  }
+                }
+              }
+            }
+            if (ze || je > 1) return De;
+            throw rt = !0, Fe;
+          }
+          return function (je, Fe, ze) {
+            if (qe > 1) throw TypeError("Generator is already running");
+            if (rt && Fe === 1) {
+              vt(Fe, ze);
+            }
+            re = Fe;
+            Ue = ze;
+            for (; (v = re < 2 ? V : Ue) || !rt;) {
+              if (!Se) {
+                if (re) {
+                  if (re < 3) {
+                    if (re > 1) {
+                      Ye.n = -1;
+                    }
+                    vt(re, Ue);
+                  } else {
+                    Ye.n = Ue;
+                  }
+                } else {
+                  Ye.v = Ue;
+                }
+              }
+              try {
+                qe = 2;
+                if (Se) {
+                  if (!re) {
+                    je = "next";
+                  }
+                  if (v = Se[je]) {
+                    if (!(v = v.call(Se, Ue))) throw TypeError("iterator result is not an object");
+                    if (!v.done) return v;
+                    Ue = v.value;
+                    if (re < 2) {
+                      re = 0;
+                    }
+                  } else {
+                    if (re === 1 && (v = Se.return)) {
+                      v.call(Se);
+                    }
+                    if (re < 2) {
+                      Ue = TypeError("The iterator does not provide a '" + je + "' method");
+                      re = 1;
+                    }
+                  }
+                  Se = V;
+                } else if ((v = (rt = 0 < 0) ? Ue : Tt.call(Ct, Ye)) !== De) break;
+              } catch (Be) {
+                Se = V;
+                re = 1;
+                Ue = Be;
+              } finally {
+                qe = 1;
+              }
+            }
+            return {
+              value: v,
+              done: rt
+            };
+          };
+        }(ge, gt, ut), !0);
+        return St;
+      }
+      var De = {};
+      function xe() {}
+      function Te() {}
+      function _e() {}
+      v = Object.getPrototypeOf;
+      var ye = [][O] ? v(v([][O]())) : (Ge(v = {}, O, function () {
+          return this;
+        }), v),
+        ae = _e.prototype = xe.prototype = Object.create(ye);
+      function ot(ge) {
+        if (Object.setPrototypeOf) {
+          Object.setPrototypeOf(ge, _e);
+        } else {
+          ge.__proto__ = _e;
+          Ge(ge, ee, "GeneratorFunction");
+        }
+        ge.prototype = Object.create(ae);
+        return ge;
+      }
+      Te.prototype = _e;
+      Ge(ae, "constructor", _e);
+      Ge(_e, "constructor", Te);
+      Te.displayName = "GeneratorFunction";
+      Ge(_e, ee, "GeneratorFunction");
+      Ge(ae);
+      Ge(ae, ee, "Generator");
+      Ge(ae, O, function () {
+        return this;
+      });
+      Ge(ae, "toString", function () {
+        return "[object Generator]";
+      });
+      return (it = function () {
+        return {
+          w: Ie,
+          m: ot
+        };
+      })();
+    }
+    function Ge(V, v, D, O) {
+      var ee = Object.defineProperty;
+      try {
+        ee({}, "", {});
+      } catch (Ie) {
+        ee = 0;
+      }
+      Ge = function (De, xe, Te, _e) {
+        function ye(ae, ot) {
+          Ge(De, ae, function (ge) {
+            return this._invoke(ae, ot, ge);
+          });
+        }
+        if (xe) {
+          if (ee) {
+            ee(De, xe, {
+              value: Te,
+              enumerable: !_e,
+              configurable: !_e,
+              writable: !_e
+            });
+          } else {
+            De[xe] = Te;
+          }
+        } else {
+          ye("next", 0);
+          ye("throw", 1);
+          ye("return", 2);
+        }
+      };
+      Ge(V, v, D, O);
+    }
+    var at = e("Q+72"),
+      Pt = Object.defineProperty,
+      Ne = Object.defineProperties,
+      fe = Object.getOwnPropertyDescriptors,
+      G = Object.getOwnPropertySymbols,
+      se = Object.prototype.hasOwnProperty,
+      we = Object.prototype.propertyIsEnumerable,
+      Ze = function (v, D, O) {
+        return D in v ? Pt(v, D, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: O
+        }) : v[D] = O;
+      },
+      Y = function (v, D) {
+        for (var O in D || (D = {})) {
+          if (se.call(D, O)) {
+            Ze(v, O, D[O]);
+          }
+        }
+        if (G) {
+          var ee = (0, c.Z)(G(D)),
+            Ie;
+          try {
+            for (ee.s(); !(Ie = ee.n()).done;) {
+              var O = Ie.value;
+              if (we.call(D, O)) {
+                Ze(v, O, D[O]);
+              }
+            }
+          } catch (De) {
+            ee.e(De);
+          } finally {
+            ee.f();
+          }
+        }
+        return v;
+      },
+      He = function (v, D) {
+        return Ne(v, fe(D));
+      },
+      Et = function (v, D, O) {
+        return new Promise(function (ee, Ie) {
+          var De = function (ye) {
+              try {
+                Te(O.next(ye));
+              } catch (ae) {
+                Ie(ae);
+              }
+            },
+            xe = function (ye) {
+              try {
+                Te(O.throw(ye));
+              } catch (ae) {
+                Ie(ae);
+              }
+            },
+            Te = function (ye) {
+              return ye.done ? ee(ye.value) : Promise.resolve(ye.value).then(De, xe);
+            };
+          Te((O = O.apply(v, D)).next());
+        });
+      },
+      mt = A.Z[E.fm];
+    Component({
+      mixins: [],
+      data: He(Y({}, n.Z.Log), {
+        keyword: "",
+        service: null,
+        cards: [],
+        guideTrack: ""
+      }),
+      props: {
+        searchPage: ""
+      },
+      onInit: function () {},
+      didMount: function () {
+        var v = this,
+          D = this.props.searchPage,
+          O = A.Z[D];
+        this.setData({
+          service: O
+        });
+        var ee = O[D === E.jD ? "searchResult$" : "search$"];
+        this.search_ = ee.pipe(R(300)).pipe(function (Ie) {
+          return Et(v, [Ie], function (De) {
+            var xe = this,
+              Te = De.keyword,
+              _e = De.status;
+            return it().m(function ye() {
+              var ae, ot, ge, Je, gt;
+              return it().w(function (ut) {
+                for (;;) switch (ut.n) {
+                  case 0:
+                    if (!(!Te || _e !== E.NQ)) {
+                      ut.n = 1;
+                      break;
+                    }
+                    return ut.a(2, {});
+                  case 1:
+                    xe.setData({
+                      keyword: Te,
+                      cards: []
+                    });
+                    ae = O.getSearchParams();
+                    ot = O.query$.getValue().value;
+                    if (ot.channel_code !== "10603") {
+                      ut.n = 2;
+                      break;
+                    }
+                    return ut.a(2, {});
+                  case 2:
+                    ut.n = 3;
+                    return ft({
+                      keyword: Te,
+                      query: ot,
+                      searchPage: D,
+                      searchParams: ae
+                    });
+                  case 3:
+                    ge = ut.v;
+                    Je = ge.cards;
+                    gt = ge.guideTrack;
+                    Je = Je || [];
+                    return ut.a(2, {
+                      cards: n.Z.Func.getSuggestListDataNew(Je, Te, gt),
+                      keyword: Te,
+                      guideTrack: gt
+                    });
+                }
+              }, ye);
+            })();
+          });
+        }).subscribe(function (Ie) {
+          var De = Ie.cards,
+            xe = Ie.keyword,
+            Te = Ie.guideTrack;
+          if (xe) {
+            v.setData({
+              cards: De,
+              keyword: xe,
+              guideTrack: Te
+            }, function () {});
+          }
+        }, function (Ie) {
+          console.log(Ie);
+        });
+      },
+      didUnmount: function () {
+        if (this.search_) {
+          this.search_.unsubscribe();
+        }
+      },
+      methods: {
+        handleSearchKeyword: function (v) {
+          var D = (v.currentTarget || v.target).dataset,
+            O = D.keyword,
+            ee = D.refer,
+            Ie = D.searchEntryCode,
+            De = "SuggestRefer.1";
+          this.handleSuggestSearch({
+            spmcd: De,
+            keyword: O,
+            refer: ee,
+            searchEntryCode: Ie
+          });
+        },
+        handleSuggestSearch: function (v) {
+          var D = v.spmcd,
+            O = v.keyword,
+            ee = v.refer,
+            Ie = v.searchExtraParams,
+            De = v.searchFilterParams,
+            xe = v.searchEntryCode,
+            Te = this.props.searchPage,
+            _e = this.data,
+            ye = _e.service,
+            ae = _e.guideTrack;
+          if (Te === E.jD) {
+            mt.recordHistory(O);
+            ye.query$.mergeNext({
+              value: He(Y({}, ye.query$.getValue().value), {
+                track: ae
+              })
+            });
+            if (Ie) {
+              xe = xe || Ie.searchEntryCode || "";
+            }
+            ye.searchKeyword({
+              keyword: O,
+              refer: ee,
+              recKw: ye.searchResult$.getValue().keyword,
+              searchEntryCode: xe,
+              searchExtraParams: Ie
+            });
+          } else {
+            (0, pt.Z)({
+              keyword: O,
+              refer: ee,
+              guideTrack: ae,
+              searchExtraParams: Ie,
+              searchFilterParams: De,
+              spmcd: D
+            });
+          }
+        }
+      }
+    });
+    var Ot = u.Z.Component(at, u.Z.mergeConfig(e("s861"), e("vAcI")));
+  },
+  aD4y: function (ue, L, e) {
+    e.d(L, {
+      W: function () {
+        return P;
+      },
+      nY: function () {
+        return b;
+      }
+    });
+    var c = e("6EqU"),
+      u = e.n(c),
+      n = e("bNyJ");
+    function E() {
+      var w,
+        T,
+        d = typeof Symbol == "function" ? Symbol : {},
+        H = d.iterator || "@@iterator",
+        x = d.toStringTag || "@@toStringTag";
+      function Q(ce, ie, m, F) {
+        var a = ie && ie.prototype instanceof oe ? ie : oe,
+          s = Object.create(a.prototype);
+        R(s, "_invoke", function (l, f, N) {
+          var C,
+            _,
+            I,
+            ne = 0,
+            B = N || [],
+            q = !1,
+            me = {
+              p: 0,
+              n: 0,
+              v: w,
+              a: be,
+              f: be.bind(w, 4),
+              d: function (Ee, $e) {
+                C = Ee;
+                _ = 0;
+                I = w;
+                me.n = $e;
+                return X;
+              }
+            };
+          function be(Re, Ee) {
+            _ = Re;
+            I = Ee;
+            T = 0;
+            for (; !q && ne && !$e && T < B.length; T++) {
+              var $e,
+                tt = B[T],
+                ft = 0,
+                pt = tt[2];
+              if (Re > 3) {
+                if ($e = pt === Ee) {
+                  I = tt[(_ = tt[4]) ? 5 : (_ = 3, 3)];
+                  tt[4] = tt[5] = w;
+                }
+              } else {
+                if (tt[0] <= ft) {
+                  if ($e = Re < 2 && ft < tt[1]) {
+                    _ = 0;
+                    me.v = Ee;
+                    me.n = tt[1];
+                  } else {
+                    if (ft < pt && ($e = Re < 3 || tt[0] > Ee || Ee > pt)) {
+                      tt[4] = Re;
+                      tt[5] = Ee;
+                      me.n = pt;
+                      _ = 0;
+                    }
+                  }
+                }
+              }
+            }
+            if ($e || Re > 1) return X;
+            throw q = !0, Ee;
+          }
+          return function (Re, Ee, $e) {
+            if (ne > 1) throw TypeError("Generator is already running");
+            if (q && Ee === 1) {
+              be(Ee, $e);
+            }
+            _ = Ee;
+            I = $e;
+            for (; (T = _ < 2 ? w : I) || !q;) {
+              if (!C) {
+                if (_) {
+                  if (_ < 3) {
+                    if (_ > 1) {
+                      me.n = -1;
+                    }
+                    be(_, I);
+                  } else {
+                    me.n = I;
+                  }
+                } else {
+                  me.v = I;
+                }
+              }
+              try {
+                ne = 2;
+                if (C) {
+                  if (!_) {
+                    Re = "next";
+                  }
+                  if (T = C[Re]) {
+                    if (!(T = T.call(C, I))) throw TypeError("iterator result is not an object");
+                    if (!T.done) return T;
+                    I = T.value;
+                    if (_ < 2) {
+                      _ = 0;
+                    }
+                  } else {
+                    if (_ === 1 && (T = C.return)) {
+                      T.call(C);
+                    }
+                    if (_ < 2) {
+                      I = TypeError("The iterator does not provide a '" + Re + "' method");
+                      _ = 1;
+                    }
+                  }
+                  C = w;
+                } else if ((T = (q = 0 < 0) ? I : l.call(f, me)) !== X) break;
+              } catch (tt) {
+                C = w;
+                _ = 1;
+                I = tt;
+              } finally {
+                ne = 1;
+              }
+            }
+            return {
+              value: T,
+              done: q
+            };
+          };
+        }(ce, m, F), !0);
+        return s;
+      }
+      var X = {};
+      function oe() {}
+      function te() {}
+      function J() {}
+      T = Object.getPrototypeOf;
+      var he = [][H] ? T(T([][H]())) : (R(T = {}, H, function () {
+          return this;
+        }), T),
+        U = J.prototype = oe.prototype = Object.create(he);
+      function de(ce) {
+        if (Object.setPrototypeOf) {
+          Object.setPrototypeOf(ce, J);
+        } else {
+          ce.__proto__ = J;
+          R(ce, x, "GeneratorFunction");
+        }
+        ce.prototype = Object.create(U);
+        return ce;
+      }
+      te.prototype = J;
+      R(U, "constructor", J);
+      R(J, "constructor", te);
+      te.displayName = "GeneratorFunction";
+      R(J, x, "GeneratorFunction");
+      R(U);
+      R(U, x, "Generator");
+      R(U, H, function () {
+        return this;
+      });
+      R(U, "toString", function () {
+        return "[object Generator]";
+      });
+      return (E = function () {
+        return {
+          w: Q,
+          m: de
+        };
+      })();
+    }
+    function R(w, T, d, H) {
+      var x = Object.defineProperty;
+      try {
+        x({}, "", {});
+      } catch (Q) {
+        x = 0;
+      }
+      R = function (X, oe, te, J) {
+        function he(U, de) {
+          R(X, U, function (ce) {
+            return this._invoke(U, de, ce);
+          });
+        }
+        if (oe) {
+          if (x) {
+            x(X, oe, {
+              value: te,
+              enumerable: !J,
+              configurable: !J,
+              writable: !J
+            });
+          } else {
+            X[oe] = te;
+          }
+        } else {
+          he("next", 0);
+          he("throw", 1);
+          he("return", 2);
+        }
+      };
+      R(w, T, d, H);
+    }
+    var A = function (T, d, H) {
+        return new Promise(function (x, Q) {
+          var X = function (he) {
+              try {
+                te(H.next(he));
+              } catch (U) {
+                Q(U);
+              }
+            },
+            oe = function (he) {
+              try {
+                te(H.throw(he));
+              } catch (U) {
+                Q(U);
+              }
+            },
+            te = function (he) {
+              return he.done ? x(he.value) : Promise.resolve(he.value).then(X, oe);
+            };
+          te((H = H.apply(T, d)).next());
+        });
+      },
+      g = {};
+    if (u()() && u()().systemInfo && u()().systemInfo.app === "alipay") {
+      P();
+    }
+    function p() {
+      return A(this, null, E().m(function w() {
+        var T, d, H, x, Q, X, oe, te;
+        return E().w(function (J) {
+          for (;;) switch (J.n) {
+            case 0:
+              T = u()().systemInfo.windowWidth;
+              d = 14;
+              H = 24;
+              if (!u()().utils.platform.IS_H5_ENV) {
+                J.n = 1;
+                break;
+              }
+              return J.a(2, 0);
+            case 1:
+              x = my.getMenuButtonBoundingClientRect && my.getMenuButtonBoundingClientRect() || {};
+              if (!(!x || !x.left)) {
+                J.n = 2;
+                break;
+              }
+              return J.a(2, 0);
+            case 2:
+              Q = x.optionMenuLeft || x.left;
+              X = T - Q;
+              if (u()().utils.platform.IS_ALIPAY_ENV && u()().utils.platform.isHarmony) {
+                X = x.right - Q;
+              }
+              if (!u()().utils.platform.IS_ALIPAY_ENV) {
+                J.n = 4;
+                break;
+              }
+              J.n = 3;
+              return P();
+            case 3:
+              oe = J.v;
+              if (!(oe && !x.optionMenuLeft)) {
+                J.n = 4;
+                break;
+              }
+              return J.a(2, X + H + d);
+            case 4:
+              if (!u()().utils.platform.IS_TB_ENV) {
+                J.n = 6;
+                break;
+              }
+              J.n = 5;
+              return y();
+            case 5:
+              te = J.v;
+              if (!te.isShowing) {
+                J.n = 6;
+                break;
+              }
+              return J.a(2, X + H + d);
+            case 6:
+              return J.a(2, X);
+          }
+        }, w);
+      }));
+    }
+    function P() {
+      var w = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : "2021001110676437";
+      return A(this, null, E().m(function T() {
+        return E().w(function (d) {
+          for (;;) switch (d.n) {
+            case 0:
+              if (!(!my.ap || !my.ap.canAddAppToMyApps)) {
+                d.n = 1;
+                break;
+              }
+              return d.a(2, !1);
+            case 1:
+              if (!g[w]) {
+                g[w] = new Promise(function (H) {
+                  my.ap.canAddAppToMyApps({
+                    appId: w,
+                    success: function (Q) {
+                      if (Q && Q.canAddAppToMyApps) {
+                        H(!0);
+                      } else {
+                        H(!1);
+                      }
+                    },
+                    fail: function () {
+                      H(!1);
+                    }
+                  });
+                });
+              }
+              return d.a(2, g[w]);
+          }
+        }, T);
+      }));
+    }
+    function y() {
+      return A(this, null, E().m(function w() {
+        return E().w(function (T) {
+          for (;;) switch (T.n) {
+            case 0:
+              if (my.call) {
+                T.n = 1;
+                break;
+              }
+              return T.a(2, !1);
+            case 1:
+              if (!g.AddHomeTb) {
+                g.AddHomeTb = new Promise(function (d, H) {
+                  my.call("checkAddIconButton", {}, function (x) {
+                    if (x.error) {
+                      H(x);
+                    }
+                    d(x);
+                  });
+                });
+              }
+              return T.a(2, g.AddHomeTb);
+          }
+        }, w);
+      }));
+    }
+    function b() {
+      return A(this, null, E().m(function w() {
+        var T, d, H, x, Q, X, oe, te, J;
+        return E().w(function (he) {
+          for (;;) switch (he.n) {
+            case 0:
+              if (!((0, n.Vg)() && (0, n.Qk)())) {
+                he.n = 2;
+                break;
+              }
+              T = navigator && navigator.navBarPosition && navigator.navBarPosition || {};
+              d = T._rightPanel;
+              H = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+              if (!(d.left <= 0 && (0, n.ZH)())) {
+                he.n = 1;
+                break;
+              }
+              return he.a(2, {
+                searchPaddingRight: "".concat(6 + 88, "px")
+              });
+            case 1:
+              return he.a(2, {
+                searchPaddingRight: "".concat(6 + H - d.left, "px")
+              });
+            case 2:
+              if (!u()().utils.platform.IS_WEB_ENV) {
+                he.n = 3;
+                break;
+              }
+              return he.a(2, null);
+            case 3:
+              x = "12px";
+              Q = "";
+              X = my.getMenuButtonBoundingClientRect && my.getMenuButtonBoundingClientRect();
+              oe = X || {};
+              te = oe.height;
+              he.n = 4;
+              return p();
+            case 4:
+              J = he.v;
+              x = "".concat(12 + J, "px");
+              if (X && te) {
+                Q = "height:".concat(te, "px;");
+              }
+              return he.a(2, {
+                searchPaddingRight: x,
+                submitHeight: Q
+              });
+          }
+        }, w);
+      }));
+    }
+    var M = {
+      getButtonStyle: b,
+      canAddHomeFunc: P
+    };
+  },
+  QNtz: function (ue, L, e) {
+    e.d(L, {
+      Z: function () {
+        return g;
+      }
+    });
+    var c = "Button-SearchBox",
+      u = "Serach\xA0box.1",
+      n = "Exposure-HomeKeyword",
+      E = "Button-HomeKeyword",
+      R = "HomeKeyword.0",
+      A = {
+        searchBoxClkLogKey: c,
+        searchBoxSpmCD: u,
+        homeKeywordExpLogKey: n,
+        homeKeywordClkLogKey: E,
+        homeKeywordSpmCD: R
+      },
+      g = {
+        Log: A
+      };
+  },
+  QMt2: function (ue, L, e) {
+    var c = e("20uZ"),
+      u = e("6EqU"),
+      n = e.n(u),
+      E = e("f+mB"),
+      R,
+      A = 9,
+      g = n()().systemInfo.titleBarHeight || 40;
+    if ((R = n()().utils) != null && R.platform.IS_WEB_ENV) {
+      g = 44;
+    }
+    Component({
+      mixins: [],
+      data: {
+        imageSrc: "https://gw.alicdn.com/imgextra/i2/O1CN01uzZMnz233ejPG1qdU_!!6000000007200-2-tps-132-56.png",
+        marginTop: A - (g - 36) / 2
+      },
+      props: {},
+      didMount: function () {},
+      didUpdate: function () {},
+      didUnmount: function () {},
+      methods: {
+        handlePropagation: function () {}
+      }
+    });
+    L.Z = c.Z.Component(E, c.Z.mergeConfig(e("s861"), e("qbo2")));
+  },
+  "+YLT": function (ue, L, e) {
+    var c = e("GhP9"),
+      u = e("6EqU"),
+      n = e.n(u),
+      E = function () {
+        var p = n()().aplus.getSpmAB();
+        console.log(p, "spmAspmABB");
+        if (!p) return {};
+        var P = {};
+        try {
+          P = {
+            spmAPos: p.split(".")[0],
+            spmBPos: p.split(".")[1],
+            bizType: "elemeapp",
+            ignorePV: !0
+          };
+        } catch (y) {}
+        return P;
+      },
+      R = function () {
+        return !c.LTracker.instance || !c.LTracker.instance() ? {
+          onAppLaunch: function () {},
+          pageOnLoad: function () {},
+          onShow: function () {},
+          onHide: function () {},
+          onUnload: function () {}
+        } : c.LTracker.instance();
+      },
+      A = {
+        onLoad: function () {
+          setTimeout(function () {
+            R().onLoad(E());
+          }, 0);
+        },
+        onShow: function () {
+          R().onShow(E());
+        },
+        onHide: function () {
+          R().onHide(E());
+        },
+        onUnload: function () {
+          R().onUnload(E());
+        }
+      };
+    if (n()().utils.platform.IS_ALIPAY_ENV) {
+      L.Z = A;
+    } else {
+      L.Z = {};
+    }
+  },
+  M6oW: function (ue, L, e) {
+    e.d(L, {
+      Fz: function () {
+        return he;
+      },
+      Po: function () {
+        return oe;
+      },
+      Q: function () {
+        return X;
+      },
+      Sp: function () {
+        return d;
+      },
+      Xk: function () {
+        return ce;
+      },
+      gY: function () {
+        return H;
+      },
+      l1: function () {
+        return J;
+      },
+      ng: function () {
+        return F;
+      },
+      on: function () {
+        return x;
+      },
+      v1: function () {
+        return Q;
+      },
+      v6: function () {
+        return de;
+      }
+    });
+    var c = e("byvu"),
+      u = e("Gm/5"),
+      n = e("g96g"),
+      E = e("lk4z"),
+      R = Object.defineProperty,
+      A = Object.defineProperties,
+      g = Object.getOwnPropertyDescriptors,
+      p = Object.getOwnPropertySymbols,
+      P = Object.prototype.hasOwnProperty,
+      y = Object.prototype.propertyIsEnumerable,
+      b = function (s, l, f) {
+        return l in s ? R(s, l, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: f
+        }) : s[l] = f;
+      },
+      M = function (s, l) {
+        for (var f in l || (l = {})) {
+          if (P.call(l, f)) {
+            b(s, f, l[f]);
+          }
+        }
+        if (p) {
+          var N = (0, c.Z)(p(l)),
+            C;
+          try {
+            for (N.s(); !(C = N.n()).done;) {
+              var f = C.value;
+              if (y.call(l, f)) {
+                b(s, f, l[f]);
+              }
+            }
+          } catch (_) {
+            N.e(_);
+          } finally {
+            N.f();
+          }
+        }
+        return s;
+      },
+      w = function (s, l) {
+        return A(s, g(l));
+      },
+      T = function (s, l) {
+        var f = {};
+        for (var N in s) {
+          if (P.call(s, N) && l.indexOf(N) < 0) {
+            f[N] = s[N];
+          }
+        }
+        if (s != null && p) {
+          var C = (0, c.Z)(p(s)),
+            _;
+          try {
+            for (C.s(); !(_ = C.n()).done;) {
+              var N = _.value;
+              if (l.indexOf(N) < 0 && y.call(s, N)) {
+                f[N] = s[N];
+              }
+            }
+          } catch (I) {
+            C.e(I);
+          } finally {
+            C.f();
+          }
+        }
+        return f;
+      };
+    function d(a) {
+      return a ? a > 0 && a < 1e3 ? a + "m" : a > 1e3 ? (Math.round(a / 100) / 10).toFixed(1) + "km" : "" : "";
+    }
+    function H(a) {
+      if (!a) return {};
+      var s = a.tips,
+        l = s === void 0 ? "" : s,
+        f = a.tipsColor,
+        N = l && typeof l == "string" && l.indexOf("\u514D\u914D\u9001\u8D39") === 0,
+        C = a.rules ? a.rules[0] || {} : {},
+        _ = l,
+        I = {
+          fontSize: "10px",
+          color: N ? "#FE7100" : f ? "#".concat(f) : "#11192D"
+        },
+        ne = l.match(/^(配送费|配送|跑腿费)(.*)$/);
+      if (ne && ne.length > 2) {
+        _ = ne[2];
+        I.fontSize = "12px";
+      }
+      var B = w(M({}, a), {
+        deliveryFee: l,
+        isDeliveryFree: N,
+        deliverRule: C,
+        enhancedDeliveryFee: _,
+        deliveryFeeStyle: I
+      });
+      return B;
+    }
+    function x(a) {
+      var s = a.price,
+        l = a.originalPrice,
+        f = a.multiSpec,
+        N = a.specialPrice,
+        C = N || {},
+        _ = C.value,
+        I = C.text,
+        ne = C.textColor,
+        B = _ || s;
+      if (N && N.typeCode === "RETAIL_FREE_ORDER_COUPON_PRICE") {
+        B = String(N.value) || B;
+      }
+      if (typeof B == "number") {
+        B = String(B);
+      } else {
+        B = B;
+      }
+      var q = I || f ? null : Number(l) > Number(B) ? l : null,
+        me = I || !B ? !1 : f,
+        be = {
+          price: B,
+          priceDesc: I,
+          specialTextColor: ne,
+          originalPrice: q,
+          multiSpec: me
+        };
+      if (N && N.iconTypeCode === "GOOD_PRICE") {
+        be.goodPrice = N;
+      }
+      return be;
+    }
+    function Q(a) {
+      if (!a) return null;
+      var s = a.rating,
+        l = s === void 0 ? {} : s,
+        f = a.attachTags;
+      l.textColor = (0, n.wK)(l.textColor);
+      l.extraColor = (0, n.wK)(l.extraColor);
+      if (l.text) {
+        l.textUnit = "\u5206";
+      } else {
+        l.textUnit = "";
+      }
+      if (Number(l.text) === 0) {
+        l.text = "";
+        l.textColor = "#FE7100";
+        l.textUnit = "\u7ACB\u5373\u5C1D\u9C9C";
+      }
+      var N = (f || []).map(function (C) {
+        var _ = C.backgroundColor,
+          I = w(M({}, C), {
+            textColor: (0, n.wK)(C.textColor),
+            extraColor: (0, n.wK)(C.extraColor)
+          });
+        if (_) {
+          I.backgroundColor = (0, n.wK)(_);
+        }
+        return I;
+      });
+      return {
+        rating: l,
+        attachTags: N
+      };
+    }
+    var X = function () {
+      var s = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : [];
+      if (!s || !s.length) return "";
+      var l = s.reduce(function (I, ne) {
+          var B = ne.replace(/\:/g, "").split("/");
+          I.push(B);
+          return I;
+        }, []),
+        f = new Date(),
+        N = f.getHours(),
+        C = f.getMinutes(),
+        _ = l.findIndex(function (I) {
+          return N + "" + C < I[1];
+        });
+      if (_ === -1) {
+        _ = l.length - 1;
+      }
+      return s[_].split("/")[1];
+    };
+    function oe(a, s) {
+      return s && s.text ? s.text : a ? a + "\u5206\u949F" : "";
+    }
+    function te(a, s) {
+      if (Object.prototype.toString.call(s) === "[object String]") {
+        var l = [a],
+          f = [];
+        if (!s) return l;
+        for (; l.some(function (C) {
+          return C.indexOf(s) !== -1 && C !== s;
+        });) {
+          l.forEach(function (C) {
+            var _ = C.indexOf(s);
+            if (_ !== -1) {
+              var I = [];
+              if (_ === 0) {
+                I = C.split(s);
+                I[0] = s;
+              } else {
+                I = C.split(s);
+                I.splice(1, 0, s);
+              }
+              f = f.concat(I);
+            } else f = f.concat(s);
+          });
+          l = f;
+        }
+        return l;
+      }
+      if (Object.prototype.toString.call(s) === "[object Array]") {
+        var N = [a];
+        if (s.length) {
+          s.forEach(function (C) {
+            for (var _ = []; N.some(function (I) {
+              return I.indexOf(C) !== -1 && I !== C;
+            });) {
+              N.forEach(function (I) {
+                var ne = I.indexOf(C);
+                if (ne !== -1) {
+                  var B = [];
+                  if (ne === 0) {
+                    B = I.split(C);
+                    B[0] = C;
+                  } else {
+                    B = I.split(C);
+                    B.splice(1, 0, C);
+                  }
+                  _ = _.concat(B);
+                } else _ = _.concat(C);
+              });
+              N = _;
+            }
+          });
+        }
+        return N;
+      }
+      return [];
+    }
+    function J(a) {
+      var s = a.text,
+        l = a.key,
+        f = a.defaultStyle,
+        N = a.lightStyle,
+        C = te(s, l).filter(function (_) {
+          return _;
+        });
+      return C.map(function (_, I) {
+        var ne = l.indexOf(_) !== -1,
+          B = "";
+        if (ne) {
+          B = "margin: 0 1px;";
+          if (I === 0) {
+            B = "margin: 0 1px 0 0;";
+          }
+          if (I === C.length - 1) {
+            B = "margin: 0 0 0 1px;";
+          }
+        }
+        var q = "display:inline;" + (ne ? N : f) + B;
+        return {
+          name: "span",
+          attrs: {
+            style: q
+          },
+          children: [{
+            type: "text",
+            text: _
+          }]
+        };
+      });
+    }
+    function he(a) {
+      var s = a.text,
+        l = a.key,
+        f = a.defaultStyle,
+        N = a.lightStyle,
+        C = te(s, l);
+      return C.map(function (_) {
+        var I = "display:inline;" + (l.indexOf(_) !== -1 ? N : f);
+        return {
+          name: "span",
+          attrs: {
+            style: I
+          },
+          children: [{
+            type: "text",
+            text: _
+          }]
+        };
+      });
+    }
+    function U(a, s) {
+      var l = a.isPremium,
+        f = a.isNew,
+        N = a.isStar,
+        C = a.theme,
+        _ = null;
+      if (s === 0 && C && C.logoSubV2) {
+        var I = /http/.test(C.logoSubV2) ? C.logoSubV2 : convertHashToUrl({
+          hash: C.logoSubV2
+        });
+        return {
+          status: SHOP_EXTRA_STATUS.OTHER,
+          src: I
+        };
+      }
+      return N ? _ = SHOP_EXTRA_STATUS.STAR : l ? _ = SHOP_EXTRA_STATUS.PREMIUM : f ? _ = SHOP_EXTRA_STATUS.NEW : _;
+    }
+    var de = function (s) {
+      var l = !1;
+      if (s) {
+        s.forEach(function (f) {
+          if (f.id === 9 || f.id === "9") return l = !0, l;
+        });
+      }
+      return l;
+    };
+    function ce(a) {
+      if (!a) return null;
+      var s = "";
+      if (a.gradient && a.gradient.rgbFrom && a.gradient.rgbTo) {
+        var l = "#".concat(a.gradient.rgbFrom.replace("#", "")),
+          f = "#".concat(a.gradient.rgbTo.replace("#", ""));
+        s = "linear-gradient(to right, ".concat(l, ", ").concat(f, ")");
+      } else s = (0, n.wK)(a.bgColor);
+      var N = a.text,
+        C = (0, n.wK)(a.textColor),
+        _ = (0, n.wK)(a.border),
+        I = a.icon,
+        ne = {
+          text: N,
+          color: C,
+          bgColor: s,
+          borderColor: _,
+          icon: I
+        };
+      return ne;
+    }
+    var ie = function (s) {
+      return (s || []).map(function (l) {
+        if (l.icon) {
+          l.icon = (0, u.Z)({
+            hash: l.icon,
+            width: 18,
+            height: 18
+          });
+        }
+        return l;
+      });
+    };
+    function m(a) {
+      return a.length ? (a[0] && !a[0].extensionList ? a.map(function (s) {
+        var l = s,
+          f = l.extensionList,
+          N = T(l, ["extensionList"]);
+        if (f && f.length) {
+          f = s.extensionList.slice(0);
+          if (s.text && +s.bizCode == 64) {
+            s.extension = N;
+            if (s.extensionList.length > 3) {
+              s.combineTagList = [f.splice(0, 3), f];
+            } else {
+              s.combineTagList = [f.splice(0, 3)];
+            }
+          } else {
+            if (s.extensionList.length > 4) {
+              s.combineTagList = [f.splice(0, 4), f];
+            } else {
+              s.combineTagList = [f.splice(0, 4)];
+            }
+          }
+        }
+      }) : a.map(function (s) {
+        var l = s,
+          f = l.extensionList,
+          N = T(l, ["extensionList"]);
+        if (f) {
+          f = s.extensionList.slice(0);
+          if (s.text && +s.bizCode == 64) {
+            s.extension = N;
+            if (s.extensionList.length > 4) {
+              s.combineTagList = [f.splice(0, 4), f];
+            } else {
+              s.combineTagList = [f.splice(0, 4)];
+            }
+          } else {
+            s.combineTagList = [s.extensionList];
+          }
+        }
+      }), ie(a)) : [];
+    }
+    function F(a, s) {
+      return a && a.length > 0 ? m(a) : s && s.length > 0 ? m(s) : [];
+    }
+  },
+  "5W0d": function (ue, L, e) {
+    var c = e("20uZ"),
+      u = e("ni4U");
+    Component({
+      mixins: [],
+      data: {},
+      props: {
+        data: {},
+        customClassName: ""
+      },
+      didMount: function () {},
+      didUpdate: function () {},
+      didUnmount: function () {},
+      methods: {}
+    });
+    L.Z = c.Z.Component(u, c.Z.mergeConfig(e("s861"), e("b4NW")));
+  },
+  "+N4N": function (ue, L, e) {
+    e.d(L, {
+      Z: function () {
+        return Be;
+      }
+    });
+    var c = e("+BzW"),
+      u = e("lIP5"),
+      n = e("k6Di"),
+      E = e("79Ja"),
+      R = e("byvu"),
+      A = e("6EqU"),
+      g = e.n(A),
+      p = e("PxK8"),
+      P = e("y6Kz");
+    function y() {
+      var j,
+        t,
+        o = typeof Symbol == "function" ? Symbol : {},
+        r = o.iterator || "@@iterator",
+        i = o.toStringTag || "@@toStringTag";
+      function h(le, Ke, Ce, Ve) {
+        var nt = Ke && Ke.prototype instanceof k ? Ke : k,
+          Qe = Object.create(nt.prototype);
+        b(Qe, "_invoke", function (st, yt, ht) {
+          var Ae,
+            K,
+            ve,
+            et = 0,
+            Xe = ht || [],
+            We = !1,
+            pe = {
+              p: 0,
+              n: 0,
+              v: j,
+              a: ct,
+              f: ct.bind(j, 4),
+              d: function (Pe, ke) {
+                Ae = Pe;
+                K = 0;
+                ve = j;
+                pe.n = ke;
+                return S;
+              }
+            };
+          function ct(Me, Pe) {
+            K = Me;
+            ve = Pe;
+            t = 0;
+            for (; !We && et && !ke && t < Xe.length; t++) {
+              var ke,
+                Oe = Xe[t],
+                _t = 0,
+                lt = Oe[2];
+              if (Me > 3) {
+                if (ke = lt === Pe) {
+                  ve = Oe[(K = Oe[4]) ? 5 : (K = 3, 3)];
+                  Oe[4] = Oe[5] = j;
+                }
+              } else {
+                if (Oe[0] <= _t) {
+                  if (ke = Me < 2 && _t < Oe[1]) {
+                    K = 0;
+                    pe.v = Pe;
+                    pe.n = Oe[1];
+                  } else {
+                    if (_t < lt && (ke = Me < 3 || Oe[0] > Pe || Pe > lt)) {
+                      Oe[4] = Me;
+                      Oe[5] = Pe;
+                      pe.n = lt;
+                      K = 0;
+                    }
+                  }
+                }
+              }
+            }
+            if (ke || Me > 1) return S;
+            throw We = !0, Pe;
+          }
+          return function (Me, Pe, ke) {
+            if (et > 1) throw TypeError("Generator is already running");
+            if (We && Pe === 1) {
+              ct(Pe, ke);
+            }
+            K = Pe;
+            ve = ke;
+            for (; (t = K < 2 ? j : ve) || !We;) {
+              if (!Ae) {
+                if (K) {
+                  if (K < 3) {
+                    if (K > 1) {
+                      pe.n = -1;
+                    }
+                    ct(K, ve);
+                  } else {
+                    pe.n = ve;
+                  }
+                } else {
+                  pe.v = ve;
+                }
+              }
+              try {
+                et = 2;
+                if (Ae) {
+                  if (!K) {
+                    Me = "next";
+                  }
+                  if (t = Ae[Me]) {
+                    if (!(t = t.call(Ae, ve))) throw TypeError("iterator result is not an object");
+                    if (!t.done) return t;
+                    ve = t.value;
+                    if (K < 2) {
+                      K = 0;
+                    }
+                  } else {
+                    if (K === 1 && (t = Ae.return)) {
+                      t.call(Ae);
+                    }
+                    if (K < 2) {
+                      ve = TypeError("The iterator does not provide a '" + Me + "' method");
+                      K = 1;
+                    }
+                  }
+                  Ae = j;
+                } else if ((t = (We = 0 < 0) ? ve : st.call(yt, pe)) !== S) break;
+              } catch (Oe) {
+                Ae = j;
+                K = 1;
+                ve = Oe;
+              } finally {
+                et = 1;
+              }
+            }
+            return {
+              value: t,
+              done: We
+            };
+          };
+        }(le, Ce, Ve), !0);
+        return Qe;
+      }
+      var S = {};
+      function k() {}
+      function Z() {}
+      function W() {}
+      t = Object.getPrototypeOf;
+      var $ = [][r] ? t(t([][r]())) : (b(t = {}, r, function () {
+          return this;
+        }), t),
+        z = W.prototype = k.prototype = Object.create($);
+      function Le(le) {
+        if (Object.setPrototypeOf) {
+          Object.setPrototypeOf(le, W);
+        } else {
+          le.__proto__ = W;
+          b(le, i, "GeneratorFunction");
+        }
+        le.prototype = Object.create(z);
+        return le;
+      }
+      Z.prototype = W;
+      b(z, "constructor", W);
+      b(W, "constructor", Z);
+      Z.displayName = "GeneratorFunction";
+      b(W, i, "GeneratorFunction");
+      b(z);
+      b(z, i, "Generator");
+      b(z, r, function () {
+        return this;
+      });
+      b(z, "toString", function () {
+        return "[object Generator]";
+      });
+      return (y = function () {
+        return {
+          w: h,
+          m: Le
+        };
+      })();
+    }
+    function b(j, t, o, r) {
+      var i = Object.defineProperty;
+      try {
+        i({}, "", {});
+      } catch (h) {
+        i = 0;
+      }
+      b = function (S, k, Z, W) {
+        function $(z, Le) {
+          b(S, z, function (le) {
+            return this._invoke(z, Le, le);
+          });
+        }
+        if (k) {
+          if (i) {
+            i(S, k, {
+              value: Z,
+              enumerable: !W,
+              configurable: !W,
+              writable: !W
+            });
+          } else {
+            S[k] = Z;
+          }
+        } else {
+          $("next", 0);
+          $("throw", 1);
+          $("return", 2);
+        }
+      };
+      b(j, t, o, r);
+    }
+    var M = Object.defineProperty,
+      w = Object.defineProperties,
+      T = Object.getOwnPropertyDescriptors,
+      d = Object.getOwnPropertySymbols,
+      H = Object.prototype.hasOwnProperty,
+      x = Object.prototype.propertyIsEnumerable,
+      Q = function (t, o, r) {
+        return o in t ? M(t, o, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: r
+        }) : t[o] = r;
+      },
+      X = function (t, o) {
+        for (var r in o || (o = {})) {
+          if (H.call(o, r)) {
+            Q(t, r, o[r]);
+          }
+        }
+        if (d) {
+          var i = (0, R.Z)(d(o)),
+            h;
+          try {
+            for (i.s(); !(h = i.n()).done;) {
+              var r = h.value;
+              if (x.call(o, r)) {
+                Q(t, r, o[r]);
+              }
+            }
+          } catch (S) {
+            i.e(S);
+          } finally {
+            i.f();
+          }
+        }
+        return t;
+      },
+      oe = function (t, o) {
+        return w(t, T(o));
+      },
+      te = function (t, o, r) {
+        return new Promise(function (i, h) {
+          var S = function ($) {
+              try {
+                Z(r.next($));
+              } catch (z) {
+                h(z);
+              }
+            },
+            k = function ($) {
+              try {
+                Z(r.throw($));
+              } catch (z) {
+                h(z);
+              }
+            },
+            Z = function ($) {
+              return $.done ? i($.value) : Promise.resolve($.value).then(S, k);
+            };
+          Z((r = r.apply(t, o)).next());
+        });
+      },
+      J = function (j) {
+        return te(void 0, null, y().m(function t() {
+          return y().w(function (o) {
+            for (;;) switch (o.n) {
+              case 0:
+                return o.a(2, (0, p.J)("28665", oe(X({
+                  "x-ele-scene": "search_filter"
+                }, j), {
+                  sversion: P.It
+                })).then(function (r) {
+                  if (r && r.data && r.data.result && r.data.result[0] && r.data.result[0].filterList) return r.data.result[0].filterList;
+                }));
+            }
+          }, t);
+        }));
+      },
+      he = e("bNyJ");
+    function U() {
+      var j,
+        t,
+        o = typeof Symbol == "function" ? Symbol : {},
+        r = o.iterator || "@@iterator",
+        i = o.toStringTag || "@@toStringTag";
+      function h(le, Ke, Ce, Ve) {
+        var nt = Ke && Ke.prototype instanceof k ? Ke : k,
+          Qe = Object.create(nt.prototype);
+        de(Qe, "_invoke", function (st, yt, ht) {
+          var Ae,
+            K,
+            ve,
+            et = 0,
+            Xe = ht || [],
+            We = !1,
+            pe = {
+              p: 0,
+              n: 0,
+              v: j,
+              a: ct,
+              f: ct.bind(j, 4),
+              d: function (Pe, ke) {
+                Ae = Pe;
+                K = 0;
+                ve = j;
+                pe.n = ke;
+                return S;
+              }
+            };
+          function ct(Me, Pe) {
+            K = Me;
+            ve = Pe;
+            t = 0;
+            for (; !We && et && !ke && t < Xe.length; t++) {
+              var ke,
+                Oe = Xe[t],
+                _t = 0,
+                lt = Oe[2];
+              if (Me > 3) {
+                if (ke = lt === Pe) {
+                  ve = Oe[(K = Oe[4]) ? 5 : (K = 3, 3)];
+                  Oe[4] = Oe[5] = j;
+                }
+              } else {
+                if (Oe[0] <= _t) {
+                  if (ke = Me < 2 && _t < Oe[1]) {
+                    K = 0;
+                    pe.v = Pe;
+                    pe.n = Oe[1];
+                  } else {
+                    if (_t < lt && (ke = Me < 3 || Oe[0] > Pe || Pe > lt)) {
+                      Oe[4] = Me;
+                      Oe[5] = Pe;
+                      pe.n = lt;
+                      K = 0;
+                    }
+                  }
+                }
+              }
+            }
+            if (ke || Me > 1) return S;
+            throw We = !0, Pe;
+          }
+          return function (Me, Pe, ke) {
+            if (et > 1) throw TypeError("Generator is already running");
+            if (We && Pe === 1) {
+              ct(Pe, ke);
+            }
+            K = Pe;
+            ve = ke;
+            for (; (t = K < 2 ? j : ve) || !We;) {
+              if (!Ae) {
+                if (K) {
+                  if (K < 3) {
+                    if (K > 1) {
+                      pe.n = -1;
+                    }
+                    ct(K, ve);
+                  } else {
+                    pe.n = ve;
+                  }
+                } else {
+                  pe.v = ve;
+                }
+              }
+              try {
+                et = 2;
+                if (Ae) {
+                  if (!K) {
+                    Me = "next";
+                  }
+                  if (t = Ae[Me]) {
+                    if (!(t = t.call(Ae, ve))) throw TypeError("iterator result is not an object");
+                    if (!t.done) return t;
+                    ve = t.value;
+                    if (K < 2) {
+                      K = 0;
+                    }
+                  } else {
+                    if (K === 1 && (t = Ae.return)) {
+                      t.call(Ae);
+                    }
+                    if (K < 2) {
+                      ve = TypeError("The iterator does not provide a '" + Me + "' method");
+                      K = 1;
+                    }
+                  }
+                  Ae = j;
+                } else if ((t = (We = 0 < 0) ? ve : st.call(yt, pe)) !== S) break;
+              } catch (Oe) {
+                Ae = j;
+                K = 1;
+                ve = Oe;
+              } finally {
+                et = 1;
+              }
+            }
+            return {
+              value: t,
+              done: We
+            };
+          };
+        }(le, Ce, Ve), !0);
+        return Qe;
+      }
+      var S = {};
+      function k() {}
+      function Z() {}
+      function W() {}
+      t = Object.getPrototypeOf;
+      var $ = [][r] ? t(t([][r]())) : (de(t = {}, r, function () {
+          return this;
+        }), t),
+        z = W.prototype = k.prototype = Object.create($);
+      function Le(le) {
+        if (Object.setPrototypeOf) {
+          Object.setPrototypeOf(le, W);
+        } else {
+          le.__proto__ = W;
+          de(le, i, "GeneratorFunction");
+        }
+        le.prototype = Object.create(z);
+        return le;
+      }
+      Z.prototype = W;
+      de(z, "constructor", W);
+      de(W, "constructor", Z);
+      Z.displayName = "GeneratorFunction";
+      de(W, i, "GeneratorFunction");
+      de(z);
+      de(z, i, "Generator");
+      de(z, r, function () {
+        return this;
+      });
+      de(z, "toString", function () {
+        return "[object Generator]";
+      });
+      return (U = function () {
+        return {
+          w: h,
+          m: Le
+        };
+      })();
+    }
+    function de(j, t, o, r) {
+      var i = Object.defineProperty;
+      try {
+        i({}, "", {});
+      } catch (h) {
+        i = 0;
+      }
+      de = function (S, k, Z, W) {
+        function $(z, Le) {
+          de(S, z, function (le) {
+            return this._invoke(z, Le, le);
+          });
+        }
+        if (k) {
+          if (i) {
+            i(S, k, {
+              value: Z,
+              enumerable: !W,
+              configurable: !W,
+              writable: !W
+            });
+          } else {
+            S[k] = Z;
+          }
+        } else {
+          $("next", 0);
+          $("throw", 1);
+          $("return", 2);
+        }
+      };
+      de(j, t, o, r);
+    }
+    var ce = Object.defineProperty,
+      ie = Object.defineProperties,
+      m = Object.getOwnPropertyDescriptors,
+      F = Object.getOwnPropertySymbols,
+      a = Object.prototype.hasOwnProperty,
+      s = Object.prototype.propertyIsEnumerable,
+      l = function (t, o, r) {
+        return o in t ? ce(t, o, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: r
+        }) : t[o] = r;
+      },
+      f = function (t, o) {
+        for (var r in o || (o = {})) {
+          if (a.call(o, r)) {
+            l(t, r, o[r]);
+          }
+        }
+        if (F) {
+          var i = (0, R.Z)(F(o)),
+            h;
+          try {
+            for (i.s(); !(h = i.n()).done;) {
+              var r = h.value;
+              if (s.call(o, r)) {
+                l(t, r, o[r]);
+              }
+            }
+          } catch (S) {
+            i.e(S);
+          } finally {
+            i.f();
+          }
+        }
+        return t;
+      },
+      N = function (t, o) {
+        return ie(t, m(o));
+      },
+      C = function (t, o, r) {
+        return new Promise(function (i, h) {
+          var S = function ($) {
+              try {
+                Z(r.next($));
+              } catch (z) {
+                h(z);
+              }
+            },
+            k = function ($) {
+              try {
+                Z(r.throw($));
+              } catch (z) {
+                h(z);
+              }
+            },
+            Z = function ($) {
+              return $.done ? i($.value) : Promise.resolve($.value).then(S, k);
+            };
+          Z((r = r.apply(t, o)).next());
+        });
+      },
+      _ = (0, he.NR)() ? "h5ToMini" : void 0,
+      I = function (j) {
+        return C(void 0, null, U().m(function t() {
+          var o, r, i;
+          return U().w(function (h) {
+            for (;;) switch (h.p = h.n) {
+              case 0:
+                h.p = 0;
+                h.n = 1;
+                return g()().aLocation.getLocation({
+                  forceAddress: !0
+                });
+              case 1:
+                r = h.v;
+                o = r.uicAddressId;
+                h.n = 3;
+                break;
+              case 2:
+                h.p = 2;
+                i = h.v;
+              case 3:
+                return h.a(2, (0, p.J)("26551", N(f({
+                  addressTannei: o,
+                  forceTransformScheme: _,
+                  "x-ele-scene": "search"
+                }, j), {
+                  sversion: P.It
+                })).then(function (S) {
+                  if (S && S.data && S.data.result && S.data.result[0]) return S.data.result[0];
+                }));
+            }
+          }, t, null, [[0, 2]]);
+        }));
+      };
+    function ne() {
+      var j,
+        t,
+        o = typeof Symbol == "function" ? Symbol : {},
+        r = o.iterator || "@@iterator",
+        i = o.toStringTag || "@@toStringTag";
+      function h(le, Ke, Ce, Ve) {
+        var nt = Ke && Ke.prototype instanceof k ? Ke : k,
+          Qe = Object.create(nt.prototype);
+        B(Qe, "_invoke", function (st, yt, ht) {
+          var Ae,
+            K,
+            ve,
+            et = 0,
+            Xe = ht || [],
+            We = !1,
+            pe = {
+              p: 0,
+              n: 0,
+              v: j,
+              a: ct,
+              f: ct.bind(j, 4),
+              d: function (Pe, ke) {
+                Ae = Pe;
+                K = 0;
+                ve = j;
+                pe.n = ke;
+                return S;
+              }
+            };
+          function ct(Me, Pe) {
+            K = Me;
+            ve = Pe;
+            t = 0;
+            for (; !We && et && !ke && t < Xe.length; t++) {
+              var ke,
+                Oe = Xe[t],
+                _t = 0,
+                lt = Oe[2];
+              if (Me > 3) {
+                if (ke = lt === Pe) {
+                  ve = Oe[(K = Oe[4]) ? 5 : (K = 3, 3)];
+                  Oe[4] = Oe[5] = j;
+                }
+              } else {
+                if (Oe[0] <= _t) {
+                  if (ke = Me < 2 && _t < Oe[1]) {
+                    K = 0;
+                    pe.v = Pe;
+                    pe.n = Oe[1];
+                  } else {
+                    if (_t < lt && (ke = Me < 3 || Oe[0] > Pe || Pe > lt)) {
+                      Oe[4] = Me;
+                      Oe[5] = Pe;
+                      pe.n = lt;
+                      K = 0;
+                    }
+                  }
+                }
+              }
+            }
+            if (ke || Me > 1) return S;
+            throw We = !0, Pe;
+          }
+          return function (Me, Pe, ke) {
+            if (et > 1) throw TypeError("Generator is already running");
+            if (We && Pe === 1) {
+              ct(Pe, ke);
+            }
+            K = Pe;
+            ve = ke;
+            for (; (t = K < 2 ? j : ve) || !We;) {
+              if (!Ae) {
+                if (K) {
+                  if (K < 3) {
+                    if (K > 1) {
+                      pe.n = -1;
+                    }
+                    ct(K, ve);
+                  } else {
+                    pe.n = ve;
+                  }
+                } else {
+                  pe.v = ve;
+                }
+              }
+              try {
+                et = 2;
+                if (Ae) {
+                  if (!K) {
+                    Me = "next";
+                  }
+                  if (t = Ae[Me]) {
+                    if (!(t = t.call(Ae, ve))) throw TypeError("iterator result is not an object");
+                    if (!t.done) return t;
+                    ve = t.value;
+                    if (K < 2) {
+                      K = 0;
+                    }
+                  } else {
+                    if (K === 1 && (t = Ae.return)) {
+                      t.call(Ae);
+                    }
+                    if (K < 2) {
+                      ve = TypeError("The iterator does not provide a '" + Me + "' method");
+                      K = 1;
+                    }
+                  }
+                  Ae = j;
+                } else if ((t = (We = 0 < 0) ? ve : st.call(yt, pe)) !== S) break;
+              } catch (Oe) {
+                Ae = j;
+                K = 1;
+                ve = Oe;
+              } finally {
+                et = 1;
+              }
+            }
+            return {
+              value: t,
+              done: We
+            };
+          };
+        }(le, Ce, Ve), !0);
+        return Qe;
+      }
+      var S = {};
+      function k() {}
+      function Z() {}
+      function W() {}
+      t = Object.getPrototypeOf;
+      var $ = [][r] ? t(t([][r]())) : (B(t = {}, r, function () {
+          return this;
+        }), t),
+        z = W.prototype = k.prototype = Object.create($);
+      function Le(le) {
+        if (Object.setPrototypeOf) {
+          Object.setPrototypeOf(le, W);
+        } else {
+          le.__proto__ = W;
+          B(le, i, "GeneratorFunction");
+        }
+        le.prototype = Object.create(z);
+        return le;
+      }
+      Z.prototype = W;
+      B(z, "constructor", W);
+      B(W, "constructor", Z);
+      Z.displayName = "GeneratorFunction";
+      B(W, i, "GeneratorFunction");
+      B(z);
+      B(z, i, "Generator");
+      B(z, r, function () {
+        return this;
+      });
+      B(z, "toString", function () {
+        return "[object Generator]";
+      });
+      return (ne = function () {
+        return {
+          w: h,
+          m: Le
+        };
+      })();
+    }
+    function B(j, t, o, r) {
+      var i = Object.defineProperty;
+      try {
+        i({}, "", {});
+      } catch (h) {
+        i = 0;
+      }
+      B = function (S, k, Z, W) {
+        function $(z, Le) {
+          B(S, z, function (le) {
+            return this._invoke(z, Le, le);
+          });
+        }
+        if (k) {
+          if (i) {
+            i(S, k, {
+              value: Z,
+              enumerable: !W,
+              configurable: !W,
+              writable: !W
+            });
+          } else {
+            S[k] = Z;
+          }
+        } else {
+          $("next", 0);
+          $("throw", 1);
+          $("return", 2);
+        }
+      };
+      B(j, t, o, r);
+    }
+    var q = Object.defineProperty,
+      me = Object.defineProperties,
+      be = Object.getOwnPropertyDescriptors,
+      Re = Object.getOwnPropertySymbols,
+      Ee = Object.prototype.hasOwnProperty,
+      $e = Object.prototype.propertyIsEnumerable,
+      tt = function (t, o, r) {
+        return o in t ? q(t, o, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: r
+        }) : t[o] = r;
+      },
+      ft = function (t, o) {
+        for (var r in o || (o = {})) {
+          if (Ee.call(o, r)) {
+            tt(t, r, o[r]);
+          }
+        }
+        if (Re) {
+          var i = (0, R.Z)(Re(o)),
+            h;
+          try {
+            for (i.s(); !(h = i.n()).done;) {
+              var r = h.value;
+              if ($e.call(o, r)) {
+                tt(t, r, o[r]);
+              }
+            }
+          } catch (S) {
+            i.e(S);
+          } finally {
+            i.f();
+          }
+        }
+        return t;
+      },
+      pt = function (t, o) {
+        return me(t, be(o));
+      },
+      it = function (t, o, r) {
+        return new Promise(function (i, h) {
+          var S = function ($) {
+              try {
+                Z(r.next($));
+              } catch (z) {
+                h(z);
+              }
+            },
+            k = function ($) {
+              try {
+                Z(r.throw($));
+              } catch (z) {
+                h(z);
+              }
+            },
+            Z = function ($) {
+              return $.done ? i($.value) : Promise.resolve($.value).then(S, k);
+            };
+          Z((r = r.apply(t, o)).next());
+        });
+      },
+      Ge = function () {
+        return new Promise(function (t) {
+          if (window.WindVane) {
+            window.WindVane.call("aluWVJSBridge", "getUserInfo", {}, function () {
+              var o = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
+              t(o.sid || "");
+            }, function () {
+              t("");
+            });
+          } else {
+            t("");
+          }
+        });
+      };
+    function at() {
+      return it(this, arguments, function () {
+        var j = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {},
+          t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
+        return ne().m(function o() {
+          var r, i, h;
+          return ne().w(function (S) {
+            for (;;) switch (S.p = S.n) {
+              case 0:
+                S.p = 0;
+                S.n = 1;
+                return Ge();
+              case 1:
+                r = S.v;
+                S.n = 2;
+                return g()().utils.searchMtopRequest({
+                  api: "mtop.alsc.upp.tbet.send",
+                  v: "1.0",
+                  data: pt(ft({}, j), {
+                    ext: pt(ft({}, j.ext || {}), {
+                      tbsid: r
+                    })
+                  }),
+                  headers: t
+                }, {
+                  needLocation: !0
+                });
+              case 2:
+                i = S.v;
+                if (!(i && i.data && i.data.resultObj)) {
+                  S.n = 3;
+                  break;
+                }
+                return S.a(2, i.data.resultObj);
+              case 3:
+                return S.a(2, null);
+              case 4:
+                S.p = 4;
+                h = S.v;
+                return S.a(2, null);
+            }
+          }, o, null, [[0, 4]]);
+        })();
+      });
+    }
+    var Pt = Object.defineProperty,
+      Ne = Object.getOwnPropertySymbols,
+      fe = Object.prototype.hasOwnProperty,
+      G = Object.prototype.propertyIsEnumerable,
+      se = function (t, o, r) {
+        return o in t ? Pt(t, o, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: r
+        }) : t[o] = r;
+      },
+      we = function (t, o) {
+        for (var r in o || (o = {})) {
+          if (fe.call(o, r)) {
+            se(t, r, o[r]);
+          }
+        }
+        if (Ne) {
+          var i = (0, R.Z)(Ne(o)),
+            h;
+          try {
+            for (i.s(); !(h = i.n()).done;) {
+              var r = h.value;
+              if (G.call(o, r)) {
+                se(t, r, o[r]);
+              }
+            }
+          } catch (S) {
+            i.e(S);
+          } finally {
+            i.f();
+          }
+        }
+        return t;
+      },
+      Ze = function (j) {
+        return (0, p.J)("36888", we({
+          scene: "ALIPAY_MINIAPP_SEARCH_PAGE"
+        }, j)).then(function (t) {
+          return t && t.data && t.data.result && t.data.result && t.data.result ? t.data.result : {};
+        });
+      },
+      Y = e("Qiv0"),
+      He = Object.defineProperty,
+      Et = Object.getOwnPropertySymbols,
+      mt = Object.prototype.hasOwnProperty,
+      Ot = Object.prototype.propertyIsEnumerable,
+      V = function (t, o, r) {
+        return o in t ? He(t, o, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: r
+        }) : t[o] = r;
+      },
+      v = function (t, o) {
+        for (var r in o || (o = {})) {
+          if (mt.call(o, r)) {
+            V(t, r, o[r]);
+          }
+        }
+        if (Et) {
+          var i = (0, R.Z)(Et(o)),
+            h;
+          try {
+            for (i.s(); !(h = i.n()).done;) {
+              var r = h.value;
+              if (Ot.call(o, r)) {
+                V(t, r, o[r]);
+              }
+            }
+          } catch (S) {
+            i.e(S);
+          } finally {
+            i.f();
+          }
+        }
+        return t;
+      },
+      D = {
+        1: {
+          costFrom: 0,
+          costTo: 20
+        },
+        2: {
+          costFrom: 20,
+          costTo: 40
+        },
+        3: {
+          costFrom: 40,
+          costTo: 999
+        }
+      },
+      O = ["itemEtag"];
+    function ee(j) {
+      var t = v({}, j || {});
+      if ("deliveryTime" in t) {
+        if (!t.deliveryTime) {
+          delete t.deliveryTime;
+        }
+      }
+      if ("distance" in t) {
+        if (!t.distance) {
+          delete t.distance;
+        }
+      }
+      Object.keys(t).forEach(function (r) {
+        var i = r.split("_");
+        if (i.length > 2 && O.includes(i[0]) && t[r].length) {
+          var h = i[0],
+            S = i.slice(1).join("_");
+          t[h] = t[h] || [];
+          t[h].push(S);
+          delete t[r];
+        } else if (i.length === 2 && t[r].length) {
+          var k = i[0],
+            Z = i[1];
+          t[k] = t[k] || [];
+          t[k].push(Z);
+          delete t[r];
+        }
+      });
+      if ("averageCostIds" in t && t.averageCostIds) {
+        var o = t.averageCostIds.map(function (r) {
+          return D[r];
+        });
+        t.costFrom = Math.min.apply(Math, (0, c.Z)(o.map(function (r) {
+          return r.costFrom;
+        })));
+        t.costTo = Math.max.apply(Math, (0, c.Z)(o.map(function (r) {
+          return r.costTo;
+        })));
+      }
+      delete t.count;
+      Object.keys(t).forEach(function (r) {
+        if (Array.isArray(t[r]) && !t[r].length) {
+          delete t[r];
+        }
+      });
+      return t;
+    }
+    function Ie(j) {
+      var t = v({}, j || {});
+      delete t.count;
+      delete t.cityId;
+      delete t.userId;
+      delete t.orderBy;
+      if ("superVip" in t && t.superVip.length) {
+        t.superVip = "1";
+      } else {
+        delete t.superVip;
+      }
+      for (var o in t) {
+        if (Array.isArray(t[o]) && !t[o].length) {
+          delete t[o];
+        }
+      }
+      return t;
+    }
+    var De = e("5jaW"),
+      xe = e("kCpd"),
+      Te = e("q+dL"),
+      _e = e("g96g"),
+      ye = e("w753"),
+      ae = e("lk4z"),
+      ot = e("hr2I");
+    function ge() {
+      var j,
+        t,
+        o = typeof Symbol == "function" ? Symbol : {},
+        r = o.iterator || "@@iterator",
+        i = o.toStringTag || "@@toStringTag";
+      function h(le, Ke, Ce, Ve) {
+        var nt = Ke && Ke.prototype instanceof k ? Ke : k,
+          Qe = Object.create(nt.prototype);
+        Je(Qe, "_invoke", function (st, yt, ht) {
+          var Ae,
+            K,
+            ve,
+            et = 0,
+            Xe = ht || [],
+            We = !1,
+            pe = {
+              p: 0,
+              n: 0,
+              v: j,
+              a: ct,
+              f: ct.bind(j, 4),
+              d: function (Pe, ke) {
+                Ae = Pe;
+                K = 0;
+                ve = j;
+                pe.n = ke;
+                return S;
+              }
+            };
+          function ct(Me, Pe) {
+            K = Me;
+            ve = Pe;
+            t = 0;
+            for (; !We && et && !ke && t < Xe.length; t++) {
+              var ke,
+                Oe = Xe[t],
+                _t = 0,
+                lt = Oe[2];
+              if (Me > 3) {
+                if (ke = lt === Pe) {
+                  ve = Oe[(K = Oe[4]) ? 5 : (K = 3, 3)];
+                  Oe[4] = Oe[5] = j;
+                }
+              } else {
+                if (Oe[0] <= _t) {
+                  if (ke = Me < 2 && _t < Oe[1]) {
+                    K = 0;
+                    pe.v = Pe;
+                    pe.n = Oe[1];
+                  } else {
+                    if (_t < lt && (ke = Me < 3 || Oe[0] > Pe || Pe > lt)) {
+                      Oe[4] = Me;
+                      Oe[5] = Pe;
+                      pe.n = lt;
+                      K = 0;
+                    }
+                  }
+                }
+              }
+            }
+            if (ke || Me > 1) return S;
+            throw We = !0, Pe;
+          }
+          return function (Me, Pe, ke) {
+            if (et > 1) throw TypeError("Generator is already running");
+            if (We && Pe === 1) {
+              ct(Pe, ke);
+            }
+            K = Pe;
+            ve = ke;
+            for (; (t = K < 2 ? j : ve) || !We;) {
+              if (!Ae) {
+                if (K) {
+                  if (K < 3) {
+                    if (K > 1) {
+                      pe.n = -1;
+                    }
+                    ct(K, ve);
+                  } else {
+                    pe.n = ve;
+                  }
+                } else {
+                  pe.v = ve;
+                }
+              }
+              try {
+                et = 2;
+                if (Ae) {
+                  if (!K) {
+                    Me = "next";
+                  }
+                  if (t = Ae[Me]) {
+                    if (!(t = t.call(Ae, ve))) throw TypeError("iterator result is not an object");
+                    if (!t.done) return t;
+                    ve = t.value;
+                    if (K < 2) {
+                      K = 0;
+                    }
+                  } else {
+                    if (K === 1 && (t = Ae.return)) {
+                      t.call(Ae);
+                    }
+                    if (K < 2) {
+                      ve = TypeError("The iterator does not provide a '" + Me + "' method");
+                      K = 1;
+                    }
+                  }
+                  Ae = j;
+                } else if ((t = (We = 0 < 0) ? ve : st.call(yt, pe)) !== S) break;
+              } catch (Oe) {
+                Ae = j;
+                K = 1;
+                ve = Oe;
+              } finally {
+                et = 1;
+              }
+            }
+            return {
+              value: t,
+              done: We
+            };
+          };
+        }(le, Ce, Ve), !0);
+        return Qe;
+      }
+      var S = {};
+      function k() {}
+      function Z() {}
+      function W() {}
+      t = Object.getPrototypeOf;
+      var $ = [][r] ? t(t([][r]())) : (Je(t = {}, r, function () {
+          return this;
+        }), t),
+        z = W.prototype = k.prototype = Object.create($);
+      function Le(le) {
+        if (Object.setPrototypeOf) {
+          Object.setPrototypeOf(le, W);
+        } else {
+          le.__proto__ = W;
+          Je(le, i, "GeneratorFunction");
+        }
+        le.prototype = Object.create(z);
+        return le;
+      }
+      Z.prototype = W;
+      Je(z, "constructor", W);
+      Je(W, "constructor", Z);
+      Z.displayName = "GeneratorFunction";
+      Je(W, i, "GeneratorFunction");
+      Je(z);
+      Je(z, i, "Generator");
+      Je(z, r, function () {
+        return this;
+      });
+      Je(z, "toString", function () {
+        return "[object Generator]";
+      });
+      return (ge = function () {
+        return {
+          w: h,
+          m: Le
+        };
+      })();
+    }
+    function Je(j, t, o, r) {
+      var i = Object.defineProperty;
+      try {
+        i({}, "", {});
+      } catch (h) {
+        i = 0;
+      }
+      Je = function (S, k, Z, W) {
+        function $(z, Le) {
+          Je(S, z, function (le) {
+            return this._invoke(z, Le, le);
+          });
+        }
+        if (k) {
+          if (i) {
+            i(S, k, {
+              value: Z,
+              enumerable: !W,
+              configurable: !W,
+              writable: !W
+            });
+          } else {
+            S[k] = Z;
+          }
+        } else {
+          $("next", 0);
+          $("throw", 1);
+          $("return", 2);
+        }
+      };
+      Je(j, t, o, r);
+    }
+    var gt = Object.defineProperty,
+      ut = Object.defineProperties,
+      wt = Object.getOwnPropertyDescriptors,
+      St = Object.getOwnPropertySymbols,
+      Tt = Object.prototype.hasOwnProperty,
+      Ct = Object.prototype.propertyIsEnumerable,
+      Rt = function (t, o, r) {
+        return o in t ? gt(t, o, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: r
+        }) : t[o] = r;
+      },
+      Se = function (t, o) {
+        for (var r in o || (o = {})) {
+          if (Tt.call(o, r)) {
+            Rt(t, r, o[r]);
+          }
+        }
+        if (St) {
+          var i = (0, R.Z)(St(o)),
+            h;
+          try {
+            for (i.s(); !(h = i.n()).done;) {
+              var r = h.value;
+              if (Ct.call(o, r)) {
+                Rt(t, r, o[r]);
+              }
+            }
+          } catch (S) {
+            i.e(S);
+          } finally {
+            i.f();
+          }
+        }
+        return t;
+      },
+      re = function (t, o) {
+        return ut(t, wt(o));
+      },
+      Ue = function (t, o) {
+        var r = {};
+        for (var i in t) {
+          if (Tt.call(t, i) && o.indexOf(i) < 0) {
+            r[i] = t[i];
+          }
+        }
+        if (t != null && St) {
+          var h = (0, R.Z)(St(t)),
+            S;
+          try {
+            for (h.s(); !(S = h.n()).done;) {
+              var i = S.value;
+              if (o.indexOf(i) < 0 && Ct.call(t, i)) {
+                r[i] = t[i];
+              }
+            }
+          } catch (k) {
+            h.e(k);
+          } finally {
+            h.f();
+          }
+        }
+        return r;
+      },
+      qe = function (t, o, r) {
+        return new Promise(function (i, h) {
+          var S = function ($) {
+              try {
+                Z(r.next($));
+              } catch (z) {
+                h(z);
+              }
+            },
+            k = function ($) {
+              try {
+                Z(r.throw($));
+              } catch (z) {
+                h(z);
+              }
+            },
+            Z = function ($) {
+              return $.done ? i($.value) : Promise.resolve($.value).then(S, k);
+            };
+          Z((r = r.apply(t, o)).next());
+        });
+      },
+      dt = ye.Z.getInstance(),
+      rt = De.Z.Constant,
+      Ye = rt.NETWORK_ERROR,
+      vt = rt.ACCOUNT_ERROR,
+      je = 5,
+      Fe = 10,
+      ze = function () {
+        function j() {
+          var t = this;
+          (0, n.Z)(this, j);
+          this.query$ = dt.query$;
+          this.searchResult$ = new Y.x({
+            count: 0,
+            params: {},
+            keyword: "",
+            status: ae.fF,
+            searchScene: ""
+          });
+          this.result$ = new Y.x({
+            value: {},
+            status: "",
+            action: "",
+            refer: "",
+            showPopoverIndex: -1
+          });
+          this.guess$ = new Y.x({
+            kw: ""
+          });
+          this.filter$ = new Y.x({
+            value: {},
+            status: ""
+          });
+          this.sort$ = new Y.x({
+            value: {},
+            status: ""
+          });
+          this.loading$ = new Y.x({
+            resultLoading: !1
+          });
+          this.sortFilterTrack$ = new Y.x({
+            sortFilterTrack: ""
+          });
+          this.error$ = new Y.x({
+            isError: !1,
+            errTip: {}
+          });
+          this.popupShop$ = new Y.x({
+            isShow: !1,
+            anchor: {}
+          });
+          this.scroll$ = new Y.x({
+            toScrollView: null,
+            pageScroll: !0
+          });
+          this.couponPopup$ = new Y.x({
+            isCouponShow: !1,
+            coupon: null
+          });
+          this.windVane$ = new Y.x({
+            requestParams: {},
+            lastParams: {},
+            expList: [],
+            backList: []
+          });
+          this.anchored$ = new Y.x({
+            value: {}
+          });
+          this._rankId = "";
+          this.isFromBaohongbao = !1;
+          this._searchBasicParams = {};
+          this.extraTrackParams = {};
+          this.searchExtraParams = null;
+          this.comprehensiveFilterList = {};
+          Te.Z.UserId().then(function (o) {
+            if (o) {
+              t.setSearchParams({
+                userId: o
+              });
+            }
+          });
+          this.isFirstScreen = !0;
+        }
+        return (0, E.Z)(j, [{
+          key: "reset",
+          value: function () {
+            this.searchResult$.next({
+              count: 0,
+              params: {},
+              keyword: "",
+              originalKeyword: "",
+              upKeyword: "",
+              status: ae.fF,
+              searchScene: ""
+            });
+            this.sortFilterTrack$.next({
+              sortFilterTrack: ""
+            });
+            this.loading$.next({
+              resultLoading: !1
+            });
+            this.error$.next({
+              isError: !1,
+              errTip: {}
+            });
+            this.popupShop$.next({
+              isShow: !1,
+              anchor: {},
+              list: []
+            });
+            this.scroll$.next({
+              toScrollView: null,
+              pageScroll: !0
+            });
+            this.couponPopup$.next({
+              isCouponShow: !1,
+              coupon: null
+            });
+            this.windVane$.next({
+              requestParams: {},
+              expList: [],
+              backList: []
+            });
+            this.anchored$.next({
+              value: {}
+            });
+            this.resetGuessValue();
+          }
+        }, {
+          key: "setLocation",
+          value: function () {
+            return qe(this, null, ge().m(function o() {
+              var r, i, h, S, k;
+              return ge().w(function (Z) {
+                for (;;) switch (Z.n) {
+                  case 0:
+                    if (!(this._searchBasicParams.longitude && this._searchBasicParams.latitude && this._searchBasicParams.cityId)) {
+                      Z.n = 1;
+                      break;
+                    }
+                    return Z.a(2);
+                  case 1:
+                    Z.n = 2;
+                    return xe.Z.getLocation();
+                  case 2:
+                    r = Z.v;
+                    i = r.cityId;
+                    h = r.latitude;
+                    S = r.longitude;
+                    if ((!h || !S) && g()().utils.platform.IS_TB_ENV) {
+                      k = this.query$.getValue().value;
+                      h = k.latitude;
+                      S = k.longitude;
+                      i = k.cityId;
+                    }
+                    this.setSearchParams({
+                      cityId: i,
+                      latitude: h,
+                      longitude: S
+                    });
+                    g()().answer.logKeyEvent({
+                      event: "setLocation",
+                      desc: "setLocation",
+                      extra: {
+                        cityId: i,
+                        latitude: h,
+                        longitude: S
+                      }
+                    });
+                  case 3:
+                    return Z.a(2);
+                }
+              }, o, this);
+            }));
+          }
+        }, {
+          key: "handleError",
+          value: function (o) {
+            if (o.status === 401) {
+              this.error$.mergeNext({
+                isError: !0,
+                errTip: vt
+              });
+            } else {
+              this.error$.mergeNext({
+                isError: !0,
+                errTip: Ye
+              });
+            }
+            this.loading$.next({
+              resultLoading: !1
+            });
+          }
+        }, {
+          key: "resetError",
+          value: function () {
+            this.error$.next({
+              isError: !1,
+              errTip: {}
+            });
+          }
+        }, {
+          key: "resetBasicParams",
+          value: function () {
+            var o = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
+            this.setSearchParams(Se({
+              userId: 0,
+              cityId: 0
+            }, o));
+          }
+        }, {
+          key: "setSearchParams",
+          value: function (o) {
+            this._searchBasicParams = Object.assign(this._searchBasicParams, o);
+          }
+        }, {
+          key: "resetGuessValue",
+          value: function () {
+            this.guess$.next({
+              kw: ""
+            });
+          }
+        }, {
+          key: "getSearchParams",
+          value: function () {
+            return Se(Se({}, this._searchBasicParams), this.searchResult$.getValue().params);
+          }
+        }, {
+          key: "navigateBackSearchIndex",
+          value: function () {
+            var o = this.query$.getValue().value,
+              r = o.keyword,
+              i = o.refer,
+              h = o.track,
+              S = o.search_extra_params,
+              k = o.showcase_mode,
+              Z = Ue(o, ["keyword", "refer", "track", "search_extra_params", "showcase_mode"]);
+            dt.searchBarAutoFocus$.mergeNext({
+              value: !0
+            });
+            var W = getCurrentPages(),
+              $ = W[W.length - 2],
+              z = (0, he.at)() ? $ && $.route === ae.Or : $ && $.pageName === ae.qR;
+            if (z) my.navigateBack();else {
+              var Le = Se(re(Se({}, Z), {
+                spm: "".concat((0, ot.S)(), ".13154471")
+              }), (0, he.rO)("srp.service.navigateBack", "sp"));
+              return my.redirectTo({
+                url: (0, _e.GB)("/pages/search/search?".concat((0, _e.Xl)(Le)))
+              });
+            }
+          }
+        }, {
+          key: "searchUpword",
+          value: function (o) {
+            return qe(this, arguments, function (r) {
+              var i = this,
+                h = r.keyword,
+                S = r.originalKeyword,
+                k = r.refer,
+                Z = r.comprehensiveFilterList,
+                W = r.searchEntryCode,
+                $ = r.searchExtraParams;
+              return ge().m(function z() {
+                var Le, le, Ke, Ce, Ve, nt;
+                return ge().w(function (Qe) {
+                  for (;;) switch (Qe.p = Qe.n) {
+                    case 0:
+                      Qe.p = 0;
+                      if (h) {
+                        Qe.n = 1;
+                        break;
+                      }
+                      return Qe.a(2);
+                    case 1:
+                      S = S || i.searchResult$.getValue().originalKeyword;
+                      console.log("searchUpword", "originalKeyword:", S, "keyword:", h, "upKeyword", h);
+                      i.searchResult$.mergeNext({
+                        originalKeyword: S,
+                        keyword: h,
+                        upKeyword: h,
+                        status: ae.fF,
+                        params: {}
+                      });
+                      i.sortFilterTrack$.mergeNext({
+                        sortFilterTrack: ""
+                      });
+                      if (dt) {
+                        dt.recordHistory(h);
+                      }
+                      Le = i.result$.getValue().value;
+                      le = Le.pageInfo.browseModeSwitch;
+                      i.result$.mergeNext({
+                        status: "loading",
+                        value: {},
+                        action: "search"
+                      });
+                      console.log(i.searchResult$.getValue(), "this.searchResult$.getValue()");
+                      i.loading$.mergeNext({
+                        resultLoading: !0
+                      });
+                      i.anchored$.mergeNext({
+                        value: {}
+                      });
+                      try {} catch (st) {
+                        g()().exlog.jserror("2021001193603467_filter&sort_error", "", st);
+                      }
+                      Qe.n = 2;
+                      return i.asyncBasicSearch({
+                        originalKeyword: S,
+                        keyword: h,
+                        refer: k,
+                        searchMode: le,
+                        searchEntryCode: W,
+                        searchExtraParams: $,
+                        comprehensiveFilterList: Z,
+                        fixSearch: "1"
+                      });
+                    case 2:
+                      Ke = Qe.v;
+                      Ce = Ke || {};
+                      Ve = "";
+                      if (Ce && Ce.pageInfo) {
+                        i._rankId = Ce.pageInfo.rankId;
+                        Ve = Ce.pageInfo.searchEntryName;
+                      }
+                      console.log(k, Ve, "searchEntryName");
+                      i.loading$.mergeNext({
+                        resultLoading: !1
+                      });
+                      i.result$.mergeNext({
+                        status: "success",
+                        value: re(Se({}, Ke), {
+                          action: "search"
+                        }),
+                        refer: Ve || k
+                      });
+                      try {
+                        i.getShopPreRenderData(Ce && Ce.listItems);
+                      } catch (st) {
+                        g()().exlog.customerror("\u83B7\u53D6\u5E97\u94FA\u9884\u6E32\u67D3\u6570\u636E\u9519\u8BEF", "", st);
+                        console.error(st, "getShopPreRenderData error");
+                      }
+                      Qe.n = 4;
+                      break;
+                    case 3:
+                      Qe.p = 3;
+                      nt = Qe.v;
+                      i.loading$.mergeNext({
+                        resultLoading: !1
+                      });
+                      console.error(nt, "search error");
+                      g()().exlog.customerror("searchKeyword \u641C\u7D22\u9519\u8BEF", "", nt);
+                      i.handleError(nt);
+                    case 4:
+                      return Qe.a(2);
+                  }
+                }, z, null, [[0, 3]]);
+              })();
+            });
+          }
+        }, {
+          key: "searchKeywordOld",
+          value: function (o) {
+            return qe(this, arguments, function (r) {
+              var i = this,
+                h = r.keyword,
+                S = r.refer,
+                k = r.recKw,
+                Z = r.searchEntryCode,
+                W = r.searchExtraParams;
+              return ge().m(function $() {
+                var z, Le, le, Ke;
+                return ge().w(function (Ce) {
+                  for (;;) switch (Ce.p = Ce.n) {
+                    case 0:
+                      Ce.p = 0;
+                      if (h) {
+                        Ce.n = 1;
+                        break;
+                      }
+                      return Ce.a(2);
+                    case 1:
+                      if (i.isFirstScreen) {
+                        g()().exlog.performance("searchRequest", "", "start");
+                      }
+                      if (k && dt.search$.getValue().status === ae.fF) {
+                        dt.guess$.mergeNext({
+                          kw: k
+                        });
+                      }
+                      try {
+                        if (i.query$.getValue().value.filter_params) {
+                          i.searchResult$.mergeNext({
+                            params: Se({
+                              count: 1
+                            }, JSON.parse(i.query$.getValue().value.filter_params || "{}")),
+                            keyword: h,
+                            status: ae.fF
+                          });
+                        } else {
+                          i.searchResult$.mergeNext({
+                            keyword: h,
+                            originalKeyword: h,
+                            status: ae.fF,
+                            params: {}
+                          });
+                        }
+                      } catch (Ve) {}
+                      i.scroll$.mergeNext({
+                        pageScroll: !0,
+                        toScrollView: null
+                      });
+                      i.result$.mergeNext({
+                        status: "loading",
+                        action: "search",
+                        value: null
+                      });
+                      i.sortFilterTrack$.mergeNext({
+                        sortFilterTrack: ""
+                      });
+                      i.loading$.mergeNext({
+                        resultLoading: !0
+                      });
+                      try {} catch (Ve) {
+                        console.error(Ve, "fiter & sort error");
+                        g()().exlog.jserror("2021001193603467_filter&sort_error", "", Ve);
+                      }
+                      Ce.n = 2;
+                      return i.asyncBasicSearch({
+                        keyword: h,
+                        refer: S,
+                        searchEntryCode: Z,
+                        searchExtraParams: W,
+                        fixSearch: "1"
+                      });
+                    case 2:
+                      z = Ce.v;
+                      Le = z || {};
+                      le = "";
+                      if (Le && Le.pageInfo) {
+                        i._rankId = Le.pageInfo.rankId;
+                        le = Le.pageInfo.searchEntryName;
+                      }
+                      console.log(S, le, "searchEntryName");
+                      i.loading$.mergeNext({
+                        resultLoading: !1
+                      });
+                      i.result$.mergeNext({
+                        status: "success",
+                        value: re(Se({}, z), {
+                          action: "search"
+                        }),
+                        refer: S || le
+                      });
+                      if (i.isFirstScreen) {
+                        g()().exlog.performance("bizAvailable", "", "end");
+                        g()().exlog.performance("searchRequest", "", "end");
+                        i.isFirstScreen = !1;
+                      }
+                      try {
+                        i.getShopPreRenderData(Le && Le.listItems);
+                      } catch (Ve) {
+                        g()().exlog.customerror("\u83B7\u53D6\u5E97\u94FA\u9884\u6E32\u67D3\u6570\u636E\u9519\u8BEF", "", Ve);
+                        console.error(Ve, "getShopPreRenderData error");
+                      }
+                      Ce.n = 4;
+                      break;
+                    case 3:
+                      Ce.p = 3;
+                      Ke = Ce.v;
+                      i.loading$.mergeNext({
+                        resultLoading: !1
+                      });
+                      console.error(Ke, "search error");
+                      g()().exlog.customerror("searchKeyword \u641C\u7D22\u9519\u8BEF", "", Ke);
+                      i.handleError(Ke);
+                    case 4:
+                      return Ce.a(2);
+                  }
+                }, $, null, [[0, 3]]);
+              })();
+            });
+          }
+        }, {
+          key: "searchKeyword",
+          value: function (o) {
+            return qe(this, arguments, function (r) {
+              var i = this,
+                h = r.keyword,
+                S = r.refer,
+                k = r.recKw,
+                Z = r.searchEntryCode,
+                W = r.searchExtraParams;
+              return ge().m(function $() {
+                return ge().w(function (z) {
+                  for (;;) switch (z.n) {
+                    case 0:
+                      return z.a(2, i.searchKeywordRequest({
+                        keyword: h,
+                        refer: S,
+                        recKw: k,
+                        searchEntryCode: Z,
+                        searchExtraParams: W
+                      }).then(function (Le) {
+                        i.setSearchResultData(Le, S);
+                        if (i._searchBasicParams.factors) {
+                          delete i._searchBasicParams.factors;
+                        }
+                      }).catch(function (Le) {
+                        i.handleError(Le);
+                      }));
+                  }
+                }, $);
+              })();
+            });
+          }
+        }, {
+          key: "setSearchResultData",
+          value: function (o) {
+            var r = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : "",
+              i = o || {},
+              h = "";
+            if (i && i.pageInfo) {
+              this._rankId = i.pageInfo.rankId;
+              h = i.pageInfo.searchEntryName;
+            }
+            console.log(r, h, "searchEntryName");
+            this.loading$.mergeNext({
+              resultLoading: !1
+            });
+            this.result$.mergeNext({
+              status: "success",
+              value: re(Se({}, o), {
+                action: "search"
+              }),
+              refer: r || h
+            });
+            if (this.isFirstScreen) {
+              g()().exlog.performance("bizAvailable", "", "end");
+              g()().exlog.performance("searchRequest", "", "end");
+              this.isFirstScreen = !1;
+            }
+            try {
+              this.getShopPreRenderData(i && i.listItems);
+            } catch (S) {
+              g()().exlog.customerror("\u83B7\u53D6\u5E97\u94FA\u9884\u6E32\u67D3\u6570\u636E\u9519\u8BEF", "", S);
+              console.error(S, "getShopPreRenderData error");
+            }
+          }
+        }, {
+          key: "searchKeywordRequest",
+          value: function (o) {
+            var r = o.keyword,
+              i = o.refer,
+              h = o.recKw,
+              S = o.searchEntryCode,
+              k = o.searchExtraParams;
+            try {
+              if (!r) return Promise.reject(new Error("keyword is empty"));
+              if (this.isFirstScreen) {
+                g()().exlog.performance("searchRequest", "", "start");
+              }
+              if (h && dt.search$.getValue().status === ae.fF) {
+                dt.guess$.mergeNext({
+                  kw: h
+                });
+              }
+              try {
+                if (this.query$.getValue().value.filter_params) {
+                  this.searchResult$.mergeNext({
+                    params: Se({
+                      count: 1
+                    }, JSON.parse(this.query$.getValue().value.filter_params || "{}")),
+                    keyword: r,
+                    status: ae.fF
+                  });
+                } else {
+                  this.searchResult$.mergeNext({
+                    keyword: r,
+                    originalKeyword: r,
+                    status: ae.fF,
+                    params: {}
+                  });
+                }
+              } catch (Z) {}
+              this.sortFilterTrack$.next({
+                sortFilterTrack: ""
+              });
+              this.scroll$.mergeNext({
+                pageScroll: !0,
+                toScrollView: null
+              });
+              this.result$.mergeNext({
+                status: "loading",
+                action: "search",
+                value: null
+              });
+              this.loading$.mergeNext({
+                resultLoading: !0
+              });
+              this.anchored$.mergeNext({
+                value: {}
+              });
+              try {} catch (Z) {
+                console.error(Z, "fiter & sort error");
+                g()().exlog.jserror("2021001193603467_filter&sort_error", "", Z);
+              }
+              return this.asyncBasicSearch({
+                keyword: r,
+                refer: i,
+                searchEntryCode: S,
+                searchExtraParams: k,
+                fixSearch: "1"
+              });
+            } catch (Z) {
+              return Promise.reject(Z);
+            }
+          }
+        }, {
+          key: "asyncBasicSearch",
+          value: function (o) {
+            return qe(this, null, ge().m(function r() {
+              var i, h, S, k, Z, W, $, z, Le, le, Ke, Ce, Ve, nt, Qe, st, yt, ht, Ae, K, ve, et, Xe;
+              return ge().w(function (We) {
+                for (;;) switch (We.n) {
+                  case 0:
+                    console.log("asyncBasicSearch service", o);
+                    We.n = 1;
+                    return this.setLocation();
+                  case 1:
+                    i = o.originalKeyword;
+                    h = o.comprehensiveFilterList;
+                    S = o.keyword;
+                    k = o.searchMode;
+                    Z = o.searchEntryCode;
+                    W = o.searchExtraParams;
+                    $ = this.query$.getValue().value;
+                    z = $.terminal;
+                    Le = $.fromPage;
+                    le = $.topShop;
+                    Ke = $.forceShopIds;
+                    Ce = $.passSearchParam;
+                    Ve = $.channel_code;
+                    nt = $.channel_extra_params;
+                    Qe = $.showcase_mode;
+                    st = {};
+                    try {
+                      if (Ce) {
+                        st = JSON.parse(Ce);
+                      }
+                    } catch (pe) {}
+                    yt = {};
+                    try {
+                      if (nt) {
+                        yt = JSON.parse(decodeURIComponent(nt));
+                      }
+                    } catch (pe) {}
+                    ht = {};
+                    try {
+                      if (W) {
+                        ht = JSON.parse(decodeURIComponent(W));
+                        this.searchExtraParams = ht;
+                      } else {
+                        this.searchExtraParams = null;
+                      }
+                    } catch (pe) {}
+                    try {
+                      if (h) {
+                        this.comprehensiveFilterList = h;
+                      } else {
+                        this.comprehensiveFilterList = null;
+                      }
+                    } catch (pe) {}
+                    Ae = k || 1;
+                    if (Qe) {
+                      if (Qe === "store") {
+                        Ae = 2;
+                      } else {
+                        if (Qe === "product") {
+                          Ae = 3;
+                        } else {
+                          Ae = 1;
+                        }
+                      }
+                    }
+                    K = {};
+                    Te.Z.get("feedbackExpose").then(function (pe) {
+                      K.feedbackExpose = pe;
+                    }).catch(function (pe) {
+                      return pe;
+                    });
+                    Te.Z.get("feedbackClick").then(function (pe) {
+                      K.feedbackClick = pe;
+                    }).catch(function (pe) {
+                      return pe;
+                    });
+                    ve = this.getPlatform();
+                    et = "5.3";
+                    Xe = ee(re(Se(Se(re(Se(re(Se(Se({
+                      channelCode: Ve || "0",
+                      platform: ve,
+                      alipayChannel: 1,
+                      sversion: et,
+                      offset: 0,
+                      limit: (0, he.at)() ? Fe : je,
+                      n: (0, he.at)() ? Fe : je,
+                      page: 1,
+                      orderBy: 0
+                    }, this.getSearchParams()), o), {
+                      keyword: S,
+                      originalKeyword: i,
+                      comprehensiveFilterList: h,
+                      terminal: z,
+                      fromPage: Le,
+                      topShop: le,
+                      forceShopIds: Ke
+                    }), st), {
+                      storeParams: K
+                    }), yt), ht || {}), {
+                      searchMode: Ae,
+                      searchEntryCode: Z
+                    }));
+                    Object.keys(Xe).forEach(function (pe) {
+                      if ((0, u.Z)(Xe[pe]) === "object") {
+                        Xe[pe] = JSON.stringify(Xe[pe]);
+                      } else {
+                        Xe[pe] = Xe[pe];
+                      }
+                    });
+                    Object.keys(Xe).forEach(function (pe) {
+                      if (!Xe[pe]) {
+                        delete Xe[pe];
+                      }
+                    });
+                    console.log(Xe, "basicsearch query");
+                    return We.a(2, I(Xe));
+                }
+              }, r, this);
+            }));
+          }
+        }, {
+          key: "getShopPreRenderData",
+          value: function () {
+            var o = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : [],
+              r = g()().utils.getShopPreRenderData;
+            if (typeof r == "function") {
+              var i = [];
+              o.forEach(function (h) {
+                var S = h.restaurant,
+                  k = S === void 0 ? {} : S;
+                if (k && k.id) {
+                  var Z = k.id;
+                  i.push({
+                    shopId: Z
+                  });
+                }
+              });
+              r(i);
+            }
+          }
+        }, {
+          key: "asyncFirstSearchWithFilter",
+          value: function (o) {
+            return qe(this, null, ge().m(function r() {
+              var i, h, S, k, Z;
+              return ge().w(function (W) {
+                for (;;) switch (W.p = W.n) {
+                  case 0:
+                    W.p = 0;
+                    i = o.keyword;
+                    h = o.filter_params_count;
+                    if (h === void 0) {
+                      S = 0;
+                    } else {
+                      S = h;
+                    }
+                    delete o.keyword;
+                    this.result$.mergeNext({
+                      status: "loading",
+                      value: {},
+                      action: "search",
+                      showPopoverIndex: -1
+                    });
+                    this.loading$.mergeNext({
+                      resultLoading: !0
+                    });
+                    this.searchResult$.mergeNext({
+                      params: Se({
+                        count: S
+                      }, o)
+                    });
+                    W.n = 1;
+                    return this.asyncBasicSearch(Se({
+                      keyword: this.searchResult$.getValue().keyword,
+                      fixSearch: "0"
+                    }, o));
+                  case 1:
+                    k = W.v;
+                    this.result$.mergeNext({
+                      status: "success",
+                      value: re(Se({}, k), {
+                        action: "search"
+                      })
+                    });
+                    this.loading$.mergeNext({
+                      resultLoading: !1
+                    });
+                    W.n = 3;
+                    break;
+                  case 2:
+                    W.p = 2;
+                    Z = W.v;
+                    this.loading$.mergeNext({
+                      resultLoading: !1
+                    });
+                    g()().exlog.customerror("asyncFirstSearchWithFilter \u5E26\u7B5B\u9009\u8FDB\u5165\u641C\u7D22\u9519\u8BEF", "", Z);
+                    this.handleError(Z);
+                  case 3:
+                    return W.a(2);
+                }
+              }, r, this, [[0, 2]]);
+            }));
+          }
+        }, {
+          key: "asyncSearchFilter",
+          value: function (o) {
+            return qe(this, null, ge().m(function r() {
+              var i, h, S, k;
+              return ge().w(function (Z) {
+                for (;;) switch (Z.p = Z.n) {
+                  case 0:
+                    console.log(o, "asyncSearchFilter params");
+                    i = this.result$.getValue().value;
+                    h = i.pageInfo.browseModeSwitch;
+                    Z.p = 1;
+                    this.searchResult$.mergeNext({
+                      params: o
+                    });
+                    this.result$.mergeNext({
+                      status: "loading",
+                      value: {},
+                      action: "filter"
+                    });
+                    this.loading$.mergeNext({
+                      resultLoading: !0
+                    });
+                    Z.n = 2;
+                    return this.asyncBasicSearch(Se({
+                      keyword: this.searchResult$.getValue().keyword,
+                      originalKeyword: this.searchResult$.getValue().originalKeyword,
+                      searchMode: h,
+                      searchExtraParams: this.searchExtraParams,
+                      fixSearch: "0"
+                    }, o));
+                  case 2:
+                    S = Z.v;
+                    this.result$.mergeNext({
+                      status: "success",
+                      value: re(Se({}, S), {
+                        action: "filter"
+                      })
+                    });
+                    this.loading$.mergeNext({
+                      resultLoading: !1
+                    });
+                    Z.n = 4;
+                    break;
+                  case 3:
+                    Z.p = 3;
+                    k = Z.v;
+                    this.loading$.mergeNext({
+                      resultLoading: !1
+                    });
+                    g()().exlog.customerror("asyncSearchFilter \u7B5B\u9009\u9519\u8BEF", "", k);
+                    this.handleError(k);
+                  case 4:
+                    return Z.a(2);
+                }
+              }, r, this, [[1, 3]]);
+            }));
+          }
+        }, {
+          key: "asyncSearchMore",
+          value: function () {
+            return qe(this, null, ge().m(function o() {
+              var r, i, h, S, k, Z, W, $, z, Le, le, Ke;
+              return ge().w(function (Ce) {
+                for (;;) switch (Ce.p = Ce.n) {
+                  case 0:
+                    console.log("search more");
+                    r = this.result$.getValue().value;
+                    i = this.anchored$.getValue().value;
+                    Ce.p = 1;
+                    this.result$.mergeNext({
+                      status: "loading",
+                      action: "add"
+                    });
+                    h = r.pageInfo;
+                    S = h.rankId;
+                    k = h.page;
+                    Z = h.browseModeSwitch;
+                    W = {
+                      smartFilterIds: []
+                    };
+                    if (i) {
+                      Object.keys(i).forEach(function (Ve) {
+                        var nt = Ve.split("-");
+                        W[nt[0]] = JSON.stringify([nt[1]]);
+                      });
+                    }
+                    $ = this.searchResult$.getValue().keyword;
+                    z = this.searchResult$.getValue().originalKeyword;
+                    Ce.n = 2;
+                    return this.asyncBasicSearch(re(Se({
+                      keyword: $,
+                      originalKeyword: this.comprehensiveFilterList ? z : void 0,
+                      offset: k * ((0, he.at)() ? Fe : je),
+                      page: Number(k) + 1,
+                      rankId: S,
+                      searchExtraParams: this.searchExtraParams,
+                      searchMode: Z
+                    }, W), {
+                      fixSearch: "0",
+                      comprehensiveFilterList: this.comprehensiveFilterList
+                    }));
+                  case 2:
+                    Le = Ce.v;
+                    le = this.result$.getValue().action;
+                    if (le === "add") {
+                      Ce.n = 3;
+                      break;
+                    }
+                    return Ce.a(2);
+                  case 3:
+                    if (Le && Le.listItems) {
+                      this.result$.mergeNext({
+                        status: "success",
+                        value: re(Se({}, Le), {
+                          listItems: [].concat((0, c.Z)(r.listItems), (0, c.Z)(Le.listItems)),
+                          offset: r.listItems.length,
+                          action: "add"
+                        })
+                      });
+                    } else {
+                      this.result$.mergeNext({
+                        status: "success",
+                        value: {
+                          pageInfo: re(Se({}, r.pageInfo), {
+                            finished: !0
+                          }),
+                          listItems: (0, c.Z)(r.listItems),
+                          offset: r.listItems.length,
+                          action: "add"
+                        }
+                      });
+                    }
+                    Ce.n = 5;
+                    break;
+                  case 4:
+                    Ce.p = 4;
+                    Ke = Ce.v;
+                    console.error(Ke, "\u7FFB\u9875\u9519\u8BEF");
+                    this.result$.mergeNext({
+                      status: "success",
+                      value: {
+                        pageInfo: re(Se({}, r.pageInfo), {
+                          finished: !0
+                        }),
+                        listItems: (0, c.Z)(r.listItems),
+                        offset: r.listItems.length,
+                        action: "add"
+                      }
+                    });
+                    g()().exlog.customerror("asyncSearchMore \u7FFB\u9875\u9519\u8BEF", "", Ke);
+                  case 5:
+                    return Ce.a(2);
+                }
+              }, o, this, [[1, 4]]);
+            }));
+          }
+        }, {
+          key: "loadFilterBar",
+          value: function (o) {
+            return qe(this, arguments, function (r) {
+              var i = this,
+                h = r.keyword;
+              return ge().m(function S() {
+                var k, Z, W, $, z, Le, le, Ke, Ce;
+                return ge().w(function (Ve) {
+                  for (;;) switch (Ve.n) {
+                    case 0:
+                      Ve.n = 1;
+                      return i.setLocation();
+                    case 1:
+                      i.filter$.next({
+                        value: {},
+                        status: "loading"
+                      });
+                      if (g()().authLogin.getUserId()) {
+                        Ve.n = 2;
+                        break;
+                      }
+                      return Ve.a(2, i.filter$.next({
+                        value: {},
+                        status: "success"
+                      }));
+                    case 2:
+                      k = i.getSearchParams();
+                      Z = k.latitude;
+                      W = k.longitude;
+                      $ = i.query$.getValue() || {};
+                      z = $.value;
+                      if (z === void 0) {
+                        Le = {};
+                      } else {
+                        Le = z;
+                      }
+                      le = Le.entry_code;
+                      if (le === void 0) {
+                        Ke = "";
+                      } else {
+                        Ke = le;
+                      }
+                      Ve.n = 3;
+                      return J({
+                        latitude: Z,
+                        longitude: W,
+                        keyword: h,
+                        searchEntryCode: Ke,
+                        scene: "miniapp:search",
+                        inGroup: 1,
+                        method: "filter_bar",
+                        sversion: "5.3"
+                      });
+                    case 3:
+                      Ce = Ve.v;
+                      i.filter$.next({
+                        value: Ce,
+                        status: "success"
+                      });
+                      return Ve.a(2, Ce);
+                  }
+                }, S);
+              })();
+            });
+          }
+        }, {
+          key: "getEnterMiddle",
+          value: function () {
+            var o = "";
+            try {
+              var r = g()().aife.pageManager.getSecondToLastPage(getCurrentPages),
+                i = r.properties.pageConfig;
+              if (i.pageName) {
+                o = ae.Jn[i.pageName];
+              } else {
+                o = "";
+              }
+            } catch (k) {}
+            var h = getCurrentPages(),
+              S = h[h.length - 2];
+            return o;
+          }
+        }, {
+          key: "vaneRefresh",
+          value: function () {
+            return qe(this, null, ge().m(function o() {
+              var r, i, h, S, k, Z, W, $, z, Le, le, Ke, Ce, Ve, nt, Qe, st, yt, ht, Ae, K, ve, et;
+              return ge().w(function (Xe) {
+                for (;;) switch (Xe.p = Xe.n) {
+                  case 0:
+                    r = this.query$.getValue().value;
+                    i = this.result$.getValue().value;
+                    h = this.searchResult$.getValue();
+                    S = i.pageInfo;
+                    k = S.rankId;
+                    if (k === void 0) {
+                      Z = "";
+                    } else {
+                      Z = k;
+                    }
+                    W = S.currentPageShopIds;
+                    if (W === void 0) {
+                      $ = "";
+                    } else {
+                      $ = W;
+                    }
+                    z = S.unionTabId;
+                    if (z === void 0) {
+                      Le = "elemeAll";
+                    } else {
+                      Le = z;
+                    }
+                    le = this.windVane$.getValue();
+                    Ke = le.requestParams;
+                    Ce = Ke.currentClkShop;
+                    if (Ce === void 0) {
+                      Ve = "";
+                    } else {
+                      Ve = Ce;
+                    }
+                    nt = Ke.cardIndex;
+                    if (nt === void 0) {
+                      Qe = "";
+                    } else {
+                      Qe = nt;
+                    }
+                    st = le.lastParams;
+                    if (!(Qe <= 4)) {
+                      Xe.n = 1;
+                      break;
+                    }
+                    return Xe.a(2);
+                  case 1:
+                    yt = st && st.lastPageVaneCard;
+                    ht = Se({
+                      keyword: h.keyword,
+                      vaneQueryFeature: JSON.stringify({
+                        actionType: "clkback",
+                        currentClkShop: Ve,
+                        currentPageShopIds: $,
+                        lastPageVaneCard: yt
+                      }),
+                      rankId: Z,
+                      unionTabId: Le,
+                      cardIndex: Qe,
+                      refer: r.refer,
+                      channelId: r.channelId || r.from_channel || 0
+                    }, this.getSearchParams());
+                    Xe.p = 2;
+                    Xe.n = 3;
+                    return Ze(ht);
+                  case 3:
+                    Ae = Xe.v;
+                    if (Ae && Ae.listItems) {
+                      K = i.listItems.splice(Number(Qe) + 1, 0, Ae.listItems);
+                      try {
+                        this.result$.mergeNext({
+                          status: "success",
+                          action: "insert",
+                          value: re(Se({}, i), {
+                            insertItems: Ae.listItems,
+                            offset: Number(Qe) + 1
+                          })
+                        });
+                        ve = K.map(function (We) {
+                          return We.info && We.info.restaurant && We.info.restaurant.id;
+                        });
+                        ve = ve.filter(function (We) {
+                          return We !== void 0;
+                        });
+                        this.windVane$.mergeNext({
+                          expList: ve
+                        });
+                      } catch (We) {
+                        console.log("===== \u8BF7\u6C42\u5931\u8D25 =====", We);
+                      }
+                    }
+                    Xe.n = 5;
+                    break;
+                  case 4:
+                    Xe.p = 4;
+                    et = Xe.v;
+                    console.log("===== \u8BF7\u6C42\u5931\u8D25 =====", et);
+                  case 5:
+                    return Xe.a(2);
+                }
+              }, o, this, [[2, 4]]);
+            }));
+          }
+        }, {
+          key: "getPlatform",
+          value: function () {
+            var o = this.query$.getValue().value,
+              r = o.businessComeFrom,
+              i = o.from;
+            try {
+              var h = "0";
+              if (g()().utils.platform.IS_DY_ENV || g()().utils.platform.IS_DYLT_ENV) {
+                h = "701";
+              } else {
+                if (g()().utils.platform.IS_TB_ENV || g()().utils.platform.IS_LT_ENV) {
+                  h = "6";
+                } else {
+                  if (g()().utils.platform.IS_WX_ENV) {
+                    h = "9";
+                  } else {
+                    if (g()().utils.platform.IS_WEB_ENV) {
+                      if (r === ae.mZ.gonghuiding) {
+                        h = "901";
+                      } else {
+                        if (i === ae.mZ.greenbuy) {
+                          h = "902";
+                        } else {
+                          if (i === ae.mZ.guanaitong) {
+                            h = "903";
+                          } else {
+                            h = "999";
+                          }
+                        }
+                      }
+                    } else {
+                      h = "0";
+                    }
+                  }
+                }
+              }
+              return h;
+            } catch (S) {
+              g()().exlog.jserror("get_search_platform error", "", S);
+              return "0";
+            }
+          }
+        }, {
+          key: "setPopupShopData",
+          value: function (o) {
+            this.popupShop$.mergeNext(o);
+          }
+        }, {
+          key: "setPageScroll",
+          value: function (o) {
+            this.scroll$.mergeNext(o);
+          }
+        }, {
+          key: "silentSendCoupon",
+          value: function (o) {
+            return qe(this, null, ge().m(function r() {
+              var i, h, S;
+              return ge().w(function (k) {
+                for (;;) switch (k.n) {
+                  case 0:
+                    i = o.isLogin;
+                    h = o.tbet_safe;
+                    k.n = 1;
+                    return at({
+                      bizCode: "ET_SEARCH",
+                      ext: {
+                        subSubChannel: (0, _e.Hd)(),
+                        tbet_safe: h.toString(),
+                        tbet_no_login: (!i).toString(),
+                        bizCode: "ET_SEARCH"
+                      }
+                    }, {
+                      asac: i ? "alscIEHa9RGen8cRSFu1rN" : "alsc4ujougItcCUhhvcENL"
+                    });
+                  case 1:
+                    S = k.v;
+                    return k.a(2, S);
+                }
+              }, r);
+            }));
+          }
+        }], [{
+          key: "getInstance",
+          value: function () {
+            j.__instance = j.__instance || new j();
+            return j.__instance;
+          }
+        }]);
+      }();
+  },
+  EHTJ: function (ue, L, e) {
+    var c = e("20uZ"),
+      u = e("1l8G");
+    Component({
+      mixins: [],
+      data: {
+        iconWidth: null,
+        srcError: !1
+      },
+      props: {
+        word: "",
+        tagStyle: "",
+        size: "normal",
+        isHighlight: 0,
+        icon: ""
+      },
+      didUpdate: function () {},
+      didUnmount: function () {},
+      methods: {
+        handleImageLoaded: function (E) {
+          var R = E.target.dataset.icon;
+          if (R) {
+            var A = E.detail.width,
+              g = E.detail.height,
+              p = 32 * A / g;
+            this.setData({
+              iconWidth: p
+            });
+          }
+        },
+        handleImageError: function () {
+          this.setData({
+            srcError: !0
+          });
+        }
+      }
+    });
+    L.Z = c.Z.Component(u, c.Z.mergeConfig(e("s861"), e("pYd0")));
+  },
+  d8vc: function (ue, L, e) {
+    e.r(L);
+    e.d(L, {
+      $templates: function () {
+        return R;
+      },
+      defaultRender: function () {
+        return A;
+      },
+      isComplexComponents: function () {
+        return g;
+      }
+    });
+    var c = e("q1tI"),
+      u = e("20uZ"),
+      n = e("2pVW"),
+      E = e("aMrw"),
+      R = {};
+    function A(p) {
+      var P = p.isShow,
+        y = p.image,
+        b = p.title,
+        M = p.subTitle,
+        w = p.buttons,
+        T = p.item,
+        d = p.index,
+        H = p.$id;
+      return c.createElement("tiga-view", {
+        class: "error-view-cmp",
+        hidden: u.Z.toJsonString(!P, !1)
+      }, c.createElement("tiga-view", {
+        class: "error-view-content"
+      }, c.createElement("tiga-image", {
+        class: "error-view-img",
+        mode: "aspectFit",
+        src: u.Z.toJsonString(y, !1)
+      }), b && (b == null ? void 0 : b.length) > 0 ? c.createElement("tiga-view", {
+        class: "error-view-title"
+      }, u.Z.getString(b)) : !1, M && (M == null ? void 0 : M.length) > 0 ? c.createElement("tiga-view", {
+        class: "error-view-subTitle"
+      }, u.Z.getString(M)) : !1, c.createElement("tiga-view", {
+        class: "error-view-btns"
+      }, u.Z.getForValue(w).map(function (x, Q) {
+        return c.createElement(u.Z.Block, null, (x == null ? void 0 : x.theme) == "blue" ? c.createElement("tiga-view", {
+          key: u.Z.toJsonString(Q, !1),
+          class: "error-view-btn error-view-btn-blue" + (" 813aa84f99984344984ae1b6bd987ec0" + (typeof Q != "undefined" ? Q : "") + (" comp-id-" + H)),
+          "data-type": u.Z.toJsonString(x == null ? void 0 : x.type, !0)
+        }, u.Z.getString(x == null ? void 0 : x.text), u.Z.registEvents([{
+          name: "tap",
+          event: "handleErrorAction",
+          catch: !0
+        }], p, "813aa84f99984344984ae1b6bd987ec0" + (typeof Q != "undefined" ? Q : ""))) : c.createElement("tiga-view", {
+          key: u.Z.toJsonString(Q, !1),
+          class: "error-view-btn error-view-btn-white" + (" 0142b5a3a4cb4c3088b06ffa5f8cdea1" + (typeof Q != "undefined" ? Q : "") + (" comp-id-" + H)),
+          "data-type": u.Z.toJsonString(x == null ? void 0 : x.type, !0)
+        }, u.Z.getString(x == null ? void 0 : x.text), u.Z.registEvents([{
+          name: "tap",
+          event: "handleErrorAction",
+          catch: !0
+        }], p, "0142b5a3a4cb4c3088b06ffa5f8cdea1" + (typeof Q != "undefined" ? Q : ""))));
+      }))));
+    }
+    var g = !0;
+  },
+  kj4q: function (ue, L, e) {
+    e.r(L);
+    e.d(L, {
+      $templates: function () {
+        return R;
+      },
+      defaultRender: function () {
+        return A;
+      },
+      isComplexComponents: function () {
+        return g;
+      }
+    });
+    var c = e("q1tI"),
+      u = e("20uZ"),
+      n = e("2pVW"),
+      E = e("aMrw"),
+      R = {};
+    function A(p) {
+      var P = p.isShow,
+        y = p.isTBH5AndImmersiveLink,
+        b = p.loadingImg,
+        M = p.$id;
+      return c.createElement("tiga-view", {
+        class: "loading-fixed" + (" f6379d9d7bb64e178a90d255c59fff55" + (typeof index != "undefined" ? index : "") + (" comp-id-" + M)),
+        hidden: u.Z.toJsonString(!P, !1),
+        "disable-scroll": "true"
+      }, c.createElement("tiga-image", {
+        class: "loading-gif " + (y ? "loading-gif-tbh5" : ""),
+        style: u.Z.createStyle("uc-perf-stat-ignore: image;"),
+        mode: "aspectFit",
+        src: u.Z.toJsonString(b, !1)
+      }), u.Z.registEvents([{
+        name: "touchmove",
+        event: "handlePropagation",
+        catch: !0
+      }, {
+        name: "tap",
+        event: "handlePropagation",
+        catch: !0
+      }], p, "f6379d9d7bb64e178a90d255c59fff55" + (typeof index != "undefined" ? index : "")));
+    }
+    var g = !0;
+  },
+  aSs5: function (ue, L, e) {
+    e.r(L);
+    e.d(L, {
+      $templates: function () {
+        return g;
+      },
+      defaultRender: function () {
+        return p;
+      },
+      isComplexComponents: function () {
+        return P;
+      }
+    });
+    var c = e("q1tI"),
+      u = e("20uZ"),
+      n = e("gAsz"),
+      E = e("aMrw"),
+      R = e("9RWM"),
+      A = e("EHTJ"),
+      g = {};
+    function p(y) {
+      var b,
+        M,
+        w = y.recWords,
+        T = y.suggestGuessClkLogKey,
+        d = y.suggestGuessExpLogKey,
+        H = y.suggestGuessSpmC,
+        x = y.index,
+        Q = y.item;
+      return c.createElement("tiga-view", {
+        class: "suggest-guess"
+      }, c.createElement("tiga-view", {
+        class: "suggest-guess-header"
+      }, c.createElement("tiga-view", {
+        class: "suggest-guess-header-title"
+      }, u.Z.getString(w == null || (b = w.content) === null || b === void 0 ? void 0 : b.text))), c.createElement("tiga-view", {
+        class: "suggest-guess-tag-container"
+      }, c.createElement("tiga-view", {
+        class: "guess-tag-selector"
+      }, u.Z.getForValue(w == null || (M = w.content) === null || M === void 0 ? void 0 : M.entities).map(function (X, oe) {
+        var te;
+        return c.createElement(u.Z.Block, null, c.createElement(R.Z, {
+          trackClkLogkey: T,
+          trackExpLogkey: d,
+          "data-track-spmcd": H + "." + (oe + 1),
+          "data-track-refer": n.ZP === null || n.ZP === void 0 ? void 0 : n.ZP.SEARCH_REFER_RELATION_GUESS,
+          trackItem: X == null ? void 0 : X.guideTrack,
+          "data-keyword": X == null ? void 0 : X.keyword,
+          "data-refer": n.ZP === null || n.ZP === void 0 ? void 0 : n.ZP.SEARCH_REFER_RELATION_GUESS,
+          "data-searchEntryCode": n.ZP === null || n.ZP === void 0 || (te = n.ZP.ENTRY_CODE) === null || te === void 0 ? void 0 : te.RELATION,
+          trackExpParamMergeExp: !0,
+          isCatchTap: !0,
+          onTap: u.Z.getEvent("handleSearchTagTap", y)
+        }, c.createElement("tiga-view", {
+          class: "suggest-guess-tag-item"
+        }, c.createElement(A.Z, {
+          size: "mini",
+          word: X == null ? void 0 : X.text
+        }))));
+      }))));
+    }
+    var P = !0;
+  },
+  m2rB: function (ue, L, e) {
+    e.r(L);
+    e.d(L, {
+      $templates: function () {
+        return p;
+      },
+      defaultRender: function () {
+        return P;
+      },
+      isComplexComponents: function () {
+        return y;
+      }
+    });
+    var c = e("q1tI"),
+      u = e("20uZ"),
+      n = e("gAsz"),
+      E = e("AHf3"),
+      R = e("2pVW"),
+      A = e("aMrw"),
+      g = e("9RWM"),
+      p = {};
+    function P(b) {
+      var M,
+        w,
+        T,
+        d,
+        H,
+        x = b.suggestModuleExpLogKey,
+        Q = b.suggestModuleClkLogKey,
+        X = b.suggestModuleSpmC,
+        oe = b.index,
+        te = b.item;
+      return c.createElement(g.Z, {
+        trackExpLogkey: x,
+        trackClkLogkey: Q,
+        "data-track-spmcd": X + "." + (oe + 1),
+        trackItem: te == null ? void 0 : te.trackItem,
+        "data-word": te == null || (M = te.content) === null || M === void 0 ? void 0 : M.keyword,
+        "data-scheme": te == null || (w = te.content) === null || w === void 0 ? void 0 : w.scheme,
+        "data-name": te == null || (T = te.content) === null || T === void 0 ? void 0 : T.text,
+        "data-spmcd": X + "." + (oe + 1),
+        isCatchTap: !0,
+        trackExpParamMergeExp: !0,
+        onTap: u.Z.getEvent("handleSearchSuggestItem", b)
+      }, c.createElement("tiga-view", {
+        class: "suggest-item-inner suggest-word-wrapper"
+      }, c.createElement("tiga-view", {
+        class: "suggest-item-left"
+      }, c.createElement("tiga-image", {
+        class: "image-tag-selector suggest-item-word-icon",
+        mode: "aspectFit",
+        src: u.Z.toJsonString(te == null || (d = te.content) === null || d === void 0 ? void 0 : d.icon, !1)
+      })), c.createElement("tiga-view", {
+        class: "suggest-item-right"
+      }, c.createElement("tiga-rich-text", {
+        class: "suggest-item-word-text",
+        nodes: u.Z.toJsonString(te == null || (H = te.content) === null || H === void 0 ? void 0 : H.highlightWordNodes, !1)
+      }), c.createElement("tiga-image", {
+        class: "image-tag-selector icon-right",
+        mode: "aspectFit",
+        src: u.Z.toJsonString(n.ZP === null || n.ZP === void 0 ? void 0 : n.ZP.ICON_ARROW_RIGHT, !1)
+      }))));
+    }
+    var y = !0;
+  },
+  VnCw: function (ue, L, e) {
+    e.r(L);
+    e.d(L, {
+      $templates: function () {
+        return p;
+      },
+      defaultRender: function () {
+        return P;
+      },
+      isComplexComponents: function () {
+        return y;
+      }
+    });
+    var c = e("q1tI"),
+      u = e("20uZ"),
+      n = e("9RWM"),
+      E = e("AHf3"),
+      R = e("2pVW"),
+      A = e("aMrw"),
+      g = e("5W0d"),
+      p = {};
+    function P(b) {
+      var M,
+        w,
+        T,
+        d,
+        H,
+        x,
+        Q,
+        X,
+        oe = b.suggestRestaurantExpLogKey,
+        te = b.suggestRestaurantClkLogKey,
+        J = b.suggestRestaurantSpmC,
+        he = b.index,
+        U = b.item;
+      return c.createElement(n.Z, {
+        trackExpLogkey: oe,
+        trackClkLogkey: te,
+        "data-track-spmcd": J + "." + (he + 1),
+        trackItem: U == null ? void 0 : U.trackItem,
+        adExp: !0,
+        adClk: !0,
+        adInfo: U == null ? void 0 : U.adInfo,
+        "data-scheme": U == null || (M = U.content) === null || M === void 0 ? void 0 : M.scheme,
+        "data-name": U == null || (w = U.content) === null || w === void 0 ? void 0 : w.text,
+        "data-spmcd": J + "." + (he + 1),
+        "data-guideTrack": U == null || (T = U.trackItem) === null || T === void 0 ? void 0 : T.guideTrack,
+        isCatchTap: !0,
+        trackExpParamMergeExp: !0,
+        onTap: u.Z.getEvent("handleShopTap", b)
+      }, c.createElement("tiga-view", {
+        class: "suggest-item-inner"
+      }, c.createElement("tiga-view", {
+        class: "suggest-item-left"
+      }, c.createElement("tiga-image", {
+        class: "image-tag-selector suggest-item-shop-image",
+        mode: "aspectFit",
+        src: u.Z.toJsonString(U == null || (d = U.content) === null || d === void 0 ? void 0 : d.icon, !1)
+      })), c.createElement("tiga-view", {
+        class: "suggest-item-right-shop"
+      }, c.createElement("tiga-view", {
+        class: "suggest-item-title"
+      }, c.createElement("tiga-rich-text", {
+        class: "suggest-item-name",
+        nodes: u.Z.toJsonString(U == null || (H = U.content) === null || H === void 0 ? void 0 : H.highlightWordNodes, !1)
+      }), u.Z.getForValue(U == null || (x = U.content) === null || x === void 0 ? void 0 : x.tags).map(function (de, ce) {
+        return c.createElement(u.Z.Block, null, c.createElement(g.Z, {
+          data: de,
+          customClassName: "suggest-item-tags-support-tag"
+        }));
+      })), c.createElement("tiga-view", {
+        class: "suggest-item-desc"
+      }, u.Z.getForValue(U == null || (Q = U.content) === null || Q === void 0 ? void 0 : Q.descs).map(function (de, ce) {
+        return c.createElement("tiga-view", {
+          class: "text-tag-selector"
+        }, u.Z.getString(de == null ? void 0 : de.text));
+      }))), U != null && U.isAd && U !== null && U !== void 0 && U.adInfo ? c.createElement("tiga-image", {
+        class: "suggest-item-ad-icon",
+        src: u.Z.toJsonString(U == null || (X = U.adInfo) === null || X === void 0 ? void 0 : X.adIconUrl, !1)
+      }) : !1));
+    }
+    var y = !0;
+  },
+  ZUco: function (ue, L, e) {
+    e.r(L);
+    e.d(L, {
+      $templates: function () {
+        return y;
+      },
+      defaultRender: function () {
+        return b;
+      },
+      isComplexComponents: function () {
+        return M;
+      }
+    });
+    var c = e("q1tI"),
+      u = e("20uZ"),
+      n = e("gAsz"),
+      E = e("hmPl"),
+      R = e("AHf3"),
+      A = e("2pVW"),
+      g = e("aMrw"),
+      p = e("9RWM"),
+      P = e("5W0d"),
+      y = {};
+    function b(w) {
+      var T,
+        d,
+        H,
+        x,
+        Q,
+        X,
+        oe,
+        te,
+        J,
+        he,
+        U,
+        de,
+        ce = w.suggestWordExpLogKey,
+        ie = w.suggestWordClkLogKey,
+        m = w.suggestWordSpmC,
+        F = w.index,
+        a = w.item,
+        s = w.entityItem,
+        l = w.entityIndex;
+      return c.createElement(p.Z, {
+        trackExpLogkey: ce,
+        trackClkLogkey: ie,
+        "data-track-spmcd": m + "." + (F + 1),
+        "data-track-keyword": a == null || (T = a.content) === null || T === void 0 ? void 0 : T.keyword,
+        "data-track-refer": n.ZP === null || n.ZP === void 0 ? void 0 : n.ZP.SEARCH_REFER_RELATION,
+        trackItem: a == null ? void 0 : a.trackItem,
+        "data-keyword": a == null || (d = a.content) === null || d === void 0 ? void 0 : d.keyword,
+        "data-refer": n.ZP === null || n.ZP === void 0 ? void 0 : n.ZP.SEARCH_REFER_RELATION,
+        "data-searchEntryCode": n.ZP === null || n.ZP === void 0 || (H = n.ZP.ENTRY_CODE) === null || H === void 0 ? void 0 : H.RELATION,
+        isCatchTap: !0,
+        trackExpParamMergeExp: !0,
+        onTap: u.Z.getEvent("handleSearchSuggestWord", w)
+      }, c.createElement("tiga-view", {
+        class: "suggest-item-inner suggest-word-wrapper"
+      }, c.createElement("tiga-view", {
+        class: "suggest-item-left"
+      }, c.createElement("tiga-image", {
+        class: "image-tag-selector suggest-item-word-icon",
+        mode: "aspectFit",
+        src: u.Z.toJsonString(a == null || (x = a.content) === null || x === void 0 ? void 0 : x.icon, !1)
+      })), c.createElement("tiga-view", {
+        class: "suggest-item-right suggest-bottom-wrapper"
+      }, c.createElement("tiga-view", {
+        class: "suggest-item-word-box"
+      }, c.createElement("tiga-rich-text", {
+        class: "suggest-item-word-text",
+        nodes: u.Z.toJsonString(a == null || (Q = a.content) === null || Q === void 0 ? void 0 : Q.highlightWordNodes, !1)
+      }), u.Z.getForValue(a == null || (X = a.content) === null || X === void 0 ? void 0 : X.tags).map(function (f, N) {
+        return c.createElement(u.Z.Block, null, c.createElement(P.Z, {
+          data: f,
+          customClassName: "suggest-item-tags-support-tag"
+        }));
+      })), a != null && (oe = a.content) !== null && oe !== void 0 && oe.entities ? c.createElement("tiga-view", {
+        class: "suggest-bottom-wrapper-right"
+      }, u.Z.getForValue(a == null || (te = a.content) === null || te === void 0 ? void 0 : te.entities).map(function (f, N) {
+        var C, _, I, ne, B, q, me, be;
+        return c.createElement(u.Z.Block, null, c.createElement(p.Z, {
+          trackClkLogkey: f == null || (C = f.trackInfo) === null || C === void 0 ? void 0 : C.clickEvent,
+          trackExpLogkey: f == null || (_ = f.trackInfo) === null || _ === void 0 ? void 0 : _.expoEvent,
+          "data-track-spmcd": (f == null || (I = f.trackInfo) === null || I === void 0 ? void 0 : I.spmC) + "." + (N + 1),
+          trackItem: f == null ? void 0 : f.trackItem,
+          "data-keyword": f == null ? void 0 : f.keyword,
+          "data-refer": n.ZP === null || n.ZP === void 0 ? void 0 : n.ZP.SEARCH_REFER_RELATION,
+          "data-searchEntryCode": n.ZP === null || n.ZP === void 0 || (ne = n.ZP.ENTRY_CODE) === null || ne === void 0 ? void 0 : ne.RELATION,
+          "data-searchExtraParams": f == null ? void 0 : f.searchExtraParams,
+          "data-searchFilterParams": f == null ? void 0 : f.searchFilterParams,
+          trackExpParamMergeExp: !0,
+          isCatchTap: !0,
+          onTap: u.Z.getEvent("handleSuggestEntryWord", w)
+        }, c.createElement("tiga-view", {
+          class: "search-tag search-tag-mini " + (N === (a == null || (B = a.content) === null || B === void 0 || (q = B.entities) === null || q === void 0 ? void 0 : q.length) - 1 ? "is-last" : ""),
+          style: u.Z.createStyle("padding: 0 0.5rem;")
+        }, f != null && f.style && f !== null && f !== void 0 && (me = f.style) !== null && me !== void 0 && me.image ? c.createElement("tiga-image", {
+          class: "search-tag-image",
+          mode: "aspectFit",
+          src: u.Z.toJsonString(f == null || (be = f.style) === null || be === void 0 ? void 0 : be.image, !1)
+        }) : !1, c.createElement("tiga-view", {
+          class: "search-tag-text"
+        }, u.Z.getString(f == null ? void 0 : f.text)))));
+      })) : a != null && (J = a.content) !== null && J !== void 0 && J.descs ? c.createElement("tiga-text", {
+        class: "suggest-item-number"
+      }, u.Z.getString(a == null || (he = a.content) === null || he === void 0 || (U = he.descs) === null || U === void 0 || (de = U[0]) === null || de === void 0 ? void 0 : de.text)) : !1)));
+    }
+    var M = !0;
+  },
+  "Q+72": function (ue, L, e) {
+    e.r(L);
+    e.d(L, {
+      $templates: function () {
+        return Ge;
+      },
+      defaultRender: function () {
+        return at;
+      },
+      isComplexComponents: function () {
+        return Pt;
+      }
+    });
+    var c = e("q1tI"),
+      u = e("20uZ"),
+      n = e("gAsz"),
+      E = e("hmPl"),
+      R = e("aMrw"),
+      A = e("wQfN"),
+      g = e.n(A),
+      p = e("byvu"),
+      P = e("MmZo"),
+      y = e("aSs5"),
+      b = Object.defineProperty,
+      M = Object.defineProperties,
+      w = Object.getOwnPropertyDescriptors,
+      T = Object.getOwnPropertySymbols,
+      d = Object.prototype.hasOwnProperty,
+      H = Object.prototype.propertyIsEnumerable,
+      x = function (fe, G, se) {
+        return G in fe ? b(fe, G, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: se
+        }) : fe[G] = se;
+      },
+      Q = function (fe, G) {
+        for (var se in G || (G = {})) {
+          if (d.call(G, se)) {
+            x(fe, se, G[se]);
+          }
+        }
+        if (T) {
+          var we = (0, p.Z)(T(G)),
+            Ze;
+          try {
+            for (we.s(); !(Ze = we.n()).done;) {
+              var se = Ze.value;
+              if (H.call(G, se)) {
+                x(fe, se, G[se]);
+              }
+            }
+          } catch (Y) {
+            we.e(Y);
+          } finally {
+            we.f();
+          }
+        }
+        return fe;
+      },
+      X = function (fe, G) {
+        return M(fe, w(G));
+      };
+    Component({
+      mixins: [],
+      data: X(Q({}, P.Z.Log), {
+        recWords: {}
+      }),
+      props: {
+        searchPage: "",
+        item: {},
+        onHandleSearch: function () {}
+      },
+      onInit: function () {
+        console.log("this.props.item+++", this.props.item);
+        this.setData({
+          recWords: this.props.item
+        });
+      },
+      didMount: function () {},
+      didUpdate: function () {},
+      didUnmount: function () {},
+      methods: {
+        handleSearchTagTap: function (fe) {
+          var G = (fe.currentTarget || fe.target).dataset,
+            se = G.trackSpmcd,
+            we = G.keyword,
+            Ze = G.refer,
+            Y = G.searchEntryCode,
+            He = se;
+          this.props.onHandleSearch({
+            spmcd: He,
+            keyword: we,
+            refer: Ze,
+            searchEntryCode: Y
+          });
+        }
+      }
+    });
+    var oe = u.Z.Component(y, u.Z.mergeConfig(e("s861"), e("okSe"))),
+      te = e("6EqU"),
+      J = e.n(te),
+      he = e("w753"),
+      U = e("eE7e"),
+      de = e("VnCw"),
+      ce = Object.defineProperty,
+      ie = Object.getOwnPropertySymbols,
+      m = Object.prototype.hasOwnProperty,
+      F = Object.prototype.propertyIsEnumerable,
+      a = function (fe, G, se) {
+        return G in fe ? ce(fe, G, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: se
+        }) : fe[G] = se;
+      },
+      s = function (fe, G) {
+        for (var se in G || (G = {})) {
+          if (m.call(G, se)) {
+            a(fe, se, G[se]);
+          }
+        }
+        if (ie) {
+          var we = (0, p.Z)(ie(G)),
+            Ze;
+          try {
+            for (we.s(); !(Ze = we.n()).done;) {
+              var se = Ze.value;
+              if (F.call(G, se)) {
+                a(fe, se, G[se]);
+              }
+            }
+          } catch (Y) {
+            we.e(Y);
+          } finally {
+            we.f();
+          }
+        }
+        return fe;
+      },
+      l = he.Z.getInstance();
+    Component({
+      mixins: [],
+      data: s({}, P.Z.Log),
+      props: {
+        item: {},
+        index: 0
+      },
+      didMount: function () {},
+      didUpdate: function () {},
+      didUnmount: function () {},
+      methods: {
+        handleShopTap: function (fe) {
+          var G = (fe.currentTarget || fe.target).dataset,
+            se = G.scheme,
+            we = G.name,
+            Ze = G.spmcd,
+            Y = G.guideTrack;
+          l.recordHistory(we);
+          (0, U.ZP)({
+            targetUrl: se,
+            params: {
+              spm: J()().aplus.spm(Ze),
+              guideTrack: encodeURIComponent(Y)
+            }
+          });
+        }
+      }
+    });
+    var f = u.Z.Component(de, u.Z.mergeConfig(e("s861"), e("fGQr"))),
+      N = e("m2rB"),
+      C = Object.defineProperty,
+      _ = Object.getOwnPropertySymbols,
+      I = Object.prototype.hasOwnProperty,
+      ne = Object.prototype.propertyIsEnumerable,
+      B = function (fe, G, se) {
+        return G in fe ? C(fe, G, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: se
+        }) : fe[G] = se;
+      },
+      q = function (fe, G) {
+        for (var se in G || (G = {})) {
+          if (I.call(G, se)) {
+            B(fe, se, G[se]);
+          }
+        }
+        if (_) {
+          var we = (0, p.Z)(_(G)),
+            Ze;
+          try {
+            for (we.s(); !(Ze = we.n()).done;) {
+              var se = Ze.value;
+              if (ne.call(G, se)) {
+                B(fe, se, G[se]);
+              }
+            }
+          } catch (Y) {
+            we.e(Y);
+          } finally {
+            we.f();
+          }
+        }
+        return fe;
+      };
+    Component({
+      mixins: [],
+      data: q({}, P.Z.Log),
+      props: {
+        item: {},
+        index: 0
+      },
+      didMount: function () {
+        console.log(this.props.item, "item");
+      },
+      didUpdate: function () {},
+      didUnmount: function () {},
+      methods: {
+        handleSearchSuggestItem: function (fe) {
+          var G = (fe.currentTarget || fe.target).dataset,
+            se = G.scheme,
+            we = G.spmcd;
+          (0, U.ZP)({
+            targetUrl: se,
+            params: {
+              spm: J()().aplus.spm(we)
+            }
+          });
+        }
+      }
+    });
+    var me = u.Z.Component(N, u.Z.mergeConfig(e("s861"), e("/SNs"))),
+      be = e("ZUco"),
+      Re = Object.defineProperty,
+      Ee = Object.getOwnPropertySymbols,
+      $e = Object.prototype.hasOwnProperty,
+      tt = Object.prototype.propertyIsEnumerable,
+      ft = function (fe, G, se) {
+        return G in fe ? Re(fe, G, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: se
+        }) : fe[G] = se;
+      },
+      pt = function (fe, G) {
+        for (var se in G || (G = {})) {
+          if ($e.call(G, se)) {
+            ft(fe, se, G[se]);
+          }
+        }
+        if (Ee) {
+          var we = (0, p.Z)(Ee(G)),
+            Ze;
+          try {
+            for (we.s(); !(Ze = we.n()).done;) {
+              var se = Ze.value;
+              if (tt.call(G, se)) {
+                ft(fe, se, G[se]);
+              }
+            }
+          } catch (Y) {
+            we.e(Y);
+          } finally {
+            we.f();
+          }
+        }
+        return fe;
+      };
+    Component({
+      mixins: [],
+      data: pt({}, P.Z.Log),
+      props: {
+        item: {},
+        index: 0,
+        onHandleSearch: function () {}
+      },
+      didMount: function () {},
+      didUpdate: function () {},
+      didUnmount: function () {},
+      methods: {
+        handleSearchSuggestWord: function (fe) {
+          var G = (fe.currentTarget || fe.target).dataset,
+            se = G.trackSpmcd,
+            we = G.keyword,
+            Ze = G.refer,
+            Y = G.searchEntryCode,
+            He = se;
+          this.props.onHandleSearch({
+            spmcd: He,
+            keyword: we,
+            refer: Ze,
+            searchEntryCode: Y
+          });
+        },
+        handleSuggestEntryWord: function (fe) {
+          var G = (fe.currentTarget || fe.target).dataset,
+            se = G.trackSpmcd,
+            we = G.keyword,
+            Ze = G.refer,
+            Y = G.searchEntryCode,
+            He = G.searchExtraParams,
+            Et = He === void 0 ? {} : He,
+            mt = G.searchFilterParams,
+            Ot = mt === void 0 ? {} : mt,
+            V = se;
+          this.props.onHandleSearch({
+            spmcd: V,
+            keyword: we,
+            refer: Ze,
+            searchEntryCode: Y,
+            searchExtraParams: Et,
+            searchFilterParams: Ot
+          });
+        }
+      }
+    });
+    var it = u.Z.Component(be, u.Z.mergeConfig(e("s861"), e("vtKY"))),
+      Ge = {};
+    function at(Ne) {
+      var fe = Ne.cards,
+        G = Ne.index,
+        se = Ne.item,
+        we = Ne.searchPage,
+        Ze = Ne.$id;
+      return c.createElement("tiga-view", {
+        class: "pannel-suggest"
+      }, u.Z.getForValue(fe).map(function (Y, He) {
+        var Et, mt, Ot, V;
+        return c.createElement("tiga-view", {
+          class: "suggest-item",
+          key: u.Z.toJsonString(He, !1)
+        }, (Y == null ? void 0 : Y.code) === (n.ZP === null || n.ZP === void 0 ? void 0 : n.ZP.SUGGEST_CARD_REC_WORDS) ? c.createElement(oe, {
+          searchPage: we,
+          item: Y,
+          onHandleSearch: u.Z.getEvent("handleSuggestSearch", Ne)
+        }) : !1, (Y == null ? void 0 : Y.code) === (n.ZP === null || n.ZP === void 0 ? void 0 : n.ZP.SUGGEST_CARD_SHOP) || (Y == null ? void 0 : Y.code) === (n.ZP === null || n.ZP === void 0 ? void 0 : n.ZP.SUGGEST_CARD_AD_SHOP) ? c.createElement(f, {
+          index: He,
+          item: Y
+        }) : !1, (Y == null ? void 0 : Y.code) === (n.ZP === null || n.ZP === void 0 ? void 0 : n.ZP.SUGGEST_CARD_OP_WORD) ? c.createElement(me, {
+          index: He,
+          item: Y
+        }) : !1, (Y == null ? void 0 : Y.code) === (n.ZP === null || n.ZP === void 0 ? void 0 : n.ZP.SUGGEST_CARD_WORD) || (Y == null ? void 0 : Y.code) === (n.ZP === null || n.ZP === void 0 ? void 0 : n.ZP.SUGGEST_CARD_NO_RESULT) ? c.createElement(it, {
+          index: He,
+          item: Y,
+          onHandleSearch: u.Z.getEvent("handleSuggestSearch", Ne)
+        }) : !1, (Y == null ? void 0 : Y.code) === (n.ZP === null || n.ZP === void 0 ? void 0 : n.ZP.SUGGEST_CARD_FOOT) ? c.createElement("tiga-view", {
+          class: "suggest-item" + (" d9f16a4c1680492b89aa55402a897a6d" + (typeof He != "undefined" ? He : "") + (" comp-id-" + Ze)),
+          "data-keyword": u.Z.toJsonString(Y == null || (Et = Y.content) === null || Et === void 0 ? void 0 : Et.keyword, !0),
+          "data-refer": u.Z.toJsonString(n.ZP === null || n.ZP === void 0 ? void 0 : n.ZP.SEARCH_REFER_RELATION, !0),
+          "data-searchEntryCode": u.Z.toJsonString(n.ZP === null || n.ZP === void 0 || (mt = n.ZP.ENTRY_CODE) === null || mt === void 0 ? void 0 : mt.RELATION, !0)
+        }, c.createElement("tiga-view", {
+          class: "suggest-item-inner"
+        }, c.createElement("tiga-view", {
+          class: "flex-1"
+        }, c.createElement("tiga-text", null, u.Z.getString((g() === null || g() === void 0 ? void 0 : g().findKeyword.bind(g()))(Y == null || (Ot = Y.content) === null || Ot === void 0 ? void 0 : Ot.text, "\u67E5\u627E"))), c.createElement("tiga-text", {
+          class: "text-primary"
+        }, u.Z.getString((g() === null || g() === void 0 ? void 0 : g().replaceKeyword.bind(g()))(Y == null || (V = Y.content) === null || V === void 0 ? void 0 : V.text, "\u67E5\u627E"))))), u.Z.registEvents([{
+          name: "tap",
+          event: "handleSearchKeyword",
+          catch: !0
+        }], Ne, "d9f16a4c1680492b89aa55402a897a6d" + (typeof He != "undefined" ? He : ""))) : !1);
+      }));
+    }
+    var Pt = !0;
+  },
+  "f+mB": function (ue, L, e) {
+    e.r(L);
+    e.d(L, {
+      $templates: function () {
+        return A;
+      },
+      defaultRender: function () {
+        return g;
+      },
+      isComplexComponents: function () {
+        return p;
+      }
+    });
+    var c = e("q1tI"),
+      u = e("20uZ"),
+      n = e("hmPl"),
+      E = e("2pVW"),
+      R = e("aMrw"),
+      A = {};
+    function g(P) {
+      var y = P.marginTop,
+        b = P.imageSrc,
+        M = P.$children;
+      return c.createElement("tiga-view", {
+        class: "xsd-address-wrapper",
+        style: u.Z.createStyle("margin-top: " + y + "px")
+      }, c.createElement("tiga-view", {
+        class: "xsd-icon-wrapper"
+      }, c.createElement("tiga-image", {
+        src: u.Z.toJsonString(b, !1),
+        class: "xsd-icon"
+      }), c.createElement("tiga-text", {
+        class: "xsd-text"
+      }, "\u8D85\u503C\u5916\u5356\u9001\u5230\u5BB6")), c.createElement(u.Z.Slot, {
+        slots: M
+      }));
+    }
+    var p = !0;
+  },
+  ni4U: function (ue, L, e) {
+    e.r(L);
+    e.d(L, {
+      $templates: function () {
+        return P;
+      },
+      defaultRender: function () {
+        return y;
+      },
+      isComplexComponents: function () {
+        return b;
+      }
+    });
+    var c = e("q1tI"),
+      u = e("20uZ"),
+      n = e("VmqG"),
+      E = e.n(n),
+      R = e("2pVW"),
+      A = e("aMrw"),
+      g = e("SvPd"),
+      p = e.n(g),
+      P = {};
+    function y(M) {
+      var w,
+        T,
+        d = M.data,
+        H = M.customClassName;
+      return d && (d != null && d.text || d != null && d.name) ? c.createElement("tiga-view", {
+        class: "support-tag-wrapper " + H
+      }, c.createElement("tiga-view", {
+        class: "support-tag " + E()({
+          showExtension: d == null ? void 0 : d.extension
+        })
+      }, (d == null ? void 0 : d.tagStyle) === 5 && d !== null && d !== void 0 && d.wideIcon ? c.createElement("tiga-image", {
+        style: u.Z.createStyle("width: " + 16 * (d == null ? void 0 : d.wideIconRatio) + "px"),
+        class: "support-tag-icon-wide",
+        mode: "aspectFit",
+        src: u.Z.toJsonString(d == null ? void 0 : d.wideIcon, !1)
+      }) : d != null && d.icon ? c.createElement("tiga-image", {
+        class: "support-tag-icon",
+        mode: "aspectFit",
+        src: u.Z.toJsonString(d == null ? void 0 : d.icon, !1)
+      }) : !1, u.Z.getString((p() === null || p() === void 0 ? void 0 : p().getText.bind(p()))(d))), d != null && d.extension ? c.createElement("tiga-view", {
+        class: "support-tag isExtension"
+      }, u.Z.getString((p() === null || p() === void 0 ? void 0 : p().getText.bind(p()))(d == null ? void 0 : d.extension))) : !1, c.createElement("tiga-view", {
+        class: "support-tag-wrapper-simulated"
+      }, c.createElement("tiga-view", {
+        class: "support-tag-simulated " + ((d == null ? void 0 : d.icon) && (d == null ? void 0 : d.extension) && (d == null || (w = d.extension) === null || w === void 0 ? void 0 : w.splitBarType) === 2 && "support-tag-simulated-red-envelopes") + " " + E()({
+          showExtension: d == null ? void 0 : d.extension
+        }),
+        style: u.Z.createStyle(p().getStyle(d))
+      }, (d == null ? void 0 : d.tagStyle) === 5 && d !== null && d !== void 0 && d.wideIcon ? c.createElement("tiga-image", {
+        style: u.Z.createStyle("width: " + 16 * (d == null ? void 0 : d.wideIconRatio) + "px"),
+        class: "support-tag-simulated-icon-wide",
+        mode: "aspectFit",
+        src: u.Z.toJsonString(d == null ? void 0 : d.wideIcon, !1)
+      }) : d != null && d.icon ? c.createElement("tiga-image", {
+        class: "support-tag-simulated-icon",
+        mode: "aspectFit",
+        src: u.Z.toJsonString(d == null ? void 0 : d.icon, !1)
+      }) : !1, u.Z.getString((p() === null || p() === void 0 ? void 0 : p().getText.bind(p()))(d))), d != null && d.icon && d !== null && d !== void 0 && d.extension && (d == null || (T = d.extension) === null || T === void 0 ? void 0 : T.splitBarType) === 2 ? c.createElement("tiga-view", {
+        class: "support-tag-division"
+      }, c.createElement("tiga-view", {
+        class: "support-tag-division-style"
+      })) : !1, d != null && d.extension ? c.createElement("tiga-view", {
+        class: "support-tag-simulated isExtension",
+        style: u.Z.createStyle(p().getStyle(d.extension))
+      }, u.Z.getString((p() === null || p() === void 0 ? void 0 : p().getText.bind(p()))(d == null ? void 0 : d.extension))) : !1)) : !1;
+    }
+    var b = !0;
+  },
+  "1l8G": function (ue, L, e) {
+    e.r(L);
+    e.d(L, {
+      $templates: function () {
+        return A;
+      },
+      defaultRender: function () {
+        return g;
+      },
+      isComplexComponents: function () {
+        return p;
+      }
+    });
+    var c = e("q1tI"),
+      u = e("20uZ"),
+      n = e("gAsz"),
+      E = e("2pVW"),
+      R = e("aMrw"),
+      A = {};
+    function g(P) {
+      var y = P.size,
+        b = P.tagStyle,
+        M = P.isHighlight,
+        w = P.iconWidth,
+        T = P.srcError,
+        d = P.icon,
+        H = P.$id,
+        x = P.word;
+      return c.createElement("tiga-view", {
+        class: "search-tag " + (y ? "search-tag-" + y : "") + " " + (b ? "" : "no-custom-style"),
+        style: u.Z.createStyle(b)
+      }, M ? c.createElement("tiga-image", {
+        class: "search-tag-image" + (" a036ec48f4f844be84a6b0211de8ebcd" + (typeof index != "undefined" ? index : "") + (" comp-id-" + H)),
+        mode: "aspectFit",
+        style: u.Z.createStyle("width: " + w + "rpx"),
+        src: u.Z.toJsonString(!T && d ? d : n.ZP === null || n.ZP === void 0 ? void 0 : n.ZP.ICON_HOT, !1),
+        "data-icon": u.Z.toJsonString(d, !0)
+      }, u.Z.registEvents([{
+        name: "load",
+        event: "handleImageLoaded",
+        catch: !1
+      }, {
+        name: "error",
+        event: "handleImageError",
+        catch: !1
+      }], P, "a036ec48f4f844be84a6b0211de8ebcd" + (typeof index != "undefined" ? index : ""))) : !1, c.createElement("tiga-view", {
+        class: "search-tag-text"
+      }, u.Z.getString(x)));
+    }
+    var p = !0;
+  },
+  VmqG: function (ue, L) {
+    Object.defineProperty(L, "__esModule", {
+      value: !0
+    });
+    L.default = void 0;
+    function e(n) {
+      var E = JSON.stringify(n),
+        R = 0,
+        A = 0,
+        g = [];
+      function p(y, b) {
+        for (var M = y.length, w = [], T = b; T < M; T++) if (y[T] !== '"' && w.push(y[T]), y[T] === '"') return w.join("");
+        return "";
+      }
+      function P() {
+        var y = E[R];
+        if (y) {
+          if (y === "{" && A === 0) {
+            A += 1;
+            var b = p(E, R + 2);
+            if (b) {
+              g.push(b);
+            }
+            R += b.length + 2;
+            P();
+            return;
+          }
+          if (y === "," && E[R + 1] === '"') {
+            var M = p(E, R + 2);
+            if (M) {
+              g.push(M);
+            }
+            R += M.length + 2;
+            P();
+            return;
+          }
+          if (y === "}") {
+            A -= 1;
+          }
+          R += 1;
+          P();
+        }
+      }
+      P(R);
+      return g;
+    }
+    function c(n) {
+      var E = [];
+      if (Object.prototype.toString.call(n).slice(8, -1) === "Object") {
+        e(n).forEach(function (R) {
+          if (n[R]) {
+            E.push(R);
+          }
+        });
+      }
+      return E.join(" ");
+    }
+    var u = L.default = c;
+    ue.exports = L.default;
+    ue.exports.default = L.default;
+  },
+  gAsz: function (ue, L) {
+    var e;
+    e = {
+      value: !0
+    };
+    L.ZP = e = e = void 0;
+    var c = "recommend",
+      u = "suggest",
+      n = "result",
+      E = "normal",
+      R = "searchIndex",
+      A = "searchResult",
+      P = "https://img.alicdn.com/tfs/TB13of.kkT2gK0jSZFkXXcIQFXa-34-18.svg",
+      y = "https://gw.alicdn.com/imgextra/i1/O1CN01SwTeAk1wrqQvlRIOl_!!6000000006362-2-tps-84-45.png",
+      b = "https://img.alicdn.com/tfs/TB1QJP9ki_1gK0jSZFqXXcpaXXa-34-18.svg",
+      M = "https://img.alicdn.com/tfs/TB12nY7khn1gK0jSZKPXXXvUXXa-34-18.svg",
+      w = "https://gw.alicdn.com/tfs/TB1myebHAvoK1RjSZFNXXcxMVXa-540-540.png",
+      T = "https://gw.alicdn.com/tfs/TB1JIjzkvzO3e4jSZFxXXaP_FXa-288-204.png",
+      d = "https://img.alicdn.com/tfs/TB1jXfppAY2gK0jSZFgXXc5OFXa-12-14.svg",
+      H = "https://gw.alicdn.com/imgextra/i1/O1CN01vDozah1wAnHaEtRNB_!!6000000006268-55-tps-24-24.svg",
+      x = "https://gw.alicdn.com/imgextra/i3/O1CN011woQ1L1EgXe6JyE06_!!6000000000381-55-tps-24-24.svg",
+      Q = "https://gw.alicdn.com/imgextra/i4/O1CN01dEESBm29v8T0567At_!!6000000008129-2-tps-36-36.png",
+      X = "https://img.alicdn.com/tfs/TB1aM5Kk1bviK0jSZFNXXaApXXa-5-4.svg",
+      oe = "https://img.alicdn.com/tfs/TB13ShjlHj1gK0jSZFOXXc7GpXa-5-4.svg",
+      te = "https://gw.alicdn.com/imgextra/i4/O1CN01ReZ4mq1EJBNav48eB_!!6000000000330-2-tps-48-48.png",
+      J = "https://gw.alicdn.com/tfs/TB12fmojoT1gK0jSZFrXXcNCXXa-16-16.svg",
+      he = "https://img.alicdn.com/tfs/TB1yOZeIXT7gK0jSZFpXXaTkpXa-200-169.png",
+      U = "https://gw.alicdn.com/imgextra/i3/O1CN01HfZP711JHQJRxvSz4_!!6000000001003-2-tps-525-375.png",
+      de = "https://gw.alicdn.com/imgextra/i4/O1CN01rx87fJ22XaciX5GXz_!!6000000007130-2-tps-48-48.png",
+      ce = "https://gw.alicdn.com/imgextra/i2/O1CN01d90R0m1zuXkIdq7QC_!!6000000006774-2-tps-123-123.png",
+      ie = "https://gw.alicdn.com/imgextra/i2/O1CN01d90R0m1zuXkIdq7QC_!!6000000006774-2-tps-123-123.png",
+      m = "https://gw.alicdn.com/imgextra/i3/O1CN014PIlsx2ADubWDeTn2_!!6000000008170-55-tps-48-48.svg",
+      F = "https://gw.alicdn.com/imgextra/i3/O1CN01l7w1gR1lUWZljl1G6_!!6000000004822-55-tps-48-48.svg",
+      a = "https://gw.alicdn.com/imgextra/i2/O1CN01UU67zE1Zdtb79hxmx_!!6000000003218-2-tps-36-36.png",
+      f = 1,
+      N = 2,
+      C = 3,
+      _ = "SUGGEST_CARD_REC_WORDS",
+      I = "SUGGEST_CARD_WORD",
+      ne = "SUGGEST_CARD_SHOP",
+      B = "SUGGEST_CARD_AD_SHOP",
+      q = "SUGGEST_CARD_FOOT",
+      me = "SUGGEST_CARD_NO_RESULT",
+      be = "SUGGEST_CARD_OP_WORD",
+      Re = "SUGGEST_CARD_GEN_WORD",
+      Ee = "\u5386\u53F2\u8BCD",
+      $e = "\u641C\u7D22\u53D1\u73B0\u70ED\u8BCD",
+      tt = "\u731C\u4F60\u60F3\u641C\u8BCD",
+      ft = "\u8054\u60F3\u8BCD",
+      pt = "\u8054\u60F3\u8BCD-\u731C\u4F60\u60F3\u641C",
+      it = "\u76F4\u63A5\u641C\u7D22",
+      Ge = "\u9996\u9875\u641C\u7D22\u6846\u4E0B\u70ED\u8BCD",
+      at = "\u5E95\u7EB9\u8BCD",
+      Pt = "\u70ED\u641C\u699C",
+      Ne = "\u641C\u7D22\u6846\u4E0B\u70ED\u8BCD\u641C\u7D22",
+      fe = "\u56FE\u6587\u7B5B\u9009",
+      G = "\u699C\u5355",
+      se = "\u4E0B\u7F6E\u8BCD",
+      we = "SRP\u8BCD\u4E91\u5361\u7247",
+      Ze = e = {
+        DIRECT: 0,
+        PLACEHOLDER: 1,
+        RELATION: 3,
+        HISTORICAL: 4,
+        POPULAR: 5,
+        HOT_BOARD: 10,
+        INNO_REC_WORD: 21
+      },
+      Y = e = {
+        0: it,
+        1: at,
+        2: "",
+        3: ft,
+        4: Ee,
+        5: $e,
+        6: "",
+        7: "",
+        8: "",
+        9: Ge,
+        10: G,
+        21: se,
+        22: we,
+        100: ""
+      },
+      He = L.ZP = {
+        STATUS_RESULT: n,
+        STATUS_NORMAL: E,
+        SEARCH_INDEX_PAGE: R,
+        SEARCH_RESULT_PAGE: A,
+        STATUS_RECOMMEND: c,
+        STATUS_SUGGEST: u,
+        TYPE_SERACH_RESULT_TEMPLATE: g,
+        TYPE_WORD: p,
+        ICON_NEW_V2: P,
+        ICON_BRAND_V2: y,
+        ICON_STAR_V2: b,
+        ICON_MEMBER_V2: M,
+        ICON_DEFAULT_LOGO: w,
+        ICON_DEFAULT_LOGO_OBLATE: T,
+        ICON_HOT: d,
+        ICON_ARROW_UP: H,
+        ICON_ARROW_DOWN: x,
+        ICON_LEFT_QUOTE: X,
+        ICON_RIGHT_QUOTE: oe,
+        ICON_DUSTBIN: te,
+        ICON_DELETE: J,
+        ICON_REFRESH: de,
+        ICON_SEARCH_EMPTY: he,
+        ET_ICON_RECOMMAND_DOG: ie,
+        ET_ICON_SEARCH_EMPTY: U,
+        ICON_ARROW_RIGHT: Q,
+        SHOP_STATUS: s,
+        SHOP_EXTRA_STATUS: l,
+        ELEMENT_TYPE_SHOP: f,
+        ELEMENT_TYPE_WORD: N,
+        ELEMENT_TYPE_MODULE: C,
+        SEARCH_REFER_HISTORICAL: Ee,
+        SEARCH_REFER_POPULAR: $e,
+        SEARCH_REFER_GUESS: tt,
+        SEARCH_REFER_RELATION: ft,
+        SEARCH_REFER_RELATION_GUESS: pt,
+        SEARCH_REFER_DIRECT: it,
+        SEARCH_REFER_HOME_HOT: Ge,
+        SEARCH_REFER_PLACEHOLDER: at,
+        SEARCH_REFER_HOT_LIST: Pt,
+        SEARCH_REFER_BELOW_WORDS: Ne,
+        SEARCH_REFER_IMAGE_FILTER_HEADER: fe,
+        SEARCH_REFER_RECOMMENDS_WORDS: we,
+        ENTRY_CODE: Ze,
+        ENTRY_CODE_MAP: Y,
+        SUGGEST_CARD_REC_WORDS: _,
+        SUGGEST_CARD_WORD: I,
+        SUGGEST_CARD_SHOP: ne,
+        SUGGEST_CARD_AD_SHOP: B,
+        SUGGEST_CARD_FOOT: q,
+        SUGGEST_CARD_NO_RESULT: me,
+        SUGGEST_CARD_OP_WORD: be,
+        SUGGEST_CARD_GEN_WORD: Re,
+        ICON_RECOMMAND_DOG: ce,
+        ICON_ARROW_BACK_BLACK: m,
+        ICON_ARROW_BACK_TRANSPARENT: F,
+        ICON_ARROW_RECOMMEND_RIGHT: a
+      };
+  },
+  SvPd: function (ue, L) {
+    Object.defineProperty(L, "__esModule", {
+      value: !0
+    });
+    L.default = void 0;
+    function e(A) {
+      if (!A) return "";
+      var g = A.slice(A.indexOf("#") === 0 ? 1 : 0);
+      if (!(g.length === 3 || g.length === 6 || g.length === 8)) return "";
+      if (g.length === 3) {
+        g = g.split("").map(function (b) {
+          return b + b;
+        }).join("");
+      }
+      if (g.length === 6) {
+        g = "FF".concat(g);
+      }
+      if (g.length === 8) {
+        g = "".concat(g.substring(2)).concat(g.substring(0, 1));
+      }
+      for (var p = [], P = 0; P < g.length - 1; P += 2) {
+        var y = g.substring(P, P + 2);
+        if (P > 5) {
+          p.push(parseFloat((parseInt(y, 16) / 255).toFixed(2)));
+        } else {
+          p.push(parseInt(y, 16));
+        }
+      }
+      return "rgba(".concat(p.join(","), ")");
+    }
+    function c(A) {
+      return A.text || A.name;
+    }
+    function u(A) {
+      var g = "",
+        p = "",
+        P = "";
+      if (A.background && A.background.rgbFrom && A.background.rgbTo) {
+        p = "#".concat(A.background.rgbFrom.replace("#", ""));
+        P = "#".concat(A.background.rgbTo.replace("#", ""));
+        g = "linear-gradient(to right, ".concat(p, ", ").concat(P, ")");
+      } else {
+        g = e(A.background);
+      }
+      var y = e(A.nameColor || A.color || A.textColor),
+        b = e(A.border);
+      return `
+    color: `.concat(y, `;
+    background: `).concat(g, `;
+    border-color: `).concat(b, `;
+  `);
+    }
+    function n(A) {
+      var g = A.background;
+      if (!g || !g.rgbFrom || !g.rgbTo) return "";
+      var p = "#".concat(g.rgbFrom.replace("#", "")),
+        P = "#".concat(g.rgbTo.replace("#", ""));
+      return "background: linear-gradient(to right, ".concat(p, " 0%, ").concat(P, ") 100%;");
+    }
+    var E = function (g) {
+        return g && g.length <= 3 ? {
+          alignItems: "center"
+        } : {
+          alignItems: "flex-start"
+        };
+      },
+      R = L.default = {
+        hex2rgb: e,
+        getText: c,
+        getStyle: u,
+        getBackground: n,
+        getTextAlignItems: E
+      };
+    ue.exports = L.default;
+    ue.exports.default = L.default;
+  },
+  wQfN: function (ue, L) {
+    Object.defineProperty(L, "__esModule", {
+      value: !0
+    });
+    L.default = void 0;
+    function e(n, E) {
+      return n.includes(E) ? E : "";
+    }
+    function c(n, E) {
+      return n.replace(E, "");
+    }
+    var u = L.default = {
+      findKeyword: e,
+      replaceKeyword: c
+    };
+    ue.exports = L.default;
+    ue.exports.default = L.default;
+  },
+  "3vE6": function (ue) {
+    ue.exports = {
+      component: !0
+    };
+  },
+  fL5z: function (ue) {
+    ue.exports = {
+      component: !0
+    };
+  },
+  okSe: function (ue) {
+    ue.exports = JSON.parse('{"component":true,"usingComponents":{"track-view":"@ali/ltracker-ta-component/lib/component/index","search-tag":"../../../../pages/search/mods/panel-recommend/components/search-tag/index"}}');
+  },
+  "/SNs": function (ue) {
+    ue.exports = JSON.parse('{"component":true,"usingComponents":{"track-view":"@ali/ltracker-ta-component/lib/component/index"}}');
+  },
+  fGQr: function (ue) {
+    ue.exports = JSON.parse('{"component":true,"usingComponents":{"support-tag":"../../../../pages/search-result/components/support-tag/index","shop-status-tag":"../../../../pages/search-result/components/shop-status-tag/index","track-view":"@ali/ltracker-ta-component/lib/component/index"}}');
+  },
+  vtKY: function (ue) {
+    ue.exports = JSON.parse('{"component":true,"usingComponents":{"track-view":"@ali/ltracker-ta-component/lib/component/index","support-tag":"../../../../pages/search-result/components/support-tag/index"}}');
+  },
+  vAcI: function (ue) {
+    ue.exports = JSON.parse('{"component":true,"usingComponents":{"suggest-shop":"./components/suggest-shop/index","suggest-word":"./components/suggest-word/index","suggest-guess":"./components/suggest-guess/index","suggest-link":"./components/suggest-link/index","suggest-gen-word":"./components/suggest-gen-word/index","track-view":"@ali/ltracker-ta-component/lib/component/index"}}');
+  },
+  qbo2: function (ue) {
+    ue.exports = {
+      component: !0
+    };
+  },
+  b4NW: function (ue) {
+    ue.exports = {
+      component: !0
+    };
+  },
+  pYd0: function (ue) {
+    ue.exports = {
+      component: !0
+    };
+  }
+}]);

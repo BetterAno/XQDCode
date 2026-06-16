@@ -1,0 +1,56 @@
+[
+  {
+    "time": 1778480686325,
+    "args": [
+      "[EVAL_HOOK] CALLED, length:",
+      "336",
+      "preview:",
+      "() => {\n            if (!window.$_ts) return null;\n            const r = {keys: Object.keys(window.$"
+    ]
+  },
+  {
+    "time": 1778480686327,
+    "args": [
+      "[EVAL_HOOK] CALLED, length:",
+      "32",
+      "preview:",
+      "() => window.__cookie_logs || []"
+    ]
+  },
+  {
+    "time": 1778480686331,
+    "args": [
+      "[EVAL_HOOK] CALLED, length:",
+      "30",
+      "preview:",
+      "() => window.__eval_logs || []"
+    ]
+  },
+  {
+    "time": 1778480686335,
+    "args": [
+      "[EVAL_HOOK] CALLED, length:",
+      "34",
+      "preview:",
+      "() => window.__function_logs || []"
+    ]
+  },
+  {
+    "time": 1778480686337,
+    "args": [
+      "[EVAL_HOOK] CALLED, length:",
+      "33",
+      "preview:",
+      "() => window.__timeout_logs || []"
+    ]
+  },
+  {
+    "time": 1778480686339,
+    "args": [
+      "[EVAL_HOOK] CALLED, length:",
+      "33",
+      "preview:",
+      "() => window.__console_logs || []"
+    ]
+  }
+]

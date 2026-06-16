@@ -1,0 +1,46 @@
+[
+  {
+    "url": "https://sugh.szu.edu.cn/Html/News/Columns/7/Index.html",
+    "status": 412,
+    "headers": {
+      "connection": "keep-alive",
+      "content-type": "text/html; charset=utf-8",
+      "date": "Mon, 11 May 2026 06:22:13 GMT",
+      "server": "none",
+      "transfer-encoding": "chunked"
+    },
+    "body_preview": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<meta id=\"HugPYbOHyOWN\" content=\"hXDWnnhSbl.Nso4iR4Ojq4g_Yx8VYLZXmIjfVYSza8tV_FDg8CZkhSUaERwyZAYcFe68naRk1EPLlfr9ZUfHvRruHWySR021WusV9naAxd8Xr_3gSUKqLG\" r='m'><!--[if lt IE 9]><script r='m'>document.createElement(\"section\")</script><![endif]--><script type=\"text/javascript\" r='m'>$_ts=window['$_",
+    "body_size": 15459
+  },
+  {
+    "url": "https://sugh.szu.edu.cn/ymwuCYY2EAZT/0hQf2xF3qjHj.0515a6f.js",
+    "status": 200,
+    "headers": {
+      "transfer-encoding": "chunked",
+      "expires": "Wed, 10 Jun 2026 06:41:31 GMT",
+      "cache-control": "max-age=2592000, public",
+      "date": "Mon, 11 May 2026 06:22:13 GMT",
+      "content-type": "text/javascript; charset=UTF-8",
+      "server": "none",
+      "connection": "keep-alive"
+    },
+    "body_preview": "if($_ts.cd){\n\n(function(_$lC,_$bh){var _$fN=0;function _$dP(){var _$iV=[21];Array.prototype.push.apply(_$iV,arguments);return _$aD.apply(this,_$iV);}function _$g9(_$fL){return _$dP;function _$dP(){_$fL=0x3d3f*(_$fL&0xFFFF)+0x269ec3;return _$fL;}}function _$gb(_$dP,_$_n){var _$d9,_$_j,_$eZ; !_$_n?_$_n=_$ft:0,_$d9=_$dP.length;while(_$d9>1)_$d9-- ,_$eZ=_$_n()%_$d9,_$_j=_$dP[_$d9],_$dP[_$d9]=_$dP[_$eZ],_$dP[_$eZ]=_$_j;function _$ft(){return Math.floor(_$dh()*0xFFFFFFFF);}}var _$_n,_$d9,_$$V,_$$n,_$c",
+    "body_size": 204623
+  },
+  {
+    "url": "https://sugh.szu.edu.cn/Html/News/Columns/7/Index.html",
+    "status": 400,
+    "headers": {
+      "cache-control": "no-store",
+      "connection": "keep-alive",
+      "content-type": "text/html",
+      "date": "Mon, 11 May 2026 06:22:13 GMT",
+      "expires": "Mon, 11 May 2026 06:41:31 GMT",
+      "pragma": "no-cache",
+      "server": "none",
+      "transfer-encoding": "chunked"
+    },
+    "body_preview": "\r\n\r\n\r\n",
+    "body_size": 6
+  }
+]

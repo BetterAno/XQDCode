@@ -1,0 +1,1 @@
+require("./6718.js")("observable");

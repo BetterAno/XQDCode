@@ -1,0 +1,16 @@
+# Verify5 滑块验证码纯协议求解器 - Python 依赖
+
+# 核心依赖
+requests>=2.28.0          # HTTP 会话管理
+websocket-client>=1.6.0   # WebSocket 通信
+
+# 图像处理 (滑块缺口识别)
+opencv-python>=4.8.0      # Canny 边缘检测 + 模板匹配
+numpy>=1.24.0             # 数组运算
+
+# 可选依赖
+# Pillow>=10.0.0          # 图像处理备选
+
+# 测试依赖
+# pytest>=7.0.0
+# pytest-asyncio>=0.21.0

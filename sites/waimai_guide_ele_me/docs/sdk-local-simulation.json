@@ -1,0 +1,1036 @@
+{
+  "generatedAt": "2026-05-23T09:45:52.084Z",
+  "note": "Local fake-data diagnostic only. Does not use real account cookies and does not build a production request.",
+  "loadResults": [
+    {
+      "file": "sdk/AWSC__AWSC__awsc.js",
+      "ok": true,
+      "bytes": 10875,
+      "before": {
+        "AWSC": "undefined",
+        "AWSCInner": "undefined",
+        "__etModule": "undefined",
+        "__fyModule": "undefined",
+        "__uabModule": "undefined",
+        "__umidModule": "undefined",
+        "etSign": "undefined",
+        "x_check": "undefined",
+        "baxiaCommon": "undefined",
+        "lib": "undefined",
+        "EBridgeClientAPI": "function"
+      },
+      "after": {
+        "AWSC": "object",
+        "AWSCInner": "object",
+        "__etModule": "undefined",
+        "__fyModule": "undefined",
+        "__uabModule": "undefined",
+        "__umidModule": "undefined",
+        "etSign": "undefined",
+        "x_check": "undefined",
+        "baxiaCommon": "undefined",
+        "lib": "undefined",
+        "EBridgeClientAPI": "function"
+      },
+      "addedGlobals": [
+        "AWSC",
+        "AWSCFY",
+        "AWSCInner",
+        "etrprtrt"
+      ],
+      "group": "awsc_et"
+    },
+    {
+      "file": "sdk/AWSC__uab__1.140.0__collina.js",
+      "ok": true,
+      "bytes": 248730,
+      "before": {
+        "AWSC": "object",
+        "AWSCInner": "object",
+        "__etModule": "undefined",
+        "__fyModule": "undefined",
+        "__uabModule": "undefined",
+        "__umidModule": "undefined",
+        "etSign": "undefined",
+        "x_check": "undefined",
+        "baxiaCommon": "undefined",
+        "lib": "undefined",
+        "EBridgeClientAPI": "function"
+      },
+      "after": {
+        "AWSC": "object",
+        "AWSCInner": "object",
+        "__etModule": "undefined",
+        "__fyModule": "undefined",
+        "__uabModule": "undefined",
+        "__umidModule": "undefined",
+        "etSign": "undefined",
+        "x_check": "undefined",
+        "baxiaCommon": "undefined",
+        "lib": "undefined",
+        "EBridgeClientAPI": "function"
+      },
+      "addedGlobals": [
+        "UA_Opt",
+        "__acjs",
+        "__acjs_awsc_140",
+        "_uab_module"
+      ],
+      "group": "awsc_et"
+    },
+    {
+      "file": "sdk/AWSC__WebUMID__1.93.0__um.js",
+      "ok": true,
+      "bytes": 177654,
+      "before": {
+        "AWSC": "object",
+        "AWSCInner": "object",
+        "__etModule": "undefined",
+        "__fyModule": "undefined",
+        "__uabModule": "undefined",
+        "__umidModule": "undefined",
+        "etSign": "undefined",
+        "x_check": "undefined",
+        "baxiaCommon": "undefined",
+        "lib": "undefined",
+        "EBridgeClientAPI": "function"
+      },
+      "after": {
+        "AWSC": "object",
+        "AWSCInner": "object",
+        "__etModule": "undefined",
+        "__fyModule": "undefined",
+        "__uabModule": "undefined",
+        "__umidModule": "undefined",
+        "etSign": "undefined",
+        "x_check": "undefined",
+        "baxiaCommon": "undefined",
+        "lib": "undefined",
+        "EBridgeClientAPI": "function"
+      },
+      "addedGlobals": [
+        "__umModule",
+        "um",
+        "umx"
+      ],
+      "group": "awsc_et"
+    },
+    {
+      "file": "sdk/AWSC__et__1.83.41__et_f.js",
+      "ok": true,
+      "bytes": 320510,
+      "before": {
+        "AWSC": "object",
+        "AWSCInner": "object",
+        "__etModule": "undefined",
+        "__fyModule": "undefined",
+        "__uabModule": "undefined",
+        "__umidModule": "undefined",
+        "etSign": "undefined",
+        "x_check": "undefined",
+        "baxiaCommon": "undefined",
+        "lib": "undefined",
+        "EBridgeClientAPI": "function"
+      },
+      "after": {
+        "AWSC": "object",
+        "AWSCInner": "object",
+        "__etModule": "object",
+        "__fyModule": "undefined",
+        "__uabModule": "undefined",
+        "__umidModule": "undefined",
+        "etSign": "function",
+        "x_check": "undefined",
+        "baxiaCommon": "undefined",
+        "lib": "undefined",
+        "EBridgeClientAPI": "function"
+      },
+      "addedGlobals": [
+        "BaxiaCookieManager",
+        "LTKSign",
+        "__awsc_et__",
+        "__etModule",
+        "etSign"
+      ],
+      "group": "awsc_et"
+    },
+    {
+      "file": "sdk/sd__baxia__2.5.36__baxiaCommon.js",
+      "ok": true,
+      "bytes": 37374,
+      "before": {
+        "AWSC": "object",
+        "AWSCInner": "object",
+        "__etModule": "object",
+        "__fyModule": "undefined",
+        "__uabModule": "undefined",
+        "__umidModule": "undefined",
+        "etSign": "function",
+        "x_check": "undefined",
+        "baxiaCommon": "undefined",
+        "lib": "undefined",
+        "EBridgeClientAPI": "function"
+      },
+      "after": {
+        "AWSC": "object",
+        "AWSCInner": "object",
+        "__etModule": "object",
+        "__fyModule": "undefined",
+        "__uabModule": "undefined",
+        "__umidModule": "undefined",
+        "etSign": "function",
+        "x_check": "undefined",
+        "baxiaCommon": "function",
+        "lib": "undefined",
+        "EBridgeClientAPI": "function"
+      },
+      "addedGlobals": [
+        "__baxia__",
+        "baxiaCommon"
+      ],
+      "group": "baxia"
+    },
+    {
+      "file": "sdk/sd__baxia__2.5.36__baxiaXhrHandler.js",
+      "ok": true,
+      "bytes": 21471,
+      "before": {
+        "AWSC": "object",
+        "AWSCInner": "object",
+        "__etModule": "object",
+        "__fyModule": "undefined",
+        "__uabModule": "undefined",
+        "__umidModule": "undefined",
+        "etSign": "function",
+        "x_check": "undefined",
+        "baxiaCommon": "function",
+        "lib": "undefined",
+        "EBridgeClientAPI": "function"
+      },
+      "after": {
+        "AWSC": "object",
+        "AWSCInner": "object",
+        "__etModule": "object",
+        "__fyModule": "undefined",
+        "__uabModule": "undefined",
+        "__umidModule": "undefined",
+        "etSign": "function",
+        "x_check": "undefined",
+        "baxiaCommon": "function",
+        "lib": "undefined",
+        "EBridgeClientAPI": "function"
+      },
+      "addedGlobals": [
+        "baxiaXhrHandler"
+      ],
+      "group": "baxia"
+    },
+    {
+      "file": "sdk/sd__baxia__2.5.36__baxiaFetchHandler.js",
+      "ok": true,
+      "bytes": 21232,
+      "before": {
+        "AWSC": "object",
+        "AWSCInner": "object",
+        "__etModule": "object",
+        "__fyModule": "undefined",
+        "__uabModule": "undefined",
+        "__umidModule": "undefined",
+        "etSign": "function",
+        "x_check": "undefined",
+        "baxiaCommon": "function",
+        "lib": "undefined",
+        "EBridgeClientAPI": "function"
+      },
+      "after": {
+        "AWSC": "object",
+        "AWSCInner": "object",
+        "__etModule": "object",
+        "__fyModule": "undefined",
+        "__uabModule": "undefined",
+        "__umidModule": "undefined",
+        "etSign": "function",
+        "x_check": "undefined",
+        "baxiaCommon": "function",
+        "lib": "undefined",
+        "EBridgeClientAPI": "function"
+      },
+      "addedGlobals": [
+        "baxiaFetchHandler"
+      ],
+      "group": "baxia"
+    },
+    {
+      "file": "elecheck-cl-loader-1.1.7.js",
+      "ok": true,
+      "bytes": 6564,
+      "before": {
+        "AWSC": "object",
+        "AWSCInner": "object",
+        "__etModule": "object",
+        "__fyModule": "undefined",
+        "__uabModule": "undefined",
+        "__umidModule": "undefined",
+        "etSign": "function",
+        "x_check": "undefined",
+        "baxiaCommon": "function",
+        "lib": "undefined",
+        "EBridgeClientAPI": "function"
+      },
+      "after": {
+        "AWSC": "object",
+        "AWSCInner": "object",
+        "__etModule": "object",
+        "__fyModule": "undefined",
+        "__uabModule": "undefined",
+        "__umidModule": "undefined",
+        "etSign": "function",
+        "x_check": "undefined",
+        "baxiaCommon": "function",
+        "lib": "undefined",
+        "EBridgeClientAPI": "function"
+      },
+      "addedGlobals": [],
+      "group": "elecheck"
+    },
+    {
+      "file": "elecheck-cl-legacy-1.1.7.js",
+      "ok": true,
+      "bytes": 509819,
+      "before": {
+        "AWSC": "object",
+        "AWSCInner": "object",
+        "__etModule": "object",
+        "__fyModule": "undefined",
+        "__uabModule": "undefined",
+        "__umidModule": "undefined",
+        "etSign": "function",
+        "x_check": "undefined",
+        "baxiaCommon": "function",
+        "lib": "undefined",
+        "EBridgeClientAPI": "function"
+      },
+      "after": {
+        "AWSC": "object",
+        "AWSCInner": "object",
+        "__etModule": "object",
+        "__fyModule": "undefined",
+        "__uabModule": "undefined",
+        "__umidModule": "undefined",
+        "etSign": "function",
+        "x_check": "undefined",
+        "baxiaCommon": "function",
+        "lib": "undefined",
+        "EBridgeClientAPI": "function"
+      },
+      "addedGlobals": [
+        "$",
+        "$a",
+        "$c",
+        "$e",
+        "$i",
+        "$n",
+        "$o",
+        "$p",
+        "$r",
+        "$s",
+        "$t",
+        "$u",
+        "$v",
+        "A",
+        "Aa",
+        "Ac",
+        "Ae",
+        "Af",
+        "Ai",
+        "An",
+        "Ao",
+        "Ap",
+        "Ar",
+        "As",
+        "At",
+        "Au",
+        "Av",
+        "B",
+        "Ba",
+        "Bc",
+        "Be",
+        "Bi",
+        "Bn",
+        "Bo",
+        "Bp",
+        "Br",
+        "Bs",
+        "Bt",
+        "Bu",
+        "Bv",
+        "C",
+        "Ca",
+        "Cc",
+        "Ce",
+        "Cf",
+        "Ci",
+        "Cn",
+        "Co",
+        "Cp",
+        "Cr",
+        "Cs",
+        "Ct",
+        "Cu",
+        "Cv",
+        "D",
+        "Da",
+        "Dc",
+        "De",
+        "Di",
+        "Dn",
+        "Do",
+        "Dp",
+        "Dr",
+        "Ds",
+        "Dt",
+        "Du",
+        "Dv",
+        "E",
+        "Ea",
+        "Ec",
+        "Ee",
+        "Ef",
+        "Ei",
+        "En",
+        "Eo",
+        "Ep",
+        "Er",
+        "Es",
+        "Et",
+        "Eu",
+        "Ev",
+        "F",
+        "Fa",
+        "Fc",
+        "Fe",
+        "Fi",
+        "Fn",
+        "Fo",
+        "Fp",
+        "Fr",
+        "Fs",
+        "Ft",
+        "Fu",
+        "Fv",
+        "G",
+        "Ga",
+        "Gc",
+        "Ge",
+        "Gi",
+        "Gn",
+        "Go",
+        "Gp",
+        "Gr",
+        "Gs",
+        "Gt",
+        "Gu",
+        "Gv",
+        "H",
+        "Ha",
+        "Hc",
+        "He",
+        "Hi",
+        "Hn",
+        "Ho",
+        "Hp",
+        "Hr",
+        "Hs",
+        "Ht",
+        "Hu",
+        "Hv"
+      ],
+      "group": "elecheck"
+    }
+  ],
+  "staticDependencies": {
+    "sdk/AWSC__AWSC__awsc.js": [
+      "https://acjs.aliyun.com/error?v=",
+      "https://aeis.alicdn.com/",
+      "https://assets.alicdn.com/",
+      "https://assets.aliexpress-media.com/",
+      "https://g.alicdn.com/",
+      "https://g.lazcdn.com/",
+      "https://lzd-g.slatic.net/"
+    ],
+    "sdk/sd__baxia__2.5.36__baxiaCommon.js": [
+      "//g.alicdn.com/sd/baxia/",
+      "//g.alicdn.com/sd/nch5/index.js",
+      "//g.alicdn.com/sd/ncpc/nc.js",
+      "https://g.alicdn.com/sd/baxia/"
+    ],
+    "sdk/sd__baxia__2.5.36__baxiaXhrHandler.js": [
+      "//g.alicdn.com/sd/nch5/index.js",
+      "//g.alicdn.com/sd/ncpc/nc.js",
+      "https://fourier.taobao.com/ts?ext=200&uuid="
+    ],
+    "sdk/sd__baxia__2.5.36__baxiaFetchHandler.js": [
+      "//g.alicdn.com/sd/nch5/index.js",
+      "//g.alicdn.com/sd/ncpc/nc.js",
+      "https://fourier.taobao.com/ts?ext=200&uuid="
+    ],
+    "elecheck-cl-legacy-1.1.7.js": [
+      "https://github.com/zloirock/core-js",
+      "https://github.com/zloirock/core-js/blob/v3.43.0/LICENSE",
+      "https://mozilla.github.io/localForage/#definedriver"
+    ],
+    "elecheck-cl-polyfill-1.1.7.js": [
+      "./cl_babel-CP8i_Swq.js",
+      "https://github.com/zloirock/core-js",
+      "https://github.com/zloirock/core-js/blob/v3.43.0/LICENSE"
+    ],
+    "elecheck-cl-vendor-1.1.7.js": [
+      "./cl_babel-CP8i_Swq.js",
+      "https://mozilla.github.io/localForage/#definedriver"
+    ],
+    "elecheck-cl-1.1.7.js": [
+      "./cl_babel-CP8i_Swq.js",
+      "./cl_polyfill-DqZ71sDb.js",
+      "./cl_vendor-DXnIpoEh.js"
+    ]
+  },
+  "awscFeatures": [
+    {
+      "feature": "uab",
+      "ok": true,
+      "state": "loaded",
+      "moduleType": "object",
+      "keys": [
+        "getUA",
+        "isReadyForSC",
+        "resetSA",
+        "decryptJSON",
+        "getVersion"
+      ],
+      "fakeUA": {
+        "ok": true,
+        "redacted": true,
+        "digest": {
+          "type": "string",
+          "length": 3504,
+          "sha256_16": "869c14ca856fcc7f"
+        }
+      }
+    },
+    {
+      "feature": "um",
+      "ok": true,
+      "state": "loaded",
+      "moduleType": "object",
+      "keys": [
+        "st",
+        "init",
+        "getVersion",
+        "at"
+      ]
+    },
+    {
+      "feature": "et",
+      "ok": true,
+      "state": "loaded",
+      "moduleType": "object",
+      "keys": [
+        "ver",
+        "jsv",
+        "getETToken",
+        "LTKProduct",
+        "LTKConsume",
+        "AECookie",
+        "load"
+      ]
+    }
+  ],
+  "browserParity": {
+    "note": "Diagnostic Chrome-shape patch only; verify against a live browser baseline before trusting parity.",
+    "nodeLeakKeys": [],
+    "prototypeChecks": {
+      "document": true,
+      "navigator": true,
+      "localStorage": true,
+      "body": true,
+      "head": true,
+      "xhr": true
+    },
+    "toStringChecks": {
+      "fetch": "function fetch() { [native code] }",
+      "xhrOpen": "function open() { [native code] }",
+      "createElement": "function createElement() { [native code] }"
+    },
+    "navigatorKeys": [
+      "appCodeName",
+      "appName",
+      "appVersion",
+      "connection",
+      "cookieEnabled",
+      "deviceMemory",
+      "doNotTrack",
+      "hardwareConcurrency",
+      "javaEnabled",
+      "language",
+      "languages",
+      "maxTouchPoints",
+      "mimeTypes",
+      "onLine",
+      "pdfViewerEnabled",
+      "permissions",
+      "platform",
+      "plugins",
+      "product",
+      "productSub",
+      "userAgent",
+      "userAgentData",
+      "vendor",
+      "webdriver"
+    ]
+  },
+  "globals": {
+    "AWSC": "object",
+    "AWSCInner": "object",
+    "__etModule": "object",
+    "__fyModule": "undefined",
+    "__uabModule": "undefined",
+    "__umidModule": "undefined",
+    "etSign": "function",
+    "x_check": "function",
+    "baxiaCommon": "function",
+    "lib": "undefined",
+    "EBridgeClientAPI": "function"
+  },
+  "fakeParams": {
+    "t": {
+      "ok": true,
+      "value": "1779509212043",
+      "source": "expired sample timestamp for offline reproducible test"
+    },
+    "sign": {
+      "ok": true,
+      "value": "8d3fa332a8e04ee6bf0504dae3f27c55",
+      "source": "md5(expired_m_h5_tk_prefix&t&appKey&data)",
+      "expected": "8d3fa332a8e04ee6bf0504dae3f27c55",
+      "signInputPreview": "<expired_m_h5_tk_prefix>&1779509212043&12574478&<data:596>"
+    },
+    "bx_et": {
+      "ok": true,
+      "redacted": true,
+      "digest": {
+        "type": "string",
+        "length": 457,
+        "sha256_16": "916bd945a4ff66e0"
+      }
+    },
+    "bx_et_getETToken": {
+      "ok": true,
+      "redacted": true,
+      "digest": {
+        "type": "string",
+        "length": 457,
+        "sha256_16": "004af1e21379ab4c"
+      }
+    },
+    "x_ele_check": {
+      "ok": true,
+      "value": "X8eYHQplkLB25bDi0InuG5BcofTJq89IdIcQMfOcYLSiWY6tar2VCg9BKkxtiG7D12eLgK1hSQa8b/2imv5VytWmmx74kLC/BremOoe7NCdsz3/wZLtdAaXEaBuXe17ManSLvvnV/xpUvI0ryTvB+w8LpKsZl4Vdbi9+vjGALSWmH5q+rkX1TL1JZJvpnSE3tKKhD0cpjs2PEtXq7SwbXJ7sNdsoJyK+BECoCkbWnNHfEZIQOQOMTiocB1dJWWBqHADNFhO9NGfOKbxyeC5i6tAKK2lW7YeFI9vStOgNSETWbPkCucqSkS5GQ2MQz6um2J8v81F5fX+saM1YbSGDOJN4F1sfQZGsnZ2MMxfX8lp+6+dv2lRSNB/rQBGvtN1hKekaxNRHkB86qv51Wy9SkcG7rpoiwDx5O+bff0S/qk2nFK0XuYr4Ckfx6OItHreNxuKF2/GkEFbpZsC0nVHdSxbjrrpgS3f1Rjf4D6FG5QF9qdVnOt9z0opBAmKL5BS1/YAKaaXWio5szYquyyy4LPBoe/9pNlCgo69joBAeaKrS4EqgQH0PXYy5LrGs4zcp"
+    },
+    "x_ele_ua": {
+      "ok": true,
+      "value": "RenderWay/H5 MiniAppId/2021001110676437 MiniAppVersion/diagnostic AppName/h5 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+      "source": "diagnostic assembly, not SDK getXUA output"
+    },
+    "bx_umidtoken": {
+      "ok": true,
+      "value": "FAKE_UMIDTOKEN_DIAGNOSTIC_0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcde",
+      "source": "fake local diagnostic token; real token requires AWSC/WebUMID runtime callback"
+    }
+  },
+  "expiredSample": {
+    "note": "Expired captured sample for offline parity only; no network request is made.",
+    "expectedSign": "8d3fa332a8e04ee6bf0504dae3f27c55",
+    "signMatches": true,
+    "dataLength": 596,
+    "browserBxEtLengthBaseline": 469
+  },
+  "dynamicResources": [
+    {
+      "parent": "HEAD",
+      "tag": "SCRIPT",
+      "src": "https://g.alicdn.com/AWSC/et/1.83.41/et_f.js"
+    }
+  ],
+  "networkAttempts": {
+    "xhr": [
+      {
+        "method": "GET",
+        "url": "https://h5-data.elemecdn.com/ele-check-h5-config/config/zh_CN.json",
+        "type": "open"
+      },
+      {
+        "method": "GET",
+        "url": "https://h5-data.elemecdn.com/ele-check-h5-config/config/zh_CN.json",
+        "body": null,
+        "type": "send"
+      }
+    ],
+    "fetch": [],
+    "image": [
+      "https://fourier.alibaba.com/ts?url=https%3A%2F%2Fh5-data.elemecdn.com%2Fele-check-h5-config%2Fconfig%2Fzh_CN.json&token=<redacted:449:c95fdb698f31ff16>&cna=DIAGNOSTIC_CNA_012345678&ext=61"
+    ]
+  },
+  "behaviorSeed": {
+    "mode": "deterministic expired-sample parity events",
+    "dispatched": 15,
+    "extraMoves": 0
+  },
+  "eventLog": [
+    {
+      "target": "window",
+      "type": "test",
+      "action": "add"
+    },
+    {
+      "target": "window",
+      "type": "test",
+      "action": "remove"
+    },
+    {
+      "target": "window",
+      "type": "deviceorientation",
+      "action": "add"
+    },
+    {
+      "target": "document",
+      "type": "mousedown",
+      "action": "add"
+    },
+    {
+      "target": "document",
+      "type": "mouseup",
+      "action": "add"
+    },
+    {
+      "target": "document",
+      "type": "mousemove",
+      "action": "add"
+    },
+    {
+      "target": "document",
+      "type": "click",
+      "action": "add"
+    },
+    {
+      "target": "document",
+      "type": "keyup",
+      "action": "add"
+    },
+    {
+      "target": "document",
+      "type": "focus",
+      "action": "add"
+    },
+    {
+      "target": "document",
+      "type": "blur",
+      "action": "add"
+    },
+    {
+      "target": "window",
+      "type": "mousedown",
+      "action": "add"
+    },
+    {
+      "target": "window",
+      "type": "mouseup",
+      "action": "add"
+    },
+    {
+      "target": "window",
+      "type": "message",
+      "action": "add"
+    },
+    {
+      "target": "document",
+      "type": "mousemove",
+      "action": "add"
+    },
+    {
+      "target": "document",
+      "type": "touchmove",
+      "action": "add"
+    },
+    {
+      "target": "document",
+      "type": "touchstart",
+      "action": "add"
+    },
+    {
+      "target": "document",
+      "type": "mousedown",
+      "action": "add"
+    },
+    {
+      "target": "document",
+      "type": "mouseup",
+      "action": "add"
+    },
+    {
+      "target": "document",
+      "type": "keydown",
+      "action": "add"
+    },
+    {
+      "target": "document",
+      "type": "DOMMouseScroll",
+      "action": "add"
+    },
+    {
+      "target": "window",
+      "type": "focus",
+      "action": "add"
+    },
+    {
+      "target": "window",
+      "type": "blur",
+      "action": "add"
+    },
+    {
+      "target": "window",
+      "type": "resize",
+      "action": "add"
+    },
+    {
+      "target": "window",
+      "type": "unload",
+      "action": "add"
+    },
+    {
+      "target": "document",
+      "type": "click",
+      "action": "add"
+    },
+    {
+      "target": "document",
+      "type": "submit",
+      "action": "add"
+    },
+    {
+      "target": "document",
+      "type": "touchmove",
+      "action": "add"
+    },
+    {
+      "target": "window",
+      "type": "resize",
+      "action": "add"
+    },
+    {
+      "target": "window",
+      "type": "message",
+      "action": "remove"
+    },
+    {
+      "target": "window",
+      "type": "deviceorientation",
+      "action": "add"
+    },
+    {
+      "target": "window",
+      "type": "deviceorientation",
+      "action": "remove"
+    },
+    {
+      "target": "document",
+      "type": "mousemove",
+      "action": "dispatch"
+    },
+    {
+      "target": "document",
+      "type": "mousemove",
+      "action": "dispatch"
+    },
+    {
+      "target": "document",
+      "type": "mousedown",
+      "action": "dispatch"
+    },
+    {
+      "target": "window",
+      "type": "mousedown",
+      "action": "dispatch"
+    },
+    {
+      "target": "document",
+      "type": "mouseup",
+      "action": "dispatch"
+    },
+    {
+      "target": "window",
+      "type": "mouseup",
+      "action": "dispatch"
+    },
+    {
+      "target": "document",
+      "type": "click",
+      "action": "dispatch"
+    },
+    {
+      "target": "document",
+      "type": "keydown",
+      "action": "dispatch"
+    },
+    {
+      "target": "document",
+      "type": "keyup",
+      "action": "dispatch"
+    },
+    {
+      "target": "document",
+      "type": "touchstart",
+      "action": "dispatch"
+    },
+    {
+      "target": "document",
+      "type": "touchmove",
+      "action": "dispatch"
+    },
+    {
+      "target": "document",
+      "type": "DOMMouseScroll",
+      "action": "dispatch"
+    },
+    {
+      "target": "window",
+      "type": "scroll",
+      "action": "dispatch"
+    },
+    {
+      "target": "window",
+      "type": "resize",
+      "action": "dispatch"
+    },
+    {
+      "target": "window",
+      "type": "focus",
+      "action": "dispatch"
+    }
+  ],
+  "consoleMessages": [
+    {
+      "level": "groupEnd",
+      "items": [
+        "Error"
+      ]
+    },
+    {
+      "level": "groupEnd",
+      "items": [
+        "Error"
+      ]
+    },
+    {
+      "level": "log",
+      "items": [
+        ""
+      ]
+    },
+    {
+      "level": "groupEnd",
+      "items": [
+        "Error"
+      ]
+    },
+    {
+      "level": "groupEnd",
+      "items": [
+        "Error"
+      ]
+    }
+  ],
+  "windowMisses": [
+    "awscrprtrt",
+    "AWSC",
+    "__etModule",
+    "AWSC_SPECIFY_ETMODULE_ADDRESSES",
+    "UA_Opt",
+    "__acjs_awsc_140",
+    "__acjs",
+    "_uab_module",
+    "mozPaintCount",
+    "Debug",
+    "WebKitPlaybackTargetAvailabilityEvent",
+    "WindVane",
+    "WeixinJSBridge",
+    "__wxjs_environment",
+    "AlipayJSBridge",
+    "ScriptEngineBuildVersion",
+    "ScriptEngineMajorVersion",
+    "ScriptEngineMinorVersion",
+    "attachEvent",
+    "umx",
+    "__BaxiaCookieManager__",
+    "__awsc_et__",
+    "__$cdc7c2f8ab481c8964b__",
+    "NanUI",
+    "__wxWebEnv",
+    "__wxjs_is_wkwebview",
+    "aef",
+    "_mqqWebViewJSInterface",
+    "qb_Notify",
+    "DSJPLUGJS_VERSION",
+    "LSJ",
+    "_0x48b3",
+    "ActiveXObject",
+    "et_performance_log",
+    "et_report_log",
+    "system",
+    "__etOnReady",
+    "__baxia__",
+    "$answer",
+    "__x__init__v",
+    "__x__reset",
+    "__sufei_point_list",
+    "__sufei_ignore_list",
+    "addFetchFilter",
+    "ApplePaySession",
+    "ApplePayError",
+    "ucapi",
+    "UCCoreJava",
+    "oooOoOO0oOO",
+    "oO0OoOo0OO0"
+  ],
+  "autoConstructors": [],
+  "cookies": {
+    "ubt_ssid": "ubt_ssid_zQ5mDU9qHYduL0hyP4lCT8pGXctK-gxO3k",
+    "perf_ssid": "perf_ssid_K-gxO3kBS7oFWbsJ_fwN2jAR6nEVarIZe",
+    "_bl_uid": "bluid_2jAR6nEVarIZevM1izQ5mD",
+    "xlly_s": "1",
+    "__ebg_utdid": "00000000-0000-4000-8000-8pGXctK-gxO3kBS7oFWbsJ_fwN",
+    "cna": "DIAGNOSTIC_CNA_012345678",
+    "t": "44ba22a44feb01dc79b0779350735209",
+    "app_cityid": "14",
+    "from": "mobile.default",
+    "xqkp": "FAKE_UMIDTOKEN_DIAGNOSTIC_0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcde=",
+    "_tb_token_": "ef5651e87b6e7",
+    "munb": "1921057897231",
+    "unb": "1921057897231",
+    "ucn": "center2j",
+    "isg": "ISG_IZevM1izQ5mDU9qHYduL0hyP4lCT8pGXctK-gxO3kBS7oFWbsJ_fwN2jAR6n",
+    "__ebg_uid": "310136287",
+    "tfstk": "gWAsOAtO4lq6SF0tDluUPiDp7w5j42lrfr_vrEFak1CTlWIBVsJwkFPXAH-13FSZSs6vDhIOuVjaMqTlMdirab8MSs1x40lysKTH1sjxgsHF9Qlzkhirab89Ssfx4DJVCoKhqZCAk5CxReIhuRIvDGBLva_lMiKvD2TdxZCADnCxReIhksIvDbF7AZk1kFgmeDJCwtwiZMNYGUb1pghlAwbHONZP2F6uMSdCSOOefOAkgOJvrTAwojNh_U9d9a8i1W1JWatNY3h8O6LeJnWkKmVPKHOfHCBgk0IRhG9p69aYMefffTvXfcwGXd-CEwBLlbbe4MLM6pg0vFKPf1QdLb3WJtpesTAZv51JEF5wHnDzK1TvB6slI38atZdUXub3MguCR-ku1Tuowwwlo-XO7vsrR420nOQhSguI5FwcBNJf42g_i"
+  },
+  "localStorageKeys": [
+    "web_behavior_time",
+    "TiGa-ELEME_ElemeMiniApp",
+    "ETLCD",
+    "syfhs",
+    "auyst",
+    "B"
+  ],
+  "relatedReports": {
+    "elecheckEsmProbe": "E:\\PythonCodeObject1\\Qoder_ObjectProdemo2\\sites\\waimai_guide_ele_me\\docs\\elecheck-esm-probe.json"
+  },
+  "missingOrBlocked": []
+}

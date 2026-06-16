@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "js-reverse": {
+      "command": "node",
+      "args": [
+        "C:/Users/Administrator/Desktop/XQDCode/mcp/js-reverse-mcp/build/src/index.js",
+        "--browserUrl",
+        "http://127.0.0.1:9222?fingerprint=12345"
+      ]
+    }
+  }
+}

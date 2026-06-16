@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="841.95" version="1.1" viewBox="0 0 595.3 841.95" width="595.3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<clipPath clip-rule="evenodd" id="hkswfjson-cp0">
+  <path d="M 0 0 L 595.3 0 L 595.3 841.95 L 0 841.95 L 0 0 "/>
+</clipPath>
+</defs>
+<g clip-path="url(#hkswfjson-cp0)">
+  <path d="M 0 0 L 595.3 0 L 595.3 841.95 L 0 841.95 L 0 0 " fill="rgb(255,255,255)" fill-rule="evenodd"/>
+  <clipPath clip-rule="evenodd" id="hkswfjson-cp1">
+  <path d="M 0 0 L 595.3 0 L 595.3 841.95 L 0 841.95 L 0 0 "/>
+</clipPath>
+  <g clip-path="url(#hkswfjson-cp1)">
+  <text font-family="f0f7" font-size="12" x="517.00" y="786.00">1</text>
+  <text font-family="f0f8" font-size="14" x="204.00" y="86.00">5</text>
+  <text font-family="f0f10" font-size="14" x="211.00" y="86.00">.</text>
+  <text font-family="f0f8" font-size="14" x="215.00" y="86.00">3</text>
+  <text font-family="f0f11" font-size="14" x="236.00 250.00 264.00 278.00 292.00 306.00 320.00 334.00 348.00 362.00 376.00" y="86.00">实际问题与一元一次方程</text>
+  <text font-family="f0f7" font-size="14" x="220.00" y="122.00">第</text>
+  <text font-family="f0f8" font-size="14" x="238.00" y="122.00">3</text>
+  <text font-family="f0f7" font-size="14" x="248.00 262.00 290.00 304.00 318.00 332.00 346.00 360.00" y="122.00">课时球赛积分问题</text>
+  <text font-family="f0f12" font-size="14" x="253.00 267.00" y="162.00">课后</text>
+  <text font-family="f0f13" font-size="14" x="281.00" y="162.00">·</text>
+  <text font-family="f0f12" font-size="14" x="285.00 299.00 313.00 327.00" y="162.00">知能演练</text>
+  <text font-family="f0f7" font-size="14" x="72.00 86.00 100.00 114.00 128.00 142.00" y="206.00">一、基础巩固</text>
+  <text font-family="f0f8" font-size="14" x="72.00" y="243.00">1</text>
+  <text font-family="f0f10" font-size="14" x="79.00" y="243.00">.</text>
+  <text font-family="f0f7" font-size="14" x="82.00 96.00 110.00 124.00 138.00 152.00 166.00" y="243.00">某位同学连续答</text>
+  <text font-family="f0f13" font-size="14" x="184.00 191.00" y="243.00">40</text>
+  <text font-family="f0f7" font-size="14" x="200.00 214.00" y="243.00">道题</text>
+  <text font-family="f0f13" font-size="14" x="228.00" y="243.00">,</text>
+  <text font-family="f0f7" font-size="14" x="232.00 246.00 260.00 274.00 288.00" y="243.00">答对一题得</text>
+  <text font-family="f0f13" font-size="14" x="305.00" y="243.00">5</text>
+  <text font-family="f0f7" font-size="14" x="315.00" y="243.00">分</text>
+  <text font-family="f0f13" font-size="14" x="329.00" y="243.00">,</text>
+  <text font-family="f0f7" font-size="14" x="333.00 347.00 361.00 375.00 389.00" y="243.00">答错一题扣</text>
+  <text font-family="f0f13" font-size="14" x="406.00" y="243.00">2</text>
+  <text font-family="f0f7" font-size="14" x="416.00" y="243.00">分</text>
+  <text font-family="f0f13" font-size="14" x="430.00" y="243.00">(</text>
+  <text font-family="f0f7" font-size="14" x="435.00 449.00 462.00 476.00 491.00 504.00" y="243.00">不答同样算作</text>
+  <text font-family="f0f7" font-size="14" x="72.00 86.00" y="282.00">答错</text>
+  <text font-family="f0f13" font-size="14" x="100.00 104.00" y="282.00">),</text>
+  <text font-family="f0f7" font-size="14" x="108.00 122.00 136.00 150.00 164.00 178.00 192.00" y="282.00">最终该同学获得</text>
+  <text font-family="f0f13" font-size="14" x="209.00 216.00 223.00" y="282.00">144</text>
+  <text font-family="f0f7" font-size="14" x="233.00" y="282.00">分</text>
+  <text font-family="f0f10" font-size="14" x="247.00" y="282.00">.</text>
+  <text font-family="f0f7" font-size="14" x="250.00 264.00 278.00 292.00 306.00 320.00 334.00" y="282.00">若所列的方程是</text>
+  <text font-family="f0f14" font-size="9" x="349.00" y="273.00">�</text>
+  <text font-family="f0f14" font-size="9" x="349.00" y="289.00">5</text>
+  <path d="M 348.95 278.15 L 354.45 278.15 " fill="none" stroke="rgb(0,0,0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10.000000" stroke-width="0.95"/>
+  <text font-family="f0f14" font-size="14" x="357.00" y="282.00">+</text>
+  <text font-family="f0f14" font-size="9" x="371.00" y="273.00">�</text>
+  <text font-family="f0f13" font-size="9" x="376.00" y="273.00">-</text>
+  <text font-family="f0f14" font-size="9" x="379.00 385.00 390.00" y="273.00">144</text>
+  <text font-family="f0f14" font-size="9" x="381.00" y="289.00">2</text>
+  <path d="M 371.15 278.15 L 396.35 278.15 " fill="none" stroke="rgb(0,0,0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10.000000" stroke-width="0.95"/>
+  <text font-family="f0f10" font-size="14" x="396.00" y="282.00">=</text>
+  <text font-family="f0f13" font-size="14" x="405.00 412.00 419.00" y="282.00">40,</text>
+  <text font-family="f0f7" font-size="14" x="423.00" y="282.00">则</text>
+  <text font-family="f0f10" font-size="14" x="440.00" y="282.00">x</text>
+  <text font-family="f0f7" font-size="14" x="449.00 463.00 477.00 491.00 505.00" y="282.00">表示的意义</text>
+  <text font-family="f0f7" font-size="14" x="72.00" y="321.00">是</text>
+  <text font-family="f0f13" font-size="14" x="86.00 118.00" y="321.00">()</text>
+  <text font-family="f0f10" font-size="14" x="72.00" y="357.00">A</text>
+  <text font-family="f0f13" font-size="14" x="80.00" y="357.00">.</text>
+  <text font-family="f0f7" font-size="14" x="84.00 98.00 112.00 126.00 140.00 154.00" y="357.00">答对题的数目</text>
+  <text font-family="f0f13" font-size="14" x="242.00 251.00" y="357.00">B.</text>
+  <text font-family="f0f7" font-size="14" x="255.00 269.00 283.00 297.00 311.00 325.00" y="357.00">答错题的数目</text>
+  <text font-family="f0f13" font-size="14" x="72.00 81.00" y="394.00">C.</text>
+  <text font-family="f0f7" font-size="14" x="84.00 98.00 112.00 126.00 140.00 154.00 168.00" y="394.00">答对题目总得分</text>
+  <text font-family="f0f13" font-size="14" x="242.00 252.00" y="394.00">D.</text>
+  <text font-family="f0f7" font-size="14" x="256.00 270.00 284.00 298.00 312.00 326.00 340.00" y="394.00">答错题目总扣分</text>
+  <text font-family="f0f8" font-size="14" x="72.00" y="430.00">2</text>
+  <text font-family="f0f10" font-size="14" x="79.00" y="430.00">.</text>
+  <text font-family="f0f7" font-size="14" x="82.00 96.00 110.00 124.00 138.00 152.00 166.00 180.00 194.00 208.00 222.00 236.00 250.00" y="430.00">某篮球联赛积分规则如表所示</text>
+  <text font-family="f0f13" font-size="14" x="264.00" y="430.00">,</text>
+  <text font-family="f0f7" font-size="14" x="268.00 282.00 296.00 310.00 324.00 338.00 352.00 366.00" y="430.00">某支球队一共打了</text>
+  <text font-family="f0f13" font-size="14" x="383.00 390.00" y="430.00">20</text>
+  <text font-family="f0f7" font-size="14" x="400.00 414.00 428.00" y="430.00">场比赛</text>
+  <text font-family="f0f13" font-size="14" x="442.00" y="430.00">,</text>
+  <text font-family="f0f7" font-size="14" x="445.00 459.00" y="430.00">共积</text>
+  <text font-family="f0f13" font-size="14" x="477.00 484.00" y="430.00">25</text>
+  <text font-family="f0f7" font-size="14" x="494.00" y="430.00">分</text>
+  <text font-family="f0f10" font-size="14" x="508.00" y="430.00">.</text>
+  <text font-family="f0f7" font-size="14" x="72.00 86.00 100.00 114.00 128.00 142.00 156.00" y="466.00">设该支球队胜了</text>
+  <text font-family="f0f10" font-size="14" x="173.00" y="466.00">x</text>
+  <text font-family="f0f7" font-size="14" x="182.00" y="466.00">场</text>
+  <text font-family="f0f13" font-size="14" x="196.00" y="466.00">,</text>
+  <text font-family="f0f7" font-size="14" x="200.00 214.00 228.00 242.00" y="466.00">根据题意</text>
+  <text font-family="f0f13" font-size="14" x="256.00" y="466.00">,</text>
+  <text font-family="f0f7" font-size="14" x="259.00 273.00 287.00 301.00" y="466.00">可列方程</text>
+  <text font-family="f0f13" font-size="14" x="315.00 348.00" y="466.00">()</text>
+</g>
+  <clipPath clip-rule="evenodd" id="hkswfjson-cp2">
+  <path d="M 0 0 L 595.3 0 L 595.3 841.95 L 0 841.95 L 0 0 "/>
+</clipPath>
+  <g clip-path="url(#hkswfjson-cp2)">
+  <clipPath clip-rule="evenodd" id="hkswfjson-cp3">
+  <path d="M 219.8 489.05 L 298.5 489.05 L 298.5 527.6 L 219.8 527.6 L 219.8 489.05 "/>
+</clipPath>
+  <g clip-path="url(#hkswfjson-cp3)">
+  <text font-family="f0f11" font-size="14" x="221.00 235.00 248.00 263.00" y="505.00">比赛结果</text>
+</g>
+</g>
+  <clipPath clip-rule="evenodd" id="hkswfjson-cp4">
+  <path d="M 0 0 L 595.3 0 L 595.3 841.95 L 0 841.95 L 0 0 "/>
+</clipPath>
+  <g clip-path="url(#hkswfjson-cp4)">
+  <clipPath clip-rule="evenodd" id="hkswfjson-cp5">
+  <path d="M 298.45 489.05 L 337.05 489.05 L 337.05 527.6 L 298.45 527.6 L 298.45 489.05 "/>
+</clipPath>
+  <g clip-path="url(#hkswfjson-cp5)">
+  <text font-family="f0f7" font-size="14" x="299.00" y="505.00">胜</text>
+</g>
+</g>
+  <clipPath clip-rule="evenodd" id="hkswfjson-cp6">
+  <path d="M 0 0 L 595.3 0 L 595.3 841.95 L 0 841.95 L 0 0 "/>
+</clipPath>
+  <g clip-path="url(#hkswfjson-cp6)">
+  <clipPath clip-rule="evenodd" id="hkswfjson-cp7">
+  <path d="M 337 489.05 L 375.55 489.05 L 375.55 527.6 L 337 527.6 L 337 489.05 "/>
+</clipPath>
+  <g clip-path="url(#hkswfjson-cp7)">
+  <text font-family="f0f7" font-size="14" x="337.00" y="505.00">负</text>
+</g>
+</g>
+  <clipPath clip-rule="evenodd" id="hkswfjson-cp8">
+  <path d="M 0 0 L 595.3 0 L 595.3 841.95 L 0 841.95 L 0 0 "/>
+</clipPath>
+  <g clip-path="url(#hkswfjson-cp8)">
+  <clipPath clip-rule="evenodd" id="hkswfjson-cp9">
+  <path d="M 219.8 527.6 L 298.5 527.6 L 298.5 567.2 L 219.8 567.2 L 219.8 527.6 "/>
+</clipPath>
+  <g clip-path="url(#hkswfjson-cp9)">
+  <text font-family="f0f11" font-size="14" x="221.00 235.00" y="542.00">积分</text>
+</g>
+</g>
+  <clipPath clip-rule="evenodd" id="hkswfjson-cp10">
+  <path d="M 0 0 L 595.3 0 L 595.3 841.95 L 0 841.95 L 0 0 "/>
+</clipPath>
+  <g clip-path="url(#hkswfjson-cp10)">
+  <clipPath clip-rule="evenodd" id="hkswfjson-cp11">
+  <path d="M 298.45 527.6 L 337.05 527.6 L 337.05 567.2 L 298.45 567.2 L 298.45 527.6 "/>
+</clipPath>
+  <g clip-path="url(#hkswfjson-cp11)">
+  <text font-family="f0f13" font-size="14" x="299.00" y="543.00">2</text>
+</g>
+</g>
+  <clipPath clip-rule="evenodd" id="hkswfjson-cp12">
+  <path d="M 0 0 L 595.3 0 L 595.3 841.95 L 0 841.95 L 0 0 "/>
+</clipPath>
+  <g clip-path="url(#hkswfjson-cp12)">
+  <clipPath clip-rule="evenodd" id="hkswfjson-cp13">
+  <path d="M 337 527.6 L 375.55 527.6 L 375.55 567.2 L 337 567.2 L 337 527.6 "/>
+</clipPath>
+  <g clip-path="url(#hkswfjson-cp13)">
+  <text font-family="f0f13" font-size="14" x="337.00" y="543.00">1</text>
+</g>
+</g>
+  <clipPath clip-rule="evenodd" id="hkswfjson-cp14">
+  <path d="M 0 0 L 595.3 0 L 595.3 841.95 L 0 841.95 L 0 0 "/>
+</clipPath>
+  <g clip-path="url(#hkswfjson-cp14)">
+  <path d="M 218.75 489.1 L 218.75 491.3 L 376.6 491.3 L 376.6 489.1 L 218.75 489.1 " fill-rule="evenodd"/>
+  <path d="M 218.75 565 L 218.75 567.15 L 376.6 567.15 L 376.6 565 L 218.75 565 " fill-rule="evenodd"/>
+  <path d="M 220.85 528.1 L 374.4 528.1 " fill="none" stroke="rgb(0,0,0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10.000000" stroke-width="1.0"/>
+  <path d="M 218.75 489.15 L 218.75 567.15 L 220.9 567.15 L 220.9 489.15 L 218.75 489.15 " fill-rule="evenodd"/>
+  <path d="M 298.4 491.25 L 298.4 564.9 M 337 491.25 L 337 564.9 " fill="none" stroke="rgb(0,0,0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10.000000" stroke-width="1.0"/>
+  <path d="M 374.45 491.3 L 374.45 567.15 L 376.6 567.15 L 376.6 491.3 L 374.45 491.3 " fill-rule="evenodd"/>
+  <text font-family="f0f10" font-size="14" x="72.00" y="612.00">A</text>
+  <text font-family="f0f13" font-size="14" x="80.00 84.00" y="612.00">.2</text>
+  <text font-family="f0f10" font-size="14" x="91.00 97.00 106.00 113.00" y="612.00">x+x=</text>
+  <text font-family="f0f13" font-size="14" x="122.00 129.00" y="612.00">25</text>
+  <text font-family="f0f13" font-size="14" x="72.00 81.00 84.00" y="644.00">B.2</text>
+  <text font-family="f0f10" font-size="14" x="91.00 98.00" y="644.00">x+</text>
+  <text font-family="f0f13" font-size="14" x="107.00 112.00 119.00" y="644.00">(20</text>
+  <text font-family="f0f10" font-size="14" x="126.00 130.00" y="644.00">-x</text>
+  <text font-family="f0f13" font-size="14" x="137.00" y="644.00">)</text>
+  <text font-family="f0f10" font-size="14" x="141.00" y="644.00">=</text>
+  <text font-family="f0f13" font-size="14" x="151.00 158.00" y="644.00">25</text>
+  <text font-family="f0f13" font-size="14" x="72.00 81.00 84.00" y="676.00">C.2</text>
+  <text font-family="f0f10" font-size="14" x="91.00 98.00" y="676.00">x+</text>
+  <text font-family="f0f13" font-size="14" x="107.00 112.00 119.00" y="676.00">(15</text>
+  <text font-family="f0f10" font-size="14" x="126.00 130.00" y="676.00">-x</text>
+  <text font-family="f0f13" font-size="14" x="137.00" y="676.00">)</text>
+  <text font-family="f0f10" font-size="14" x="141.00" y="676.00">=</text>
+  <text font-family="f0f13" font-size="14" x="151.00 158.00" y="676.00">25</text>
+  <text font-family="f0f13" font-size="14" x="72.00 82.00 85.00" y="709.00">D.2</text>
+  <text font-family="f0f10" font-size="14" x="92.00 98.00" y="709.00">x+</text>
+  <text font-family="f0f13" font-size="14" x="108.00 113.00 120.00" y="709.00">(25</text>
+  <text font-family="f0f10" font-size="14" x="126.00 131.00" y="709.00">-x</text>
+  <text font-family="f0f13" font-size="14" x="137.00" y="709.00">)</text>
+  <text font-family="f0f10" font-size="14" x="142.00" y="709.00">=</text>
+  <text font-family="f0f13" font-size="14" x="152.00 159.00" y="709.00">25</text>
+</g>
+</g>
+<style >@font-face {
+font-family: "f0f13";
+src: url("../font/f0f13.ttf");
+}
+@font-face {
+font-family: "f0f11";
+src: url("../font/f0f11.ttf");
+}
+@font-face {
+font-family: "f0f10";
+src: url("../font/f0f10.ttf");
+}
+@font-face {
+font-family: "f0f12";
+src: url("../font/f0f12.ttf");
+}
+@font-face {
+font-family: "f0f7";
+src: url("../font/f0f7.ttf");
+}
+@font-face {
+font-family: "f0f14";
+src: url("../font/f0f14.ttf");
+}
+@font-face {
+font-family: "f0f8";
+src: url("../font/f0f8.ttf");
+}
+</style>
+</svg>

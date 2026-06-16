@@ -1,0 +1,2 @@
+/* user-login/0.0.24 sign.js Date:2026-03-26 15:43:32 */
+!function(){function a(a){try{var b=new ParamsSign({appId:"73806",preRequest:!0});var c={h5st:"",_stk:"",originParam:a,signedParams:{}};return b.sign(a).then(function(a){return c.h5st=a.h5st?a.h5st:"",c._stk=a._stk?a._stk:"",c})["catch"](function(){return c})}catch(d){return function(a){var b={h5st:"",_stk:"",originParam:a,signedParams:{}};return b}}}window.paramsSingUtils=a}();

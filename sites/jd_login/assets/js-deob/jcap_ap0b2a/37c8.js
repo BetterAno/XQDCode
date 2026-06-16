@@ -1,0 +1,1 @@
+exports.f = require("./2b4c.js");

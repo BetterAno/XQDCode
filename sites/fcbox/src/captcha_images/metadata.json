@@ -1,0 +1,62 @@
+[
+  {
+    "index": 1,
+    "pointY": 97,
+    "bg_path": "captcha_images\\bg_1.png",
+    "block_path": "captcha_images\\block_1.png"
+  },
+  {
+    "index": 2,
+    "pointY": 45,
+    "bg_path": "captcha_images\\bg_2.png",
+    "block_path": "captcha_images\\block_2.png"
+  },
+  {
+    "index": 3,
+    "pointY": 97,
+    "bg_path": "captcha_images\\bg_3.png",
+    "block_path": "captcha_images\\block_3.png"
+  },
+  {
+    "index": 4,
+    "pointY": 97,
+    "bg_path": "captcha_images\\bg_4.png",
+    "block_path": "captcha_images\\block_4.png"
+  },
+  {
+    "index": 5,
+    "pointY": 69,
+    "bg_path": "captcha_images\\bg_5.png",
+    "block_path": "captcha_images\\block_5.png"
+  },
+  {
+    "index": 6,
+    "pointY": 99,
+    "bg_path": "captcha_images\\bg_6.png",
+    "block_path": "captcha_images\\block_6.png"
+  },
+  {
+    "index": 7,
+    "pointY": 76,
+    "bg_path": "captcha_images\\bg_7.png",
+    "block_path": "captcha_images\\block_7.png"
+  },
+  {
+    "index": 8,
+    "pointY": 96,
+    "bg_path": "captcha_images\\bg_8.png",
+    "block_path": "captcha_images\\block_8.png"
+  },
+  {
+    "index": 9,
+    "pointY": 62,
+    "bg_path": "captcha_images\\bg_9.png",
+    "block_path": "captcha_images\\block_9.png"
+  },
+  {
+    "index": 10,
+    "pointY": 56,
+    "bg_path": "captcha_images\\bg_10.png",
+    "block_path": "captcha_images\\block_10.png"
+  }
+]

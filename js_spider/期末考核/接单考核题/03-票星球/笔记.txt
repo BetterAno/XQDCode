@@ -1,0 +1,8 @@
+
+地址: https://m.piaoxingqiu.com/
+接口: https://m.piaoxingqiu.com/cyy_gatewayapi/home/pub/v3/show_list/search_by_front
+
+2025.12.23
+请求头无需加密参数Angry-dog和front-trace-id以及cookie信息, 直接请求即可返回数据信息
+
+需要携带params中的bizFrontendCategoryId和siteId参数才能得到想要的页面数据

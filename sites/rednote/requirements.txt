@@ -1,0 +1,21 @@
+# rednote 上报脚本 · Python 依赖清单
+#
+# 实测环境：Python 3.13.5 + curl_cffi 0.15.0 (Windows 10/11 x64)
+# 最低环境：Python 3.11+（项目使用了 from __future__ import annotations 及新式 type hints）
+#
+# 安装方式：
+#   python -m venv venv
+#   .\venv\Scripts\Activate.ps1          # Windows PowerShell
+#   # source venv/bin/activate           # Linux / macOS
+#   pip install -r requirements.txt
+#
+# 另外需要（非 Python）：
+#   - Node.js 18+              用于运行 src/signer.js (rednote X-s/X-t 签名桥)
+#   - AdsPower 客户端           用于持有 rednote 登录态 cookie
+#                             详见 DEPLOY.md §4 / §5
+
+# ===== 核心依赖 =====
+# curl_cffi: 基于 libcurl-impersonate 的 HTTP 客户端, 用于模拟 Chrome TLS/JA3 指纹
+#   - 必须 >= 0.7.0 才能使用 impersonate="chrome146"
+#   - 推荐 >= 0.15.0, 支持最新的 Chrome 指纹与更稳定的 HTTP/2
+curl_cffi>=0.15.0

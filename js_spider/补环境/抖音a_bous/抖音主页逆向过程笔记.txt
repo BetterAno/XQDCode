@@ -1,0 +1,27 @@
+1.去定位参数: a_bogus
+    根据堆栈往前推导最终显示a_bogus参数的位置: v.send(p)
+
+2.解决引用类型的问题
+    在v.send(p)中虽然存在a_bogus参数, 但是js有引用类型的特征, 可能这个参数在后面的栈赋值的, 会影响到之前执行的栈
+    通过条件断点解决引用类型的问题
+
+3.通过条件断点与普通断点配合最终会定位到a_bogus的正确位置: bdms_1.0.1.19的栈位
+
+4.下日志点确定推导结论
+    必须确保 var m = n.apply(d, e); 执行完毕, 所以日志点需要打在 var m = n.apply(d, e); 表达式的下一行
+    最终在日志点可以看到a_bogus的输出信息: ['a_bogus', 'Ey4VgF6wEo8bcdMG8Kn6eAIUcAj/NPSyjFixWbdPyaboOhtc6W…FIdQWIrChAQ1Hu/vNRcfdPH3GV/zji9KsUSSjwn/Va5iWqq6=']
+    输出这个a_bogus参数的变量名为: e
+
+5.将生成a_bogus的文件全部复制到本地并完成补环境的操作
+    1.需要将这个参数e导出到全局window
+    2.在执行这个代码的时候发生手动抛出的错误 (throw l错误, 先定位报错行号并注释) 直接注释只是测试代码是否能正常工作
+    3.补环境 (需要补充原型链: 补充浏览器的实例对象的类的关系和属性[实例对象的属性可能在不同的继承类中]与方法[实例对象的方法可能在不同的继承类中])
+        以document为例:
+            在document实例对象中的属性从浏览器验证发现属性都在HTMLDocument类中, 所以属性需要写入到HTMLDocument类中
+            同理, 如果document实例对象中的方法从浏览器验证发现方法在Document类中, 则方法相关就需要写入到Document类中
+
+6.send发送的问题
+    XMLHttpRequest对象需要自行构建, 构建的是一个空的函数, 所以需要将这个xhr对象中需要的属性和方法从页面中拿下来
+        1.t.origin.apply(e, u);复制e得到的(在jsvmp执行前的栈)
+        2.e参数中的_tnc_original_url必须是/aweme/post/地址并且必须存在叫bdmsInvokeList名称的key
+        3.在bdmsInvokeList中替换动态的url

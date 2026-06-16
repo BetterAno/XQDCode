@@ -1,0 +1,4 @@
+js-reverse-mcp 基于CDP连接（容易被检测） （仓库地址：https://github.com/zhizhuodemao/js-reverse-mcp）
+    - 魔改内核：
+    使用ads商业指纹浏览器（仓库地址：https://github.com/AdsPower/adspower-browser）
+    - 改内核、改连接方式

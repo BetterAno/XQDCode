@@ -1,0 +1,2 @@
+/* user-login/0.0.24 ssoDomain.js Date:2026-03-26 15:43:31 */
+!function(){var a=[];$(function(){setTimeout(function(){$.ajax({url:"/ssoDomain/getList?"+location.search.substring(1)+"&r="+Math.random(),dataType:"json",success:function(b){for(var c=0;c<b.length;c++)!function(b){$.ajax({url:"//"+b+"/alive",dataType:"jsonp",success:function(c){if(c){var d=JSON.parse(c);d&&"success"==d.result&&a.push(b)}}})}(b[c])}})},10)}),window.getAliveSsoDomains=function(){return a}}();

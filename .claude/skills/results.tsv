@@ -1,0 +1,24 @@
+timestamp	commit	skill	old_score	new_score	status	dimension	note	eval_mode
+2026-05-30T19:00	baseline	env-patcher	-	68.1	baseline	全部9维度	judge-A评分	full_test
+2026-05-30T19:00	baseline	param-encryptor	-	69.9	baseline	全部9维度	judge-B评分	full_test
+2026-05-30T19:00	baseline	captcha-solver	-	76.4	baseline	全部9维度	judge-C评分	full_test
+2026-05-30T19:05	18042da	env-patcher	68.1	81.0	keep	dim2+dim4	+5步工作流+CHECKPOINT+WASM模板+排查清单	judge-D(full_test)
+2026-05-30T19:10	bad1b41	param-encryptor	69.9	73.1	keep	dim2+dim4	+5步工作流+CHECKPOINT门控	judge-E(full_test)
+2026-05-30T19:10	bad1b41	captcha-solver	76.4	69.9	judge_cal	dim4+dim2	dim4(4→8)dim2(7→9)提升但dim8评分校准差异(judge-C=8 vs judge-F=5)	judge-F(full_test)
+2026-05-30T19:40	conflict-fix	env-patcher	81.0	79.9	judge_cal	dim1+dim4	dim1(7→9)dim4(8→9)提升dim2/dim3校准差异(-2/-2)	judge-G(full_test)
+2026-05-30T19:40	conflict-fix	param-encryptor	73.1	77.5	keep	dim1+dim8	dim1(6→9)dim8(8→9)+Phase映射+MCP引用+边界声明	judge-G(full_test)
+2026-05-30T19:40	conflict-fix	captcha-solver	69.9	83.5	keep	dim1+dim8	dim1(8→9)dim8(5→9)+Phase映射+MCP引用+边界声明+通用分析流	judge-G(full_test)
+2026-05-30T20:10	round3-dim3	env-patcher	79.9	84.04	keep	dim3	dim3(+4)WebGL状态机+Canvas哈希+RAF时序+CSSOM对抗	judge-H(full_test)
+2026-05-30T20:10	round3-dim3	param-encryptor	77.5	79.39	keep	dim3	dim3(+1.89)TimestampAntiDetect+FingerprintAwareSigner+request_jitter	judge-H(full_test)
+2026-05-30T20:10	round3-dim3	captcha-solver	83.5	82.83	judge_cal	dim3	dim3=7行为建模增强(-0.67法官校准差异实为有效增强)	judge-H(full_test)
+2026-05-30T20:40	round4-dim3	param-encryptor	79.39	81.01	keep	dim3深度补强	dim3(6→9)+6层对抗栈(TLS/卡尔曼/Weibull/Header/老化/依赖序)+import bug修复	judge-I(full_test)
+2026-05-30T21:10	round5-workflow	web-reverse-master	-	84.55	baseline	全维度	Phase Mapping+Related Skills更新+workflow引用	judge-J(full_test)
+2026-05-30T21:10	round5-workflow	web-reverse-workflow	-	79.90	baseline	全维度	专业Skill路由+Phase Mapping+边界声明+场景F/G+10项Related	judge-J(full_test)
+2026-05-30T21:10	round5-workflow	web-reverse-brainstorming	-	69.90	baseline	全维度	专业Skill快速路由+Phase Mapping+边界声明+8项Related	judge-J(full_test)
+2026-05-30T21:10	round5-workflow	web-reverse-writing-plans	-	73.64	baseline	全维度	任务Skill对应表+模板Skill栏+Phase Mapping+边界声明+8项Related	judge-J(full_test)
+2026-05-30T21:10	round5-workflow	web-reverse-executing-plans	-	65.56	baseline	全维度	专业Skill调用表+Phase Mapping+边界声明+9项Related	judge-K(full_test)
+2026-05-30T21:10	round5-workflow	web-reverse-test-driven-development	-	73.43	baseline	全维度	专业Skill协作+典型循环示例+Phase Mapping+边界声明+8项Related	judge-K(full_test)
+2026-05-30T21:10	round5-workflow	web-reverse-systematic-debugging	-	74.65	baseline	全维度	根因路由表+Phase Mapping+边界声明+8项Related	judge-K(full_test)
+2026-05-30T21:10	round5-workflow	ast-deobfuscation	-	86.47	baseline	全维度	58→160行扩展+工作流CHECKPOINT+混淆类型/家族表+下游路由+Phase Mapping+5项Related	judge-K(full_test)
+2026-05-30T21:40	round6-content	executing-plans	65.56	73.33	keep	dim2+dim8	+执行trace示例+证据记录模板+命令模板+可移植性标注	judge-L(full_test)
+2026-05-30T21:40	round6-content	brainstorming	69.90	78.99	keep	dim3(+5)	+路线决策矩阵(9目标×4路线)+详细对比+风险关联表(7×4)+可移植性标注	judge-L(full_test)

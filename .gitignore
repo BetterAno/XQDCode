@@ -1,0 +1,79 @@
+# ======================
+# Python
+# ======================
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+*.whl
+
+# ======================
+# Node.js
+# ======================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ======================
+# IDE / Editor
+# ======================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-*
+
+# ======================
+# OS generated
+# ======================
+Thumbs.db
+.DS_Store
+Desktop.ini
+$RECYCLE.BIN/
+
+# ======================
+# Temp & debug
+# ======================
+temp/
+tmp/
+ChromeDebug/
+*.tmp
+*.log
+*.bak
+
+# ======================
+# Environment & secrets
+# ======================
+.env
+.env.*
+*.local
+
+# ======================
+# Binary / archives
+# ======================
+*.exe
+*.dll
+*.so
+*.dylib
+*.lib
+*.node
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+

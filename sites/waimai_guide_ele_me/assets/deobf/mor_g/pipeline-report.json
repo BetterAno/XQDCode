@@ -1,0 +1,116 @@
+{
+  "inputPath": "E:\\PythonCodeObject1\\Qoder_ObjectProdemo2\\sites\\waimai_guide_ele_me\\assets\\js\\mor.g.40cff3.js",
+  "outputDir": "E:\\PythonCodeObject1\\Qoder_ObjectProdemo2\\sites\\waimai_guide_ele_me\\assets\\deobf\\mor_g",
+  "hint": "",
+  "selectedPattern": {
+    "id": "generic",
+    "displayName": "generic layered pipeline",
+    "reference": null,
+    "families": [
+      "generic"
+    ],
+    "notes": [
+      "Use only the generic passes.",
+      "Escalate to a site adapter when residue is stable and reproducible."
+    ]
+  },
+  "detections": [],
+  "steps": [
+    {
+      "id": "normalize",
+      "script": "normalize-structure.js",
+      "outputFile": "01_normalize.js",
+      "timeoutMs": 60000,
+      "durationMs": 495,
+      "status": "ok",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "id": "prune",
+      "script": "prune-fake-branches.js",
+      "outputFile": "02_prune.js",
+      "timeoutMs": 60000,
+      "durationMs": 336,
+      "status": "ok",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "id": "inline_dispatchers",
+      "script": "inline-dispatchers.js",
+      "outputFile": "03_inline_dispatchers.js",
+      "timeoutMs": 120000,
+      "durationMs": 502,
+      "status": "ok",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "id": "flatten",
+      "script": "flatten-array-control-flow.js",
+      "outputFile": "04_flatten.js",
+      "timeoutMs": 180000,
+      "durationMs": 315,
+      "status": "ok",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "id": "if_to_switch",
+      "script": "if-chain-to-switch.js",
+      "outputFile": "05_if_to_switch.js",
+      "timeoutMs": 90000,
+      "durationMs": 416,
+      "status": "ok",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "id": "prune",
+      "script": "prune-fake-branches.js",
+      "outputFile": "06_prune.js",
+      "timeoutMs": 60000,
+      "durationMs": 324,
+      "status": "ok",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "id": "normalize",
+      "script": "normalize-structure.js",
+      "outputFile": "07_normalize.js",
+      "timeoutMs": 60000,
+      "durationMs": 319,
+      "status": "ok",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": ""
+    }
+  ],
+  "status": "ok",
+  "failedStep": null,
+  "lastGoodFile": "07_normalize.js",
+  "finalMetrics": {
+    "filePath": "E:\\PythonCodeObject1\\Qoder_ObjectProdemo2\\sites\\waimai_guide_ele_me\\assets\\deobf\\mor_g\\final.js",
+    "lineCount": 6936,
+    "splitPipeCount": 0,
+    "loopSwitchCount": 0,
+    "opcodeIfChainCount": 0,
+    "dispatcherWrapperCount": 0,
+    "hexIdentifierCount": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "source": "js-reverse-mcp closure capture",
+  "capture_time": 1779788077384,
+  "mtgsig": "{\"a1\":\"1.2\",\"a2\":1779787041022,\"a3\":\"805zzu6yz53v53v119w881v2w406vz6780v4wzv844497958y715u41y\",\"a5\":\"+HJHbN7gOUWF4/0qNonxsdrMMwPmEeykwxcP3n/SjWiBT/IQJ6MQ5uGnPJz4DHQ49CGbmM/QAJptt0GQ7AtMbxnLnRy0SMkqRes8/JmoWCDSjV3dhJTQ94A9axX/\",\"a6\":\"h1.9Q7a9jPFujuSpGqpQhPALgmdzxUHHiMAVrqC5cMnvkh5yFhHAqkVINxM/AYd0gUzlYTKlDmMWH2dI09et80CpEK0IWo5e4tyCoAbHPl0yEdWWzRxXUqRb+WCqRufd7M4Qz2N41Kjoret6ZwEhPChyKlcCVsdruqEPvIJ/Hw+bNypyJ3q9PvXK6O88IfSC7VV2wVekcHQ39VOt7cpm1nGDgjpUaoV4YMUiWz2BumMBPw6wYFzMP7wYACHE6HkuJQ6akI8t1L8asYNhh5Yyzz5hnRZlJT8nYFxHDypSck/kUKRYbRFZ8px2psSVFK5sXFE1TnGn5zrtFV/7+RkRS26tGh8FfP0w06PlDl6jENv7dHzVYuLLuU1hr/hAx4Ob4HGJfBk4uPKzIvwKsj6x2iEmGeROKh7pA/wcQKSQcqjjSjsMkYRG3efmp711+2kURlxTszY0VqDGsCmfrMG3WCD5TDORvr6utVvD2stV8sKrKpOlkOKdCjymL9O/RYrE1QeRMzuKAKShYjoLbSwYNv5xEQ==\",\"a8\":\"847c3e9863846b0b0d749fa3ec88f584\",\"a9\":\"4.2.0,7,247\",\"a10\":\"63\",\"x0\":4,\"d1\":\"af59cff0d904c6b5fe329b3d765d0948\"}",
+  "h5guard_init_config": {
+    "xhrHook": true,
+    "fetchHook": true,
+    "domains": ["m.dianping.com", "mapi.dianping.com"]
+  },
+  "dfpId": "805zzu6yz53v53v119w881v2w406vz6780v4wzv844497958y715u41y",
+  "getfp": "H5dfp_4.2.0_tttt_At642rYW2P7YAI9MXyqIr+yjfHceuMlyeE/Fownv8xVL9pBb0DHfsssWqr9fWy0JncKSSX92JCZ4ill1Xm7cqnAfOIViGs+nl4d+T1naC/FDEQBPybc/tzZfzz6rjwIm7kb+DO6PGAfhI9msqoyVUeRkvg/zXLW07DzZ6l6oH89UUEj6qG03Sbt...",
+  "cookies": "GSI=#sl_zdjlwxbdsb@211011l#rf_syztwlb@210720a#rf_tsmbyrk@220309b#rf_syjgwlb@220829a; _lxsdk_cuid=19e5dae1b53c8-0c0e21fbc7081c8-26061151-384000-19e5dae1b53c8; _lxsdk=19e5dae1b53c8-0c0e21fbc7081c8-26061151-384000-19e5dae1b53c8; _hc.v=f0789e7e-7377-a76f-72fe-2c60f8407c87.1779688153; ua=%E7%82%B9%E5%B0%8F%E8%AF%841049778584; ctu=f4255ebd150c2db7c2005c314d4b35430de12495d678724125a564e4a85c368f; qruuid=6a25eec7-bb0c-4369-ba8e-bc70146d6cdf; __CACHE@is_login=true; logan_custom_report=; WEBDFPID=805zzu6yz53v53v119w881v2w406vz6780v4wzv844497958y715u41y-1779869009591-1779688152371OGMWAUKfd79fef3d01d5e9aadc18ccd4d0c95073119; utm_source_rg=AM%2540D8E8J%25360%25DCAvv4yEvAYdAYd..t2DD.di2MCydvyZDCdM2vdDMMMtZtADEZ.A4M.E; PHOENIX_ID=fe80000000000000e0fed2fffe7b5480-19e634f6acc-dcb55; logan_session_token=6sks6dih9ftnyowzxqgf; _lx_utm=utm_source%3Dgoogle%26utm_medium%3Dorganic; _lxsdk_s=19e636d99f0-51d-143-516%7C%7C151",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+  "note": "2026-05-26: Captured complete b[] data from H5guard closure. Detailed b[] data in b_array_data.json.",
+  "b_data_file": "b_array_data.json"
+}

@@ -1,0 +1,26 @@
+{
+    "name": "verify5-captcha-solver",
+    "version": "1.0.0",
+    "description": "Verify5 滑块验证码纯协议求解器 - Python + Node.js 双方案",
+    "main": "core/bridge.js",
+    "scripts": {
+        "test": "node core/bridge.js",
+        "env-test": "node env/browser.js"
+    },
+    "keywords": [
+        "captcha",
+        "verify5",
+        "reverse-engineering",
+        "slider",
+        "anti-bot"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "ws": "^8.14.0",
+        "node-fetch": "^2.7.0"
+    },
+    "devDependencies": {
+        "eslint": "^8.50.0"
+    }
+}

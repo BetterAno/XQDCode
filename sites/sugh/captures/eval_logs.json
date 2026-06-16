@@ -1,0 +1,17 @@
+[
+  {
+    "time": 1778480686325,
+    "length": 336,
+    "preview": "() => {\n            if (!window.$_ts) return null;\n            const r = {keys: Object.keys(window.$_ts), values: {}};\n            for (const k of r.keys.slice(0, 30)) {\n                const v = window.$_ts[k];\n                r.values[k] = typeof v === 'string' ? v.substring(0, 150) : v;\n         "
+  },
+  {
+    "time": 1778480686327,
+    "length": 32,
+    "preview": "() => window.__cookie_logs || []"
+  },
+  {
+    "time": 1778480686331,
+    "length": 30,
+    "preview": "() => window.__eval_logs || []"
+  }
+]

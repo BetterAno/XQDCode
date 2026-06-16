@@ -1,0 +1,10 @@
+网址: http://www.winshangdata.com/brandList
+
+12.19 下午分析接口时网页显示有sign请求头参数,无需其余参数; 晚上网页上没有sign参数,请求没有sign但是需要uid参数???
+1. 获取id数据接口: http://www.winshangdata.com/brandList
+分析: 需要解析token参数, 无需携带cookies请求
+
+2. 通过ID获取详细信息接口: http://www.winshangdata.com/wsapi/brand/getBigdataBrandExpandDemand
+分析: 需要解析token参数, 可能与上面的加密算法一致
+
+3. 通过运行发现不携带sign值显示未登录, 加上uid参数即可正常返回数据, 无需携带sign值

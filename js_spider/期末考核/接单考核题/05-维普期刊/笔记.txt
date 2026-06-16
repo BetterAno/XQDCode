@@ -1,0 +1,29 @@
+
+请求首页瑞数6补环境能成功返回 200, 但是 response.text 没有数据, 复制浏览器的cookies请求能返回首页数据.
+
+分析问题:
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta id="FbkwzLN5XOx0" content="wNVMPTiIO4FUhViWiLJpJwv9YDuqijj1ZOxRac9MWxva3gpim_gXVvb3tAY_u4Uz7a2wVXyiKwtpporN3ggyx7uy5mUkE2BiVxpJFq7nyR7WRDMO7bcMbfkIqwgt8XnfR76lQAyq7oYVrSONNn5nQWT.E0aW3D7If4dER9bO_uK83tpCQkzVH64fYeUNc8jf77JHJPZ8jDvcFvoZW3w_aLBFXVNC2Cx89Nnp3yDOLf2HyeuMRVZr0tLaGcmzWAegrdoRFODTEwiZxTIH3L0nqxHGFURuwPFE" r='m'>
+        <!--[if lt IE 9]><script r='m'>document.createElement("section")</script><![endif]-->
+        <script type="text/javascript" r='m'>
+            $_ts = window['$_ts'];
+            if (!$_ts)
+                $_ts = {};
+            $_ts.nsd = 26456;
+            $_ts.cd = "qtwErpAlErEqEGWPqk7elGqwqAG1qcEcEGW6HpEqoAlxEGqPqsalcqAMoGqPrcEmiu01qcEkEGq4HpgqEG3Pru7eEGAlcAAFEGA6maVPqu7UrrEqEGlPrO7ehGV4maEPqGAtrclPrplmEGa4maV1qcEDEGQ4HpEqoAlolGqPrcEmiu0qrAAhrcq1kcEkEGq4HpEqEG3Pru7elGaPr1Eciu0Pqs7UqPEDWcXRqs3SqGVSWy9uTyftZOEa.0_4EdmFpQPlIBGbuR0kew5tRzqoyHYhCY.d8zFY2HMhuqYPbxxtAclJqqAuraQobcaqf22ZxVoMMYL0w0z.AX7zVKg_pvpidY27A9V2HYucWnavEc7CK7ABEbT6pYyTLoVy10qa3VBQFCyLVDTaYwGfi2yRJn72XnZaKme_tCv7MCaNKYa6tdwCMD9XFUx.e1eXQDy.tCv7MCS3h2a6tdwCMD9XFUx.e1eXQDy.tCv7MCS3UTLJr.mqsTWnAup84OfF3V70wKDzRuzTRbYrF8rNVOy2VC2XZDrVAs26wDUQY9RdskaSsZJf10TDMVyc5bA41uYd3vdhKCzsR92KHif6sb2zVVJl.CwAYO28WbOxY0NoFUyHRHEz3CROHuAC5nTjwO2lV2oZYkwxsupTWBVz3CROHuAC5nTjwO2wWlDN1VLTRYe8seZz3CROHuAC5nTjwO2kIbuHYofbMvpBVZlzFv3ysDysnmJBUUpXYOkAimraYDJ2QXf.AKx.ROSEg6lnYlRJ1Ys8VmW5FOrIWd3aQmw6M0pwzCrORkL0JbK6FUW5R9TiWXN_sOwLA2xSzCrORkL0JbK6FUW5hDp9RjlaWKQ7MUAZ6Cm.Qvfh1shrsoGTiKpbJWZ4w6pgwuRmdAWqrAW6raFLqSxzwvJ6HFLSis0CHOW5jO3_HsEoqKs_3OGCWaQlWFg6qqZuJuqu.OLaWslTracfWk96JsQurgvG.3i84TYUH7VDSeHh5FDnqSqelj42iR7rHGtMrqQcbaAor1hWNcAUmx4vp5FPukzDgPuU1C4kyAjsVt7NUP8Rblm9DqQJJFZuJOaaJsQdLqWrJAEJJOcBiu3SJuATJy9Lw2J.s9eHgkzK1mqCI6dsYDmtw02xVQS6wCzSQYrBzTNfUCemVTHIAofAiaQoryG6qqAnra3abHA6InybRb1T3bT6hbR0F.YPwbaXRKR7zKmfQ1y2Fv8T3K2.hbA.RHffhDRSwcz9_vV7RbTjtCsNQnSf36W.3dYBhDmzRczOevQ73KT9InBZ8CVNRCfutdeB3129FCA.dCSXtKpLQnBdMDyShbrORMY9FKWX3o0.dbzBtKN.wnBSQ6qNFvJ9tdrGMn2.FKg.ZDTbtKzNwcBaQDZNFoA.MIfShDen3czz_KRvtKf0FDbTFKmu3nz.MB7BMDN2tCNXd1ezws3.FvIghC0S3nzjw_LBMUY2tCN74nezFb3.FbOBhCT7Mnzjw59BMUR.tCN6dDA7FbrztCO_8nSjRKq.FHYfhDNX3PzL4KV7wU7.w64_h6r9Q1z63HABQoYBt6w6_PeawU3.wCHdh6rTwvZ.wdw9hoY.Rcz6eKL7wUmOt6MaR1S0wvZ.wIGBQbGXwKRjzUmzQCq.wKh5h6xGQ1zTQdZBQbpat6pLzUrPF1y03U5TQow9hvpa3MYawbEXwoy0zUwfwnyuRvCTwC2OhvJX3IZBwDNawKxN41e0IU3.Q6Hdh6RCRPzSwiLBwvRTt6mdd1e6Fbpft6kCRK36hvrjQMY0MKAXQDRSzUpawPydRKjT86rLhve.whY4MoR_t6e0e1egFDg.I1BOFvqN36w7t52BFURCtCy65qWqrAR3ECMOqapFxPWOryTQxDrVraJ3BYScrAquJG8MJsqmqu3orjGkqqVcraQobAWmWuE6Ju8RrOEuJOESrZm3EvJOw1wBdDx93or0YoH.FbyPVUx2EMZ2QbrSwCfN_b3XMKwb3Ch.QcyOMUYcRBN.tcT0RbzndcZGMbw5hPDdxKfG3CJPw8NAwow.FKqv7OgGMbw5xYjs";
+            if ($_ts.lcd)
+                $_ts.lcd();
+        </script>
+        <script type="text/javascript" charset="utf-8" src="/N7xexRXkVdNQ/Y5oPTJBkyHck.cca831b.js" r='m'></script>
+    </head>
+    <body></body>
+</html>
+<script type="text/javascript" r='m'>
+    _$jD();
+</script>
+<a href="/N7xexRXkVdNQ/48b1a12/S4rwvzdFZfO./bdLNvISLiOZo/wOT2nH164EQl" style="display:none">.7HzVgjw7c2e</a>
+
+<meta id="FbkwzLN5XOx0" content="AEPrYIjzUvzyFrtAIF45MUzV42CuN6ZU5MC7DcHG4G.9fwMcG3bkkbDjSaeUZP2u_SLDFn7G1aK_Z8ahl5k8uEV8xzl_uDmZzy0NoXl1zZI_ODXqXpLMMBZ0F9SNqB42WsVeEahzYMscUvsv_7wsrUacloA9QLn.MoiTyV2MKNnbEgL9CqnJKI.J8bZfGsUohcZ1PJ601C4txPKxBzAMDlIsbGs0WQBjwoK3urZeg1XCyLRsxzvOWT1n5ZwbKg94O1hkWfqxNnsg8BUHaKGQq0ltpts9pxmm" r="m">

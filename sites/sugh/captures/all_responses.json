@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://sugh.szu.edu.cn/Html/News/Columns/7/Index.html",
+    "status": 412,
+    "content_type": "text/html; charset=utf-8",
+    "set_cookie": "",
+    "body_size": 15456,
+    "body_preview": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<meta id=\"HugPYbOHyOWN\" content=\"PDKFAcB2aRVzzct1FGoWMqVeA2gF_Q_SbKveubowwtexkMKiVLsnr.Rsb1savPf"
+  },
+  {
+    "url": "https://sugh.szu.edu.cn/ymwuCYY2EAZT/0hQf2xF3qjHj.0515a6f.js",
+    "status": 200,
+    "content_type": "text/javascript; charset=UTF-8",
+    "set_cookie": "",
+    "body_size": 204623,
+    "body_preview": "if($_ts.cd){\n\n(function(_$lC,_$bh){var _$fN=0;function _$dP(){var _$iV=[21];Array.prototype.push.apply(_$iV,arguments);return _$aD.apply(this,_$iV);}function _$g9(_$fL){return _$dP;function _$dP(){_$fL=0x3d3f*(_$fL&0xFFFF)+0x269ec3;return _$fL;}}function _$gb(_$dP,_$_n){var _$d9,_$_j,_$eZ; !_$_n?_$_"
+  },
+  {
+    "url": "https://sugh.szu.edu.cn/Html/News/Columns/7/Index.html",
+    "status": 400,
+    "content_type": "text/html",
+    "set_cookie": "",
+    "body_size": 6,
+    "body_preview": "\r\n\r\n\r\n"
+  }
+]

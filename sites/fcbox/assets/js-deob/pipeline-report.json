@@ -1,0 +1,97 @@
+{
+  "inputPath": "e:\\PythonCodeObject1\\Qoder_ObjectProdemo2\\sites\\fcbox\\assets\\js\\fc_slider_v2.0.js",
+  "outputDir": "e:\\PythonCodeObject1\\Qoder_ObjectProdemo2\\sites\\fcbox\\assets\\js-deob",
+  "hint": "fcbox",
+  "selectedPattern": {
+    "id": "cn-bidding-ob",
+    "displayName": "cn-bidding-ob",
+    "reference": "references/patterns/cn-bidding-ob.md",
+    "families": [
+      "ob-variant"
+    ],
+    "notes": [
+      "Keep OB-family tweaks in a dedicated adapter so the common pipeline stays conservative.",
+      "Track remaining loop-switch residue after the OB adapter stage."
+    ]
+  },
+  "detections": [
+    {
+      "id": "cn-bidding-ob",
+      "score": 13,
+      "reasons": [
+        "hint:ob",
+        "content:/\\b_0x[a-f0-9]+\\b/i"
+      ]
+    },
+    {
+      "id": "mps-ob",
+      "score": 13,
+      "reasons": [
+        "hint:ob",
+        "content:/\\b_0x[a-f0-9]+\\b/i"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "id": "normalize",
+      "script": "normalize-structure.js",
+      "outputFile": "01_normalize.js",
+      "timeoutMs": 60000,
+      "durationMs": 699,
+      "status": "ok",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "id": "prune",
+      "script": "prune-fake-branches.js",
+      "outputFile": "02_prune.js",
+      "timeoutMs": 60000,
+      "durationMs": 449,
+      "status": "ok",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "id": "inline_dispatchers",
+      "script": "inline-dispatchers.js",
+      "outputFile": "03_inline_dispatchers.js",
+      "timeoutMs": 120000,
+      "durationMs": 467,
+      "status": "ok",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "id": "ob_variant_pass",
+      "script": "patterns/ob-variant-pass.js",
+      "outputFile": "04_ob_variant_pass.js",
+      "timeoutMs": 360000,
+      "durationMs": 2124,
+      "status": "failed",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "evalmachine.<anonymous>:1\r\nnew Promise(function(_0x41623f,_0x492659){_0x3f9ab2=_0x3503dd[_0x77cf3f]=[_0x41623f,_0x492659];})\r\n                                          ^\r\n\r\nReferenceError: _0x3503dd is not defined\r\n    at evalmachine.<anonymous>:1:43\r\n    at new Promise (<anonymous>)\r\n    at evalmachine.<anonymous>:1:1\r\n    at Script.runInContext (node:vm:149:12)\r\n    at Script.runInNewContext (node:vm:154:17)\r\n    at Object.runInNewContext (node:vm:310:38)\r\n    at evaluateExpression (E:\\PythonCodeObject1\\Qoder_ObjectProdemo2\\.qoder\\skills\\ast-deobfuscation\\scripts\\patterns\\pattern-utils.js:198:17)\r\n    at VariableDeclarator (E:\\PythonCodeObject1\\Qoder_ObjectProdemo2\\.qoder\\skills\\ast-deobfuscation\\scripts\\patterns\\ob-variant-pass.js:308:24)\r\n    at NodePath._call (E:\\PythonCodeObject1\\Qoder_ObjectProdemo2\\.qoder\\skills\\ast-deobfuscation\\node_modules\\@babel\\traverse\\lib\\path\\context.js:50:20)\r\n    at NodePath.call (E:\\PythonCodeObject1\\Qoder_ObjectProdemo2\\.qoder\\skills\\ast-deobfuscation\\node_modules\\@babel\\traverse\\lib\\path\\context.js:40:18)\r\n\r\nNode.js v22.18.0",
+      "error": ""
+    }
+  ],
+  "status": "failed",
+  "failedStep": "ob_variant_pass",
+  "lastGoodFile": "03_inline_dispatchers.js",
+  "finalMetrics": {
+    "filePath": "e:\\PythonCodeObject1\\Qoder_ObjectProdemo2\\sites\\fcbox\\assets\\js-deob\\final.js",
+    "lineCount": 7558,
+    "splitPipeCount": 0,
+    "loopSwitchCount": 0,
+    "opcodeIfChainCount": 2,
+    "dispatcherWrapperCount": 0,
+    "hexIdentifierCount": 14374
+  }
+}

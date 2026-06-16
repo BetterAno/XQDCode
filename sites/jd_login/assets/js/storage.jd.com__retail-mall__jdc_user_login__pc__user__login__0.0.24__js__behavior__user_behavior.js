@@ -1,0 +1,2 @@
+/* user-login/0.0.24 user_behavior.js Date:2026-03-26 15:43:31 */
+define("//storage.jd.com/retail-mall/jdc_user_login/pc/user/login/0.0.24/js/behavior/user_behavior.js",[],function(require,a,b){function c(){try{if(window.ubcEnable!==!0)return;var a=window.jdWebBCC;if(!a)return void console.log("[wbc] the sdk has not been loaded.");a.supportWASM&&a.wbr&&"function"==typeof a.wbr&&a.wbr()}catch(b){console.log("[wbc] ubr error: ",b)}}function d(){window.passportUdr=c}b.exports={report:c,init:d}});
