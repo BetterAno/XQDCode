@@ -25,6 +25,9 @@ import traceback
 import subprocess
 import random
 import time
+import urllib.request
+import ssl
+from PIL import Image as PILImage
 
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║                       0. 配置                                    ║
@@ -55,10 +58,6 @@ PRODUCT_IMG_H = 100  # 商品图片嵌入高度（点）
 
 DEFAULT_PAGES = 5     # 默认采集页数
 
-
-import urllib.request
-import ssl
-import io as _io
 
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║                       1. 工具函数                                ║
@@ -367,10 +366,10 @@ def step0_auto_collect(keyword: str, max_pages: int = DEFAULT_PAGES,
     # 自动继续截图+XLSX
     print()
     log_step("继续执行截图...")
-    existing_ids, seller_names = step2_screenshot(filename, captcha_pause=captcha_pause)
+    existing_ids = step2_screenshot(filename, captcha_pause=captcha_pause)
     print()
     log_step("继续生成 XLSX...")
-    step3_to_xlsx(filename, existing_ids=existing_ids, seller_names=seller_names)
+    step3_to_xlsx(filename, existing_ids=existing_ids)
 
     return json_path
 
@@ -422,7 +421,7 @@ def step2_screenshot(json_path: str, captcha_pause: bool = True):
         log_ok(f"跳过 {skipped} 个已有截图，待处理 {len(pending)} 个")
     if not pending:
         log_ok("所有商品已有截图，无需处理")
-        return done_ids, seller_names  # 返回已存在的ID集合 + 空卖家名
+        return done_ids  # 返回已存在的ID集合
 
     # --- 2.4 启动浏览器 ---
     success = 0
@@ -531,19 +530,18 @@ def step2_screenshot(json_path: str, captcha_pause: bool = True):
     log_ok(f"截图完成: 新增 {success}, 跳过 {skipped}, 失败 {fail}, 共 {total}/{len(items)}")
     if seller_names:
         log_ok(f"从详情页提取卖家名: {len(seller_names)} 个，已回写JSON")
-    return done_ids, seller_names  # 返回截图前的已存在ID集合 + 卖家名映射
+    return done_ids  # 返回截图前的已存在ID集合，供 step3 标记状态
 
 
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║                   Step 3: JSON → XLSX                            ║
 # ╚══════════════════════════════════════════════════════════════════╝
 
-def step3_to_xlsx(json_path: str, existing_ids: set = None, seller_names: dict = None):
+def step3_to_xlsx(json_path: str, existing_ids: set = None):
     """
     将搜索结果 JSON + 截图合并为一个 XLSX 文件。
     截图以图片形式嵌入到「商品详情页截图」列。
     existing_ids: 截图前已存在的 itemId 集合，用于标记「新增/已爬取」。
-    seller_names: {itemId: sellerName} 从详情页抓取的卖家名映射。
     """
     # --- 3.1 校验依赖 ---
     try:
@@ -571,8 +569,6 @@ def step3_to_xlsx(json_path: str, existing_ids: set = None, seller_names: dict =
         existing_ids = set()
         if os.path.exists(SCREENSHOTS_DIR):
             existing_ids = {f.replace(".png", "") for f in os.listdir(SCREENSHOTS_DIR) if f.endswith(".png")}
-    if seller_names is None:
-        seller_names = {}
 
     # --- 3.3 写入工作簿 ---
     wb = Workbook()
@@ -618,10 +614,8 @@ def step3_to_xlsx(json_path: str, existing_ids: set = None, seller_names: dict =
         item_id = item.get("itemId", "")
         status = "已爬取" if item_id in existing_ids else "新增"
         image_url = item.get("image", "")
-        # 卖家名：优先当前提取 > JSON已存 > 搜索页地区
-        seller_display = (seller_names.get(item_id)
-                          or item.get("sellerName", "")
-                          or item.get("location", ""))
+        # 卖家名：优先JSON已存的卖家名，其次搜索页地区
+        seller_display = item.get("sellerName", "") or item.get("location", "")
 
         row_data = [
             row_idx - 1,
@@ -654,7 +648,16 @@ def step3_to_xlsx(json_path: str, existing_ids: set = None, seller_names: dict =
                     "Referer": "https://www.goofish.com/",
                 })
                 with urllib.request.urlopen(req, context=ssl_ctx, timeout=10) as resp:
-                    img_data = io.BytesIO(resp.read())
+                    raw_data = resp.read()
+                # WebP 格式转 PNG（openpyxl 不支持 WebP）
+                if raw_data[:4] == b'RIFF' and raw_data[8:12] == b'WEBP':
+                    pil_img = PILImage.open(io.BytesIO(raw_data))
+                    img_buf = io.BytesIO()
+                    pil_img.save(img_buf, format='PNG')
+                    img_buf.seek(0)
+                    img_data = img_buf
+                else:
+                    img_data = io.BytesIO(raw_data)
                 pimg = XlImage(img_data)
                 pimg.width = PRODUCT_IMG_W
                 pimg.height = PRODUCT_IMG_H
@@ -668,7 +671,6 @@ def step3_to_xlsx(json_path: str, existing_ids: set = None, seller_names: dict =
             product_img_miss += 1
 
         # --- 嵌入截图 ---
-        item_id = item.get("itemId", "")
         img_path = os.path.join(SCREENSHOTS_DIR, f"{item_id}.png")
 
         if os.path.exists(img_path):
@@ -746,9 +748,9 @@ def main():
             log_err("请指定 JSON 文件路径")
             sys.exit(1)
         log_step(f"从 JSON 文件开始: {json_file}")
-        existing_ids, seller_names = step2_screenshot(json_file, captcha_pause=captcha_pause)
+        existing_ids = step2_screenshot(json_file, captcha_pause=captcha_pause)
         print()
-        step3_to_xlsx(json_file, existing_ids=existing_ids, seller_names=seller_names)
+        step3_to_xlsx(json_file, existing_ids=existing_ids)
 
     else:
         # 模式1: 指定关键词，输出提取脚本
