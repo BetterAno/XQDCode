@@ -32,15 +32,14 @@ import time
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JS_PATH = os.path.join(BASE_DIR, "extract_search.js")
-SCREENSHOTS_DIR = os.path.join(BASE_DIR, "screenshots")
 
 # 浏览器配置（标准 Chrome + 独立 Profile 目录，不影响用户正在使用的 Chrome）
 CHROME_EXE = r"C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chrome.exe"
 CHROME_PROFILE = r"C:\Users\Administrator\Desktop\XQDCode\ChromeDebug"
 
 # 截图延时（秒）—— 抖音反爬更严格，适当拉长
-PAGE_WAIT = (3, 5)        # 详情页加载后等待 (min, max)
-BETWEEN_WAIT = (3, 5)     # 视频间间隔
+PAGE_WAIT = (2, 3)        # 详情页加载后等待 (min, max)
+BETWEEN_WAIT = (3, 4)     # 视频间间隔
 
 # XLSX 列定义
 HEADERS = [
@@ -224,6 +223,22 @@ def resolve_json_path(json_path: str) -> str:
     return json_path
 
 
+def _keyword_from_json(json_path: str) -> str:
+    """从 JSON 文件名中提取关键词。
+    文件名格式: {keyword}_douyin_{date}.json
+    """
+    basename = os.path.basename(json_path)
+    name = basename.replace(".json", "")
+    parts = name.rsplit("_douyin_", 1)
+    return parts[0] if parts else name
+
+
+def _screenshots_dir(keyword: str) -> str:
+    """返回关键词对应的截图目录: screenshots/{keyword}/"""
+    safe_kw = "".join(c if c.isalnum() or '一' <= c <= '鿿' else '_' for c in keyword)
+    return os.path.join(BASE_DIR, "screenshots", safe_kw)
+
+
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║                   Step 1: 生成浏览器提取脚本                      ║
 # ╚══════════════════════════════════════════════════════════════════╝
@@ -365,10 +380,10 @@ def step0_auto_collect(keyword: str, auto_full: bool = False,
     if auto_full:
         print()
         log_step("继续执行截图...")
-        existing_ids = step2_screenshot(filename, captcha_pause=captcha_pause)
+        existing_ids = step2_screenshot(filename, captcha_pause=captcha_pause, keyword=keyword)
         print()
         log_step("继续生成 XLSX...")
-        step3_to_xlsx(filename, existing_ids=existing_ids)
+        step3_to_xlsx(filename, existing_ids=existing_ids, keyword=keyword)
 
     return json_path
 
@@ -377,7 +392,7 @@ def step0_auto_collect(keyword: str, auto_full: bool = False,
 # ║                  Step 2: 视频详情页截图                           ║
 # ╚══════════════════════════════════════════════════════════════════╝
 
-def step2_screenshot(json_path: str, captcha_pause: bool = True):
+def step2_screenshot(json_path: str, captcha_pause: bool = True, keyword: str = None):
     """
     读取 JSON 视频列表，启动浏览器逐条打开详情页截图。
 
@@ -421,8 +436,11 @@ def step2_screenshot(json_path: str, captcha_pause: bool = True):
     log_step(f"共 {len(items)} 个视频待截图")
 
     # --- 2.3 增量跳过 ---
-    os.makedirs(SCREENSHOTS_DIR, exist_ok=True)
-    done_ids = {f.replace(".png", "") for f in os.listdir(SCREENSHOTS_DIR) if f.endswith(".png")}
+    if not keyword:
+        keyword = _keyword_from_json(json_path)
+    screenshots_dir = _screenshots_dir(keyword)
+    os.makedirs(screenshots_dir, exist_ok=True)
+    done_ids = {f.replace(".png", "") for f in os.listdir(screenshots_dir) if f.endswith(".png")}
     pending = [it for it in items if it.get("videoId", "") not in done_ids]
     skipped = len(items) - len(pending)
 
@@ -467,7 +485,7 @@ def step2_screenshot(json_path: str, captcha_pause: bool = True):
                 fail += 1
                 continue
 
-            snapshot_path = os.path.join(SCREENSHOTS_DIR, f"{video_id}.png")
+            snapshot_path = os.path.join(screenshots_dir, f"{video_id}.png")
 
             try:
                 print(f"  [{idx}/{len(pending)}] {video_id} ... ",
@@ -509,7 +527,7 @@ def step2_screenshot(json_path: str, captcha_pause: bool = True):
 # ║                   Step 3: JSON → XLSX                            ║
 # ╚══════════════════════════════════════════════════════════════════╝
 
-def step3_to_xlsx(json_path: str, existing_ids: set = None):
+def step3_to_xlsx(json_path: str, existing_ids: set = None, keyword: str = None):
     """
     将搜索结果 JSON + 截图合并为一个 XLSX 文件。
     截图以图片形式嵌入到「视频详情页截图」列。
@@ -548,11 +566,16 @@ def step3_to_xlsx(json_path: str, existing_ids: set = None):
 
     log_step(f"数据 {len(items)} 条 → 生成 XLSX ...")
 
+    # 截图目录
+    if not keyword:
+        keyword = _keyword_from_json(json_path)
+    screenshots_dir = _screenshots_dir(keyword)
+
     # 若无传入，从截图目录推断已存在的视频ID
     if existing_ids is None:
         existing_ids = set()
-        if os.path.exists(SCREENSHOTS_DIR):
-            existing_ids = {f.replace(".png", "") for f in os.listdir(SCREENSHOTS_DIR) if f.endswith(".png")}
+        if os.path.exists(screenshots_dir):
+            existing_ids = {f.replace(".png", "") for f in os.listdir(screenshots_dir) if f.endswith(".png")}
 
     # --- 3.3 写入工作簿 ---
     wb = Workbook()
@@ -634,7 +657,7 @@ def step3_to_xlsx(json_path: str, existing_ids: set = None):
 
         # --- 嵌入截图 ---
         video_id = item.get("videoId", "")
-        img_path = os.path.join(SCREENSHOTS_DIR, f"{video_id}.png")
+        img_path = os.path.join(screenshots_dir, f"{video_id}.png")
 
         if os.path.exists(img_path):
             try:
@@ -711,9 +734,10 @@ def main():
             log_err("请指定 JSON 文件路径")
             sys.exit(1)
         log_step(f"从 JSON 文件开始: {json_file}")
-        existing_ids = step2_screenshot(json_file, captcha_pause=captcha_pause)
+        keyword = _keyword_from_json(json_file)
+        existing_ids = step2_screenshot(json_file, captcha_pause=captcha_pause, keyword=keyword)
         print()
-        step3_to_xlsx(json_file, existing_ids=existing_ids)
+        step3_to_xlsx(json_file, existing_ids=existing_ids, keyword=keyword)
 
     else:
         # 模式1: 指定关键词，输出提取脚本

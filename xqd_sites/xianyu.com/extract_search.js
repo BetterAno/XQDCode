@@ -1,16 +1,16 @@
-// === 闲鱼搜索结果提取脚本（含商品ID、详情链接） ===
+// === 闲鱼搜索结果提取脚本（含翻页） ===
 // 使用方法:
 //   1. 浏览器打开 https://www.goofish.com/search?q=关键词
 //   2. 等页面加载完毕后，F12 打开控制台
-//   3. 粘贴本脚本运行 → 自动翻页采集 + 下载JSON
+//   3. 粘贴本脚本运行 → 自动翻页 + 提取 + 下载JSON
 //
-// ⚠️ 使用前请修改下方 KEYWORD 变量（或保持 __KEYWORD__ 由程序替换）
+// ⚠️ 使用前请确保已登录闲鱼（未登录搜索无结果）
 
 (async function extractXianyuSearch() {
   // ========== 配置 ==========
   const KEYWORD = '__KEYWORD__';  // 会被 Python 自动替换为搜索关键词
-  const MAX_PAGES = __MAX_PAGES__;  // 由 Python 替换，最大采集页数
-  const PAGE_DELAY = 3000;      // 翻页后等待加载时间（ms）
+  const MAX_PAGES = __MAX_PAGES__;  // 由 Python 替换
+  const PAGE_LOAD_DELAY = 3000;   // 翻页后等待加载（毫秒）
   // ==========================
 
   console.log(`🔍 开始提取闲鱼搜索数据 [关键词: ${KEYWORD}]...`);
@@ -18,161 +18,127 @@
   const seen = new Set();
   const items = [];
 
-  // 提取当前页商品
-  function extractCurrentPage() {
-    const cards = document.querySelectorAll('a[href*="goofish.com/item"]');
-    let newCount = 0;
-    cards.forEach((card) => {
-      const idMatch = card.href.match(/[?&]id=(\d+)/);
-      if (!idMatch || seen.has(idMatch[1])) return;
-      seen.add(idMatch[1]);
-      newCount++;
+  // 占位图特征（懒加载未完成时的 2x2 透明图）
+  const PLACEHOLDER_PATTERNS = ['tps-2-2', 'placeholder', 'default-avatar', '1x1'];
 
-      const itemId = idMatch[1];
+  // 滚动页面触发图片懒加载
+  async function scrollForLazyLoad() {
+    const scrollStep = 600;
+    const totalHeight = document.body.scrollHeight;
+    for (let y = 0; y < totalHeight; y += scrollStep) {
+      window.scrollTo(0, y);
+      await new Promise(r => setTimeout(r, 150));
+    }
+    // 滚回顶部
+    window.scrollTo(0, 0);
+    await new Promise(r => setTimeout(r, 500));
+  }
+
+  // 判断图片是否为占位图
+  function isPlaceholder(imgUrl) {
+    if (!imgUrl || imgUrl.length < 20) return true;
+    return PLACEHOLDER_PATTERNS.some(p => imgUrl.includes(p));
+  }
+
+  // 提取当前页面的所有商品卡片
+  function extractCurrentPage() {
+    const cards = document.querySelectorAll('[class*="feeds-item-wrap"]');
+    let added = 0;
+
+    cards.forEach(card => {
+      const href = card.getAttribute('href') || '';
+      const idMatch = href.match(/[?&]id=(\d+)/);
+      const itemId = idMatch ? idMatch[1] : '';
+
+      if (!itemId || seen.has(itemId)) return;
+      seen.add(itemId);
 
       // 标题
       const titleEl = card.querySelector('[class*="main-title"]');
-      const title = titleEl ? titleEl.textContent.trim() : '';
+      const title = (titleEl?.textContent?.trim() || '').replace(/\n/g, ' ');
 
       // 价格
-      const signEl = card.querySelector('[class*="price-wrap"] [class*="sign"]');
-      const numEl = card.querySelector('[class*="price-wrap"] [class*="number"]');
-      const decEl = card.querySelector('[class*="price-wrap"] [class*="decimal"]');
-      let price = '';
-      if (signEl && numEl) {
-        price = signEl.textContent.trim() + numEl.textContent.trim();
-        if (decEl && decEl.textContent.trim()) price += decEl.textContent.trim();
-      }
+      const priceNum = card.querySelector('[class*="price-wrap"] [class*="number"]')?.textContent?.trim() || '';
+      const priceDec = card.querySelector('[class*="price-wrap"] [class*="decimal"]')?.textContent?.trim() || '';
+      const price = priceNum + priceDec;
 
-      // 卖家地区（闲鱼搜索页展示的是地区，非卖家名；卖家名需从详情页获取）
-      const locationEl = card.querySelector('[class*="seller-text--"]');
-      const location = locationEl ? locationEl.textContent.trim() : '';
+      // 想要人数（仅匹配"X人想要"模式）
+      const wantEl = card.querySelector('[class*="price-desc"] [class*="text"]');
+      const wantTextRaw = wantEl?.textContent?.trim() || '';
+      const wantMatch = wantTextRaw.match(/(\d+)人想要/);
+      const wantCount = wantMatch ? wantMatch[1] + '人想要' : '';
 
-      // 卖家名（搜索页不再展示，留空，由 step2 截图阶段从详情页抓取）
-      const sellerName = '';
+      // 卖家/地区
+      const sellerEl = card.querySelector('[class*="seller-text"]');
+      const sellerText = sellerEl?.textContent?.trim() || '';
 
-      // 商品图片
+      // 图片（过滤占位图）
       const img = card.querySelector('img[class*="feeds-image"]');
-      let image = '';
-      if (img) {
-        image = img.src || img.getAttribute('data-src') || '';
-        if (image.startsWith('//')) image = 'https:' + image;
-        image = image.replace(/_\d+x\d+.*\.\w+$/i, '');
-      }
+      let image = img?.getAttribute('src') || img?.src || '';
+      if (image.startsWith('//')) image = 'https:' + image;
+      if (isPlaceholder(image)) image = '';
 
-      // 想要人数（price-desc 区域可能显示“想要”数或划线原价，只取含“想要”的文本）
-      const descEl = card.querySelector('[class*="price-desc"] [class*="text"]');
-      const wantCount = (descEl && descEl.textContent.includes('想要')) ? descEl.textContent.trim() : '';
-
-      // 属性标签（成色等）
-      const cpvEls = card.querySelectorAll('[class*="cpv--"]');
-      const tags = Array.from(cpvEls).map(el => el.textContent.trim()).filter(t => t);
-
-      // 详情页链接（去掉 spm/trackParams 追踪参数，保留 categoryId）
-      const detailUrl = card.href.split('&spm=')[0].split('&trackParams=')[0];
-
-      // 卖家头像
-      const avatarEl = card.querySelector('[class*="seller-wrap"] img, [class*="row4-wrap-seller"] img');
-      const sellerAvatar = avatarEl ? (avatarEl.src || '') : '';
+      // 详情链接（保留 categoryId 参数）
+      let detailUrl = href;
+      if (detailUrl.startsWith('/')) detailUrl = 'https://www.goofish.com' + detailUrl;
 
       items.push({
-        itemId,
-        title,
-        price,
-        location,
-        sellerName,
-        image,
-        wantCount,
-        tags,
-        detailUrl,
-        sellerAvatar,
+        itemId: itemId,
+        title: title,
+        price: price,
+        wantCount: wantCount,
+        sellerText: sellerText,
+        detailUrl: detailUrl,
+        image: image,
       });
+      added++;
     });
-    return newCount;
+
+    return added;
   }
 
-  // 获取当前页码
-  function getCurrentPage() {
-    const activePage = document.querySelector('[class*="page-box-active"]');
-    return activePage ? parseInt(activePage.textContent.trim()) : 1;
-  }
+  // === 第 1 页提取 ===
+  console.log('  第1页: 滚动触发图片懒加载...');
+  await scrollForLazyLoad();
+  let added = extractCurrentPage();
+  console.log(`  第1页: 提取 ${added} 条商品`);
 
-  // 获取总页数
-  function getTotalPages() {
-    const pageBoxes = document.querySelectorAll('[class*="page-box"]');
-    let maxPage = 1;
-    pageBoxes.forEach(box => {
-      const num = parseInt(box.textContent.trim());
-      if (!isNaN(num) && num > maxPage) maxPage = num;
-    });
-    return maxPage;
-  }
-
-  // 点击下一页
-  async function clickNextPage() {
-    // 方法1: 点击右箭头
-    const rightArrow = document.querySelector('[class*="arrow-right"]');
-    if (rightArrow) {
-      const btn = rightArrow.closest('button');
-      if (btn && !btn.disabled) {
-        btn.click();
-        return true;
-      }
+  // === 翻页提取 ===
+  for (let page = 2; page <= MAX_PAGES; page++) {
+    // 查找下一页按钮（右箭头）
+    const nextArrow = document.querySelector(
+      '[class*="pagination-arrow-right"]'
+    );
+    if (!nextArrow) {
+      console.log(`  第${page}页: 未找到下一页按钮，停止`);
+      break;
     }
-    // 方法2: 点击下一个页码
-    const currentPage = getCurrentPage();
-    const nextPage = currentPage + 1;
-    const pageBoxes = document.querySelectorAll('[class*="page-box"]');
-    for (const box of pageBoxes) {
-      if (box.textContent.trim() === String(nextPage)) {
-        box.click();
-        return true;
-      }
+
+    // 检查下一页按钮是否被禁用（父按钮有 disabled 属性）
+    const parentBtn = nextArrow.closest('button');
+    if (parentBtn && parentBtn.disabled) {
+      console.log(`  第${page}页: 已到最后一页，停止`);
+      break;
     }
-    return false;
-  }
 
-  // 主循环：分页采集
-  const totalPages = getTotalPages();
-  const pagesToScrape = Math.min(MAX_PAGES, totalPages);
-  console.log(`📄 检测到 ${totalPages} 页，计划采集 ${pagesToScrape} 页`);
+    // 点击下一页
+    nextArrow.click();
+    await new Promise(r => setTimeout(r, PAGE_LOAD_DELAY));
 
-  for (let page = 1; page <= pagesToScrape; page++) {
-    console.log(`\n--- 第 ${page}/${pagesToScrape} 页 ---`);
+    // 滚动触发懒加载
+    console.log(`  第${page}页: 滚动触发图片懒加载...`);
+    await scrollForLazyLoad();
 
-    // 等待页面内容加载
-    try {
-      await new Promise(r => setTimeout(r, 2000));
-    } catch (e) {}
-
-    // 提取当前页
-    const newCount = extractCurrentPage();
-    console.log(`  提取 ${newCount} 条，累计 ${items.length} 条`);
-
-    // 如果不是最后一页，点击翻页
-    if (page < pagesToScrape) {
-      const clicked = await clickNextPage();
-      if (!clicked) {
-        console.log('  ⚠️ 无法点击下一页，停止采集');
-        break;
-      }
-      console.log(`  ⏳ 等待第 ${page + 1} 页加载...`);
-      await new Promise(r => setTimeout(r, PAGE_DELAY));
-
-      // 等待内容变化
-      let waitCount = 0;
-      while (waitCount < 5) {
-        const currentCards = document.querySelectorAll('a[href*="goofish.com/item"]');
-        const currentPageNum = getCurrentPage();
-        if (currentPageNum === page + 1 || currentCards.length > 0) break;
-        await new Promise(r => setTimeout(r, 1000));
-        waitCount++;
-      }
+    added = extractCurrentPage();
+    console.log(`  第${page}页: 提取 ${added} 条商品`);
+    if (added === 0 && page > 2) {
+      console.log('  连续无新增，停止翻页');
+      break;
     }
   }
 
   if (items.length === 0) {
-    console.log('❌ 未提取到数据');
+    console.log('❌ 未提取到数据，请确认已登录闲鱼');
     return;
   }
 
@@ -193,9 +159,9 @@
   console.log(`💾 已保存: ${filename}`);
   console.table(items.slice(0, 5).map(i => ({
     商品ID: i.itemId,
-    地区: i.location,
     标题: i.title.substring(0, 30),
-    售价: i.price,
-    想要: i.wantCount || '(无)',
+    价格: i.price,
+    想要: i.wantCount,
+    地区: i.sellerText,
   })));
 })();
